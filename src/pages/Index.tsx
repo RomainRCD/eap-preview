@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import previewConfiance from "@/assets/preview-confiance.png";
+import previewImpact from "@/assets/preview-impact.png";
+import previewTechnique from "@/assets/preview-technique.png";
+import previewFormulaire from "@/assets/preview-formulaire.png";
 
 const Index = () => {
   const templates = [
@@ -8,28 +12,28 @@ const Index = () => {
       name: "Confiance",
       description: "Design épuré, réassurance, badges de crédibilité",
       path: "/template-confiance",
-      preview: "bg-gradient-to-br from-slate-50 to-slate-100"
+      preview: previewConfiance
     },
     {
       id: "impact",
       name: "Impact",
       description: "Hero full-width, chiffres XXL, CTAs agressifs",
       path: "/template-impact",
-      preview: "bg-gradient-to-br from-primary/20 to-primary/5"
+      preview: previewImpact
     },
     {
       id: "technique",
       name: "Technique",
       description: "Tableau comparatif avec specs détaillées",
       path: "/template-technique",
-      preview: "bg-gradient-to-br from-slate-100 to-slate-200"
+      preview: previewTechnique
     },
     {
       id: "formulaire",
       name: "Formulaire First",
       description: "Formulaire multi-étapes directement en hero",
       path: "/template-formulaire",
-      preview: "bg-gradient-to-br from-primary/10 to-slate-50"
+      preview: previewFormulaire
     },
   ];
 
@@ -53,23 +57,12 @@ const Index = () => {
               className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary hover:shadow-lg transition-all duration-300"
             >
               {/* Miniature preview */}
-              <div className={`h-32 ${template.preview} relative overflow-hidden`}>
-                <div className="absolute inset-2 bg-white/80 rounded-md shadow-sm flex flex-col">
-                  <div className="h-8 bg-slate-800 rounded-t-md flex items-center px-2 gap-1">
-                    <div className="w-2 h-2 rounded-full bg-red-400"></div>
-                    <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
-                    <div className="w-2 h-2 rounded-full bg-green-400"></div>
-                  </div>
-                  <div className="flex-1 p-2 space-y-1">
-                    <div className="h-6 bg-primary/20 rounded w-3/4"></div>
-                    <div className="h-2 bg-slate-200 rounded w-full"></div>
-                    <div className="h-2 bg-slate-200 rounded w-2/3"></div>
-                    <div className="flex gap-1 mt-2">
-                      <div className="h-4 bg-primary/30 rounded w-16"></div>
-                      <div className="h-4 bg-slate-300 rounded w-12"></div>
-                    </div>
-                  </div>
-                </div>
+              <div className="h-40 overflow-hidden bg-muted">
+                <img 
+                  src={template.preview} 
+                  alt={`Aperçu ${template.name}`}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
 
               <div className="p-5">
