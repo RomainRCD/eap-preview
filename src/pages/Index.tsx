@@ -41,12 +41,9 @@ const Index = () => {
     <div className="min-h-screen bg-background flex items-center justify-center p-6">
       <div className="max-w-4xl w-full">
         <div className="text-center mb-10">
-          <h1 className="text-3xl font-display font-bold text-foreground mb-2">
+          <h1 className="text-3xl font-display font-bold text-foreground">
             EAP Location - Redesign
           </h1>
-          <p className="text-muted-foreground">
-            4 propositions pour la page Chariot Rotatif
-          </p>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-6">
