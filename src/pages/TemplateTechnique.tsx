@@ -210,20 +210,14 @@ const TemplateTechnique = () => {
               {/* Section 1: Matériel */}
               <div className="mb-6 pb-6 border-b border-border">
                 <h3 className="font-display font-semibold text-lg text-foreground mb-4">1. Le matériel</h3>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Choix du matériel *</label>
-                    <select className="input-field">
-                      <option>Sélectionner un chariot</option>
-                      {products.map((p, i) => (
-                        <option key={i}>{p.name} - {p.height} / {p.capacity}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Autre / Précisions</label>
-                    <input type="text" className="input-field" placeholder="Accessoires, besoins spécifiques..." />
-                  </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">Choix du matériel *</label>
+                  <select className="input-field">
+                    <option>Sélectionner un chariot</option>
+                    {products.map((p, i) => (
+                      <option key={i}>{p.name} - {p.height} / {p.capacity}</option>
+                    ))}
+                  </select>
                 </div>
               </div>
 

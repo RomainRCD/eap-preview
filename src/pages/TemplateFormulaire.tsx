@@ -138,11 +138,6 @@ const TemplateFormulaire = () => {
                             ))}
                           </div>
                         </div>
-
-                        <div>
-                          <label className="block text-xs sm:text-sm font-medium text-foreground mb-2">Autre / Précisions</label>
-                          <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="Accessoires, besoins spécifiques..." />
-                        </div>
                       </div>
 
                       <Button variant="cta" size="default" className="w-full text-sm sm:text-base" onClick={() => setStep(2)}>
