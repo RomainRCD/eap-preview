@@ -208,20 +208,14 @@ const TemplateImpact = () => {
                 {/* Section 1: Matériel */}
                 <div className="pb-4 border-b border-border">
                   <p className="text-xs font-semibold text-primary mb-3">1. MATÉRIEL</p>
-                  <div className="space-y-3">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Choix du matériel *</label>
-                      <select className="input-field">
-                        <option>Choisir une hauteur</option>
-                        {products.map((p, i) => (
-                          <option key={i}>Chariot Rotatif {p.height} - Cap. {p.capacity}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Autre / Précisions</label>
-                      <input type="text" className="input-field" placeholder="Besoins spécifiques..." />
-                    </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Choix du matériel *</label>
+                    <select className="input-field">
+                      <option>Choisir une hauteur</option>
+                      {products.map((p, i) => (
+                        <option key={i}>Chariot Rotatif {p.height} - Cap. {p.capacity}</option>
+                      ))}
+                    </select>
                   </div>
                 </div>
                 
