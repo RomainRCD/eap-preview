@@ -206,78 +206,97 @@ const TemplateTechnique = () => {
               </p>
             </div>
             
-            <form className="bg-card border border-border rounded-2xl p-8">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="md:col-span-2">
-                  <label className="block text-sm font-medium text-foreground mb-2">Modèle souhaité</label>
-                  <select className="input-field">
-                    <option>Sélectionner un chariot</option>
-                    {products.map((p, i) => (
-                      <option key={i}>{p.name} - {p.height} / {p.capacity}</option>
-                    ))}
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Avec opérateur ?</label>
-                  <select className="input-field">
-                    <option>Sans opérateur</option>
-                    <option>Avec opérateur</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Accessoires</label>
-                  <select className="input-field">
-                    <option>Fourche uniquement</option>
-                    <option>Godet Terre</option>
-                    <option>Potence</option>
-                    <option>Treuil 5T</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Entreprise / SIRET</label>
-                  <input type="text" className="input-field" placeholder="Votre entreprise" />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Contact</label>
-                  <input type="text" className="input-field" placeholder="Nom et Prénom" />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Téléphone</label>
-                  <input type="tel" className="input-field" placeholder="06 XX XX XX XX" />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Email</label>
-                  <input type="email" className="input-field" placeholder="email@entreprise.fr" />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Code postal chantier</label>
-                  <input type="text" className="input-field" placeholder="75001" />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Durée estimée</label>
-                  <select className="input-field">
-                    <option>1 jour</option>
-                    <option>1 semaine</option>
-                    <option>1 mois</option>
-                    <option>+ 1 mois</option>
-                  </select>
-                </div>
-                
-                <div className="md:col-span-2">
-                  <label className="block text-sm font-medium text-foreground mb-2">Précisions techniques (optionnel)</label>
-                  <textarea className="input-field min-h-[100px]" placeholder="Contraintes d'accès, charge spécifique, etc."></textarea>
+            <form className="bg-card border border-border rounded-2xl p-6 sm:p-8">
+              {/* Section 1: Matériel */}
+              <div className="mb-6 pb-6 border-b border-border">
+                <h3 className="font-display font-semibold text-lg text-foreground mb-4">1. Le matériel</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Choix du matériel *</label>
+                    <select className="input-field">
+                      <option>Sélectionner un chariot</option>
+                      {products.map((p, i) => (
+                        <option key={i}>{p.name} - {p.height} / {p.capacity}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Autre / Précisions</label>
+                    <input type="text" className="input-field" placeholder="Accessoires, besoins spécifiques..." />
+                  </div>
                 </div>
               </div>
 
-              <Button variant="cta" size="xl" className="w-full mt-8">
+              {/* Section 2: Informations Entreprise */}
+              <div className="mb-6 pb-6 border-b border-border">
+                <h3 className="font-display font-semibold text-lg text-foreground mb-4">2. Informations Entreprise</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Nom Entreprise (ou SIRET) *</label>
+                    <input type="text" className="input-field" placeholder="Votre entreprise" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Adresse de l'entreprise *</label>
+                    <input type="text" className="input-field" placeholder="Adresse complète" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Code Postal *</label>
+                    <input type="text" className="input-field" placeholder="67000" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Ville *</label>
+                    <input type="text" className="input-field" placeholder="Strasbourg" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Section 3: Contact */}
+              <div className="mb-6 pb-6 border-b border-border">
+                <h3 className="font-display font-semibold text-lg text-foreground mb-4">3. Contact</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Nom *</label>
+                    <input type="text" className="input-field" placeholder="Dupont" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Prénom *</label>
+                    <input type="text" className="input-field" placeholder="Jean" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">E-mail *</label>
+                    <input type="email" className="input-field" placeholder="email@entreprise.fr" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Téléphone *</label>
+                    <input type="tel" className="input-field" placeholder="06 XX XX XX XX" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Section 4: Date et Lieu du chantier */}
+              <div className="mb-6">
+                <h3 className="font-display font-semibold text-lg text-foreground mb-4">4. Date et Lieu du chantier</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Date début de chantier *</label>
+                    <input type="date" className="input-field" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Date fin de chantier *</label>
+                    <input type="date" className="input-field" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Code postal du chantier *</label>
+                    <input type="text" className="input-field" placeholder="75001" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Ville du chantier *</label>
+                    <input type="text" className="input-field" placeholder="Paris" />
+                  </div>
+                </div>
+              </div>
+
+              <Button variant="cta" size="xl" className="w-full mt-4">
                 Envoyer ma demande technique
               </Button>
             </form>
