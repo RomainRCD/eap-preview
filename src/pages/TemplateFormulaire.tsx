@@ -1,6 +1,6 @@
-import { Phone, Clock, CheckCircle, ArrowRight, Shield, Zap, MapPin, ArrowLeft } from "lucide-react";
+import { Phone, Clock, CheckCircle, ArrowRight, Shield, Zap, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+
 import heroImage from "@/assets/hero-chariot.jpg";
 import { useState } from "react";
 
@@ -22,17 +22,11 @@ const TemplateFormulaire = () => {
       {/* Header Minimal */}
       <header className="bg-card border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-              <span className="text-sm">Retour</span>
-            </Link>
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">E</span>
-              </div>
-              <span className="font-display font-bold text-xl text-foreground">EAP Location</span>
+          <div className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-lg">E</span>
             </div>
+            <span className="font-display font-bold text-xl text-foreground">EAP Location</span>
           </div>
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-2 text-muted-foreground">
@@ -50,24 +44,24 @@ const TemplateFormulaire = () => {
       </header>
 
       {/* Hero with Form */}
-      <section className="py-8 md:py-16">
+      <section className="py-6 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Left - Content */}
-            <div>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* Left - Content (hidden on mobile, form comes first) */}
+            <div className="order-2 lg:order-1">
               <span className="badge-pro mb-4 inline-block">Location Pro depuis 2016</span>
-              <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground leading-tight mb-4 md:mb-6">
                 Location Chariot Télescopique <span className="text-primary">Rotatif</span>
               </h1>
               
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8">
                 De 16 à 35 mètres de hauteur, avec ou sans opérateur. Obtenez votre devis gratuit en moins de 2 minutes.
               </p>
 
-              {/* Quick Trust Points */}
-              <div className="space-y-4 mb-8">
+              {/* Quick Trust Points - Hidden on mobile */}
+              <div className="hidden md:block space-y-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center shrink-0">
                     <Zap className="w-5 h-5 text-success" />
                   </div>
                   <div>
@@ -76,7 +70,7 @@ const TemplateFormulaire = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
                     <Shield className="w-5 h-5 text-primary" />
                   </div>
                   <div>
@@ -85,7 +79,7 @@ const TemplateFormulaire = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5 text-accent" />
                   </div>
                   <div>
@@ -105,13 +99,13 @@ const TemplateFormulaire = () => {
               </div>
             </div>
 
-            {/* Right - Form */}
-            <div className="lg:sticky lg:top-24">
+            {/* Right - Form (shows first on mobile) */}
+            <div className="order-1 lg:order-2 lg:sticky lg:top-24">
               <div className="bg-card rounded-2xl shadow-xl border border-border overflow-hidden">
                 {/* Form Header */}
-                <div className="bg-secondary text-secondary-foreground p-6">
-                  <h2 className="font-display font-bold text-2xl mb-2">Devis Gratuit Express</h2>
-                  <p className="text-secondary-foreground/80">Recevez votre devis sous 2h maximum</p>
+                <div className="bg-secondary text-secondary-foreground p-4 md:p-6">
+                  <h2 className="font-display font-bold text-xl md:text-2xl mb-2">Devis Gratuit Express</h2>
+                  <p className="text-secondary-foreground/80 text-sm md:text-base">Recevez votre devis sous 2h maximum</p>
                   
                   {/* Progress */}
                   <div className="flex gap-2 mt-4">
@@ -122,36 +116,36 @@ const TemplateFormulaire = () => {
                 </div>
 
                 {/* Form Body */}
-                <div className="p-6">
+                <div className="p-4 md:p-6">
                   {step === 1 && (
                     <div className="animate-fade-in">
-                      <h3 className="font-semibold text-lg text-foreground mb-4">1. Choisissez votre matériel</h3>
+                      <h3 className="font-semibold text-base md:text-lg text-foreground mb-4">1. Choisissez votre matériel</h3>
                       
-                      <div className="grid grid-cols-2 gap-3 mb-6">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-2 md:gap-3 mb-4 md:mb-6">
                         {products.map((product, index) => (
                           <button 
                             key={index}
-                            className="border-2 border-border rounded-lg p-4 text-center hover:border-primary hover:bg-primary/5 transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20"
+                            className="border-2 border-border rounded-lg p-3 md:p-4 text-center hover:border-primary hover:bg-primary/5 transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20"
                           >
-                            <p className="text-xl font-display font-bold text-foreground">{product.height}</p>
-                            <p className="text-sm text-muted-foreground">Cap. {product.capacity}</p>
+                            <p className="text-lg md:text-xl font-display font-bold text-foreground">{product.height}</p>
+                            <p className="text-xs md:text-sm text-muted-foreground">Cap. {product.capacity}</p>
                           </button>
                         ))}
                       </div>
 
-                      <div className="mb-6">
+                      <div className="mb-4 md:mb-6">
                         <label className="block text-sm font-medium text-foreground mb-2">Avec opérateur ?</label>
-                        <div className="grid grid-cols-2 gap-3">
-                          <button className="border-2 border-border rounded-lg p-3 text-center hover:border-primary transition-colors">
+                        <div className="grid grid-cols-2 gap-2 md:gap-3">
+                          <button className="border-2 border-border rounded-lg p-2 md:p-3 text-center text-sm md:text-base hover:border-primary transition-colors">
                             Sans opérateur
                           </button>
-                          <button className="border-2 border-border rounded-lg p-3 text-center hover:border-primary transition-colors">
+                          <button className="border-2 border-border rounded-lg p-2 md:p-3 text-center text-sm md:text-base hover:border-primary transition-colors">
                             Avec opérateur
                           </button>
                         </div>
                       </div>
 
-                      <Button variant="cta" size="xl" className="w-full" onClick={() => setStep(2)}>
+                      <Button variant="cta" size="lg" className="w-full" onClick={() => setStep(2)}>
                         Continuer
                         <ArrowRight className="w-5 h-5" />
                       </Button>

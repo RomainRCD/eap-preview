@@ -1,6 +1,6 @@
-import { Phone, Clock, CheckCircle, Shield, Users, MapPin, ArrowLeft } from "lucide-react";
+import { Phone, Clock, CheckCircle, Shield, Users, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+
 import heroImage from "@/assets/hero-chariot.jpg";
 const TemplateConfiance = () => {
   const products = [
@@ -18,17 +18,11 @@ const TemplateConfiance = () => {
       {/* Header */}
       <header className="bg-card border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-              <span className="text-sm">Retour</span>
-            </Link>
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">E</span>
-              </div>
-              <span className="font-display font-bold text-xl text-foreground">EAP Location</span>
+          <div className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-lg">E</span>
             </div>
+            <span className="font-display font-bold text-xl text-foreground">EAP Location</span>
           </div>
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-2 text-muted-foreground">
