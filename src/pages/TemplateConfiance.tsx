@@ -1,7 +1,9 @@
 import { Phone, Clock, CheckCircle, Shield, Users, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
 
 import heroImage from "@/assets/hero-chariot.jpg";
+
 const TemplateConfiance = () => {
   const products = [
     { height: "16m", capacity: "4T", name: "Chariot Rotatif 16m" },
@@ -15,6 +17,12 @@ const TemplateConfiance = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Location Chariot Télescopique Rotatif | Devis 2h | EAP Location"
+        description="Louez un chariot télescopique rotatif de 16m à 35m partout en France. 2400+ agences, 99% de disponibilité, réponse sous 2h. Devis gratuit immédiat."
+        keywords="location chariot télescopique, chariot rotatif, location BTP, manitou, nacelle télescopique, location courte durée, location longue durée"
+        canonicalUrl="/chariot-rotatif"
+      />
       {/* Header */}
       <header className="bg-card border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">

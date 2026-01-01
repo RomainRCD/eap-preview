@@ -1,5 +1,6 @@
 import { Phone, Clock, CheckCircle, Ruler, Weight, ArrowRight, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
 
 import heroImage from "@/assets/hero-chariot.jpg";
 
@@ -23,6 +24,12 @@ const TemplateTechnique = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Comparatif Chariots Télescopiques Rotatifs 16m-35m | Specs Techniques | EAP"
+        description="Comparez les caractéristiques techniques des chariots télescopiques rotatifs : hauteur 16-35m, capacité 4-6T, portée jusqu'à 30m. Fiche technique complète."
+        keywords="fiche technique chariot télescopique, comparatif manitou, specs chariot rotatif, capacité levage, portée horizontale"
+        canonicalUrl="/chariot-rotatif-technique"
+      />
       {/* Header */}
       <header className="bg-card border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">

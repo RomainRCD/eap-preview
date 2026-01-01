@@ -1,5 +1,6 @@
 import { Phone, Clock, CheckCircle, ArrowRight, Shield, Zap, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
 
 import heroImage from "@/assets/hero-chariot.jpg";
 import { useState } from "react";
@@ -19,6 +20,12 @@ const TemplateFormulaire = () => {
 
   return (
     <div className="min-h-screen bg-muted w-full max-w-full overflow-x-hidden">
+      <SEOHead
+        title="Devis Location Chariot Télescopique Rotatif | Réponse 2h | EAP Location"
+        description="Obtenez votre devis gratuit en 2 minutes. Location chariot télescopique rotatif 16m-35m, avec ou sans opérateur. Réponse garantie sous 2h."
+        keywords="devis chariot télescopique, demande location, tarif chariot rotatif, prix location BTP, location avec opérateur"
+        canonicalUrl="/chariot-rotatif-devis"
+      />
       {/* Header Minimal */}
       <header className="bg-card border-b border-border w-full">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 flex items-center justify-between gap-2">
