@@ -112,6 +112,7 @@ const TemplateFormulaire = () => {
                     <div className={`h-1 sm:h-1.5 flex-1 rounded-full ${step >= 1 ? 'bg-primary' : 'bg-secondary-foreground/20'}`}></div>
                     <div className={`h-1 sm:h-1.5 flex-1 rounded-full ${step >= 2 ? 'bg-primary' : 'bg-secondary-foreground/20'}`}></div>
                     <div className={`h-1 sm:h-1.5 flex-1 rounded-full ${step >= 3 ? 'bg-primary' : 'bg-secondary-foreground/20'}`}></div>
+                    <div className={`h-1 sm:h-1.5 flex-1 rounded-full ${step >= 4 ? 'bg-primary' : 'bg-secondary-foreground/20'}`}></div>
                   </div>
                 </div>
 
@@ -119,29 +120,28 @@ const TemplateFormulaire = () => {
                 <div className="p-3 sm:p-4 md:p-6">
                   {step === 1 && (
                     <div className="animate-fade-in">
-                      <h3 className="font-semibold text-sm sm:text-base md:text-lg text-foreground mb-3 sm:mb-4">1. Choisissez votre matériel</h3>
+                      <h3 className="font-semibold text-sm sm:text-base md:text-lg text-foreground mb-3 sm:mb-4">1. Le matériel</h3>
                       
-                      <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-6">
-                        {products.map((product, index) => (
-                          <button 
-                            key={index}
-                            className="border-2 border-border rounded-lg p-2 sm:p-3 md:p-4 text-center hover:border-primary hover:bg-primary/5 transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20"
-                          >
-                            <p className="text-base sm:text-lg md:text-xl font-display font-bold text-foreground">{product.height}</p>
-                            <p className="text-xs text-muted-foreground">Cap. {product.capacity}</p>
-                          </button>
-                        ))}
-                      </div>
+                      <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+                        <div>
+                          <label className="block text-xs sm:text-sm font-medium text-foreground mb-2">Choix du matériel *</label>
+                          <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                            {products.map((product, index) => (
+                              <button 
+                                key={index}
+                                type="button"
+                                className="border-2 border-border rounded-lg p-2 sm:p-3 md:p-4 text-center hover:border-primary hover:bg-primary/5 transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20"
+                              >
+                                <p className="text-base sm:text-lg md:text-xl font-display font-bold text-foreground">{product.height}</p>
+                                <p className="text-xs text-muted-foreground">Cap. {product.capacity}</p>
+                              </button>
+                            ))}
+                          </div>
+                        </div>
 
-                      <div className="mb-3 sm:mb-6">
-                        <label className="block text-xs sm:text-sm font-medium text-foreground mb-2">Avec opérateur ?</label>
-                        <div className="grid grid-cols-2 gap-2">
-                          <button className="border-2 border-border rounded-lg p-2 sm:p-3 text-center text-xs sm:text-sm md:text-base hover:border-primary transition-colors">
-                            Sans opérateur
-                          </button>
-                          <button className="border-2 border-border rounded-lg p-2 sm:p-3 text-center text-xs sm:text-sm md:text-base hover:border-primary transition-colors">
-                            Avec opérateur
-                          </button>
+                        <div>
+                          <label className="block text-xs sm:text-sm font-medium text-foreground mb-2">Autre / Précisions</label>
+                          <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="Accessoires, besoins spécifiques..." />
                         </div>
                       </div>
 
@@ -154,20 +154,26 @@ const TemplateFormulaire = () => {
 
                   {step === 2 && (
                     <div className="animate-fade-in">
-                      <h3 className="font-semibold text-sm sm:text-base md:text-lg text-foreground mb-3 sm:mb-4">2. Votre entreprise</h3>
+                      <h3 className="font-semibold text-sm sm:text-base md:text-lg text-foreground mb-3 sm:mb-4">2. Informations Entreprise</h3>
                       
                       <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
                         <div>
-                          <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Nom de l'entreprise</label>
+                          <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Nom Entreprise (ou SIRET) *</label>
                           <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="Votre société" />
                         </div>
                         <div>
-                          <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">SIRET (optionnel)</label>
-                          <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="XXX XXX XXX XXXXX" />
+                          <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Adresse de l'entreprise *</label>
+                          <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="Adresse complète" />
                         </div>
-                        <div>
-                          <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Code postal du chantier</label>
-                          <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="Ex: 75001" />
+                        <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                          <div>
+                            <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Code Postal *</label>
+                            <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="67000" />
+                          </div>
+                          <div>
+                            <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Ville *</label>
+                            <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="Strasbourg" />
+                          </div>
                         </div>
                       </div>
 
@@ -185,31 +191,70 @@ const TemplateFormulaire = () => {
 
                   {step === 3 && (
                     <div className="animate-fade-in">
-                      <h3 className="font-semibold text-sm sm:text-base md:text-lg text-foreground mb-3 sm:mb-4">3. Vos coordonnées</h3>
+                      <h3 className="font-semibold text-sm sm:text-base md:text-lg text-foreground mb-3 sm:mb-4">3. Contact</h3>
                       
                       <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
                         <div className="grid grid-cols-2 gap-2 sm:gap-3">
                           <div>
-                            <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Prénom</label>
-                            <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="Jean" />
-                          </div>
-                          <div>
-                            <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Nom</label>
+                            <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Nom *</label>
                             <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="Dupont" />
                           </div>
+                          <div>
+                            <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Prénom *</label>
+                            <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="Jean" />
+                          </div>
                         </div>
                         <div>
-                          <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Téléphone</label>
-                          <input type="tel" className="input-field text-sm sm:text-base w-full" placeholder="06 XX XX XX XX" />
-                        </div>
-                        <div>
-                          <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Email</label>
+                          <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">E-mail *</label>
                           <input type="email" className="input-field text-sm sm:text-base w-full" placeholder="email@entreprise.fr" />
+                        </div>
+                        <div>
+                          <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Téléphone *</label>
+                          <input type="tel" className="input-field text-sm sm:text-base w-full" placeholder="06 XX XX XX XX" />
                         </div>
                       </div>
 
                       <div className="flex gap-2 sm:gap-3">
                         <Button variant="outline" size="default" className="text-sm" onClick={() => setStep(2)}>
+                          Retour
+                        </Button>
+                        <Button variant="cta" size="default" className="flex-1 text-sm sm:text-base min-w-0" onClick={() => setStep(4)}>
+                          Continuer
+                          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+                        </Button>
+                      </div>
+                    </div>
+                  )}
+
+                  {step === 4 && (
+                    <div className="animate-fade-in">
+                      <h3 className="font-semibold text-sm sm:text-base md:text-lg text-foreground mb-3 sm:mb-4">4. Date et Lieu du chantier</h3>
+                      
+                      <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+                        <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                          <div>
+                            <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Date début *</label>
+                            <input type="date" className="input-field text-sm sm:text-base w-full" />
+                          </div>
+                          <div>
+                            <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Date fin *</label>
+                            <input type="date" className="input-field text-sm sm:text-base w-full" />
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                          <div>
+                            <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Code postal chantier *</label>
+                            <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="75001" />
+                          </div>
+                          <div>
+                            <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Ville du chantier *</label>
+                            <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="Paris" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-2 sm:gap-3">
+                        <Button variant="outline" size="default" className="text-sm" onClick={() => setStep(3)}>
                           Retour
                         </Button>
                         <Button variant="cta" size="default" className="flex-1 text-sm sm:text-base min-w-0">
