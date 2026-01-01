@@ -74,14 +74,14 @@ const TemplateTechnique = () => {
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <Button variant="cta" size="lg" asChild>
+              <div className="flex flex-col sm:flex-row gap-3 w-full">
+                <Button variant="cta" size="lg" className="w-full sm:w-auto" asChild>
                   <a href="#catalogue">
                     Voir le catalogue
                     <ArrowRight className="w-5 h-5" />
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
                   <a href="#devis">Demander un devis</a>
                 </Button>
               </div>
