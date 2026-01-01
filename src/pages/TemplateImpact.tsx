@@ -1,5 +1,6 @@
 import { Phone, Clock, Zap, CheckCircle, ArrowRight, Shield, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
 
 import heroImage from "@/assets/hero-chariot.jpg";
 
@@ -16,6 +17,12 @@ const TemplateImpact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Chariot Télescopique Rotatif jusqu'à 35m | Dispo Immédiate | EAP Location"
+        description="Location chariot télescopique rotatif 16m-35m. Disponibilité 99%, devis en 2h, livraison 48h partout en France. Avec ou sans opérateur."
+        keywords="chariot télescopique 35m, location chariot rotatif, manitou location, nacelle grande hauteur, location matériel BTP"
+        canonicalUrl="/chariot-rotatif-impact"
+      />
       {/* Sticky CTA Bar */}
       <div className="bg-primary text-primary-foreground py-2 md:py-3 text-center">
         <div className="container mx-auto px-4 flex items-center justify-center gap-2 md:gap-4 flex-wrap">
