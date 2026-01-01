@@ -21,22 +21,22 @@ const TemplateFormulaire = () => {
     <div className="min-h-screen bg-muted">
       {/* Header Minimal */}
       <header className="bg-card border-b border-border">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">E</span>
+        <div className="container mx-auto px-4 py-3 md:py-4 flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 min-w-0">
+            <div className="w-8 h-8 md:w-10 md:h-10 bg-primary rounded-lg flex items-center justify-center shrink-0">
+              <span className="text-primary-foreground font-bold text-base md:text-lg">E</span>
             </div>
-            <span className="font-display font-bold text-xl text-foreground">EAP Location</span>
+            <span className="font-display font-bold text-lg md:text-xl text-foreground truncate">EAP Location</span>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4 shrink-0">
             <div className="hidden md:flex items-center gap-2 text-muted-foreground">
               <Clock className="w-4 h-4" />
               <span className="text-sm">Réponse sous 2h</span>
             </div>
-            <Button variant="phone" asChild>
+            <Button variant="phone" size="sm" className="text-xs md:text-sm px-3 md:px-4" asChild>
               <a href="tel:0368385456">
                 <Phone className="w-4 h-4" />
-                <span className="hidden sm:inline">03 68 38 54 56</span>
+                <span className="hidden xs:inline">03 68 38 54 56</span>
               </a>
             </Button>
           </div>
