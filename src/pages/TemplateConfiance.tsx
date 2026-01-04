@@ -202,14 +202,14 @@ const TemplateConfiance = () => {
       {/* Social Proof - Ils nous font confiance */}
       <section className="py-10 bg-background border-b border-border">
         <div className="container mx-auto px-4">
-          <p className="text-center text-muted-foreground text-sm mb-6">Ils nous font confiance</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+          <p className="text-center text-muted-foreground text-sm mb-8">Ils nous font confiance</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {trustedCompanies.map((company, index) => (
               <img 
                 key={index} 
                 src={company.logo}
                 alt={`Logo ${company.name}`}
-                className="h-6 md:h-8 w-auto opacity-40 grayscale hover:opacity-60 hover:grayscale-0 transition-all duration-300"
+                className="h-10 md:h-12 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
               />
             ))}
           </div>
