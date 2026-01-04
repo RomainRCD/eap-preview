@@ -10,7 +10,6 @@ import heroImage from "@/assets/hero-chariot.jpg";
 import logoBouygues from "@/assets/logos/bouygues.svg";
 import logoVinci from "@/assets/logos/vinci.svg";
 import logoEiffage from "@/assets/logos/eiffage.svg";
-import logoColas from "@/assets/logos/colas.svg";
 import logoSpie from "@/assets/logos/spie-batignolles.svg";
 
 const TemplateImpact = () => {
@@ -47,10 +46,9 @@ const TemplateImpact = () => {
   ];
 
   const trustLogos = [
-    { name: "Bouygues", logo: logoBouygues },
+    { name: "Bouygues Construction", logo: logoBouygues },
     { name: "Eiffage", logo: logoEiffage },
     { name: "Vinci", logo: logoVinci },
-    { name: "Colas", logo: logoColas },
     { name: "Spie Batignolles", logo: logoSpie },
   ];
 
@@ -201,17 +199,23 @@ const TemplateImpact = () => {
       </section>
 
       {/* Trust Bar - Logos */}
-      <section className="py-8 md:py-10 bg-card border-b border-border">
+      <section className="py-12 md:py-16 bg-card border-b border-border">
         <div className="container mx-auto px-4">
-          <p className="text-center text-xs md:text-sm text-muted-foreground mb-6">Ils nous font confiance</p>
-          <div className="flex items-center justify-center gap-8 md:gap-16 flex-wrap">
+          <h3 className="text-center text-foreground font-display font-semibold text-lg md:text-xl mb-10">
+            Ils nous font confiance
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center max-w-4xl mx-auto">
             {trustLogos.map((company, index) => (
-              <img 
+              <div 
                 key={index}
-                src={company.logo}
-                alt={`Logo ${company.name}`}
-                className="h-10 md:h-12 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
-              />
+                className="flex items-center justify-center p-4 h-20 md:h-24 w-full"
+              >
+                <img 
+                  src={company.logo}
+                  alt={`Logo ${company.name}`}
+                  className="max-h-full max-w-full w-auto h-auto object-contain"
+                />
+              </div>
             ))}
           </div>
         </div>
