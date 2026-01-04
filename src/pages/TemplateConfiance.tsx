@@ -7,9 +7,19 @@ import SEOHead from "@/components/SEOHead";
 
 import heroImage from "@/assets/hero-chariot.jpg";
 
-// Logos entreprises BTP (simulés en texte pour grayscale)
+// Logos entreprises BTP
+import logoBouygues from "@/assets/logos/bouygues.svg";
+import logoVinci from "@/assets/logos/vinci.svg";
+import logoEiffage from "@/assets/logos/eiffage.svg";
+import logoColas from "@/assets/logos/colas.svg";
+import logoSpie from "@/assets/logos/spie-batignolles.svg";
+
 const trustedCompanies = [
-  "Bouygues", "Vinci", "Eiffage", "Colas", "Spie Batignolles", "Fayat"
+  { name: "Bouygues", logo: logoBouygues },
+  { name: "Vinci", logo: logoVinci },
+  { name: "Eiffage", logo: logoEiffage },
+  { name: "Colas", logo: logoColas },
+  { name: "Spie Batignolles", logo: logoSpie },
 ];
 
 // Avis clients
@@ -195,12 +205,12 @@ const TemplateConfiance = () => {
           <p className="text-center text-muted-foreground text-sm mb-6">Ils nous font confiance</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {trustedCompanies.map((company, index) => (
-              <span 
+              <img 
                 key={index} 
-                className="text-lg md:text-xl font-display font-bold text-muted-foreground/40 grayscale hover:text-muted-foreground/60 transition-colors"
-              >
-                {company}
-              </span>
+                src={company.logo}
+                alt={`Logo ${company.name}`}
+                className="h-6 md:h-8 w-auto opacity-40 grayscale hover:opacity-60 hover:grayscale-0 transition-all duration-300"
+              />
             ))}
           </div>
         </div>
