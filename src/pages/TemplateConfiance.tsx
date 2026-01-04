@@ -210,12 +210,12 @@ const TemplateConfiance = () => {
             {trustedCompanies.map((company, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center p-3 md:p-4 h-20 md:h-28"
+                className="bg-white rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center p-2 md:p-3 h-20 md:h-28"
               >
                 <img 
                   src={company.logo}
                   alt={`Logo ${company.name}`}
-                  className="w-auto h-full max-h-[50px] md:max-h-[80px] object-contain"
+                  className="w-auto h-full max-h-[56px] md:max-h-[90px] object-contain"
                 />
               </div>
             ))}
