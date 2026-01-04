@@ -6,6 +6,13 @@ import SEOHead from "@/components/SEOHead";
 
 import heroImage from "@/assets/hero-chariot.jpg";
 
+// Logos entreprises BTP
+import logoBouygues from "@/assets/logos/bouygues.svg";
+import logoVinci from "@/assets/logos/vinci.svg";
+import logoEiffage from "@/assets/logos/eiffage.svg";
+import logoColas from "@/assets/logos/colas.svg";
+import logoSpie from "@/assets/logos/spie-batignolles.svg";
+
 const TemplateImpact = () => {
   const [selectedProduct, setSelectedProduct] = useState<string>("");
   const [formStep, setFormStep] = useState(1);
@@ -40,7 +47,11 @@ const TemplateImpact = () => {
   ];
 
   const trustLogos = [
-    "Bouygues", "Eiffage", "Vinci", "Colas", "Spie"
+    { name: "Bouygues", logo: logoBouygues },
+    { name: "Eiffage", logo: logoEiffage },
+    { name: "Vinci", logo: logoVinci },
+    { name: "Colas", logo: logoColas },
+    { name: "Spie Batignolles", logo: logoSpie },
   ];
 
   // Handle product selection and scroll to form
@@ -194,13 +205,13 @@ const TemplateImpact = () => {
         <div className="container mx-auto px-4">
           <p className="text-center text-xs md:text-sm text-muted-foreground mb-4">Ils nous font confiance</p>
           <div className="flex items-center justify-center gap-6 md:gap-12 flex-wrap">
-            {trustLogos.map((logo, index) => (
-              <div 
+            {trustLogos.map((company, index) => (
+              <img 
                 key={index}
-                className="text-lg md:text-xl font-bold text-muted-foreground/40 grayscale hover:grayscale-0 hover:text-muted-foreground/60 transition-all duration-300"
-              >
-                {logo}
-              </div>
+                src={company.logo}
+                alt={`Logo ${company.name}`}
+                className="h-5 md:h-7 w-auto opacity-40 grayscale hover:grayscale-0 hover:opacity-60 transition-all duration-300"
+              />
             ))}
           </div>
         </div>
