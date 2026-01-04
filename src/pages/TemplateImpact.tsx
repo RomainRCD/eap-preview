@@ -199,21 +199,21 @@ const TemplateImpact = () => {
       </section>
 
       {/* Trust Bar - Logos */}
-      <section className="py-12 md:py-16 bg-card border-b border-border">
+      <section className="py-12 md:py-20 bg-card border-b border-border">
         <div className="container mx-auto px-4">
-          <h3 className="text-center text-foreground font-display font-semibold text-lg md:text-xl mb-10">
+          <h3 className="text-center text-foreground font-display font-semibold text-lg md:text-2xl mb-10 md:mb-14">
             Ils nous font confiance
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 lg:gap-16 items-center justify-items-center max-w-5xl mx-auto">
             {trustLogos.map((company, index) => (
               <div 
                 key={index}
-                className="flex items-center justify-center p-4 h-20 md:h-24 w-full"
+                className="flex items-center justify-center p-4 md:p-6 h-16 md:h-20 lg:h-28 w-full"
               >
                 <img 
                   src={company.logo}
                   alt={`Logo ${company.name}`}
-                  className="max-h-full max-w-full w-auto h-auto object-contain"
+                  className="max-h-full max-w-[180px] lg:max-w-[220px] w-auto h-auto object-contain"
                 />
               </div>
             ))}
