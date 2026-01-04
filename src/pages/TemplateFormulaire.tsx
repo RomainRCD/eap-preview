@@ -167,7 +167,7 @@ const TemplateFormulaire = () => {
                           <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Adresse de l'entreprise *</label>
                           <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="Adresse complète" />
                         </div>
-                        <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                           <div>
                             <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Code Postal *</label>
                             <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="67000" />
@@ -196,7 +196,7 @@ const TemplateFormulaire = () => {
                       <h3 className="font-semibold text-sm sm:text-base md:text-lg text-foreground mb-3 sm:mb-4">3. Contact</h3>
                       
                       <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
-                        <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                           <div>
                             <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Nom *</label>
                             <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="Dupont" />
@@ -233,7 +233,7 @@ const TemplateFormulaire = () => {
                       <h3 className="font-semibold text-sm sm:text-base md:text-lg text-foreground mb-3 sm:mb-4">4. Date et Lieu du chantier</h3>
                       
                       <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
-                        <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                           <div>
                             <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Date début *</label>
                             <input type="date" className="input-field text-sm sm:text-base w-full" />
@@ -243,7 +243,7 @@ const TemplateFormulaire = () => {
                             <input type="date" className="input-field text-sm sm:text-base w-full" />
                           </div>
                         </div>
-                        <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                           <div>
                             <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">Code postal chantier *</label>
                             <input type="text" className="input-field text-sm sm:text-base w-full" placeholder="75001" />
