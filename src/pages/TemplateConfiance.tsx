@@ -197,26 +197,32 @@ const TemplateConfiance = () => {
         </div>
       </section>
 
-      {/* Social Proof - Ils nous font confiance */}
-      <section className="py-12 md:py-20 bg-background border-b border-border">
+      {/* Social Proof - Ils nous font confiance - Design Premium */}
+      <section className="py-16 md:py-24 bg-background border-b border-border">
         <div className="container mx-auto px-4">
-          <h3 className="text-center text-foreground font-display font-semibold text-lg md:text-2xl mb-10 md:mb-14">
-            Ils nous font confiance
-          </h3>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 lg:gap-16 items-center justify-items-center max-w-5xl mx-auto">
+          <div className="text-center mb-12 md:mb-16">
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-3 block">Références clients</span>
+            <h3 className="text-foreground font-display font-bold text-2xl md:text-4xl">
+              Ils nous font confiance
+            </h3>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto">
             {trustedCompanies.map((company, index) => (
               <div 
                 key={index}
-                className="flex items-center justify-center p-4 md:p-6 h-16 md:h-20 lg:h-28 w-full"
+                className="bg-white rounded-2xl border border-border shadow-sm hover:shadow-lg transition-shadow duration-300 flex items-center justify-center p-6 md:p-10 min-h-[120px] md:min-h-[180px]"
               >
                 <img 
                   src={company.logo}
                   alt={`Logo ${company.name}`}
-                  className="max-h-full max-w-[180px] lg:max-w-[220px] w-auto h-auto object-contain"
+                  className="w-full h-auto max-h-[60px] md:max-h-[100px] object-contain"
                 />
               </div>
             ))}
           </div>
+          <p className="text-center text-muted-foreground mt-10 md:mt-14 text-sm md:text-base">
+            Et des centaines d'autres entreprises du BTP à travers la France
+          </p>
         </div>
       </section>
 
