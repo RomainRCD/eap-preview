@@ -365,7 +365,7 @@ const TemplateImpact = () => {
                         <Check className="absolute right-10 top-9 w-5 h-5 text-success animate-scale-in" />
                       )}
                     </div>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <div className="relative">
                         <label className="block text-sm font-medium text-foreground mb-2">Date début *</label>
                         <input 
