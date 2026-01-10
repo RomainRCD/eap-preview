@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Phone, Clock, Zap, CheckCircle, ArrowRight, Shield, TrendingUp, Star, Check, FileText, Loader2, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -11,6 +11,53 @@ import logoBouygues from "@/assets/logos/bouygues.svg";
 import logoVinci from "@/assets/logos/vinci.svg";
 import logoEiffage from "@/assets/logos/eiffage.svg";
 import logoSpie from "@/assets/logos/spie-batignolles.svg";
+
+// Helper function to check if value looks like a SIRET
+const isSiretFormat = (value: string): boolean => {
+  const cleanValue = value.replace(/\s/g, "");
+  return /^\d{9}$|^\d{14}$/.test(cleanValue);
+};
+
+// API SIRENE search function
+const fetchCompanyBySiret = async (siret: string): Promise<{
+  nom_complet: string;
+  adresse: string;
+  code_postal: string;
+  ville: string;
+} | null> => {
+  const cleanSiret = siret.replace(/\s/g, "");
+  
+  try {
+    const response = await fetch(
+      `https://recherche-entreprises.api.gouv.fr/search?q=${encodeURIComponent(cleanSiret)}`
+    );
+    
+    if (!response.ok) {
+      console.error("API SIRENE error:", response.status);
+      return null;
+    }
+
+    const data = await response.json();
+    console.log("API SIRENE response:", data);
+    
+    if (data.results && data.results.length > 0) {
+      const company = data.results[0];
+      const siege = company.siege;
+      
+      return {
+        nom_complet: company.nom_complet || "",
+        adresse: siege?.adresse || "",
+        code_postal: siege?.code_postal || "",
+        ville: siege?.libelle_commune || "",
+      };
+    }
+    
+    return null;
+  } catch (error) {
+    console.error("SIRENE fetch error:", error);
+    return null;
+  }
+};
 
 const TemplateImpact = () => {
   const [selectedProduct, setSelectedProduct] = useState<string>("");
@@ -36,6 +83,9 @@ const TemplateImpact = () => {
   const [validFields, setValidFields] = useState<Record<string, boolean>>({});
   const [isSearchingSiret, setIsSearchingSiret] = useState(false);
   const [siretVerified, setSiretVerified] = useState(false);
+  
+  // Debounce timer ref
+  const siretSearchTimeout = useRef<NodeJS.Timeout | null>(null);
 
   const products = [
     { height: "16m", capacity: "4T" },
@@ -64,62 +114,70 @@ const TemplateImpact = () => {
     document.getElementById("devis")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Search SIRENE API for company data
-  const searchSirene = useCallback(async (siret: string) => {
-    const cleanSiret = siret.replace(/\s/g, "");
+  // Handle SIRET search with debounce
+  const handleSiretSearch = async (siretValue: string) => {
+    // Clear any pending search
+    if (siretSearchTimeout.current) {
+      clearTimeout(siretSearchTimeout.current);
+    }
+
+    const cleanValue = siretValue.replace(/\s/g, "");
     
-    // Check if it looks like a SIRET (9 or 14 digits)
-    if (!/^\d{9}$|^\d{14}$/.test(cleanSiret)) {
+    // Reset verified state if not a valid SIRET format
+    if (!isSiretFormat(cleanValue)) {
+      setSiretVerified(false);
+      setIsSearchingSiret(false);
       return;
     }
 
+    // Show loading immediately
     setIsSearchingSiret(true);
     setSiretVerified(false);
 
-    try {
-      const response = await fetch(
-        `https://recherche-entreprises.api.gouv.fr/search?q=${encodeURIComponent(cleanSiret)}`
-      );
+    // Debounce the actual API call
+    siretSearchTimeout.current = setTimeout(async () => {
+      console.log("Searching SIRET:", cleanValue);
       
-      if (!response.ok) {
-        throw new Error("API error");
-      }
-
-      const data = await response.json();
+      const companyData = await fetchCompanyBySiret(cleanValue);
       
-      if (data.results && data.results.length > 0) {
-        const company = data.results[0];
-        const siege = company.siege;
+      if (companyData) {
+        console.log("Company found:", companyData);
         
-        // Auto-fill company fields
-        const newFormData = {
-          ...formData,
-          entreprise: company.nom_complet || formData.entreprise,
-          adresseEntreprise: siege?.adresse || "",
-          cpEntreprise: siege?.code_postal || "",
-          villeEntreprise: siege?.libelle_commune || "",
-        };
-        
-        setFormData(newFormData);
+        // Update form with company data
+        setFormData(prev => ({
+          ...prev,
+          entreprise: companyData.nom_complet,
+          adresseEntreprise: companyData.adresse,
+          cpEntreprise: companyData.code_postal,
+          villeEntreprise: companyData.ville,
+        }));
         
         // Mark fields as valid
         setValidFields(prev => ({
           ...prev,
           entreprise: true,
-          adresseEntreprise: !!siege?.adresse,
-          cpEntreprise: !!siege?.code_postal,
-          villeEntreprise: !!siege?.libelle_commune,
+          adresseEntreprise: !!companyData.adresse,
+          cpEntreprise: !!companyData.code_postal,
+          villeEntreprise: !!companyData.ville,
         }));
         
         setSiretVerified(true);
+      } else {
+        console.log("No company found for SIRET:", cleanValue);
       }
-    } catch (error) {
-      // Silently fail - user can fill manually
-      console.log("SIRENE search failed, manual entry available");
-    } finally {
+      
       setIsSearchingSiret(false);
-    }
-  }, [formData]);
+    }, 500); // 500ms debounce
+  };
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (siretSearchTimeout.current) {
+        clearTimeout(siretSearchTimeout.current);
+      }
+    };
+  }, []);
 
   // Handle form field change with validation
   const handleFieldChange = (field: string, value: string) => {
@@ -137,12 +195,7 @@ const TemplateImpact = () => {
 
     // Trigger SIRET search when entreprise field changes
     if (field === "entreprise") {
-      const cleanValue = value.replace(/\s/g, "");
-      if (/^\d{9}$|^\d{14}$/.test(cleanValue)) {
-        searchSirene(value);
-      } else {
-        setSiretVerified(false);
-      }
+      handleSiretSearch(value);
     }
   };
 
