@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Phone, Clock, Zap, CheckCircle, ArrowRight, Shield, TrendingUp, Star, Check, FileText } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import { Phone, Clock, Zap, CheckCircle, ArrowRight, Shield, TrendingUp, Star, Check, FileText, Loader2, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import SEOHead from "@/components/SEOHead";
@@ -34,6 +34,8 @@ const TemplateImpact = () => {
     telephone: "",
   });
   const [validFields, setValidFields] = useState<Record<string, boolean>>({});
+  const [isSearchingSiret, setIsSearchingSiret] = useState(false);
+  const [siretVerified, setSiretVerified] = useState(false);
 
   const products = [
     { height: "16m", capacity: "4T" },
@@ -62,6 +64,63 @@ const TemplateImpact = () => {
     document.getElementById("devis")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Search SIRENE API for company data
+  const searchSirene = useCallback(async (siret: string) => {
+    const cleanSiret = siret.replace(/\s/g, "");
+    
+    // Check if it looks like a SIRET (9 or 14 digits)
+    if (!/^\d{9}$|^\d{14}$/.test(cleanSiret)) {
+      return;
+    }
+
+    setIsSearchingSiret(true);
+    setSiretVerified(false);
+
+    try {
+      const response = await fetch(
+        `https://recherche-entreprises.api.gouv.fr/search?q=${encodeURIComponent(cleanSiret)}`
+      );
+      
+      if (!response.ok) {
+        throw new Error("API error");
+      }
+
+      const data = await response.json();
+      
+      if (data.results && data.results.length > 0) {
+        const company = data.results[0];
+        const siege = company.siege;
+        
+        // Auto-fill company fields
+        const newFormData = {
+          ...formData,
+          entreprise: company.nom_complet || formData.entreprise,
+          adresseEntreprise: siege?.adresse || "",
+          cpEntreprise: siege?.code_postal || "",
+          villeEntreprise: siege?.libelle_commune || "",
+        };
+        
+        setFormData(newFormData);
+        
+        // Mark fields as valid
+        setValidFields(prev => ({
+          ...prev,
+          entreprise: true,
+          adresseEntreprise: !!siege?.adresse,
+          cpEntreprise: !!siege?.code_postal,
+          villeEntreprise: !!siege?.libelle_commune,
+        }));
+        
+        setSiretVerified(true);
+      }
+    } catch (error) {
+      // Silently fail - user can fill manually
+      console.log("SIRENE search failed, manual entry available");
+    } finally {
+      setIsSearchingSiret(false);
+    }
+  }, [formData]);
+
   // Handle form field change with validation
   const handleFieldChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -74,6 +133,16 @@ const TemplateImpact = () => {
       setValidFields(prev => ({ ...prev, [field]: /^[\d\s]{10,}$/.test(value.replace(/\s/g, "")) }));
     } else {
       setValidFields(prev => ({ ...prev, [field]: isValid }));
+    }
+
+    // Trigger SIRET search when entreprise field changes
+    if (field === "entreprise") {
+      const cleanValue = value.replace(/\s/g, "");
+      if (/^\d{9}$|^\d{14}$/.test(cleanValue)) {
+        searchSirene(value);
+      } else {
+        setSiretVerified(false);
+      }
     }
   };
 
@@ -413,16 +482,34 @@ const TemplateImpact = () => {
                       ÉTAPE 2 : ENTREPRISE & LIEU
                     </p>
                     <div className="relative">
-                      <label className="block text-sm font-medium text-foreground mb-2">Nom Entreprise (ou SIRET) *</label>
-                      <input 
-                        type="text" 
-                        className="input-field" 
-                        placeholder="Votre société"
-                        value={formData.entreprise}
-                        onChange={(e) => handleFieldChange("entreprise", e.target.value)}
-                      />
-                      {validFields.entreprise && (
-                        <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Nom Entreprise (ou SIRET) *
+                        {siretVerified && (
+                          <span className="ml-2 inline-flex items-center gap-1 text-xs text-success font-normal animate-fade-in">
+                            <BadgeCheck className="w-3.5 h-3.5" />
+                            Données vérifiées
+                          </span>
+                        )}
+                      </label>
+                      <div className="relative">
+                        <input 
+                          type="text" 
+                          className="input-field pr-10" 
+                          placeholder="Nom société ou SIRET (9 ou 14 chiffres)"
+                          value={formData.entreprise}
+                          onChange={(e) => handleFieldChange("entreprise", e.target.value)}
+                        />
+                        {isSearchingSiret && (
+                          <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary animate-spin" />
+                        )}
+                        {!isSearchingSiret && validFields.entreprise && (
+                          <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success animate-scale-in" />
+                        )}
+                      </div>
+                      {siretVerified && formData.adresseEntreprise && (
+                        <p className="text-xs text-muted-foreground mt-1 animate-fade-in">
+                          📍 {formData.adresseEntreprise}, {formData.cpEntreprise} {formData.villeEntreprise}
+                        </p>
                       )}
                     </div>
                     <div className="grid grid-cols-2 gap-3">
