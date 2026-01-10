@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Phone, Clock, Zap, CheckCircle, ArrowRight, Shield, TrendingUp, Star, Check, FileText, Loader2, BadgeCheck } from "lucide-react";
+import { Phone, Clock, Zap, CheckCircle, ArrowRight, Shield, TrendingUp, Star, Check, FileText, Loader2, BadgeCheck, Building2, MapPin, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import SEOHead from "@/components/SEOHead";
@@ -12,7 +12,7 @@ import logoVinci from "@/assets/logos/vinci.svg";
 import logoEiffage from "@/assets/logos/eiffage.svg";
 import logoSpie from "@/assets/logos/spie-batignolles.svg";
 
-// Helper function to check if value looks like a SIRET
+// Helper function to check if value looks like a SIRET (9 or 14 digits)
 const isSiretFormat = (value: string): boolean => {
   const cleanValue = value.replace(/\s/g, "");
   return /^\d{9}$|^\d{14}$/.test(cleanValue);
@@ -28,17 +28,18 @@ const fetchCompanyBySiret = async (siret: string): Promise<{
   const cleanSiret = siret.replace(/\s/g, "");
   
   try {
+    console.log("🔍 Fetching SIRET:", cleanSiret);
     const response = await fetch(
       `https://recherche-entreprises.api.gouv.fr/search?q=${encodeURIComponent(cleanSiret)}`
     );
     
     if (!response.ok) {
-      console.error("API SIRENE error:", response.status);
+      console.error("❌ API SIRENE error:", response.status);
       return null;
     }
 
     const data = await response.json();
-    console.log("API SIRENE response:", data);
+    console.log("✅ API SIRENE response:", data);
     
     if (data.results && data.results.length > 0) {
       const company = data.results[0];
@@ -54,7 +55,7 @@ const fetchCompanyBySiret = async (siret: string): Promise<{
     
     return null;
   } catch (error) {
-    console.error("SIRENE fetch error:", error);
+    console.error("❌ SIRENE fetch error:", error);
     return null;
   }
 };
@@ -63,26 +64,30 @@ const TemplateImpact = () => {
   const [selectedProduct, setSelectedProduct] = useState<string>("");
   const [formStep, setFormStep] = useState(1);
   const [formData, setFormData] = useState({
-    // Step 1: Matériel & Dates
+    // Step 1: Matériel & Entreprise
     materiel: "",
     dateDebut: "",
     dateFin: "",
-    // Step 2: Entreprise & Lieu
+    siret: "",
     entreprise: "",
     adresseEntreprise: "",
     cpEntreprise: "",
     villeEntreprise: "",
-    cpChantier: "",
-    villeChantier: "",
-    // Step 3: Contact
+    // Step 2: Contact
     nom: "",
     prenom: "",
     email: "",
     telephone: "",
+    // Step 3: Chantier
+    adresseChantier: "",
+    cpChantier: "",
+    villeChantier: "",
+    commentaire: "",
   });
   const [validFields, setValidFields] = useState<Record<string, boolean>>({});
   const [isSearchingSiret, setIsSearchingSiret] = useState(false);
   const [siretVerified, setSiretVerified] = useState(false);
+  const [siretError, setSiretError] = useState("");
   
   // Debounce timer ref
   const siretSearchTimeout = useRef<NodeJS.Timeout | null>(null);
@@ -109,39 +114,44 @@ const TemplateImpact = () => {
     const value = `Chariot Rotatif ${product.height} - Cap. ${product.capacity}`;
     setSelectedProduct(value);
     setFormData(prev => ({ ...prev, materiel: value }));
+    setValidFields(prev => ({ ...prev, materiel: true }));
     
     // Smooth scroll to form
     document.getElementById("devis")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Handle SIRET search with debounce
-  const handleSiretSearch = async (siretValue: string) => {
+  // Handle SIRET field change with debounced API call
+  const handleSiretChange = (value: string) => {
+    // Update siret field
+    setFormData(prev => ({ ...prev, siret: value }));
+    setSiretError("");
+    
     // Clear any pending search
     if (siretSearchTimeout.current) {
       clearTimeout(siretSearchTimeout.current);
     }
 
-    const cleanValue = siretValue.replace(/\s/g, "");
+    const cleanValue = value.replace(/\s/g, "");
     
     // Reset verified state if not a valid SIRET format
-    if (!isSiretFormat(cleanValue)) {
+    if (!cleanValue || !isSiretFormat(cleanValue)) {
       setSiretVerified(false);
       setIsSearchingSiret(false);
       return;
     }
 
-    // Show loading immediately
+    // Show loading immediately when format is valid
     setIsSearchingSiret(true);
     setSiretVerified(false);
 
-    // Debounce the actual API call
+    // Debounce the actual API call (500ms)
     siretSearchTimeout.current = setTimeout(async () => {
-      console.log("Searching SIRET:", cleanValue);
+      console.log("🔎 Searching SIRET:", cleanValue);
       
       const companyData = await fetchCompanyBySiret(cleanValue);
       
       if (companyData) {
-        console.log("Company found:", companyData);
+        console.log("✅ Company found:", companyData);
         
         // Update form with company data
         setFormData(prev => ({
@@ -155,6 +165,7 @@ const TemplateImpact = () => {
         // Mark fields as valid
         setValidFields(prev => ({
           ...prev,
+          siret: true,
           entreprise: true,
           adresseEntreprise: !!companyData.adresse,
           cpEntreprise: !!companyData.code_postal,
@@ -162,12 +173,15 @@ const TemplateImpact = () => {
         }));
         
         setSiretVerified(true);
+        setSiretError("");
       } else {
-        console.log("No company found for SIRET:", cleanValue);
+        console.log("⚠️ No company found for SIRET:", cleanValue);
+        setSiretError("SIRET non trouvé - Saisissez manuellement");
+        setValidFields(prev => ({ ...prev, siret: false }));
       }
       
       setIsSearchingSiret(false);
-    }, 500); // 500ms debounce
+    }, 500);
   };
 
   // Cleanup timeout on unmount
@@ -189,13 +203,10 @@ const TemplateImpact = () => {
       setValidFields(prev => ({ ...prev, [field]: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) }));
     } else if (field === "telephone") {
       setValidFields(prev => ({ ...prev, [field]: /^[\d\s]{10,}$/.test(value.replace(/\s/g, "")) }));
+    } else if (field === "cpChantier" || field === "cpEntreprise") {
+      setValidFields(prev => ({ ...prev, [field]: /^\d{5}$/.test(value.replace(/\s/g, "")) }));
     } else {
       setValidFields(prev => ({ ...prev, [field]: isValid }));
-    }
-
-    // Trigger SIRET search when entreprise field changes
-    if (field === "entreprise") {
-      handleSiretSearch(value);
     }
   };
 
@@ -203,9 +214,9 @@ const TemplateImpact = () => {
   const progressValue = ((formStep - 1) / 2) * 100;
 
   // Check if step is complete
-  const isStep1Complete = formData.materiel && formData.dateDebut && formData.dateFin;
-  const isStep2Complete = formData.entreprise && formData.cpChantier && formData.villeChantier;
-  const isStep3Complete = formData.nom && formData.prenom && formData.email && formData.telephone;
+  const isStep1Complete = formData.materiel && formData.dateDebut && formData.dateFin && formData.entreprise;
+  const isStep2Complete = formData.nom && formData.prenom && formData.email && formData.telephone;
+  const isStep3Complete = formData.cpChantier && formData.villeChantier;
 
   return (
     <div className="min-h-screen bg-background">
@@ -412,7 +423,7 @@ const TemplateImpact = () => {
         </div>
       </section>
 
-      {/* Form Section - Multi-Step */}
+      {/* Form Section - Multi-Step Restructured */}
       <section id="devis" className="py-10 md:py-16 lg:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -452,9 +463,9 @@ const TemplateImpact = () => {
               {/* Progress Bar */}
               <div className="mb-6">
                 <div className="flex justify-between text-xs text-muted-foreground mb-2">
-                  <span className={formStep >= 1 ? "text-primary font-medium" : ""}>1. Le projet</span>
-                  <span className={formStep >= 2 ? "text-primary font-medium" : ""}>2. Le contexte</span>
-                  <span className={formStep >= 3 ? "text-primary font-medium" : ""}>3. Le contact</span>
+                  <span className={formStep >= 1 ? "text-primary font-medium" : ""}>1. Produit & Société</span>
+                  <span className={formStep >= 2 ? "text-primary font-medium" : ""}>2. Contact</span>
+                  <span className={formStep >= 3 ? "text-primary font-medium" : ""}>3. Chantier</span>
                 </div>
                 <Progress value={progressValue} className="h-2" />
               </div>
@@ -462,13 +473,15 @@ const TemplateImpact = () => {
               <h3 className="font-display font-bold text-xl md:text-2xl text-foreground mb-4 md:mb-6">Devis Express</h3>
               
               <form className="space-y-4 md:space-y-5">
-                {/* Step 1: Matériel & Dates */}
+                {/* Step 1: Produit & Entreprise */}
                 {formStep === 1 && (
                   <div className="space-y-4 animate-fade-in">
                     <p className="text-xs font-semibold text-primary mb-3 flex items-center gap-2">
-                      <FileText className="w-4 h-4" strokeWidth={1.5} />
-                      ÉTAPE 1 : MATÉRIEL & DATES
+                      <Building2 className="w-4 h-4" strokeWidth={1.5} />
+                      ÉTAPE 1 : PRODUIT & ENTREPRISE
                     </p>
+                    
+                    {/* Choix du matériel */}
                     <div className="relative">
                       <label className="block text-sm font-medium text-foreground mb-2">Choix du matériel *</label>
                       <select 
@@ -487,6 +500,8 @@ const TemplateImpact = () => {
                         <Check className="absolute right-10 top-9 w-5 h-5 text-success animate-scale-in" />
                       )}
                     </div>
+                    
+                    {/* Dates */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <div className="relative">
                         <label className="block text-sm font-medium text-foreground mb-2">Date début *</label>
@@ -513,6 +528,71 @@ const TemplateImpact = () => {
                         )}
                       </div>
                     </div>
+
+                    {/* Séparateur */}
+                    <div className="border-t border-border pt-4 mt-4">
+                      <p className="text-xs font-medium text-muted-foreground mb-3 flex items-center gap-2">
+                        🏢 IDENTIFICATION ENTREPRISE
+                      </p>
+                    </div>
+
+                    {/* SIRET Field - Dedicated with autocomplete */}
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        N° SIRET 
+                        <span className="text-muted-foreground font-normal ml-1">(optionnel - auto-complétion)</span>
+                        {siretVerified && (
+                          <span className="ml-2 inline-flex items-center gap-1 text-xs text-success font-normal animate-fade-in">
+                            <BadgeCheck className="w-3.5 h-3.5" />
+                            Données vérifiées
+                          </span>
+                        )}
+                      </label>
+                      <div className="relative">
+                        <input 
+                          type="text" 
+                          className={`input-field pr-10 font-mono ${siretError ? 'border-destructive' : ''}`}
+                          placeholder="Ex: 443 061 841 00047"
+                          value={formData.siret}
+                          onChange={(e) => handleSiretChange(e.target.value)}
+                          maxLength={20}
+                        />
+                        {isSearchingSiret && (
+                          <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary animate-spin" />
+                        )}
+                        {!isSearchingSiret && siretVerified && (
+                          <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success animate-scale-in" />
+                        )}
+                      </div>
+                      {siretError && (
+                        <p className="text-xs text-destructive mt-1">{siretError}</p>
+                      )}
+                      {siretVerified && formData.entreprise && (
+                        <div className="mt-2 p-3 bg-success/10 border border-success/20 rounded-lg animate-fade-in">
+                          <p className="text-sm font-medium text-foreground">{formData.entreprise}</p>
+                          <p className="text-xs text-muted-foreground mt-1">
+                            📍 {formData.adresseEntreprise && `${formData.adresseEntreprise}, `}{formData.cpEntreprise} {formData.villeEntreprise}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Nom entreprise - readonly if autocompleted, otherwise editable */}
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-foreground mb-2">Nom de l'entreprise *</label>
+                      <input 
+                        type="text" 
+                        className={`input-field ${siretVerified ? 'bg-muted' : ''}`}
+                        placeholder="Ex: EAP Location"
+                        value={formData.entreprise}
+                        onChange={(e) => handleFieldChange("entreprise", e.target.value)}
+                        readOnly={siretVerified}
+                      />
+                      {validFields.entreprise && (
+                        <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                      )}
+                    </div>
+
                     <Button 
                       type="button"
                       variant="cta" 
@@ -527,104 +607,22 @@ const TemplateImpact = () => {
                   </div>
                 )}
 
-                {/* Step 2: Entreprise & Lieu */}
+                {/* Step 2: Contact */}
                 {formStep === 2 && (
                   <div className="space-y-4 animate-fade-in">
                     <p className="text-xs font-semibold text-primary mb-3 flex items-center gap-2">
-                      <Shield className="w-4 h-4" strokeWidth={1.5} />
-                      ÉTAPE 2 : ENTREPRISE & LIEU
+                      <User className="w-4 h-4" strokeWidth={1.5} />
+                      ÉTAPE 2 : VOTRE CONTACT
                     </p>
-                    <div className="relative">
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Nom Entreprise (ou SIRET) *
-                        {siretVerified && (
-                          <span className="ml-2 inline-flex items-center gap-1 text-xs text-success font-normal animate-fade-in">
-                            <BadgeCheck className="w-3.5 h-3.5" />
-                            Données vérifiées
-                          </span>
-                        )}
-                      </label>
-                      <div className="relative">
-                        <input 
-                          type="text" 
-                          className="input-field pr-10" 
-                          placeholder="Nom société ou SIRET (9 ou 14 chiffres)"
-                          value={formData.entreprise}
-                          onChange={(e) => handleFieldChange("entreprise", e.target.value)}
-                        />
-                        {isSearchingSiret && (
-                          <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary animate-spin" />
-                        )}
-                        {!isSearchingSiret && validFields.entreprise && (
-                          <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success animate-scale-in" />
-                        )}
+                    
+                    {/* Récap entreprise */}
+                    {formData.entreprise && (
+                      <div className="p-3 bg-muted rounded-lg mb-4">
+                        <p className="text-xs text-muted-foreground">Entreprise sélectionnée :</p>
+                        <p className="text-sm font-medium text-foreground">{formData.entreprise}</p>
                       </div>
-                      {siretVerified && formData.adresseEntreprise && (
-                        <p className="text-xs text-muted-foreground mt-1 animate-fade-in">
-                          📍 {formData.adresseEntreprise}, {formData.cpEntreprise} {formData.villeEntreprise}
-                        </p>
-                      )}
-                    </div>
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="relative">
-                        <label className="block text-sm font-medium text-foreground mb-2">CP chantier *</label>
-                        <input 
-                          type="text" 
-                          className="input-field" 
-                          placeholder="75001"
-                          value={formData.cpChantier}
-                          onChange={(e) => handleFieldChange("cpChantier", e.target.value)}
-                        />
-                        {validFields.cpChantier && (
-                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
-                        )}
-                      </div>
-                      <div className="relative">
-                        <label className="block text-sm font-medium text-foreground mb-2">Ville chantier *</label>
-                        <input 
-                          type="text" 
-                          className="input-field" 
-                          placeholder="Paris"
-                          value={formData.villeChantier}
-                          onChange={(e) => handleFieldChange("villeChantier", e.target.value)}
-                        />
-                        {validFields.villeChantier && (
-                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
-                        )}
-                      </div>
-                    </div>
-                    <div className="flex gap-3 mt-4">
-                      <Button 
-                        type="button"
-                        variant="outline" 
-                        size="lg" 
-                        className="flex-1"
-                        onClick={() => setFormStep(1)}
-                      >
-                        Retour
-                      </Button>
-                      <Button 
-                        type="button"
-                        variant="cta" 
-                        size="lg" 
-                        className="flex-1"
-                        onClick={() => setFormStep(3)}
-                        disabled={!isStep2Complete}
-                      >
-                        Continuer
-                        <ArrowRight className="w-5 h-5" />
-                      </Button>
-                    </div>
-                  </div>
-                )}
+                    )}
 
-                {/* Step 3: Contact */}
-                {formStep === 3 && (
-                  <div className="space-y-4 animate-fade-in">
-                    <p className="text-xs font-semibold text-primary mb-3 flex items-center gap-2">
-                      <Phone className="w-4 h-4" strokeWidth={1.5} />
-                      ÉTAPE 3 : VOS COORDONNÉES
-                    </p>
                     <div className="grid grid-cols-2 gap-3">
                       <div className="relative">
                         <label className="block text-sm font-medium text-foreground mb-2">Nom *</label>
@@ -653,8 +651,9 @@ const TemplateImpact = () => {
                         )}
                       </div>
                     </div>
+                    
                     <div className="relative">
-                      <label className="block text-sm font-medium text-foreground mb-2">E-mail *</label>
+                      <label className="block text-sm font-medium text-foreground mb-2">E-mail professionnel *</label>
                       <input 
                         type="email" 
                         className="input-field" 
@@ -666,6 +665,7 @@ const TemplateImpact = () => {
                         <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
                       )}
                     </div>
+                    
                     <div className="relative">
                       <label className="block text-sm font-medium text-foreground mb-2">Téléphone *</label>
                       <input 
@@ -678,6 +678,97 @@ const TemplateImpact = () => {
                       {validFields.telephone && (
                         <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
                       )}
+                    </div>
+
+                    <div className="flex gap-3 mt-4">
+                      <Button 
+                        type="button"
+                        variant="outline" 
+                        size="lg" 
+                        className="flex-1"
+                        onClick={() => setFormStep(1)}
+                      >
+                        Retour
+                      </Button>
+                      <Button 
+                        type="button"
+                        variant="cta" 
+                        size="lg" 
+                        className="flex-1"
+                        onClick={() => setFormStep(3)}
+                        disabled={!isStep2Complete}
+                      >
+                        Continuer
+                        <ArrowRight className="w-5 h-5" />
+                      </Button>
+                    </div>
+                  </div>
+                )}
+
+                {/* Step 3: Chantier */}
+                {formStep === 3 && (
+                  <div className="space-y-4 animate-fade-in">
+                    <p className="text-xs font-semibold text-primary mb-3 flex items-center gap-2">
+                      <MapPin className="w-4 h-4" strokeWidth={1.5} />
+                      ÉTAPE 3 : LIEU DU CHANTIER
+                    </p>
+
+                    {/* Récap */}
+                    <div className="p-3 bg-muted rounded-lg mb-4 space-y-1">
+                      <p className="text-xs text-muted-foreground">Récapitulatif :</p>
+                      <p className="text-sm font-medium text-foreground">{formData.materiel}</p>
+                      <p className="text-xs text-muted-foreground">{formData.entreprise} • {formData.prenom} {formData.nom}</p>
+                    </div>
+
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-foreground mb-2">Adresse du chantier</label>
+                      <input 
+                        type="text" 
+                        className="input-field" 
+                        placeholder="12 rue de la Paix"
+                        value={formData.adresseChantier}
+                        onChange={(e) => handleFieldChange("adresseChantier", e.target.value)}
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="relative">
+                        <label className="block text-sm font-medium text-foreground mb-2">Code postal *</label>
+                        <input 
+                          type="text" 
+                          className="input-field" 
+                          placeholder="75001"
+                          value={formData.cpChantier}
+                          onChange={(e) => handleFieldChange("cpChantier", e.target.value)}
+                          maxLength={5}
+                        />
+                        {validFields.cpChantier && (
+                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                        )}
+                      </div>
+                      <div className="relative">
+                        <label className="block text-sm font-medium text-foreground mb-2">Ville *</label>
+                        <input 
+                          type="text" 
+                          className="input-field" 
+                          placeholder="Paris"
+                          value={formData.villeChantier}
+                          onChange={(e) => handleFieldChange("villeChantier", e.target.value)}
+                        />
+                        {validFields.villeChantier && (
+                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-foreground mb-2">Commentaire / précisions</label>
+                      <textarea 
+                        className="input-field min-h-[80px] resize-none" 
+                        placeholder="Accès difficile, contraintes horaires, besoins spécifiques..."
+                        value={formData.commentaire}
+                        onChange={(e) => handleFieldChange("commentaire", e.target.value)}
+                      />
                     </div>
 
                     {/* Social Proof Badge */}
