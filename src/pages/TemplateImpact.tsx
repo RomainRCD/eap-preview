@@ -512,7 +512,7 @@ const TemplateImpact = () => {
                     <div className="relative">
                       <label className="block text-sm font-medium text-foreground mb-2">
                         N° SIRET 
-                        <span className="text-muted-foreground font-normal ml-1">(optionnel - auto-complétion)</span>
+                        <span className="text-muted-foreground font-normal ml-1">(optionnel - recommandé)</span>
                         {siretVerified && (
                           <span className="ml-2 inline-flex items-center gap-1 text-xs text-success font-normal animate-fade-in">
                             <BadgeCheck className="w-3.5 h-3.5" />
