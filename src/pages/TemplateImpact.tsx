@@ -214,9 +214,9 @@ const TemplateImpact = () => {
   const progressValue = ((formStep - 1) / 2) * 100;
 
   // Check if step is complete
-  const isStep1Complete = formData.materiel && formData.dateDebut && formData.dateFin && formData.entreprise;
+  const isStep1Complete = formData.materiel && formData.entreprise;
   const isStep2Complete = formData.nom && formData.prenom && formData.email && formData.telephone;
-  const isStep3Complete = formData.cpChantier && formData.villeChantier;
+  const isStep3Complete = formData.dateDebut && formData.dateFin && formData.cpChantier && formData.villeChantier;
 
   return (
     <div className="min-h-screen bg-background">
@@ -500,34 +500,6 @@ const TemplateImpact = () => {
                         <Check className="absolute right-10 top-9 w-5 h-5 text-success animate-scale-in" />
                       )}
                     </div>
-                    
-                    {/* Dates */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="relative">
-                        <label className="block text-sm font-medium text-foreground mb-2">Date début *</label>
-                        <input 
-                          type="date" 
-                          className="input-field"
-                          value={formData.dateDebut}
-                          onChange={(e) => handleFieldChange("dateDebut", e.target.value)}
-                        />
-                        {validFields.dateDebut && (
-                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
-                        )}
-                      </div>
-                      <div className="relative">
-                        <label className="block text-sm font-medium text-foreground mb-2">Date fin *</label>
-                        <input 
-                          type="date" 
-                          className="input-field"
-                          value={formData.dateFin}
-                          onChange={(e) => handleFieldChange("dateFin", e.target.value)}
-                        />
-                        {validFields.dateFin && (
-                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
-                        )}
-                      </div>
-                    </div>
 
                     {/* Séparateur */}
                     <div className="border-t border-border pt-4 mt-4">
@@ -718,6 +690,34 @@ const TemplateImpact = () => {
                       <p className="text-xs text-muted-foreground">Récapitulatif :</p>
                       <p className="text-sm font-medium text-foreground">{formData.materiel}</p>
                       <p className="text-xs text-muted-foreground">{formData.entreprise} • {formData.prenom} {formData.nom}</p>
+                    </div>
+
+                    {/* Dates du chantier */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="relative">
+                        <label className="block text-sm font-medium text-foreground mb-2">Date début *</label>
+                        <input 
+                          type="date" 
+                          className="input-field"
+                          value={formData.dateDebut}
+                          onChange={(e) => handleFieldChange("dateDebut", e.target.value)}
+                        />
+                        {validFields.dateDebut && (
+                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                        )}
+                      </div>
+                      <div className="relative">
+                        <label className="block text-sm font-medium text-foreground mb-2">Date fin *</label>
+                        <input 
+                          type="date" 
+                          className="input-field"
+                          value={formData.dateFin}
+                          onChange={(e) => handleFieldChange("dateFin", e.target.value)}
+                        />
+                        {validFields.dateFin && (
+                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                        )}
+                      </div>
                     </div>
 
                     <div className="relative">
