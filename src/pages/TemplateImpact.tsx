@@ -602,6 +602,8 @@ const TemplateImpact = () => {
                           type="text" 
                           className="input-field" 
                           placeholder="Dupont"
+                          name="family-name"
+                          autoComplete="family-name"
                           value={formData.nom}
                           onChange={(e) => handleFieldChange("nom", e.target.value)}
                         />
@@ -615,6 +617,8 @@ const TemplateImpact = () => {
                           type="text" 
                           className="input-field" 
                           placeholder="Jean"
+                          name="given-name"
+                          autoComplete="given-name"
                           value={formData.prenom}
                           onChange={(e) => handleFieldChange("prenom", e.target.value)}
                         />
@@ -630,6 +634,8 @@ const TemplateImpact = () => {
                         type="email" 
                         className="input-field" 
                         placeholder="email@entreprise.fr"
+                        name="email"
+                        autoComplete="email"
                         value={formData.email}
                         onChange={(e) => handleFieldChange("email", e.target.value)}
                       />
@@ -644,6 +650,8 @@ const TemplateImpact = () => {
                         type="tel" 
                         className="input-field" 
                         placeholder="06 XX XX XX XX"
+                        name="tel"
+                        autoComplete="tel"
                         value={formData.telephone}
                         onChange={(e) => handleFieldChange("telephone", e.target.value)}
                       />
