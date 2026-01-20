@@ -30,11 +30,17 @@ const fetchCompanyBySiret = async (siret: string): Promise<{
   try {
     console.log("🔍 Fetching SIRET:", cleanSiret);
     const response = await fetch(
-      `https://recherche-entreprises.api.gouv.fr/search?q=${encodeURIComponent(cleanSiret)}`
+      `https://recherche-entreprises.api.gouv.fr/search?q=${encodeURIComponent(cleanSiret)}`,
+      {
+        method: "GET",
+        headers: {
+          "Accept": "application/json",
+        },
+      }
     );
     
     if (!response.ok) {
-      console.error("❌ API SIRENE error:", response.status);
+      console.error("❌ API SIRENE error:", response.status, response.statusText);
       return null;
     }
 
