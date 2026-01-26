@@ -443,8 +443,8 @@ const TemplateImpact = () => {
 
       {/* Form Section - Multi-Step Restructured */}
       <section id="devis" className="py-10 md:py-16 lg:py-24 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="container mx-auto px-4 overflow-hidden">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center overflow-hidden">
             <div className="text-secondary-foreground">
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold mb-4 md:mb-6">
                 Créez votre devis<br />
@@ -490,7 +490,7 @@ const TemplateImpact = () => {
 
               <h3 className="font-display font-bold text-xl md:text-2xl text-foreground mb-4 md:mb-6">Devis Express</h3>
               
-              <form className="space-y-4 md:space-y-5">
+              <form className="space-y-4 md:space-y-5 overflow-hidden">
                 {/* Step 1: Produit & Entreprise */}
                 {formStep === 1 && (
                   <div className="space-y-4 animate-fade-in">
@@ -615,8 +615,8 @@ const TemplateImpact = () => {
                       </div>
                     )}
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="relative">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                      <div className="relative w-full overflow-hidden">
                         <label className="block text-sm font-medium text-foreground mb-2">Nom *</label>
                         <input 
                           type="text" 
@@ -631,7 +631,7 @@ const TemplateImpact = () => {
                           <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
                         )}
                       </div>
-                      <div className="relative">
+                      <div className="relative w-full overflow-hidden">
                         <label className="block text-sm font-medium text-foreground mb-2">Prénom *</label>
                         <input 
                           type="text" 
@@ -714,15 +714,15 @@ const TemplateImpact = () => {
                     </p>
 
                     {/* Récap */}
-                    <div className="p-3 bg-muted rounded-lg mb-4 space-y-1">
+                    <div className="p-3 bg-muted rounded-lg mb-4 space-y-1 overflow-hidden">
                       <p className="text-xs text-muted-foreground">Récapitulatif :</p>
-                      <p className="text-sm font-medium text-foreground">{formData.materiel}</p>
-                      <p className="text-xs text-muted-foreground">{formData.entreprise} • {formData.prenom} {formData.nom}</p>
+                      <p className="text-sm font-medium text-foreground truncate">{formData.materiel}</p>
+                      <p className="text-xs text-muted-foreground truncate">{formData.entreprise} • {formData.prenom} {formData.nom}</p>
                     </div>
 
                     {/* Dates du chantier */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="relative">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                      <div className="relative w-full overflow-hidden">
                         <label className="block text-sm font-medium text-foreground mb-2">Date début *</label>
                         <input 
                           type="date" 
@@ -734,7 +734,7 @@ const TemplateImpact = () => {
                           <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
                         )}
                       </div>
-                      <div className="relative">
+                      <div className="relative w-full overflow-hidden">
                         <label className="block text-sm font-medium text-foreground mb-2">Date fin *</label>
                         <input 
                           type="date" 
@@ -759,8 +759,8 @@ const TemplateImpact = () => {
                       />
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="relative">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                      <div className="relative w-full overflow-hidden">
                         <label className="block text-sm font-medium text-foreground mb-2">Code postal *</label>
                         <input 
                           type="text" 
@@ -774,7 +774,7 @@ const TemplateImpact = () => {
                           <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
                         )}
                       </div>
-                      <div className="relative">
+                      <div className="relative w-full overflow-hidden">
                         <label className="block text-sm font-medium text-foreground mb-2">Ville *</label>
                         <input 
                           type="text" 
