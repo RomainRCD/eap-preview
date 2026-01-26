@@ -12,6 +12,14 @@ import logoTriangleHorizon from "@/assets/logos/triangle-horizon.jpg";
 import logoEiffage from "@/assets/logos/eiffage.jpg";
 import logoVinci from "@/assets/logos/vinci.jpg";
 
+// Images catalogue
+import catalogTerrassement from "@/assets/catalog/terrassement.jpeg";
+import catalogTravailHauteur from "@/assets/catalog/travail-en-hauteur.jpeg";
+import catalogManutention from "@/assets/catalog/manutention.jpeg";
+import catalogCompactage from "@/assets/catalog/compactage.jpeg";
+import catalogBaseVie from "@/assets/catalog/base-vie.jpeg";
+import catalogAutres from "@/assets/catalog/autres.jpeg";
+
 const Homepage = () => {
   // Catégories du catalogue - comme sur le vrai site
   const catalogCategories = [
@@ -20,42 +28,42 @@ const Homepage = () => {
       icon: Shovel,
       description: "Pelles, mini-pelles, chargeuses",
       link: "/terrassement",
-      image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=400&h=300&fit=crop",
+      image: catalogTerrassement,
     },
     {
       title: "Travail en Hauteur",
       icon: Building,
       description: "Nacelles, PEMP, échafaudages",
       link: "/travail-en-hauteur",
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop",
+      image: catalogTravailHauteur,
     },
     {
       title: "Manutention",
       icon: Package,
       description: "Chariots télescopiques, élévateurs",
       link: "/manutention",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+      image: catalogManutention,
     },
     {
       title: "Compactage",
       icon: Hammer,
       description: "Rouleaux, plaques vibrantes",
       link: "/compactage",
-      image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=300&fit=crop",
+      image: catalogCompactage,
     },
     {
       title: "Base Vie",
       icon: Home,
       description: "Bungalows, roulottes, sanitaires",
       link: "/base-vie",
-      image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=400&h=300&fit=crop",
+      image: catalogBaseVie,
     },
     {
       title: "Autres",
       icon: Wrench,
       description: "Groupes électrogènes, outillage",
       link: "/autres",
-      image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400&h=300&fit=crop",
+      image: catalogAutres,
     },
   ];
 
@@ -122,16 +130,10 @@ const Homepage = () => {
               Lundi - Vendredi : 7h30 - 18h
             </span>
           </div>
-          <div className="flex items-center gap-4">
-            <a href="mailto:contact@eap-location.fr" className="flex items-center gap-1.5 hover:text-primary transition-colors">
-              <Mail className="w-4 h-4" />
-              Contact@eap-location.fr
-            </a>
-            <a href="tel:0368385456" className="flex items-center gap-1.5 font-semibold hover:text-primary transition-colors">
-              <Phone className="w-4 h-4" />
-              03.68.38.54.56
-            </a>
-          </div>
+          <a href="tel:0368385456" className="flex items-center gap-1.5 font-semibold hover:text-primary transition-colors">
+            <Phone className="w-4 h-4" />
+            03.68.38.54.56
+          </a>
         </div>
       </div>
 
