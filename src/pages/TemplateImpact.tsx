@@ -305,7 +305,7 @@ const TemplateImpact = () => {
             </p>
 
             {/* Big Stats - responsive */}
-            <div className="grid grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-10">
+            <div className="flex gap-8 md:gap-12 mb-6 md:mb-10">
               <div>
                 <p className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-primary">99%</p>
                 <p className="text-xs md:text-sm text-secondary-foreground/70">Disponibilité</p>
