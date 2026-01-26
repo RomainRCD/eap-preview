@@ -4,11 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import Index from "./pages/Index";
-import TemplateConfiance from "./pages/TemplateConfiance";
+import Homepage from "./pages/Homepage";
 import TemplateImpact from "./pages/TemplateImpact";
-import TemplateTechnique from "./pages/TemplateTechnique";
-import TemplateFormulaire from "./pages/TemplateFormulaire";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,11 +18,8 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/template-confiance" element={<TemplateConfiance />} />
-            <Route path="/template-impact" element={<TemplateImpact />} />
-            <Route path="/template-technique" element={<TemplateTechnique />} />
-            <Route path="/template-formulaire" element={<TemplateFormulaire />} />
+            <Route path="/" element={<Homepage />} />
+            <Route path="/devis" element={<TemplateImpact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
