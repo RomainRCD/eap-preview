@@ -595,6 +595,7 @@ const TemplateImpact = () => {
                       Continuer
                       <ArrowRight className="w-5 h-5" />
                     </Button>
+                    <p className="text-xs text-muted-foreground text-center mt-3">* Service réservé aux professionnels</p>
                   </div>
                 )}
 
