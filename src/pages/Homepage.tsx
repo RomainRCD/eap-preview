@@ -1,414 +1,362 @@
-import { Phone, Clock, ArrowRight, Shield, TrendingUp, Wrench, Truck, Users, MapPin, CheckCircle, Star, ChevronRight } from "lucide-react";
+import { Phone, Mail, Clock, ArrowRight, ChevronRight, Shovel, Building, Package, Hammer, Home, Wrench, MapPin, Users, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 
-import heroImage from "@/assets/hero-chariot.jpg";
-
-// Logos entreprises BTP
-import logoAssaAbloy from "@/assets/logos/assa-abloy.jpg";
-import logoEdf from "@/assets/logos/edf.png";
-import logoNordex from "@/assets/logos/nordex.jpg";
-import logoTriangleHorizon from "@/assets/logos/triangle-horizon.jpg";
-import logoEiffage from "@/assets/logos/eiffage.jpg";
-import logoVinci from "@/assets/logos/vinci.jpg";
-
 const Homepage = () => {
-  const trustLogos = [
-    { name: "ASSA ABLOY", logo: logoAssaAbloy },
-    { name: "EDF", logo: logoEdf },
-    { name: "Nordex", logo: logoNordex },
-    { name: "Triangle Horizon", logo: logoTriangleHorizon },
-    { name: "Eiffage", logo: logoEiffage },
-    { name: "Vinci", logo: logoVinci },
-  ];
-
-  const advantages = [
+  // Catégories du catalogue - comme sur le vrai site
+  const catalogCategories = [
     {
-      icon: Clock,
-      title: "Réponse en 2h",
-      description: "Devis personnalisé envoyé en moins de 2 heures ouvrées. Pas d'attente, pas de relance.",
+      title: "Terrassement",
+      icon: Shovel,
+      description: "Pelles, mini-pelles, chargeuses",
+      link: "/terrassement",
+      image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=400&h=300&fit=crop",
     },
     {
-      icon: Truck,
-      title: "Livraison 48h",
-      description: "Votre matériel livré sur chantier en 48h partout en France métropolitaine.",
+      title: "Travail en Hauteur",
+      icon: Building,
+      description: "Nacelles, PEMP, échafaudages",
+      link: "/travail-en-hauteur",
+      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop",
+    },
+    {
+      title: "Manutention",
+      icon: Package,
+      description: "Chariots télescopiques, élévateurs",
+      link: "/manutention",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+    },
+    {
+      title: "Compactage",
+      icon: Hammer,
+      description: "Rouleaux, plaques vibrantes",
+      link: "/compactage",
+      image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=300&fit=crop",
+    },
+    {
+      title: "Base Vie",
+      icon: Home,
+      description: "Bungalows, roulottes, sanitaires",
+      link: "/base-vie",
+      image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=400&h=300&fit=crop",
+    },
+    {
+      title: "Autres",
+      icon: Wrench,
+      description: "Groupes électrogènes, outillage",
+      link: "/autres",
+      image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400&h=300&fit=crop",
+    },
+  ];
+
+  // Les 4 piliers du service EAP
+  const missionPillars = [
+    {
+      icon: Users,
+      title: "1 Interlocuteur Unique",
+      description: "Un conseiller dédié de A à Z pour vos demandes de location sur toute la France.",
+    },
+    {
+      icon: Zap,
+      title: "Réponse Sous 2h Maximum",
+      description: "Nous assurons une efficacité opérationnelle en permanence.",
     },
     {
       icon: Shield,
-      title: "99% de disponibilité",
-      description: "Parc de 200+ machines entretenues et contrôlées. Rarement en rupture.",
-    },
-    {
-      icon: Users,
-      title: "Avec ou sans opérateur",
-      description: "Location sèche ou avec conducteur qualifié selon vos besoins.",
-    },
-    {
-      icon: Wrench,
-      title: "SAV 7j/7",
-      description: "Assistance technique et dépannage 7 jours sur 7 pendant toute la durée de location.",
+      title: "Meilleur prix garanti",
+      description: "Notre équipe recherche l'offre disponible, la plus proche et au meilleur prix.",
     },
     {
       icon: MapPin,
-      title: "2 400 points de retrait",
-      description: "Réseau national d'agences partenaires pour retrait ou livraison rapide.",
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "Marc Dubois",
-      role: "Chef de chantier",
-      company: "Vinci Construction",
-      content: "Matériel toujours impeccable et livré dans les temps. EAP est devenu notre partenaire privilégié pour tous nos chantiers en hauteur.",
-      rating: 5,
-    },
-    {
-      name: "Sophie Martin",
-      role: "Responsable achats",
-      company: "Eiffage Énergie",
-      content: "La réactivité d'EAP nous a sauvé plusieurs fois. Un chariot en panne ? Remplacement en 24h. C'est ça le professionnalisme.",
-      rating: 5,
-    },
-    {
-      name: "Jean-Pierre Renard",
-      role: "Directeur travaux",
-      company: "Bouygues Bâtiment",
-      content: "Excellente qualité de service. Les machines sont récentes, bien entretenues, et les prix sont compétitifs.",
-      rating: 5,
-    },
-  ];
-
-  const services = [
-    {
-      title: "Chariot Télescopique Rotatif",
-      description: "De 16m à 35m de hauteur. Capacité jusqu'à 6 tonnes.",
-      features: ["Rotation 360°", "Grande polyvalence", "Accès difficiles"],
-      link: "/devis",
-    },
-    {
-      title: "Chariot Télescopique Fixe",
-      description: "Solution économique pour vos besoins de levage.",
-      features: ["Économique", "Fiable", "Maniable"],
-      link: "/devis",
-    },
-    {
-      title: "Nacelle & Plateforme",
-      description: "Travaux en hauteur sécurisés pour vos équipes.",
-      features: ["Sécurité optimale", "Multi-usage", "Formation incluse"],
-      link: "/devis",
+      title: "Disponibilité à 99%",
+      description: "Nous apportons la solution à votre besoin presque systématiquement.",
     },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="EAP Location | Location Chariot Télescopique & Nacelle BTP | France"
-        description="Location de chariots télescopiques rotatifs et fixes, nacelles pour professionnels du BTP. Livraison 48h, devis en 2h, SAV 7j/7. Plus de 200 machines disponibles."
-        keywords="location chariot télescopique, chariot rotatif, nacelle BTP, location matériel chantier, Manitou location"
+        title="EAP Location | Location Matériel BTP Partout en France"
+        description="EAP Location, spécialiste de la location de matériel BTP pour professionnels. Terrassement, travaux en hauteur, manutention, compactage. 2400 agences partenaires en France."
+        keywords="location matériel BTP, location engins chantier, chariot télescopique, nacelle, pelle mécanique, France"
         canonicalUrl="/"
       />
+
+      {/* Top Bar - Infos contact */}
+      <div className="bg-secondary text-secondary-foreground">
+        <div className="container mx-auto px-4 py-2 flex flex-wrap justify-between items-center text-sm">
+          <div className="flex items-center gap-4">
+            <span className="flex items-center gap-1.5">
+              <Clock className="w-4 h-4" />
+              Lundi - Vendredi : 7h30 - 18h
+            </span>
+          </div>
+          <div className="flex items-center gap-4">
+            <a href="mailto:contact@eap-location.fr" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+              <Mail className="w-4 h-4" />
+              Contact@eap-location.fr
+            </a>
+            <a href="tel:0368385456" className="flex items-center gap-1.5 font-semibold hover:text-primary transition-colors">
+              <Phone className="w-4 h-4" />
+              03.68.38.54.56
+            </a>
+          </div>
+        </div>
+      </div>
 
       {/* Header */}
       <header className="bg-card border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
-              <span className="text-secondary-foreground font-bold text-lg">E</span>
+          <Link to="/" className="flex items-center gap-3">
+            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-xl">E</span>
             </div>
-            <span className="font-display font-bold text-xl text-foreground">EAP Location</span>
+            <div className="hidden sm:block">
+              <span className="font-display font-bold text-xl text-foreground block leading-tight">EAP Location</span>
+              <span className="text-xs text-muted-foreground">Location matériel BTP</span>
+            </div>
           </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link to="/devis" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
-              Nos machines
+          
+          <nav className="hidden lg:flex items-center gap-6">
+            <Link to="/" className="text-foreground font-medium text-sm hover:text-primary transition-colors">
+              Accueil
             </Link>
-            <a href="#avantages" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
-              Nos avantages
-            </a>
-            <a href="#temoignages" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
-              Témoignages
-            </a>
+            <div className="relative group">
+              <button className="text-muted-foreground font-medium text-sm hover:text-primary transition-colors flex items-center gap-1">
+                Catalogue
+                <ChevronRight className="w-4 h-4 rotate-90" />
+              </button>
+            </div>
+            <Link to="/contact" className="text-muted-foreground font-medium text-sm hover:text-primary transition-colors">
+              Contact
+            </Link>
           </nav>
+
           <div className="flex items-center gap-3">
-            <a href="tel:0368385456" className="hidden lg:flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-              <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">03 68 38 54 56</span>
-            </a>
             <Button variant="cta" asChild>
-              <Link to="/devis">Devis gratuit</Link>
+              <Link to="/devis">
+                Obtenir un devis
+              </Link>
             </Button>
           </div>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src={heroImage} 
-            alt="Chariot télescopique rotatif sur chantier" 
-            className="w-full h-full object-cover"
-            loading="eager"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/50"></div>
+      {/* Hero Section - Style sobre et corporate */}
+      <section className="bg-secondary relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
         </div>
         
-        <div className="relative container mx-auto px-4 py-16 md:py-24 lg:py-32">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 rounded-full text-primary-foreground mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              <span className="text-sm font-medium">Disponibilité immédiate</span>
-            </div>
-            
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-secondary-foreground leading-tight mb-6">
-              Location de Matériel BTP
-              <span className="block text-primary mt-2">Professionnel & Fiable</span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-secondary-foreground/80 mb-8 max-w-xl">
-              Chariots télescopiques, nacelles, plateformes. Plus de 200 machines disponibles, livrées en 48h partout en France.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <Button variant="cta" size="xl" asChild>
-                <Link to="/devis">
-                  Demander un devis gratuit
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
-              <Button variant="phone" size="xl" asChild>
-                <a href="tel:0368385456">
-                  <Phone className="w-5 h-5" />
-                  03 68 38 54 56
-                </a>
-              </Button>
-            </div>
-
-            {/* Stats */}
-            <div className="flex flex-wrap gap-6 md:gap-10">
-              <div className="text-center">
-                <p className="text-3xl md:text-4xl font-display font-bold text-primary">200+</p>
-                <p className="text-sm text-secondary-foreground/70">Machines</p>
-              </div>
-              <div className="text-center">
-                <p className="text-3xl md:text-4xl font-display font-bold text-secondary-foreground">48h</p>
-                <p className="text-sm text-secondary-foreground/70">Livraison</p>
-              </div>
-              <div className="text-center">
-                <p className="text-3xl md:text-4xl font-display font-bold text-secondary-foreground">99%</p>
-                <p className="text-sm text-secondary-foreground/70">Disponibilité</p>
-              </div>
-              <div className="text-center">
-                <p className="text-3xl md:text-4xl font-display font-bold text-secondary-foreground">7j/7</p>
-                <p className="text-sm text-secondary-foreground/70">SAV</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Logos */}
-      <section className="py-10 md:py-14 bg-card border-b border-border">
-        <div className="container mx-auto px-4">
-          <p className="text-center text-muted-foreground text-sm mb-8">Ils nous font confiance</p>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto">
-            {trustLogos.map((company, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-xl border border-border shadow-sm flex items-center justify-center p-3 h-16 md:h-20"
-              >
-                <img 
-                  src={company.logo}
-                  alt={`Logo ${company.name}`}
-                  className="w-auto h-full max-h-[40px] md:max-h-[50px] object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-2 block">Nos solutions</span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-              Matériel adapté à vos chantiers
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Location courte ou longue durée, avec ou sans opérateur. Nous avons la solution pour tous vos besoins.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {services.map((service, index) => (
-              <div key={index} className="bg-card border border-border rounded-2xl p-6 hover:shadow-lg hover:border-primary/50 transition-all duration-300 group">
-                <h3 className="font-display font-bold text-xl text-foreground mb-3 group-hover:text-primary transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground mb-4 text-sm">{service.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-foreground">
-                      <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link 
-                  to={service.link}
-                  className="inline-flex items-center gap-1 text-primary font-medium text-sm hover:gap-2 transition-all"
-                >
-                  Demander un devis
-                  <ChevronRight className="w-4 h-4" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Advantages Section */}
-      <section id="avantages" className="py-16 md:py-24 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-2 block">Pourquoi EAP Location</span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-              Les avantages qui font la différence
-            </h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {advantages.map((advantage, index) => (
-              <div key={index} className="bg-card rounded-xl p-6 border border-border hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <advantage.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
-                </div>
-                <h3 className="font-display font-semibold text-lg text-foreground mb-2">{advantage.title}</h3>
-                <p className="text-muted-foreground text-sm">{advantage.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section id="temoignages" className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-2 block">Témoignages</span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-              Ce que disent nos clients
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-card border border-border rounded-2xl p-6">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="text-foreground mb-6 italic">"{testimonial.content}"</p>
-                <div className="border-t border-border pt-4">
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                  <p className="text-sm text-primary font-medium">{testimonial.company}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-secondary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary-foreground mb-4">
-            Prêt à démarrer votre projet ?
-          </h2>
-          <p className="text-secondary-foreground/80 mb-8 max-w-xl mx-auto">
-            Obtenez votre devis personnalisé en moins de 2 heures. Sans engagement, sans surprise.
+        <div className="relative container mx-auto px-4 py-16 md:py-24 text-center">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-secondary-foreground leading-tight mb-6">
+            LOUEZ VOTRE MATÉRIEL BTP
+            <span className="block text-primary mt-2">PARTOUT EN FRANCE</span>
+          </h1>
+          
+          <p className="text-lg md:text-xl text-secondary-foreground/80 mb-8 max-w-2xl mx-auto">
+            Disponibilité du Lundi au Vendredi de 7h30 à 18h
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button variant="cta" size="xl" asChild>
               <Link to="/devis">
-                Demander un devis gratuit
+                OBTENEZ VOTRE DEVIS
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
-            <Button variant="white" size="xl" asChild>
+            <Button variant="phone" size="xl" asChild>
+              <a href="tel:0368385456">
+                <Phone className="w-5 h-5" />
+                APPELEZ-NOUS
+              </a>
+            </Button>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6 text-secondary-foreground/70 text-sm">
+            <span className="flex items-center gap-2">
+              <Mail className="w-4 h-4" />
+              Contact@eap-location.fr
+            </span>
+            <span className="flex items-center gap-2">
+              <Phone className="w-4 h-4" />
+              03.68.38.54.56
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Fonctionnement */}
+      <section className="py-12 md:py-16 bg-card border-b border-border">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-muted-foreground text-sm uppercase tracking-wider mb-2">Le fonctionnement de notre service</p>
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-primary mb-2">La Technique</h2>
+        </div>
+      </section>
+
+      {/* Catalogue Grid */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <p className="text-muted-foreground text-sm uppercase tracking-wider mb-2">Notre</p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+              Catalogue
+            </h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto">
+              EAP location propose la plus large gamme de matériels BTP en France. Vous retrouverez dans notre catalogue du matériel de terrassements, de travaux en hauteur, de manutention, de compactage, de base vie et du matériel spécifique.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {catalogCategories.map((category, index) => (
+              <Link 
+                key={index}
+                to={category.link}
+                className="group relative overflow-hidden rounded-xl border border-border bg-card hover:border-primary transition-all duration-300 hover:shadow-lg"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={category.image} 
+                    alt={category.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/40 to-transparent"></div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                      <category.icon className="w-5 h-5 text-primary-foreground" />
+                    </div>
+                    <h3 className="font-display font-bold text-xl text-white group-hover:text-primary transition-colors">
+                      {category.title}
+                    </h3>
+                  </div>
+                  <p className="text-white/80 text-sm">{category.description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Notre Mission - Les 4 piliers */}
+      <section className="py-16 md:py-24 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <p className="text-muted-foreground text-sm uppercase tracking-wider mb-2">Notre Mission</p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+              Pourquoi travailler avec nous ?
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {missionPillars.map((pillar, index) => (
+              <div key={index} className="bg-card rounded-xl p-6 border border-border text-center hover:shadow-md transition-shadow">
+                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <pillar.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-display font-semibold text-lg text-foreground mb-2">{pillar.title}</h3>
+                <p className="text-muted-foreground text-sm">{pillar.description}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Téléphone */}
+          <div className="text-center mt-12">
+            <Button variant="phone" size="xl" asChild>
               <a href="tel:0368385456">
                 <Phone className="w-5 h-5" />
                 03 68 38 54 56
               </a>
             </Button>
+            <p className="text-muted-foreground text-sm mt-4">Service BtoB pour les pros</p>
+            <p className="text-muted-foreground text-xs">Un service assuré par des professionnels pour des professionnels.</p>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground text-background py-12">
+      <footer className="bg-secondary text-secondary-foreground py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {/* À propos */}
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">E</span>
-                </div>
-                <span className="font-display font-bold text-xl">EAP Location</span>
-              </div>
-              <p className="text-background/70 text-sm">
-                Spécialiste de la location de matériel BTP depuis 2016. Chariots télescopiques, nacelles et plateformes.
+              <h4 className="font-display font-semibold text-lg mb-4">A Propos de nous</h4>
+              <p className="text-secondary-foreground/80 text-sm leading-relaxed">
+                EAP location est une société Française spécialisée dans la location de matériels BTP pour professionnels. Notre service s'adresse aux professionnels sur le territoire français. Nous sommes en partenariat avec 2400 agences, ce qui nous permet d'assurer un service de qualité où que vous soyez.
               </p>
             </div>
+
+            {/* Navigation */}
             <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm text-background/70">
+              <h4 className="font-display font-semibold text-lg mb-4">Navigation</h4>
+              <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="tel:0368385456" className="hover:text-primary transition-colors">03 68 38 54 56</a>
+                  <Link to="/" className="text-secondary-foreground/80 hover:text-primary transition-colors">Accueil</Link>
                 </li>
                 <li>
-                  <a href="mailto:contact@eap-location.fr" className="hover:text-primary transition-colors">contact@eap-location.fr</a>
+                  <Link to="/contact" className="text-secondary-foreground/80 hover:text-primary transition-colors">Contactez-nous !</Link>
                 </li>
-                <li>Lun-Ven 7h30-18h</li>
+                <li>
+                  <Link to="/terrassement" className="text-secondary-foreground/80 hover:text-primary transition-colors">Terrassement</Link>
+                </li>
+                <li>
+                  <Link to="/travail-en-hauteur" className="text-secondary-foreground/80 hover:text-primary transition-colors">Travail en Hauteur</Link>
+                </li>
+                <li>
+                  <Link to="/manutention" className="text-secondary-foreground/80 hover:text-primary transition-colors">Manutention</Link>
+                </li>
+                <li>
+                  <Link to="/compactage" className="text-secondary-foreground/80 hover:text-primary transition-colors">Compactage</Link>
+                </li>
+                <li>
+                  <Link to="/base-vie" className="text-secondary-foreground/80 hover:text-primary transition-colors">Base Vie</Link>
+                </li>
+                <li>
+                  <Link to="/autres" className="text-secondary-foreground/80 hover:text-primary transition-colors">Autres</Link>
+                </li>
+                <li>
+                  <Link to="/mentions-legales" className="text-secondary-foreground/80 hover:text-primary transition-colors">Mentions Légales</Link>
+                </li>
               </ul>
             </div>
+
+            {/* Informations de contact */}
             <div>
-              <h4 className="font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-sm text-background/70">
-                <li>Chariot télescopique rotatif</li>
-                <li>Chariot télescopique fixe</li>
-                <li>Nacelle élévatrice</li>
-                <li>Location avec opérateur</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Informations</h4>
-              <ul className="space-y-2 text-sm text-background/70">
-                <li>
-                  <Link to="/devis" className="hover:text-primary transition-colors">Demander un devis</Link>
+              <h4 className="font-display font-semibold text-lg mb-4">Informations de Contact</h4>
+              <ul className="space-y-3 text-sm text-secondary-foreground/80">
+                <li className="flex items-start gap-2">
+                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                  <span>15 avenue du Great EASTERN, 80330 LONGUEAU</span>
                 </li>
-                <li>CGV</li>
-                <li>Mentions légales</li>
+                <li>Zone d'intervention : France métropole + EUROPE</li>
+                <li className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 flex-shrink-0" />
+                  <a href="tel:0368385456" className="hover:text-primary transition-colors font-semibold">03.68.38.54.56</a>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 flex-shrink-0" />
+                  <span>Lundi – Vendredi : 7h30 – 18h</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Mail className="w-4 h-4 flex-shrink-0" />
+                  <a href="mailto:contact@eap-location.fr" className="hover:text-primary transition-colors">Contact@eap-location.fr</a>
+                </li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-background/20 pt-8 text-center text-sm text-background/60">
-            <p>© {new Date().getFullYear()} EAP Location. Tous droits réservés.</p>
+
+          <div className="border-t border-secondary-foreground/20 pt-8 text-center text-sm text-secondary-foreground/60">
+            <p>&copy; {new Date().getFullYear()} EAP Location. Tous droits réservés.</p>
           </div>
         </div>
       </footer>
 
       {/* Mobile Sticky CTA */}
-      <div className="fixed bottom-0 left-0 right-0 bg-card border-t border-border p-3 md:hidden z-50">
-        <div className="flex gap-2">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-card border-t border-border p-3 z-50">
+        <div className="flex gap-3">
           <Button variant="phone" className="flex-1" asChild>
             <a href="tel:0368385456">
               <Phone className="w-4 h-4" />
@@ -422,9 +370,6 @@ const Homepage = () => {
           </Button>
         </div>
       </div>
-
-      {/* Spacer for mobile sticky CTA */}
-      <div className="h-16 md:hidden"></div>
     </div>
   );
 };
