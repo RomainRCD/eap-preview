@@ -477,7 +477,7 @@ const TemplateImpact = () => {
               </div>
             </div>
             
-            <div className="bg-card rounded-xl md:rounded-2xl p-5 md:p-8 shadow-2xl">
+            <div className="bg-card rounded-xl md:rounded-2xl p-5 md:p-8 shadow-2xl overflow-hidden w-full max-w-full">
               {/* Progress Bar */}
               <div className="mb-6">
                 <div className="flex justify-between text-xs text-muted-foreground mb-2">
@@ -615,7 +615,7 @@ const TemplateImpact = () => {
                       </div>
                     )}
 
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <div className="relative">
                         <label className="block text-sm font-medium text-foreground mb-2">Nom *</label>
                         <input 
@@ -759,7 +759,7 @@ const TemplateImpact = () => {
                       />
                     </div>
 
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <div className="relative">
                         <label className="block text-sm font-medium text-foreground mb-2">Code postal *</label>
                         <input 
