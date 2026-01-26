@@ -858,7 +858,7 @@ const TemplateImpact = () => {
         <Button variant="cta" size="lg" asChild className="flex-1">
           <a href="#devis">
             <FileText className="w-5 h-5" />
-            Devis Rapide
+            Devis Express
           </a>
         </Button>
       </div>
