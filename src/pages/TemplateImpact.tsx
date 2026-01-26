@@ -11,6 +11,10 @@ import logoBouygues from "@/assets/logos/bouygues.svg";
 import logoVinci from "@/assets/logos/vinci.svg";
 import logoEiffage from "@/assets/logos/eiffage.svg";
 import logoSpie from "@/assets/logos/spie-batignolles.svg";
+import logoAssaAbloy from "@/assets/logos/assa-abloy.jpg";
+import logoEdf from "@/assets/logos/edf.png";
+import logoNordex from "@/assets/logos/nordex.jpg";
+import logoTriangleHorizon from "@/assets/logos/triangle-horizon.jpg";
 
 // Helper function to check if value looks like a SIRET (9 or 14 digits)
 const isSiretFormat = (value: string): boolean => {
@@ -113,6 +117,10 @@ const TemplateImpact = () => {
     { name: "Eiffage", logo: logoEiffage },
     { name: "Vinci", logo: logoVinci },
     { name: "Spie Batignolles", logo: logoSpie },
+    { name: "ASSA ABLOY", logo: logoAssaAbloy },
+    { name: "EDF", logo: logoEdf },
+    { name: "Nordex", logo: logoNordex },
+    { name: "Triangle Horizon", logo: logoTriangleHorizon },
   ];
 
   // Handle product selection and scroll to form
