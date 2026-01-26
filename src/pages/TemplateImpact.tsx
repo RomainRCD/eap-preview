@@ -397,22 +397,15 @@ const TemplateImpact = () => {
           <div className="mt-10 md:mt-14 max-w-2xl mx-auto">
             <h3 className="text-center text-sm md:text-base font-semibold text-foreground mb-4">Options disponibles</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              {[
-                { name: "Godet Terre", icon: "🪣" },
-                { name: "Potence", icon: "🏗️" },
-                { name: "Treuil 5T", icon: "⚙️" },
-                { name: "Radio Télécommande", icon: "📡" },
-              ].map((option, i) => (
+              {["Godet Terre", "Potence", "Treuil 5T", "Radio Télécommande"].map((option, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-center gap-2 px-3 py-3 bg-card border border-border rounded-lg text-muted-foreground"
+                  className="flex items-center justify-center px-3 py-3 bg-card border border-border rounded-lg text-muted-foreground"
                 >
-                  <span className="text-base">{option.icon}</span>
-                  <span className="text-xs md:text-sm font-medium">{option.name}</span>
+                  <span className="text-xs md:text-sm font-medium">{option}</span>
                 </div>
               ))}
             </div>
-            <p className="text-xs text-muted-foreground mt-3 text-center italic">Options à préciser lors de l'appel</p>
           </div>
         </div>
       </section>
