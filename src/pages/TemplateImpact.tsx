@@ -11,6 +11,8 @@ import logoAssaAbloy from "@/assets/logos/assa-abloy.jpg";
 import logoEdf from "@/assets/logos/edf.png";
 import logoNordex from "@/assets/logos/nordex.jpg";
 import logoTriangleHorizon from "@/assets/logos/triangle-horizon.jpg";
+import logoEiffage from "@/assets/logos/eiffage.jpg";
+import logoVinci from "@/assets/logos/vinci.jpg";
 
 // Helper function to check if value looks like a SIRET (9 or 14 digits)
 const isSiretFormat = (value: string): boolean => {
@@ -113,6 +115,8 @@ const TemplateImpact = () => {
     { name: "EDF", logo: logoEdf },
     { name: "Nordex", logo: logoNordex },
     { name: "Triangle Horizon", logo: logoTriangleHorizon },
+    { name: "Eiffage", logo: logoEiffage },
+    { name: "Vinci", logo: logoVinci },
   ];
 
   // Handle product selection and scroll to form
@@ -343,7 +347,7 @@ const TemplateImpact = () => {
               Ils nous font confiance
             </h3>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-6 max-w-6xl mx-auto">
             {trustLogos.map((company, index) => (
               <div 
                 key={index}
