@@ -7,10 +7,6 @@ import SEOHead from "@/components/SEOHead";
 import heroImage from "@/assets/hero-chariot.jpg";
 
 // Logos entreprises BTP
-import logoBouygues from "@/assets/logos/bouygues.svg";
-import logoVinci from "@/assets/logos/vinci.svg";
-import logoEiffage from "@/assets/logos/eiffage.svg";
-import logoSpie from "@/assets/logos/spie-batignolles.svg";
 import logoAssaAbloy from "@/assets/logos/assa-abloy.jpg";
 import logoEdf from "@/assets/logos/edf.png";
 import logoNordex from "@/assets/logos/nordex.jpg";
@@ -113,10 +109,6 @@ const TemplateImpact = () => {
   ];
 
   const trustLogos = [
-    { name: "Bouygues Construction", logo: logoBouygues },
-    { name: "Eiffage", logo: logoEiffage },
-    { name: "Vinci", logo: logoVinci },
-    { name: "Spie Batignolles", logo: logoSpie },
     { name: "ASSA ABLOY", logo: logoAssaAbloy },
     { name: "EDF", logo: logoEdf },
     { name: "Nordex", logo: logoNordex },
