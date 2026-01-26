@@ -241,7 +241,7 @@ const TemplateImpact = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
             </span>
-            Disponibilité immédiate 99%
+            Réponse garantie en 2h max
           </span>
           <Button variant="white" size="sm" asChild>
             <a href="tel:0368385456">
@@ -285,15 +285,16 @@ const TemplateImpact = () => {
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-transparent"></div>
+          {/* Mention photo non contractuelle */}
+          <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 z-10">
+            <span className="text-[10px] md:text-xs text-white/70 bg-black/40 px-2 py-1 rounded">
+              * Photo non contractuelle
+            </span>
+          </div>
         </div>
         
         <div className="relative container mx-auto px-4 py-12 md:py-20 lg:py-32">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
-              <Zap className="w-5 h-5 md:w-6 md:h-6 text-primary" strokeWidth={1.5} />
-              <span className="text-primary font-semibold text-sm md:text-base">Réponse garantie en 2h max</span>
-            </div>
-            
             <h1 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold text-secondary-foreground leading-tight mb-4 md:mb-6">
               Chariot Rotatif
               <span className="block text-primary">Jusqu'à 35m</span>
@@ -304,18 +305,14 @@ const TemplateImpact = () => {
             </p>
 
             {/* Big Stats - responsive */}
-            <div className="grid grid-cols-3 gap-4 md:gap-8 mb-6 md:mb-10">
+            <div className="grid grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-10">
               <div>
                 <p className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-primary">99%</p>
                 <p className="text-xs md:text-sm text-secondary-foreground/70">Disponibilité</p>
               </div>
               <div>
-                <p className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-secondary-foreground">2400</p>
-                <p className="text-xs md:text-sm text-secondary-foreground/70">Agences</p>
-              </div>
-              <div>
-                <p className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-secondary-foreground">2h</p>
-                <p className="text-xs md:text-sm text-secondary-foreground/70">Réponse max</p>
+                <p className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-secondary-foreground">2 400</p>
+                <p className="text-xs md:text-sm text-secondary-foreground/70">Réseau d'agences</p>
               </div>
             </div>
 
@@ -415,7 +412,7 @@ const TemplateImpact = () => {
                 <Zap className="w-5 h-5 md:w-7 md:h-7 text-success-foreground" strokeWidth={1.5} />
               </div>
               <h3 className="font-display font-bold text-lg md:text-xl mb-2 md:mb-3">Réponse en 2h max</h3>
-              <p className="text-muted-foreground text-sm md:text-base">Urgence ou planification, nous nous engageons à répondre en moins de 2 heures.</p>
+              <p className="text-muted-foreground text-sm md:text-base">Urgence ou planification, nous nous engageons à vous rappeler en moins de 2 heures.</p>
             </div>
             
             <div className="bg-card border border-border rounded-xl md:rounded-2xl p-5 md:p-8 card-hover sm:col-span-2 md:col-span-1">
@@ -423,7 +420,7 @@ const TemplateImpact = () => {
                 <TrendingUp className="w-5 h-5 md:w-7 md:h-7 text-accent-foreground" strokeWidth={1.5} />
               </div>
               <h3 className="font-display font-bold text-lg md:text-xl mb-2 md:mb-3">99% de disponibilité</h3>
-              <p className="text-muted-foreground text-sm md:text-base">Notre réseau de 2400 agences nous permet de garantir la disponibilité.</p>
+              <p className="text-muted-foreground text-sm md:text-base">Notre réseau de 2 400 agences nous permet de garantir la disponibilité.</p>
             </div>
           </div>
         </div>
@@ -435,7 +432,7 @@ const TemplateImpact = () => {
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-secondary-foreground">
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold mb-4 md:mb-6">
-                Obtenez votre devis<br />
+                Créez votre devis<br />
                 <span className="text-primary">en 2 minutes</span>
               </h2>
               <ul className="space-y-3 md:space-y-4">
