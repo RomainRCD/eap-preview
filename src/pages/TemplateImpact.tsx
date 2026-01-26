@@ -707,48 +707,52 @@ const TemplateImpact = () => {
 
                 {/* Step 3: Chantier */}
                 {formStep === 3 && (
-                  <div className="space-y-4 animate-fade-in">
+                  <div className="space-y-4 animate-fade-in w-full max-w-full overflow-hidden box-border">
                     <p className="text-xs font-semibold text-primary mb-3 flex items-center gap-2">
-                      <MapPin className="w-4 h-4" strokeWidth={1.5} />
-                      ÉTAPE 3 : LIEU DU CHANTIER
+                      <MapPin className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
+                      <span>ÉTAPE 3 : LIEU DU CHANTIER</span>
                     </p>
 
                     {/* Récap */}
-                    <div className="p-3 bg-muted rounded-lg mb-4 space-y-1 overflow-hidden">
+                    <div className="p-3 bg-muted rounded-lg mb-4 space-y-1 overflow-hidden w-full max-w-full">
                       <p className="text-xs text-muted-foreground">Récapitulatif :</p>
                       <p className="text-sm font-medium text-foreground truncate">{formData.materiel}</p>
                       <p className="text-xs text-muted-foreground truncate">{formData.entreprise} • {formData.prenom} {formData.nom}</p>
                     </div>
 
                     {/* Dates du chantier */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-                      <div className="relative w-full overflow-hidden">
+                    <div className="flex flex-col gap-3 w-full">
+                      <div className="relative w-full">
                         <label className="block text-sm font-medium text-foreground mb-2">Date début *</label>
-                        <input 
-                          type="date" 
-                          className="input-field"
-                          value={formData.dateDebut}
-                          onChange={(e) => handleFieldChange("dateDebut", e.target.value)}
-                        />
-                        {validFields.dateDebut && (
-                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
-                        )}
+                        <div className="relative w-full">
+                          <input 
+                            type="date" 
+                            className="input-field pr-10"
+                            value={formData.dateDebut}
+                            onChange={(e) => handleFieldChange("dateDebut", e.target.value)}
+                          />
+                          {validFields.dateDebut && (
+                            <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success animate-scale-in pointer-events-none" />
+                          )}
+                        </div>
                       </div>
-                      <div className="relative w-full overflow-hidden">
+                      <div className="relative w-full">
                         <label className="block text-sm font-medium text-foreground mb-2">Date fin *</label>
-                        <input 
-                          type="date" 
-                          className="input-field"
-                          value={formData.dateFin}
-                          onChange={(e) => handleFieldChange("dateFin", e.target.value)}
-                        />
-                        {validFields.dateFin && (
-                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
-                        )}
+                        <div className="relative w-full">
+                          <input 
+                            type="date" 
+                            className="input-field pr-10"
+                            value={formData.dateFin}
+                            onChange={(e) => handleFieldChange("dateFin", e.target.value)}
+                          />
+                          {validFields.dateFin && (
+                            <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success animate-scale-in pointer-events-none" />
+                          )}
+                        </div>
                       </div>
                     </div>
 
-                    <div className="relative">
+                    <div className="relative w-full">
                       <label className="block text-sm font-medium text-foreground mb-2">Adresse du chantier</label>
                       <input 
                         type="text" 
@@ -759,33 +763,37 @@ const TemplateImpact = () => {
                       />
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-                      <div className="relative w-full overflow-hidden">
+                    <div className="flex flex-col gap-3 w-full">
+                      <div className="relative w-full">
                         <label className="block text-sm font-medium text-foreground mb-2">Code postal *</label>
-                        <input 
-                          type="text" 
-                          className="input-field" 
-                          placeholder="75001"
-                          value={formData.cpChantier}
-                          onChange={(e) => handleFieldChange("cpChantier", e.target.value)}
-                          maxLength={5}
-                        />
-                        {validFields.cpChantier && (
-                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
-                        )}
+                        <div className="relative w-full">
+                          <input 
+                            type="text" 
+                            className="input-field pr-10" 
+                            placeholder="75001"
+                            value={formData.cpChantier}
+                            onChange={(e) => handleFieldChange("cpChantier", e.target.value)}
+                            maxLength={5}
+                          />
+                          {validFields.cpChantier && (
+                            <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success animate-scale-in pointer-events-none" />
+                          )}
+                        </div>
                       </div>
-                      <div className="relative w-full overflow-hidden">
+                      <div className="relative w-full">
                         <label className="block text-sm font-medium text-foreground mb-2">Ville *</label>
-                        <input 
-                          type="text" 
-                          className="input-field" 
-                          placeholder="Paris"
-                          value={formData.villeChantier}
-                          onChange={(e) => handleFieldChange("villeChantier", e.target.value)}
-                        />
-                        {validFields.villeChantier && (
-                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
-                        )}
+                        <div className="relative w-full">
+                          <input 
+                            type="text" 
+                            className="input-field pr-10" 
+                            placeholder="Paris"
+                            value={formData.villeChantier}
+                            onChange={(e) => handleFieldChange("villeChantier", e.target.value)}
+                          />
+                          {validFields.villeChantier && (
+                            <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success animate-scale-in pointer-events-none" />
+                          )}
+                        </div>
                       </div>
                     </div>
 
