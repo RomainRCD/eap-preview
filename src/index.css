@@ -168,7 +168,7 @@
   }
 
   .input-field {
-    @apply w-full min-w-0 px-4 py-3 border border-border rounded-lg bg-card focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 box-border text-base;
+    @apply w-full min-w-0 px-4 py-3 border border-border rounded-lg bg-card focus:border-primary focus:outline-none box-border text-base;
     max-width: 100%;
     width: 100%;
     -webkit-appearance: none;

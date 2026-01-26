@@ -722,37 +722,27 @@ const TemplateImpact = () => {
 
                     {/* Dates du chantier */}
                     <div className="flex flex-col gap-3 w-full">
-                      <div className="relative w-full">
+                      <div className="w-full">
                         <label className="block text-sm font-medium text-foreground mb-2">Date début *</label>
-                        <div className="relative w-full">
-                          <input 
-                            type="date" 
-                            className="input-field pr-10"
-                            value={formData.dateDebut}
-                            onChange={(e) => handleFieldChange("dateDebut", e.target.value)}
-                          />
-                          {validFields.dateDebut && (
-                            <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success animate-scale-in pointer-events-none" />
-                          )}
-                        </div>
+                        <input 
+                          type="date" 
+                          className="input-field"
+                          value={formData.dateDebut}
+                          onChange={(e) => handleFieldChange("dateDebut", e.target.value)}
+                        />
                       </div>
-                      <div className="relative w-full">
+                      <div className="w-full">
                         <label className="block text-sm font-medium text-foreground mb-2">Date fin *</label>
-                        <div className="relative w-full">
-                          <input 
-                            type="date" 
-                            className="input-field pr-10"
-                            value={formData.dateFin}
-                            onChange={(e) => handleFieldChange("dateFin", e.target.value)}
-                          />
-                          {validFields.dateFin && (
-                            <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success animate-scale-in pointer-events-none" />
-                          )}
-                        </div>
+                        <input 
+                          type="date" 
+                          className="input-field"
+                          value={formData.dateFin}
+                          onChange={(e) => handleFieldChange("dateFin", e.target.value)}
+                        />
                       </div>
                     </div>
 
-                    <div className="relative w-full">
+                    <div className="w-full">
                       <label className="block text-sm font-medium text-foreground mb-2">Adresse du chantier</label>
                       <input 
                         type="text" 
@@ -764,36 +754,26 @@ const TemplateImpact = () => {
                     </div>
 
                     <div className="flex flex-col gap-3 w-full">
-                      <div className="relative w-full">
+                      <div className="w-full">
                         <label className="block text-sm font-medium text-foreground mb-2">Code postal *</label>
-                        <div className="relative w-full">
-                          <input 
-                            type="text" 
-                            className="input-field pr-10" 
-                            placeholder="75001"
-                            value={formData.cpChantier}
-                            onChange={(e) => handleFieldChange("cpChantier", e.target.value)}
-                            maxLength={5}
-                          />
-                          {validFields.cpChantier && (
-                            <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success animate-scale-in pointer-events-none" />
-                          )}
-                        </div>
+                        <input 
+                          type="text" 
+                          className="input-field" 
+                          placeholder="75001"
+                          value={formData.cpChantier}
+                          onChange={(e) => handleFieldChange("cpChantier", e.target.value)}
+                          maxLength={5}
+                        />
                       </div>
-                      <div className="relative w-full">
+                      <div className="w-full">
                         <label className="block text-sm font-medium text-foreground mb-2">Ville *</label>
-                        <div className="relative w-full">
-                          <input 
-                            type="text" 
-                            className="input-field pr-10" 
-                            placeholder="Paris"
-                            value={formData.villeChantier}
-                            onChange={(e) => handleFieldChange("villeChantier", e.target.value)}
-                          />
-                          {validFields.villeChantier && (
-                            <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success animate-scale-in pointer-events-none" />
-                          )}
-                        </div>
+                        <input 
+                          type="text" 
+                          className="input-field" 
+                          placeholder="Paris"
+                          value={formData.villeChantier}
+                          onChange={(e) => handleFieldChange("villeChantier", e.target.value)}
+                        />
                       </div>
                     </div>
 
@@ -817,12 +797,12 @@ const TemplateImpact = () => {
                       <span>4.9/5 basé sur 150+ interventions le mois dernier</span>
                     </div>
 
-                    <div className="flex gap-3">
+                    <div className="flex flex-col sm:flex-row gap-3">
                       <Button 
                         type="button"
                         variant="outline" 
                         size="lg" 
-                        className="flex-1"
+                        className="w-full sm:w-auto sm:flex-1"
                         onClick={() => setFormStep(2)}
                       >
                         Retour
@@ -831,11 +811,11 @@ const TemplateImpact = () => {
                         type="submit"
                         variant="cta" 
                         size="lg" 
-                        className="flex-1"
+                        className="w-full sm:w-auto sm:flex-1"
                         disabled={!isStep3Complete}
                       >
                         Envoyer ma demande
-                        <ArrowRight className="w-5 h-5" />
+                        <ArrowRight className="w-5 h-5 flex-shrink-0 ml-2" />
                       </Button>
                     </div>
                   </div>
