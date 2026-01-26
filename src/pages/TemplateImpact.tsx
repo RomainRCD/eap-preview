@@ -392,6 +392,28 @@ const TemplateImpact = () => {
               </button>
             ))}
           </div>
+
+          {/* Options disponibles - Affichage indicatif */}
+          <div className="mt-10 md:mt-14 max-w-2xl mx-auto">
+            <h3 className="text-center text-sm md:text-base font-semibold text-foreground mb-4">Options disponibles</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {[
+                { name: "Godet Terre", icon: "🪣" },
+                { name: "Potence", icon: "🏗️" },
+                { name: "Treuil 5T", icon: "⚙️" },
+                { name: "Radio Télécommande", icon: "📡" },
+              ].map((option, i) => (
+                <div
+                  key={i}
+                  className="flex items-center justify-center gap-2 px-3 py-3 bg-card border border-border rounded-lg text-muted-foreground"
+                >
+                  <span className="text-base">{option.icon}</span>
+                  <span className="text-xs md:text-sm font-medium">{option.name}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-muted-foreground mt-3 text-center italic">Options à préciser lors de l'appel</p>
+          </div>
         </div>
       </section>
 
@@ -504,28 +526,6 @@ const TemplateImpact = () => {
                       )}
                     </div>
 
-                    {/* Options disponibles - Affichage uniquement */}
-                    <div className="relative">
-                      <label className="block text-sm font-medium text-foreground mb-2">Options disponibles</label>
-                      <div className="grid grid-cols-2 gap-2">
-                        {[
-                          { name: "Godet Terre", icon: "🪣" },
-                          { name: "Potence", icon: "🏗️" },
-                          { name: "Treuil 5T", icon: "⚙️" },
-                          { name: "Radio Télécommande", icon: "📡" },
-                        ].map((option, i) => (
-                          <div
-                            key={i}
-                            className="flex items-center gap-2 px-3 py-2 bg-muted/50 border border-border rounded-lg text-muted-foreground cursor-not-allowed opacity-60"
-                            title="Option bientôt disponible"
-                          >
-                            <span className="text-sm">{option.icon}</span>
-                            <span className="text-xs font-medium">{option.name}</span>
-                          </div>
-                        ))}
-                      </div>
-                      <p className="text-xs text-muted-foreground mt-2 italic">Options à préciser lors de l'appel</p>
-                    </div>
 
                     {/* Séparateur */}
                     <div className="border-t border-border pt-4 mt-4">
