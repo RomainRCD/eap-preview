@@ -68,6 +68,12 @@ const fetchCompanyBySiret = async (siret: string): Promise<{
   }
 };
 
+// Get today's date in YYYY-MM-DD format for date validation
+const getTodayDate = (): string => {
+  const today = new Date();
+  return today.toISOString().split('T')[0];
+};
+
 const TemplateImpact = () => {
   const [selectedProduct, setSelectedProduct] = useState<string>("");
   const [formStep, setFormStep] = useState(1);
@@ -96,6 +102,7 @@ const TemplateImpact = () => {
   const [isSearchingSiret, setIsSearchingSiret] = useState(false);
   const [siretVerified, setSiretVerified] = useState(false);
   const [siretError, setSiretError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   
   // Debounce timer ref
   const siretSearchTimeout = useRef<NodeJS.Timeout | null>(null);
@@ -130,10 +137,13 @@ const TemplateImpact = () => {
     document.getElementById("devis")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Handle SIRET field change with debounced API call
+  // Handle SIRET field change with debounced API call - only allow digits
   const handleSiretChange = (value: string) => {
+    // Only allow digits and spaces
+    const sanitizedValue = value.replace(/[^\d\s]/g, "");
+    
     // Update siret field
-    setFormData(prev => ({ ...prev, siret: value }));
+    setFormData(prev => ({ ...prev, siret: sanitizedValue }));
     setSiretError("");
     
     // Clear any pending search
@@ -141,7 +151,16 @@ const TemplateImpact = () => {
       clearTimeout(siretSearchTimeout.current);
     }
 
-    const cleanValue = value.replace(/\s/g, "");
+    const cleanValue = sanitizedValue.replace(/\s/g, "");
+    
+    // Validate SIRET length
+    if (cleanValue.length > 0 && cleanValue.length !== 9 && cleanValue.length !== 14) {
+      if (cleanValue.length < 9) {
+        setSiretError("Le SIRET doit contenir 9 ou 14 chiffres");
+      } else if (cleanValue.length > 9 && cleanValue.length < 14) {
+        setSiretError("Le SIRET doit contenir 9 ou 14 chiffres");
+      }
+    }
     
     // Reset verified state if not a valid SIRET format
     if (!cleanValue || !isSiretFormat(cleanValue)) {
@@ -207,14 +226,47 @@ const TemplateImpact = () => {
   const handleFieldChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
     
+    // Clear field error
+    setFieldErrors(prev => ({ ...prev, [field]: "" }));
+    
     // Simple validation
     const isValid = value.trim().length > 0;
+    
     if (field === "email") {
-      setValidFields(prev => ({ ...prev, [field]: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) }));
+      const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      setValidFields(prev => ({ ...prev, [field]: emailValid }));
+      if (value.trim() && !emailValid) {
+        setFieldErrors(prev => ({ ...prev, email: "Format email invalide (ex: nom@entreprise.fr)" }));
+      }
     } else if (field === "telephone") {
       setValidFields(prev => ({ ...prev, [field]: /^[\d\s]{10,}$/.test(value.replace(/\s/g, "")) }));
     } else if (field === "cpChantier" || field === "cpEntreprise") {
       setValidFields(prev => ({ ...prev, [field]: /^\d{5}$/.test(value.replace(/\s/g, "")) }));
+    } else if (field === "dateDebut") {
+      const today = getTodayDate();
+      const dateValid = value >= today;
+      setValidFields(prev => ({ ...prev, [field]: dateValid && isValid }));
+      if (value && !dateValid) {
+        setFieldErrors(prev => ({ ...prev, dateDebut: "La date ne peut pas être dans le passé" }));
+      }
+      // Also validate dateFin if it exists and is before new dateDebut
+      if (formData.dateFin && value > formData.dateFin) {
+        setFieldErrors(prev => ({ ...prev, dateFin: "La date de fin doit être après la date de début" }));
+        setValidFields(prev => ({ ...prev, dateFin: false }));
+      } else if (formData.dateFin) {
+        setFieldErrors(prev => ({ ...prev, dateFin: "" }));
+        setValidFields(prev => ({ ...prev, dateFin: formData.dateFin >= value }));
+      }
+    } else if (field === "dateFin") {
+      const today = getTodayDate();
+      const dateValid = value >= today;
+      const afterStart = !formData.dateDebut || value >= formData.dateDebut;
+      setValidFields(prev => ({ ...prev, [field]: dateValid && afterStart && isValid }));
+      if (value && !dateValid) {
+        setFieldErrors(prev => ({ ...prev, dateFin: "La date ne peut pas être dans le passé" }));
+      } else if (value && !afterStart) {
+        setFieldErrors(prev => ({ ...prev, dateFin: "La date de fin doit être après la date de début" }));
+      }
     } else {
       setValidFields(prev => ({ ...prev, [field]: isValid }));
     }
@@ -656,7 +708,7 @@ const TemplateImpact = () => {
                       <label className="block text-sm font-medium text-foreground mb-2">E-mail professionnel *</label>
                       <input 
                         type="email" 
-                        className="input-field" 
+                        className={`input-field ${fieldErrors.email ? 'border-destructive' : ''}`}
                         placeholder="email@entreprise.fr"
                         name="email"
                         autoComplete="email"
@@ -665,6 +717,9 @@ const TemplateImpact = () => {
                       />
                       {validFields.email && (
                         <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                      )}
+                      {fieldErrors.email && (
+                        <p className="text-xs text-destructive mt-1">{fieldErrors.email}</p>
                       )}
                     </div>
                     
@@ -730,19 +785,27 @@ const TemplateImpact = () => {
                         <label className="block text-sm font-medium text-foreground mb-2">Date début *</label>
                         <input 
                           type="date" 
-                          className="input-field"
+                          className={`input-field ${fieldErrors.dateDebut ? 'border-destructive' : ''}`}
                           value={formData.dateDebut}
+                          min={getTodayDate()}
                           onChange={(e) => handleFieldChange("dateDebut", e.target.value)}
                         />
+                        {fieldErrors.dateDebut && (
+                          <p className="text-xs text-destructive mt-1">{fieldErrors.dateDebut}</p>
+                        )}
                       </div>
                       <div className="w-full">
                         <label className="block text-sm font-medium text-foreground mb-2">Date fin *</label>
                         <input 
                           type="date" 
-                          className="input-field"
+                          className={`input-field ${fieldErrors.dateFin ? 'border-destructive' : ''}`}
                           value={formData.dateFin}
+                          min={formData.dateDebut || getTodayDate()}
                           onChange={(e) => handleFieldChange("dateFin", e.target.value)}
                         />
+                        {fieldErrors.dateFin && (
+                          <p className="text-xs text-destructive mt-1">{fieldErrors.dateFin}</p>
+                        )}
                       </div>
                     </div>
 
