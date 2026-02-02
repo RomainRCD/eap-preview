@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import SEOHead from "@/components/SEOHead";
-import PageLayout from "@/components/layout/PageLayout";
 
 import heroImage from "@/assets/hero-chariot.jpg";
 
@@ -283,7 +282,7 @@ const ChariotRotatif = () => {
   const isStep3Complete = formData.dateDebut && formData.dateFin && formData.cpChantier && formData.villeChantier;
 
   return (
-    <PageLayout hideHeader>
+    <div className="min-h-screen bg-background">
       <SEOHead
         title="Location Chariot Télescopique Rotatif jusqu'à 35m | Dispo Immédiate | EAP Location"
         description="Location chariot télescopique rotatif 16m-35m. Disponibilité 99%, devis en 2h, livraison 48h partout en France. Avec ou sans opérateur."
@@ -314,17 +313,17 @@ const ChariotRotatif = () => {
       <header className="bg-card border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-foreground">
+            <Button variant="ghost" size="sm" asChild className="text-muted-foreground hover:text-foreground -ml-2">
               <Link to="/manutention">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Manutention
+                <ArrowLeft className="w-4 h-4 mr-1" />
+                <span className="hidden sm:inline">Manutention</span>
               </Link>
             </Button>
-            <div className="hidden sm:flex items-center gap-2">
+            <div className="flex items-center gap-2">
               <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
                 <span className="text-secondary-foreground font-bold text-lg">E</span>
               </div>
-              <span className="font-display font-bold text-xl text-foreground">EAP Location</span>
+              <span className="font-display font-bold text-xl text-foreground hidden sm:inline">EAP Location</span>
             </div>
           </div>
           <div className="hidden md:flex items-center gap-6">
@@ -415,7 +414,7 @@ const ChariotRotatif = () => {
                 key={index}
                 className="bg-white rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center p-2 md:p-3 h-20 md:h-28"
               >
-                <img
+                <img 
                   src={company.logo}
                   alt={`Logo ${company.name}`}
                   className="w-auto h-full max-h-[56px] md:max-h-[90px] object-contain"
@@ -448,406 +447,486 @@ const ChariotRotatif = () => {
               >
                 <p className={`text-xl md:text-3xl font-display font-bold transition-colors ${
                   selectedProduct.includes(product.height) ? "text-primary" : "text-foreground group-hover:text-primary"
+                }`}>{product.height}</p>
+                <p className="text-xs md:text-sm text-muted-foreground">Cap. {product.capacity}</p>
+                <div className={`absolute -top-1 -right-1 md:-top-2 md:-right-2 w-4 h-4 md:w-6 md:h-6 bg-success rounded-full flex items-center justify-center transition-opacity ${
+                  selectedProduct.includes(product.height) ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                 }`}>
-                  {product.height}
-                </p>
-                <p className="text-muted-foreground text-xs md:text-sm">Cap. {product.capacity}</p>
-                {selectedProduct.includes(product.height) && (
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                    <Check className="w-4 h-4 text-primary-foreground" />
-                  </div>
-                )}
+                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-success-foreground" strokeWidth={1.5} />
+                </div>
               </button>
             ))}
           </div>
 
-          {/* Options disponibles */}
-          <div className="mt-8 md:mt-12 text-center">
-            <p className="text-sm text-muted-foreground mb-3">Options disponibles</p>
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4 text-sm text-foreground">
-              <span>Godet Terre</span>
-              <span className="text-muted-foreground">•</span>
-              <span>Potence</span>
-              <span className="text-muted-foreground">•</span>
-              <span>Treuil 5T</span>
-              <span className="text-muted-foreground">•</span>
-              <span>Radio Télécommande</span>
+          {/* Options disponibles - Affichage indicatif */}
+          <div className="mt-10 md:mt-14 max-w-2xl mx-auto">
+            <h3 className="text-center text-sm md:text-base font-semibold text-foreground mb-4">Options disponibles</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {["Godet Terre", "Potence", "Treuil 5T", "Radio Télécommande"].map((option, i) => (
+                <div
+                  key={i}
+                  className="flex items-center justify-center px-3 py-3 bg-card border border-border rounded-lg text-muted-foreground"
+                >
+                  <span className="text-xs md:text-sm font-medium">{option}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Form Section */}
-      <section id="devis" className="py-12 md:py-20 bg-background">
+      {/* Why Choose Us - Impact */}
+      <section className="py-10 md:py-16 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="section-title mb-3 md:mb-4">Votre devis en 3 étapes</h2>
-              <p className="text-muted-foreground text-sm md:text-base">Recevez votre devis personnalisé en moins de 2 heures</p>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+            <div className="bg-card border border-border rounded-xl md:rounded-2xl p-5 md:p-8 card-hover">
+              <div className="w-10 h-10 md:w-14 md:h-14 bg-primary rounded-lg md:rounded-xl flex items-center justify-center mb-4 md:mb-6">
+                <Shield className="w-5 h-5 md:w-7 md:h-7 text-primary-foreground" strokeWidth={1.5} />
+              </div>
+              <h3 className="font-display font-bold text-lg md:text-xl mb-2 md:mb-3">Un seul interlocuteur</h3>
+              <p className="text-muted-foreground text-sm md:text-base">De la demande de devis à la fin de votre chantier, un expert dédié vous accompagne.</p>
             </div>
+            
+            <div className="bg-card border border-border rounded-xl md:rounded-2xl p-5 md:p-8 card-hover">
+              <div className="w-10 h-10 md:w-14 md:h-14 bg-success rounded-lg md:rounded-xl flex items-center justify-center mb-4 md:mb-6">
+                <Zap className="w-5 h-5 md:w-7 md:h-7 text-success-foreground" strokeWidth={1.5} />
+              </div>
+              <h3 className="font-display font-bold text-lg md:text-xl mb-2 md:mb-3">Réponse en 2h max</h3>
+              <p className="text-muted-foreground text-sm md:text-base">Urgence ou planification, nous nous engageons à vous rappeler en moins de 2 heures.</p>
+            </div>
+            
+            <div className="bg-card border border-border rounded-xl md:rounded-2xl p-5 md:p-8 card-hover sm:col-span-2 md:col-span-1">
+              <div className="w-10 h-10 md:w-14 md:h-14 bg-accent rounded-lg md:rounded-xl flex items-center justify-center mb-4 md:mb-6">
+                <TrendingUp className="w-5 h-5 md:w-7 md:h-7 text-accent-foreground" strokeWidth={1.5} />
+              </div>
+              <h3 className="font-display font-bold text-lg md:text-xl mb-2 md:mb-3">99% de disponibilité</h3>
+              <p className="text-muted-foreground text-sm md:text-base">Notre réseau de 2 400 agences nous permet de garantir la disponibilité.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Progress Bar */}
-            <div className="mb-8 md:mb-12">
-              <Progress value={progressValue} className="h-2" />
-              <div className="flex justify-between mt-3 md:mt-4 text-xs md:text-sm">
-                <span className={formStep >= 1 ? "text-primary font-semibold" : "text-muted-foreground"}>1. Matériel & Entreprise</span>
-                <span className={formStep >= 2 ? "text-primary font-semibold" : "text-muted-foreground"}>2. Contact</span>
-                <span className={formStep >= 3 ? "text-primary font-semibold" : "text-muted-foreground"}>3. Chantier</span>
+      {/* Form Section - Multi-Step Restructured */}
+      <section id="devis" className="py-10 md:py-16 lg:py-24 bg-secondary">
+        <div className="container mx-auto px-4 overflow-hidden">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center overflow-hidden">
+            <div className="text-secondary-foreground">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold mb-4 md:mb-6">
+                Créez votre devis<br />
+                <span className="text-primary">en 2 minutes</span>
+              </h2>
+              <ul className="space-y-3 md:space-y-4">
+                <li className="flex items-center gap-2 md:gap-3">
+                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-success shrink-0" strokeWidth={1.5} />
+                  <span className="text-sm md:text-lg">Réponse garantie sous 2h</span>
+                </li>
+                <li className="flex items-center gap-2 md:gap-3">
+                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-success shrink-0" strokeWidth={1.5} />
+                  <span className="text-sm md:text-lg">Devis 100% gratuit et sans engagement</span>
+                </li>
+                <li className="flex items-center gap-2 md:gap-3">
+                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-success shrink-0" strokeWidth={1.5} />
+                  <span className="text-sm md:text-lg">Livraison partout en France</span>
+                </li>
+                <li className="flex items-center gap-2 md:gap-3">
+                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-success shrink-0" strokeWidth={1.5} />
+                  <span className="text-sm md:text-lg">Avec ou sans opérateur</span>
+                </li>
+              </ul>
+              
+              <div className="mt-6 md:mt-10 p-4 md:p-6 bg-secondary-foreground/10 rounded-xl hidden sm:block">
+                <p className="text-secondary-foreground/80 mb-2 text-sm md:text-base">Besoin d'une réponse immédiate ?</p>
+                <a href="tel:0368385456" className="text-2xl md:text-3xl font-display font-bold text-primary hover:underline">
+                  03 68 38 54 56
+                </a>
               </div>
             </div>
+            
+            <div className="bg-card rounded-xl md:rounded-2xl p-5 md:p-8 shadow-2xl overflow-hidden w-full max-w-full">
+              {/* Progress Bar */}
+              <div className="mb-6">
+                <div className="flex justify-between text-xs text-muted-foreground mb-2">
+                  <span className={formStep >= 1 ? "text-primary font-medium" : ""}>1. Produit & Société</span>
+                  <span className={formStep >= 2 ? "text-primary font-medium" : ""}>2. Contact</span>
+                  <span className={formStep >= 3 ? "text-primary font-medium" : ""}>3. Chantier</span>
+                </div>
+                <Progress value={progressValue} className="h-2" />
+              </div>
 
-            {/* Form Card */}
-            <div className="bg-card border border-border rounded-2xl p-6 md:p-10 shadow-lg">
-              {formStep === 1 && (
-                <div className="space-y-6">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <FileText className="w-5 h-5 text-primary" />
-                    </div>
-                    <h3 className="font-display font-bold text-xl text-foreground">Le matériel</h3>
-                  </div>
-
-                  {/* Matériel sélectionné */}
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Matériel sélectionné *</label>
-                    <div className={`p-4 rounded-lg border ${formData.materiel ? "bg-primary/5 border-primary" : "bg-muted border-border"}`}>
-                      {formData.materiel ? (
-                        <div className="flex items-center gap-2">
-                          <BadgeCheck className="w-5 h-5 text-primary" />
-                          <span className="font-medium text-foreground">{formData.materiel}</span>
-                        </div>
-                      ) : (
-                        <span className="text-muted-foreground">Sélectionnez une hauteur ci-dessus</span>
+              <h3 className="font-display font-bold text-xl md:text-2xl text-foreground mb-4 md:mb-6">Devis Express</h3>
+              
+              <form className="space-y-4 md:space-y-5 overflow-hidden">
+                {/* Step 1: Produit & Entreprise */}
+                {formStep === 1 && (
+                  <div className="space-y-4 animate-fade-in">
+                    <p className="text-xs font-semibold text-primary mb-3 flex items-center gap-2">
+                      <Building2 className="w-4 h-4" strokeWidth={1.5} />
+                      ÉTAPE 1 : PRODUIT & ENTREPRISE
+                    </p>
+                    
+                    {/* Choix du matériel */}
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-foreground mb-2">Choix du matériel *</label>
+                      <select 
+                        className="input-field pr-8"
+                        value={formData.materiel}
+                        onChange={(e) => handleFieldChange("materiel", e.target.value)}
+                      >
+                        <option value="">Choisir une hauteur</option>
+                        {products.map((p, i) => (
+                          <option key={i} value={`Chariot Rotatif ${p.height} - Cap. ${p.capacity}`}>
+                            Chariot Rotatif {p.height} - Cap. {p.capacity}
+                          </option>
+                        ))}
+                      </select>
+                      {validFields.materiel && (
+                        <Check className="absolute right-10 top-9 w-5 h-5 text-success animate-scale-in" />
                       )}
                     </div>
-                  </div>
 
-                  {/* Entreprise Section */}
-                  <div className="pt-6 border-t border-border">
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <Building2 className="w-5 h-5 text-primary" />
-                      </div>
-                      <h3 className="font-display font-bold text-xl text-foreground">Informations Entreprise</h3>
+
+                    {/* Séparateur */}
+                    <div className="border-t border-border pt-4 mt-4">
+                      <p className="text-xs font-medium text-muted-foreground mb-3 flex items-center gap-2">
+                        🏢 IDENTIFICATION ENTREPRISE
+                      </p>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="sm:col-span-2">
-                        <label className="block text-sm font-medium text-foreground mb-2">SIRET *</label>
-                        <div className="relative">
-                          <input
-                            type="text"
-                            placeholder="123 456 789 00012"
-                            value={formData.siret}
-                            onChange={(e) => handleSiretChange(e.target.value)}
-                            className={`w-full min-w-0 box-border px-4 py-3 rounded-lg border ${siretError ? "border-destructive" : "border-border"} bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors`}
-                          />
-                          {isSearchingSiret && (
-                            <div className="absolute right-3 top-1/2 -translate-y-1/2">
-                              <Loader2 className="w-5 h-5 text-primary animate-spin" />
-                            </div>
-                          )}
-                          {siretVerified && (
-                            <div className="absolute right-3 top-1/2 -translate-y-1/2">
-                              <BadgeCheck className="w-5 h-5 text-green-500" />
-                            </div>
-                          )}
+                    {/* SIRET Field - Dedicated with autocomplete */}
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        N° SIRET 
+                        <span className="text-muted-foreground font-normal ml-1">(optionnel - recommandé)</span>
+                        {siretVerified && (
+                          <span className="ml-2 inline-flex items-center gap-1 text-xs text-success font-normal animate-fade-in">
+                            <BadgeCheck className="w-3.5 h-3.5" />
+                            Données vérifiées
+                          </span>
+                        )}
+                      </label>
+                      <div className="relative">
+                        <input 
+                          type="text" 
+                          className={`input-field pr-10 font-mono ${siretError ? 'border-destructive' : ''}`}
+                          placeholder="Ex: 443 061 841 00047"
+                          value={formData.siret}
+                          onChange={(e) => handleSiretChange(e.target.value)}
+                          maxLength={20}
+                        />
+                        {isSearchingSiret && (
+                          <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary animate-spin" />
+                        )}
+                        {!isSearchingSiret && siretVerified && (
+                          <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success animate-scale-in" />
+                        )}
+                      </div>
+                      {siretError && (
+                        <p className="text-xs text-destructive mt-1">{siretError}</p>
+                      )}
+                      {siretVerified && formData.entreprise && (
+                        <div className="mt-2 p-3 bg-success/10 border border-success/20 rounded-lg animate-fade-in">
+                          <p className="text-sm font-medium text-foreground">{formData.entreprise}</p>
+                          <p className="text-xs text-muted-foreground mt-1">
+                            📍 {formData.adresseEntreprise && `${formData.adresseEntreprise}, `}{formData.cpEntreprise} {formData.villeEntreprise}
+                          </p>
                         </div>
-                        {siretError && <p className="text-destructive text-xs mt-1">{siretError}</p>}
-                      </div>
-
-                      <div className="sm:col-span-2">
-                        <label className="block text-sm font-medium text-foreground mb-2">Nom de l'entreprise *</label>
-                        <input
-                          type="text"
-                          placeholder="Entreprise SAS"
-                          value={formData.entreprise}
-                          onChange={(e) => handleFieldChange("entreprise", e.target.value)}
-                          className="w-full min-w-0 box-border px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-                        />
-                      </div>
-
-                      <div className="sm:col-span-2">
-                        <label className="block text-sm font-medium text-foreground mb-2">Adresse</label>
-                        <input
-                          type="text"
-                          placeholder="12 rue de l'Industrie"
-                          value={formData.adresseEntreprise}
-                          onChange={(e) => handleFieldChange("adresseEntreprise", e.target.value)}
-                          className="w-full min-w-0 box-border px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">Code postal</label>
-                        <input
-                          type="text"
-                          placeholder="67000"
-                          value={formData.cpEntreprise}
-                          onChange={(e) => handleFieldChange("cpEntreprise", e.target.value)}
-                          className="w-full min-w-0 box-border px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">Ville</label>
-                        <input
-                          type="text"
-                          placeholder="Strasbourg"
-                          value={formData.villeEntreprise}
-                          onChange={(e) => handleFieldChange("villeEntreprise", e.target.value)}
-                          className="w-full min-w-0 box-border px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-                        />
-                      </div>
+                      )}
                     </div>
-                  </div>
 
-                  <div className="pt-6 flex justify-end">
+                    {/* Nom entreprise - readonly if autocompleted, otherwise editable */}
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-foreground mb-2">Nom de l'entreprise *</label>
+                      <input 
+                        type="text" 
+                        className={`input-field ${siretVerified ? 'bg-muted' : ''}`}
+                        placeholder="Ex: EAP Location"
+                        value={formData.entreprise}
+                        onChange={(e) => handleFieldChange("entreprise", e.target.value)}
+                        readOnly={siretVerified}
+                      />
+                      {validFields.entreprise && (
+                        <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                      )}
+                    </div>
+
                     <Button 
+                      type="button"
                       variant="cta" 
-                      size="lg"
-                      disabled={!isStep1Complete}
+                      size="lg" 
+                      className="w-full mt-4"
                       onClick={() => setFormStep(2)}
+                      disabled={!isStep1Complete}
                     >
                       Continuer
                       <ArrowRight className="w-5 h-5" />
                     </Button>
+                    <p className="text-xs text-muted-foreground text-center mt-3">* Service réservé aux professionnels</p>
                   </div>
-                  <p className="text-center text-xs text-muted-foreground">* Service réservé aux professionnels</p>
-                </div>
-              )}
+                )}
 
-              {formStep === 2 && (
-                <div className="space-y-6">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <User className="w-5 h-5 text-primary" />
+                {/* Step 2: Contact */}
+                {formStep === 2 && (
+                  <div className="space-y-4 animate-fade-in">
+                    <p className="text-xs font-semibold text-primary mb-3 flex items-center gap-2">
+                      <User className="w-4 h-4" strokeWidth={1.5} />
+                      ÉTAPE 2 : VOTRE CONTACT
+                    </p>
+                    
+                    {/* Récap entreprise */}
+                    {formData.entreprise && (
+                      <div className="p-3 bg-muted rounded-lg mb-4">
+                        <p className="text-xs text-muted-foreground">Entreprise sélectionnée :</p>
+                        <p className="text-sm font-medium text-foreground">{formData.entreprise}</p>
+                      </div>
+                    )}
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                      <div className="relative w-full overflow-hidden">
+                        <label className="block text-sm font-medium text-foreground mb-2">Nom *</label>
+                        <input 
+                          type="text" 
+                          className="input-field" 
+                          placeholder="Dupont"
+                          name="family-name"
+                          autoComplete="family-name"
+                          value={formData.nom}
+                          onChange={(e) => handleFieldChange("nom", e.target.value)}
+                        />
+                        {validFields.nom && (
+                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                        )}
+                      </div>
+                      <div className="relative w-full overflow-hidden">
+                        <label className="block text-sm font-medium text-foreground mb-2">Prénom *</label>
+                        <input 
+                          type="text" 
+                          className="input-field" 
+                          placeholder="Jean"
+                          name="given-name"
+                          autoComplete="given-name"
+                          value={formData.prenom}
+                          onChange={(e) => handleFieldChange("prenom", e.target.value)}
+                        />
+                        {validFields.prenom && (
+                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                        )}
+                      </div>
                     </div>
-                    <h3 className="font-display font-bold text-xl text-foreground">Contact</h3>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Nom *</label>
-                      <input
-                        type="text"
-                        placeholder="Dupont"
-                        value={formData.nom}
-                        onChange={(e) => handleFieldChange("nom", e.target.value)}
-                        className="w-full min-w-0 box-border px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Prénom *</label>
-                      <input
-                        type="text"
-                        placeholder="Jean"
-                        value={formData.prenom}
-                        onChange={(e) => handleFieldChange("prenom", e.target.value)}
-                        className="w-full min-w-0 box-border px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Email *</label>
-                      <input
-                        type="email"
-                        placeholder="jean.dupont@entreprise.fr"
+                    
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-foreground mb-2">E-mail professionnel *</label>
+                      <input 
+                        type="email" 
+                        className={`input-field ${fieldErrors.email ? 'border-destructive' : ''}`}
+                        placeholder="email@entreprise.fr"
+                        name="email"
+                        autoComplete="email"
                         value={formData.email}
                         onChange={(e) => handleFieldChange("email", e.target.value)}
-                        className={`w-full min-w-0 box-border px-4 py-3 rounded-lg border ${fieldErrors.email ? "border-destructive" : "border-border"} bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors`}
                       />
-                      {fieldErrors.email && <p className="text-destructive text-xs mt-1">{fieldErrors.email}</p>}
+                      {validFields.email && (
+                        <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                      )}
+                      {fieldErrors.email && (
+                        <p className="text-xs text-destructive mt-1">{fieldErrors.email}</p>
+                      )}
                     </div>
-
-                    <div>
+                    
+                    <div className="relative">
                       <label className="block text-sm font-medium text-foreground mb-2">Téléphone *</label>
-                      <input
-                        type="tel"
-                        placeholder="06 12 34 56 78"
+                      <input 
+                        type="tel" 
+                        className="input-field" 
+                        placeholder="06 XX XX XX XX"
+                        name="tel"
+                        autoComplete="tel"
                         value={formData.telephone}
                         onChange={(e) => handleFieldChange("telephone", e.target.value)}
-                        className="w-full min-w-0 box-border px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
                       />
+                      {validFields.telephone && (
+                        <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                      )}
+                    </div>
+
+                    <div className="flex gap-3 mt-4">
+                      <Button 
+                        type="button"
+                        variant="outline" 
+                        size="lg" 
+                        className="flex-1"
+                        onClick={() => setFormStep(1)}
+                      >
+                        Retour
+                      </Button>
+                      <Button 
+                        type="button"
+                        variant="cta" 
+                        size="lg" 
+                        className="flex-1"
+                        onClick={() => setFormStep(3)}
+                        disabled={!isStep2Complete}
+                      >
+                        Continuer
+                        <ArrowRight className="w-5 h-5" />
+                      </Button>
                     </div>
                   </div>
+                )}
 
-                  <div className="pt-6 flex justify-between">
-                    <Button variant="outline" onClick={() => setFormStep(1)}>
-                      <ArrowLeft className="w-5 h-5 mr-2" />
-                      Retour
-                    </Button>
-                    <Button 
-                      variant="cta" 
-                      size="lg"
-                      disabled={!isStep2Complete}
-                      onClick={() => setFormStep(3)}
-                    >
-                      Continuer
-                      <ArrowRight className="w-5 h-5" />
-                    </Button>
-                  </div>
-                </div>
-              )}
+                {/* Step 3: Chantier */}
+                {formStep === 3 && (
+                  <div className="space-y-4 animate-fade-in w-full max-w-full overflow-hidden box-border">
+                    <p className="text-xs font-semibold text-primary mb-3 flex items-center gap-2">
+                      <MapPin className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
+                      <span>ÉTAPE 3 : LIEU DU CHANTIER</span>
+                    </p>
 
-              {formStep === 3 && (
-                <div className="space-y-6">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <MapPin className="w-5 h-5 text-primary" />
-                    </div>
-                    <h3 className="font-display font-bold text-xl text-foreground">Date et Lieu du chantier</h3>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Date de début *</label>
-                      <input
-                        type="date"
-                        min={getTodayDate()}
-                        value={formData.dateDebut}
-                        onChange={(e) => handleFieldChange("dateDebut", e.target.value)}
-                        className={`w-full min-w-0 box-border px-4 py-3 rounded-lg border ${fieldErrors.dateDebut ? "border-destructive" : "border-border"} bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors`}
-                      />
-                      {fieldErrors.dateDebut && <p className="text-destructive text-xs mt-1">{fieldErrors.dateDebut}</p>}
+                    {/* Récap */}
+                    <div className="p-3 bg-muted rounded-lg mb-4 space-y-1 overflow-hidden w-full max-w-full">
+                      <p className="text-xs text-muted-foreground">Récapitulatif :</p>
+                      <p className="text-sm font-medium text-foreground truncate">{formData.materiel}</p>
+                      <p className="text-xs text-muted-foreground truncate">{formData.entreprise} • {formData.prenom} {formData.nom}</p>
                     </div>
 
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Date de fin *</label>
-                      <input
-                        type="date"
-                        min={formData.dateDebut || getTodayDate()}
-                        value={formData.dateFin}
-                        onChange={(e) => handleFieldChange("dateFin", e.target.value)}
-                        className={`w-full min-w-0 box-border px-4 py-3 rounded-lg border ${fieldErrors.dateFin ? "border-destructive" : "border-border"} bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors`}
-                      />
-                      {fieldErrors.dateFin && <p className="text-destructive text-xs mt-1">{fieldErrors.dateFin}</p>}
+                    {/* Dates du chantier */}
+                    <div className="flex flex-col gap-3 w-full">
+                      <div className="w-full">
+                        <label className="block text-sm font-medium text-foreground mb-2">Date début *</label>
+                        <input 
+                          type="date" 
+                          className={`input-field ${fieldErrors.dateDebut ? 'border-destructive' : ''}`}
+                          value={formData.dateDebut}
+                          min={getTodayDate()}
+                          onChange={(e) => handleFieldChange("dateDebut", e.target.value)}
+                        />
+                        {fieldErrors.dateDebut && (
+                          <p className="text-xs text-destructive mt-1">{fieldErrors.dateDebut}</p>
+                        )}
+                      </div>
+                      <div className="w-full">
+                        <label className="block text-sm font-medium text-foreground mb-2">Date fin *</label>
+                        <input 
+                          type="date" 
+                          className={`input-field ${fieldErrors.dateFin ? 'border-destructive' : ''}`}
+                          value={formData.dateFin}
+                          min={formData.dateDebut || getTodayDate()}
+                          onChange={(e) => handleFieldChange("dateFin", e.target.value)}
+                        />
+                        {fieldErrors.dateFin && (
+                          <p className="text-xs text-destructive mt-1">{fieldErrors.dateFin}</p>
+                        )}
+                      </div>
                     </div>
 
-                    <div className="sm:col-span-2">
+                    <div className="w-full">
                       <label className="block text-sm font-medium text-foreground mb-2">Adresse du chantier</label>
-                      <input
-                        type="text"
-                        placeholder="Adresse de livraison"
+                      <input 
+                        type="text" 
+                        className="input-field" 
+                        placeholder="12 rue de la Paix"
                         value={formData.adresseChantier}
                         onChange={(e) => handleFieldChange("adresseChantier", e.target.value)}
-                        className="w-full min-w-0 box-border px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
                       />
                     </div>
 
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Code postal *</label>
-                      <input
-                        type="text"
-                        placeholder="75001"
-                        value={formData.cpChantier}
-                        onChange={(e) => handleFieldChange("cpChantier", e.target.value)}
-                        className="w-full min-w-0 box-border px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-                      />
+                    <div className="flex flex-col gap-3 w-full">
+                      <div className="w-full">
+                        <label className="block text-sm font-medium text-foreground mb-2">Code postal *</label>
+                        <input 
+                          type="text" 
+                          className="input-field" 
+                          placeholder="75001"
+                          value={formData.cpChantier}
+                          onChange={(e) => handleFieldChange("cpChantier", e.target.value)}
+                          maxLength={5}
+                        />
+                      </div>
+                      <div className="w-full">
+                        <label className="block text-sm font-medium text-foreground mb-2">Ville *</label>
+                        <input 
+                          type="text" 
+                          className="input-field" 
+                          placeholder="Paris"
+                          value={formData.villeChantier}
+                          onChange={(e) => handleFieldChange("villeChantier", e.target.value)}
+                        />
+                      </div>
                     </div>
 
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Ville *</label>
-                      <input
-                        type="text"
-                        placeholder="Paris"
-                        value={formData.villeChantier}
-                        onChange={(e) => handleFieldChange("villeChantier", e.target.value)}
-                        className="w-full min-w-0 box-border px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-                      />
-                    </div>
-
-                    <div className="sm:col-span-2">
-                      <label className="block text-sm font-medium text-foreground mb-2">Commentaire</label>
-                      <textarea
-                        placeholder="Informations complémentaires..."
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-foreground mb-2">Commentaire / précisions</label>
+                      <textarea 
+                        className="input-field min-h-[80px] resize-none" 
+                        placeholder="Accès difficile, contraintes horaires, besoins spécifiques..."
                         value={formData.commentaire}
                         onChange={(e) => handleFieldChange("commentaire", e.target.value)}
-                        rows={3}
-                        className="w-full min-w-0 box-border px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
                       />
                     </div>
-                  </div>
 
-                  <div className="pt-6 flex justify-between">
-                    <Button variant="outline" onClick={() => setFormStep(2)}>
-                      <ArrowLeft className="w-5 h-5 mr-2" />
-                      Retour
-                    </Button>
-                    <Button 
-                      variant="cta" 
-                      size="lg"
-                      disabled={!isStep3Complete}
-                    >
-                      <Zap className="w-5 h-5" />
-                      Créez votre devis
-                    </Button>
-                  </div>
-                </div>
-              )}
-            </div>
+                    {/* Social Proof Badge */}
+                    <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground py-2">
+                      <div className="flex text-primary">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-current" />
+                        ))}
+                      </div>
+                      <span>4.9/5 basé sur 150+ interventions le mois dernier</span>
+                    </div>
 
-            {/* Reassurance */}
-            <div className="mt-8 md:mt-12 grid sm:grid-cols-3 gap-4 md:gap-6">
-              <div className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                  <Zap className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground text-sm">Réponse en 2h max</p>
-                  <p className="text-muted-foreground text-xs">nous vous engageons à vous rappeler en moins de deux heures</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                  <Shield className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground text-sm">Matériel assuré</p>
-                  <p className="text-muted-foreground text-xs">Garantie tous risques incluse</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                  <TrendingUp className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground text-sm">Prix compétitifs</p>
-                  <p className="text-muted-foreground text-xs">Tarifs dégressifs longue durée</p>
-                </div>
-              </div>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Button 
+                        type="button"
+                        variant="outline" 
+                        size="lg" 
+                        className="w-full sm:w-auto sm:flex-1"
+                        onClick={() => setFormStep(2)}
+                      >
+                        Retour
+                      </Button>
+                      <Button 
+                        type="submit"
+                        variant="cta" 
+                        size="lg" 
+                        className="w-full sm:w-auto sm:flex-1"
+                        disabled={!isStep3Complete}
+                      >
+                        Envoyer ma demande
+                        <ArrowRight className="w-5 h-5 flex-shrink-0 ml-2" />
+                      </Button>
+                    </div>
+                  </div>
+                )}
+              </form>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-12 md:py-20 bg-secondary">
+      {/* Footer */}
+      <footer className="bg-foreground text-background py-8 pb-24 md:pb-8">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-display font-bold text-secondary-foreground mb-4 md:mb-6">
-            Besoin d'un conseil personnalisé ?
-          </h2>
-          <p className="text-secondary-foreground/80 mb-6 md:mb-8 max-w-2xl mx-auto text-sm md:text-base">
-            Nos experts sont disponibles pour vous accompagner dans le choix du matériel adapté à votre chantier.
+          <p className="text-muted-foreground">
+            EAP Location - Spécialiste BTP depuis 2016 | contact@eap-location.fr | 03 68 38 54 56
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="cta" size="lg" asChild>
-              <a href="#devis">
-                Demander un devis
-                <ArrowRight className="w-5 h-5" />
-              </a>
-            </Button>
-            <Button variant="phone" size="lg" asChild>
-              <a href="tel:0368385456">
-                <Phone className="w-5 h-5" strokeWidth={1.5} />
-                03 68 38 54 56
-              </a>
-            </Button>
-          </div>
         </div>
-      </section>
-    </PageLayout>
+      </footer>
+
+      {/* Mobile Sticky CTA */}
+      <div className="fixed bottom-0 left-0 right-0 bg-card border-t border-border p-3 flex gap-3 md:hidden z-50 shadow-lg">
+        <Button variant="phone" size="lg" asChild className="flex-1">
+          <a href="tel:0368385456">
+            <Phone className="w-5 h-5" />
+            Appeler
+          </a>
+        </Button>
+        <Button variant="cta" size="lg" asChild className="flex-1">
+          <a href="#devis">
+            <FileText className="w-5 h-5" />
+            Devis Express
+          </a>
+        </Button>
+      </div>
+    </div>
   );
 };
 
