@@ -4,19 +4,22 @@ import PageLayout from "@/components/layout/PageLayout";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 
+// Image produit
+import heroChariot from "@/assets/hero-chariot.jpg";
+
 const Manutention = () => {
   const products = [
-    { name: "Chariot télescopique rotatif", slug: "chariot-rotatif", description: "Polyvalent 360°" },
-    { name: "Chariot télescopique fixe", slug: "chariot-fixe", description: "Compact et maniable" },
-    { name: "Chariot élévateur thermique", slug: "chariot-elevateur-thermique", description: "1,5T à 16T" },
-    { name: "Chariot élévateur électrique", slug: "chariot-elevateur-electrique", description: "Silencieux" },
-    { name: "Chariot tout terrain", slug: "chariot-tout-terrain", description: "4x4 chantier" },
-    { name: "Gerbeur électrique", slug: "gerbeur", description: "Entrepôt" },
-    { name: "Transpalette électrique", slug: "transpalette-electrique", description: "Manutention" },
-    { name: "Transpalette manuel", slug: "transpalette-manuel", description: "Économique" },
-    { name: "Grue auxiliaire", slug: "grue-auxiliaire", description: "Sur camion" },
-    { name: "Mini grue araignée", slug: "mini-grue", description: "Levage intérieur" },
-    { name: "Manipulateur télescopique", slug: "manipulateur", description: "Agriculture/BTP" },
+    { name: "Chariot télescopique rotatif", slug: "chariot-rotatif", description: "Polyvalent 360°", image: heroChariot },
+    { name: "Chariot télescopique fixe", slug: "chariot-fixe", description: "Compact et maniable", image: null },
+    { name: "Chariot élévateur thermique", slug: "chariot-elevateur-thermique", description: "1,5T à 16T", image: null },
+    { name: "Chariot élévateur électrique", slug: "chariot-elevateur-electrique", description: "Silencieux", image: null },
+    { name: "Chariot tout terrain", slug: "chariot-tout-terrain", description: "4x4 chantier", image: null },
+    { name: "Gerbeur électrique", slug: "gerbeur", description: "Entrepôt", image: null },
+    { name: "Transpalette électrique", slug: "transpalette-electrique", description: "Manutention", image: null },
+    { name: "Transpalette manuel", slug: "transpalette-manuel", description: "Économique", image: null },
+    { name: "Grue auxiliaire", slug: "grue-auxiliaire", description: "Sur camion", image: null },
+    { name: "Mini grue araignée", slug: "mini-grue", description: "Levage intérieur", image: null },
+    { name: "Manipulateur télescopique", slug: "manipulateur", description: "Agriculture/BTP", image: null },
   ];
 
   return (
@@ -69,8 +72,17 @@ const Manutention = () => {
                 to={`/manutention/${product.slug}`}
                 className="group bg-card border border-border rounded-xl p-6 hover:border-primary hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-full h-40 bg-muted rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">Image à venir</span>
+                <div className="w-full h-40 bg-muted rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                  {product.image ? (
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="text-muted-foreground text-sm">Image à venir</span>
+                  )}
                 </div>
                 <h3 className="font-display font-bold text-lg text-foreground group-hover:text-primary transition-colors">
                   {product.name}
