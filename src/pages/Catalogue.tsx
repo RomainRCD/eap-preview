@@ -35,7 +35,7 @@ const Catalogue = () => {
       description: "Chariots télescopiques, élévateurs, transpalettes",
       link: "/manutention",
       image: catalogManutention,
-      count: 11,
+      count: 12,
     },
     {
       title: "Compactage",
