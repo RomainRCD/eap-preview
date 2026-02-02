@@ -9,17 +9,18 @@ import heroChariot from "@/assets/hero-chariot.jpg";
 
 const Manutention = () => {
   const products = [
-    { name: "Chariot télescopique rotatif", slug: "chariot-rotatif", description: "Polyvalent 360°", image: heroChariot },
-    { name: "Chariot télescopique fixe", slug: "chariot-fixe", description: "Compact et maniable", image: null },
-    { name: "Chariot élévateur thermique", slug: "chariot-elevateur-thermique", description: "1,5T à 16T", image: null },
-    { name: "Chariot élévateur électrique", slug: "chariot-elevateur-electrique", description: "Silencieux", image: null },
-    { name: "Chariot tout terrain", slug: "chariot-tout-terrain", description: "4x4 chantier", image: null },
-    { name: "Gerbeur électrique", slug: "gerbeur", description: "Entrepôt", image: null },
-    { name: "Transpalette électrique", slug: "transpalette-electrique", description: "Manutention", image: null },
-    { name: "Transpalette manuel", slug: "transpalette-manuel", description: "Économique", image: null },
-    { name: "Grue auxiliaire", slug: "grue-auxiliaire", description: "Sur camion", image: null },
-    { name: "Mini grue araignée", slug: "mini-grue", description: "Levage intérieur", image: null },
-    { name: "Manipulateur télescopique", slug: "manipulateur", description: "Agriculture/BTP", image: null },
+    { name: "Chariot industriel diesel", slug: "chariot-industriel-diesel", description: "1,5T à 16T", image: null },
+    { name: "Chariot industriel gaz", slug: "chariot-industriel-gaz", description: "1,5T à 16T", image: null },
+    { name: "Chariot industriel électrique", slug: "chariot-industriel-electrique", description: "1,5T à 8T", image: null },
+    { name: "Chariot semi-industriel", slug: "chariot-semi-industriel", description: "2T à 5T", image: null },
+    { name: "Chariot tout terrain", slug: "chariot-tout-terrain", description: "4x2 ou 4x4, 2T à 5T", image: null },
+    { name: "Chariot télescopique fixe", slug: "chariot-telescopique", description: "4m à 18m", image: null },
+    { name: "Chariot télescopique rotatif", slug: "chariot-rotatif", description: "16m à 35m, 360°", image: heroChariot },
+    { name: "Chariot télescopique gros tonnage", slug: "chariot-gros-tonnage", description: "6T-9m à 33T-12m", image: null },
+    { name: "Grue mobile", slug: "grue-mobile", description: "35T à 160T", image: null },
+    { name: "Mini grue télescopique sur chenilles", slug: "mini-grue-chenilles", description: "5T-20m à 8T-26m", image: null },
+    { name: "Mini grue araignée", slug: "mini-grue-araignee", description: "3T à 4T", image: null },
+    { name: "Gerbeur / Transpalette", slug: "gerbeur-transpalette", description: "Manutention légère", image: null },
   ];
 
   return (
