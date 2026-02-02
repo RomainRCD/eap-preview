@@ -81,15 +81,6 @@ const ProductPage = () => {
               <h2 className="font-display font-bold text-2xl text-foreground mb-4">
                 Page en cours de construction
               </h2>
-              <p className="text-muted-foreground mb-6">
-                Cette page produit sera basée sur le template Impact avec les spécifications 
-                techniques, le formulaire de devis et les informations détaillées du produit.
-              </p>
-              <Button variant="cta" asChild>
-                <Link to="/devis">
-                  Voir le template de référence
-                </Link>
-              </Button>
             </div>
           </div>
         </div>
