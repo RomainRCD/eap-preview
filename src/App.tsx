@@ -12,8 +12,11 @@ import Contact from "./pages/Contact";
 import MentionsLegales from "./pages/MentionsLegales";
 import NotFound from "./pages/NotFound";
 
-// Page produit existante (template Impact)
+// Page produit existante (template Impact) - conservée pour référence
 import TemplateImpact from "./pages/TemplateImpact";
+
+// Page produit spécifique - Chariot Rotatif
+import ChariotRotatif from "./pages/products/ChariotRotatif";
 
 // Pages catégories
 import Terrassement from "./pages/categories/Terrassement";
@@ -56,6 +59,8 @@ const App = () => (
             {/* Pages produits dynamiques */}
             <Route path="/terrassement/:slug" element={<ProductPage />} />
             <Route path="/travail-en-hauteur/:slug" element={<ProductPage />} />
+            {/* Chariot Rotatif - page complète */}
+            <Route path="/manutention/chariot-rotatif" element={<ChariotRotatif />} />
             <Route path="/manutention/:slug" element={<ProductPage />} />
             <Route path="/compactage/:slug" element={<ProductPage />} />
             <Route path="/base-vie/:slug" element={<ProductPage />} />

@@ -6,14 +6,21 @@ import MobileCTA from "./MobileCTA";
 interface PageLayoutProps {
   children: ReactNode;
   showMobileCTA?: boolean;
+  hideHeader?: boolean;
+  hideFooter?: boolean;
 }
 
-const PageLayout = ({ children, showMobileCTA = true }: PageLayoutProps) => {
+const PageLayout = ({ 
+  children, 
+  showMobileCTA = true,
+  hideHeader = false,
+  hideFooter = false,
+}: PageLayoutProps) => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      {!hideHeader && <Header />}
       <main>{children}</main>
-      <Footer />
+      {!hideFooter && <Footer />}
       {showMobileCTA && <MobileCTA />}
     </div>
   );
