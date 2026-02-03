@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, ReactNode } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Phone, Clock, Zap, CheckCircle, ArrowRight, Shield, TrendingUp, Star, Check, FileText, Loader2, BadgeCheck, Building2, MapPin, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -29,17 +29,29 @@ const fetchCompanyBySiret = async (siret: string): Promise<{
   const cleanSiret = siret.replace(/\s/g, "");
   
   try {
+    console.log("🔍 Fetching SIRET:", cleanSiret);
     const response = await fetch(
       `https://recherche-entreprises.api.gouv.fr/search?q=${encodeURIComponent(cleanSiret)}`,
-      { method: "GET", headers: { "Accept": "application/json" } }
+      {
+        method: "GET",
+        headers: {
+          "Accept": "application/json",
+        },
+      }
     );
     
-    if (!response.ok) return null;
+    if (!response.ok) {
+      console.error("❌ API SIRENE error:", response.status, response.statusText);
+      return null;
+    }
+
     const data = await response.json();
+    console.log("✅ API SIRENE response:", data);
     
     if (data.results && data.results.length > 0) {
       const company = data.results[0];
       const siege = company.siege;
+      
       return {
         nom_complet: company.nom_complet || "",
         adresse: siege?.adresse || "",
@@ -47,14 +59,19 @@ const fetchCompanyBySiret = async (siret: string): Promise<{
         ville: siege?.libelle_commune || "",
       };
     }
+    
     return null;
   } catch (error) {
-    console.error("SIRENE fetch error:", error);
+    console.error("❌ SIRENE fetch error:", error);
     return null;
   }
 };
 
-const getTodayDate = (): string => new Date().toISOString().split('T')[0];
+// Get today's date in YYYY-MM-DD format for date validation
+const getTodayDate = (): string => {
+  const today = new Date();
+  return today.toISOString().split('T')[0];
+};
 
 interface ProductOption {
   label: string;
@@ -112,6 +129,7 @@ const ProductTemplate = ({
   const [selectedProduct, setSelectedProduct] = useState<string>("");
   const [formStep, setFormStep] = useState(1);
   const [formData, setFormData] = useState({
+    // Step 1: Matériel & Entreprise
     materiel: "",
     dateDebut: "",
     dateFin: "",
@@ -120,10 +138,12 @@ const ProductTemplate = ({
     adresseEntreprise: "",
     cpEntreprise: "",
     villeEntreprise: "",
+    // Step 2: Contact
     nom: "",
     prenom: "",
     email: "",
     telephone: "",
+    // Step 3: Chantier
     adresseChantier: "",
     cpChantier: "",
     villeChantier: "",
@@ -134,40 +154,67 @@ const ProductTemplate = ({
   const [siretVerified, setSiretVerified] = useState(false);
   const [siretError, setSiretError] = useState("");
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+  
+  // Debounce timer ref
   const siretSearchTimeout = useRef<NodeJS.Timeout | null>(null);
 
+  // Handle product selection and scroll to form
   const handleProductSelect = (product: ProductOption) => {
-    const value = `${productNamePrefix} ${product.value}`;
+    const value = productNamePrefix ? `${productNamePrefix} ${product.value}` : product.value;
     setSelectedProduct(value);
     setFormData(prev => ({ ...prev, materiel: value }));
     setValidFields(prev => ({ ...prev, materiel: true }));
+    
+    // Smooth scroll to form
     document.getElementById("devis")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Handle SIRET field change with debounced API call - only allow digits
   const handleSiretChange = (value: string) => {
+    // Only allow digits and spaces
     const sanitizedValue = value.replace(/[^\d\s]/g, "");
+    
+    // Update siret field
     setFormData(prev => ({ ...prev, siret: sanitizedValue }));
     setSiretError("");
     
-    if (siretSearchTimeout.current) clearTimeout(siretSearchTimeout.current);
+    // Clear any pending search
+    if (siretSearchTimeout.current) {
+      clearTimeout(siretSearchTimeout.current);
+    }
+
     const cleanValue = sanitizedValue.replace(/\s/g, "");
     
+    // Validate SIRET length
     if (cleanValue.length > 0 && cleanValue.length !== 9 && cleanValue.length !== 14) {
-      setSiretError("Le SIRET doit contenir 9 ou 14 chiffres");
+      if (cleanValue.length < 9) {
+        setSiretError("Le SIRET doit contenir 9 ou 14 chiffres");
+      } else if (cleanValue.length > 9 && cleanValue.length < 14) {
+        setSiretError("Le SIRET doit contenir 9 ou 14 chiffres");
+      }
     }
     
+    // Reset verified state if not a valid SIRET format
     if (!cleanValue || !isSiretFormat(cleanValue)) {
       setSiretVerified(false);
       setIsSearchingSiret(false);
       return;
     }
 
+    // Show loading immediately when format is valid
     setIsSearchingSiret(true);
     setSiretVerified(false);
 
+    // Debounce the actual API call (500ms)
     siretSearchTimeout.current = setTimeout(async () => {
+      console.log("🔎 Searching SIRET:", cleanValue);
+      
       const companyData = await fetchCompanyBySiret(cleanValue);
+      
       if (companyData) {
+        console.log("✅ Company found:", companyData);
+        
+        // Update form with company data
         setFormData(prev => ({
           ...prev,
           entreprise: companyData.nom_complet,
@@ -175,6 +222,8 @@ const ProductTemplate = ({
           cpEntreprise: companyData.code_postal,
           villeEntreprise: companyData.ville,
         }));
+        
+        // Mark fields as valid
         setValidFields(prev => ({
           ...prev,
           siret: true,
@@ -183,25 +232,36 @@ const ProductTemplate = ({
           cpEntreprise: !!companyData.code_postal,
           villeEntreprise: !!companyData.ville,
         }));
+        
         setSiretVerified(true);
         setSiretError("");
       } else {
+        console.log("⚠️ No company found for SIRET:", cleanValue);
         setSiretError("SIRET non trouvé - Saisissez manuellement");
         setValidFields(prev => ({ ...prev, siret: false }));
       }
+      
       setIsSearchingSiret(false);
     }, 500);
   };
 
+  // Cleanup timeout on unmount
   useEffect(() => {
     return () => {
-      if (siretSearchTimeout.current) clearTimeout(siretSearchTimeout.current);
+      if (siretSearchTimeout.current) {
+        clearTimeout(siretSearchTimeout.current);
+      }
     };
   }, []);
 
+  // Handle form field change with validation
   const handleFieldChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
+    
+    // Clear field error
     setFieldErrors(prev => ({ ...prev, [field]: "" }));
+    
+    // Simple validation
     const isValid = value.trim().length > 0;
     
     if (field === "email") {
@@ -221,6 +281,7 @@ const ProductTemplate = ({
       if (value && !dateValid) {
         setFieldErrors(prev => ({ ...prev, dateDebut: "La date ne peut pas être dans le passé" }));
       }
+      // Also validate dateFin if it exists and is before new dateDebut
       if (formData.dateFin && value > formData.dateFin) {
         setFieldErrors(prev => ({ ...prev, dateFin: "La date de fin doit être après la date de début" }));
         setValidFields(prev => ({ ...prev, dateFin: false }));
@@ -243,7 +304,10 @@ const ProductTemplate = ({
     }
   };
 
+  // Calculate progress
   const progressValue = ((formStep - 1) / 2) * 100;
+
+  // Check if step is complete
   const isStep1Complete = formData.materiel && formData.entreprise;
   const isStep2Complete = formData.nom && formData.prenom && formData.email && formData.telephone;
   const isStep3Complete = formData.dateDebut && formData.dateFin && formData.cpChantier && formData.villeChantier;
@@ -257,7 +321,7 @@ const ProductTemplate = ({
         canonicalUrl={canonicalUrl}
       />
       
-      {/* Sticky CTA Bar */}
+      {/* Sticky CTA Bar with Pulse Effect */}
       <div className="bg-primary text-primary-foreground py-2 md:py-3 text-center">
         <div className="container mx-auto px-4 flex items-center justify-center gap-2 md:gap-4 flex-wrap">
           <span className="font-semibold text-sm md:text-base flex items-center gap-2">
@@ -305,16 +369,19 @@ const ProductTemplate = ({
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[400px] md:min-h-[500px]">
+      {/* Hero Section - Full Impact */}
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={heroImage} 
-            alt={heroImageAlt} 
-            className="w-full h-full object-cover"
-            loading="eager"
-          />
+          <div className="aspect-[16/9] md:aspect-auto md:h-full">
+            <img 
+              src={heroImage} 
+              alt={heroImageAlt} 
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-transparent"></div>
+          {/* Mention photo non contractuelle */}
           <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 z-10">
             <span className="text-[10px] md:text-xs text-white/70 bg-black/40 px-2 py-1 rounded">
               * Photo non contractuelle
@@ -333,6 +400,7 @@ const ProductTemplate = ({
               {heroSubtitle}
             </p>
 
+            {/* Big Stats - responsive */}
             <div className="flex gap-8 md:gap-12 mb-6 md:mb-10">
               <div>
                 <p className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-primary">99%</p>
@@ -362,7 +430,7 @@ const ProductTemplate = ({
         </div>
       </section>
 
-      {/* Trust Bar */}
+      {/* Trust Bar - Logos - Design Premium */}
       <section className="py-10 md:py-14 bg-card border-b border-border">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8 md:mb-10">
@@ -391,7 +459,7 @@ const ProductTemplate = ({
         </div>
       </section>
 
-      {/* Product Selection */}
+      {/* Product Selection - Quick Visual */}
       <section className="py-10 md:py-16 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="section-title text-center mb-3 md:mb-4">{productSelectorTitle}</h2>
@@ -422,386 +490,457 @@ const ProductTemplate = ({
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Why Choose Us - Impact */}
       <section className="py-10 md:py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
             <div className="bg-card border border-border rounded-xl md:rounded-2xl p-5 md:p-8 card-hover">
-              <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6">
-                <Zap className="w-6 h-6 md:w-8 md:h-8 text-primary" />
+              <div className="w-10 h-10 md:w-14 md:h-14 bg-primary rounded-lg md:rounded-xl flex items-center justify-center mb-4 md:mb-6">
+                <Shield className="w-5 h-5 md:w-7 md:h-7 text-primary-foreground" strokeWidth={1.5} />
               </div>
-              <h3 className="text-lg md:text-xl font-display font-bold text-foreground mb-2 md:mb-3">Réponse en 2h max</h3>
-              <p className="text-muted-foreground text-sm md:text-base">Nous nous engageons à vous rappeler en moins de deux heures</p>
+              <h3 className="font-display font-bold text-lg md:text-xl mb-2 md:mb-3">Un seul interlocuteur</h3>
+              <p className="text-muted-foreground text-sm md:text-base">De la demande de devis à la fin de votre chantier, un expert dédié vous accompagne.</p>
             </div>
-
+            
             <div className="bg-card border border-border rounded-xl md:rounded-2xl p-5 md:p-8 card-hover">
-              <div className="w-12 h-12 md:w-16 md:h-16 bg-success/10 rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6">
-                <Shield className="w-6 h-6 md:w-8 md:h-8 text-success" />
+              <div className="w-10 h-10 md:w-14 md:h-14 bg-success rounded-lg md:rounded-xl flex items-center justify-center mb-4 md:mb-6">
+                <Zap className="w-5 h-5 md:w-7 md:h-7 text-success-foreground" strokeWidth={1.5} />
               </div>
-              <h3 className="text-lg md:text-xl font-display font-bold text-foreground mb-2 md:mb-3">Matériel contrôlé</h3>
-              <p className="text-muted-foreground text-sm md:text-base">Chaque machine vérifiée avant livraison selon les normes</p>
+              <h3 className="font-display font-bold text-lg md:text-xl mb-2 md:mb-3">Réponse en 2h max</h3>
+              <p className="text-muted-foreground text-sm md:text-base">Urgence ou planification, nous nous engageons à vous rappeler en moins de 2 heures.</p>
             </div>
-
+            
             <div className="bg-card border border-border rounded-xl md:rounded-2xl p-5 md:p-8 card-hover sm:col-span-2 md:col-span-1">
-              <div className="w-12 h-12 md:w-16 md:h-16 bg-secondary/10 rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6">
-                <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-secondary" />
+              <div className="w-10 h-10 md:w-14 md:h-14 bg-accent rounded-lg md:rounded-xl flex items-center justify-center mb-4 md:mb-6">
+                <TrendingUp className="w-5 h-5 md:w-7 md:h-7 text-accent-foreground" strokeWidth={1.5} />
               </div>
-              <h3 className="text-lg md:text-xl font-display font-bold text-foreground mb-2 md:mb-3">Livraison France entière</h3>
-              <p className="text-muted-foreground text-sm md:text-base">Transport et mise en place sur votre chantier</p>
+              <h3 className="font-display font-bold text-lg md:text-xl mb-2 md:mb-3">99% de disponibilité</h3>
+              <p className="text-muted-foreground text-sm md:text-base">Notre réseau de 2 400 agences nous permet de garantir la disponibilité.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Form Section */}
+      {/* Form Section - Multi-Step Restructured */}
       <section id="devis" className="py-10 md:py-16 lg:py-24 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-secondary-foreground mb-3 md:mb-4">
-                Votre devis en 3 étapes
+        <div className="container mx-auto px-4 overflow-hidden">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center overflow-hidden">
+            <div className="text-secondary-foreground">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold mb-4 md:mb-6">
+                Créez votre devis<br />
+                <span className="text-primary">en 2 minutes</span>
               </h2>
-              <p className="text-secondary-foreground/70 text-sm md:text-base">Recevez une offre personnalisée en quelques minutes</p>
-            </div>
-
-            {/* Progress */}
-            <div className="mb-8 md:mb-10">
-              <div className="flex justify-between mb-3 md:mb-4 text-xs md:text-sm">
-                <span className={`font-medium ${formStep >= 1 ? "text-primary" : "text-secondary-foreground/50"}`}>1. Matériel & Entreprise</span>
-                <span className={`font-medium ${formStep >= 2 ? "text-primary" : "text-secondary-foreground/50"}`}>2. Contact</span>
-                <span className={`font-medium ${formStep >= 3 ? "text-primary" : "text-secondary-foreground/50"}`}>3. Chantier</span>
+              <ul className="space-y-3 md:space-y-4">
+                <li className="flex items-center gap-2 md:gap-3">
+                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-success shrink-0" strokeWidth={1.5} />
+                  <span className="text-sm md:text-lg">Réponse garantie sous 2h</span>
+                </li>
+                <li className="flex items-center gap-2 md:gap-3">
+                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-success shrink-0" strokeWidth={1.5} />
+                  <span className="text-sm md:text-lg">Devis 100% gratuit et sans engagement</span>
+                </li>
+                <li className="flex items-center gap-2 md:gap-3">
+                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-success shrink-0" strokeWidth={1.5} />
+                  <span className="text-sm md:text-lg">Livraison partout en France</span>
+                </li>
+                <li className="flex items-center gap-2 md:gap-3">
+                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-success shrink-0" strokeWidth={1.5} />
+                  <span className="text-sm md:text-lg">Avec ou sans opérateur</span>
+                </li>
+              </ul>
+              
+              <div className="mt-6 md:mt-10 p-4 md:p-6 bg-secondary-foreground/10 rounded-xl hidden sm:block">
+                <p className="text-secondary-foreground/80 mb-2 text-sm md:text-base">Besoin d'une réponse immédiate ?</p>
+                <a href="tel:0368385456" className="text-2xl md:text-3xl font-display font-bold text-primary hover:underline">
+                  03 68 38 54 56
+                </a>
               </div>
-              <Progress value={progressValue} className="h-2" />
             </div>
+            
+            <div className="bg-card rounded-xl md:rounded-2xl p-5 md:p-8 shadow-2xl overflow-hidden w-full max-w-full">
+              {/* Progress Bar */}
+              <div className="mb-6">
+                <div className="flex justify-between text-xs text-muted-foreground mb-2">
+                  <span className={formStep >= 1 ? "text-primary font-medium" : ""}>1. Produit & Société</span>
+                  <span className={formStep >= 2 ? "text-primary font-medium" : ""}>2. Contact</span>
+                  <span className={formStep >= 3 ? "text-primary font-medium" : ""}>3. Chantier</span>
+                </div>
+                <Progress value={progressValue} className="h-2" />
+              </div>
 
-            {/* Form Card */}
-            <div className="bg-card rounded-2xl md:rounded-3xl p-5 md:p-8 lg:p-10 shadow-2xl">
-              {formStep === 1 && (
-                <div className="space-y-5 md:space-y-6">
-                  <h3 className="text-lg md:text-xl font-display font-bold text-foreground flex items-center gap-2">
-                    <FileText className="w-5 h-5 text-primary" />
-                    Le matériel
-                  </h3>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Équipement sélectionné</label>
+              <h3 className="font-display font-bold text-xl md:text-2xl text-foreground mb-4 md:mb-6">Devis Express</h3>
+              
+              <form className="space-y-4 md:space-y-5 overflow-hidden">
+                {/* Step 1: Produit & Entreprise */}
+                {formStep === 1 && (
+                  <div className="space-y-4 animate-fade-in">
+                    <p className="text-xs font-semibold text-primary mb-3 flex items-center gap-2">
+                      <Building2 className="w-4 h-4" strokeWidth={1.5} />
+                      ÉTAPE 1 : PRODUIT & ENTREPRISE
+                    </p>
+                    
+                    {/* Choix du matériel */}
                     <div className="relative">
-                      <select
+                      <label className="block text-sm font-medium text-foreground mb-2">Choix du matériel *</label>
+                      <select 
+                        className="input-field pr-8"
                         value={formData.materiel}
                         onChange={(e) => handleFieldChange("materiel", e.target.value)}
-                        className="w-full px-4 py-3 md:py-4 border-2 border-border rounded-xl focus:border-primary focus:ring-0 transition-colors bg-background text-foreground appearance-none min-w-0 box-border"
                       >
-                        <option value="">Sélectionnez un équipement</option>
-                        {products.map((product, index) => (
-                          <option key={index} value={`${productNamePrefix} ${product.value}`}>
-                            {productNamePrefix} {product.label}
+                        <option value="">Choisir un équipement</option>
+                        {products.map((p, i) => (
+                          <option key={i} value={productNamePrefix ? `${productNamePrefix} ${p.value}` : p.value}>
+                            {productNamePrefix ? `${productNamePrefix} ${p.label}` : p.label}
                           </option>
                         ))}
                       </select>
+                      {validFields.materiel && (
+                        <Check className="absolute right-10 top-9 w-5 h-5 text-success animate-scale-in" />
+                      )}
                     </div>
-                  </div>
 
-                  <h3 className="text-lg md:text-xl font-display font-bold text-foreground flex items-center gap-2 pt-4 border-t border-border">
-                    <Building2 className="w-5 h-5 text-primary" />
-                    Informations Entreprise
-                  </h3>
 
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">SIRET *</label>
+                    {/* Séparateur */}
+                    <div className="border-t border-border pt-4 mt-4">
+                      <p className="text-xs font-medium text-muted-foreground mb-3 flex items-center gap-2">
+                        🏢 IDENTIFICATION ENTREPRISE
+                      </p>
+                    </div>
+
+                    {/* SIRET Field - Dedicated with autocomplete */}
                     <div className="relative">
-                      <input
-                        type="text"
-                        inputMode="numeric"
-                        value={formData.siret}
-                        onChange={(e) => handleSiretChange(e.target.value)}
-                        placeholder="123 456 789 00012"
-                        className={`w-full px-4 py-3 md:py-4 border-2 rounded-xl focus:ring-0 transition-colors bg-background text-foreground min-w-0 box-border ${
-                          siretError ? "border-destructive" : siretVerified ? "border-success" : "border-border focus:border-primary"
-                        }`}
-                      />
-                      {isSearchingSiret && (
-                        <Loader2 className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-primary animate-spin" />
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        N° SIRET 
+                        <span className="text-muted-foreground font-normal ml-1">(optionnel - recommandé)</span>
+                        {siretVerified && (
+                          <span className="ml-2 inline-flex items-center gap-1 text-xs text-success font-normal animate-fade-in">
+                            <BadgeCheck className="w-3.5 h-3.5" />
+                            Données vérifiées
+                          </span>
+                        )}
+                      </label>
+                      <div className="relative">
+                        <input 
+                          type="text" 
+                          className={`input-field pr-10 font-mono ${siretError ? 'border-destructive' : ''}`}
+                          placeholder="Ex: 443 061 841 00047"
+                          value={formData.siret}
+                          onChange={(e) => handleSiretChange(e.target.value)}
+                          maxLength={20}
+                        />
+                        {isSearchingSiret && (
+                          <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary animate-spin" />
+                        )}
+                        {!isSearchingSiret && siretVerified && (
+                          <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success animate-scale-in" />
+                        )}
+                      </div>
+                      {siretError && (
+                        <p className="text-xs text-destructive mt-1">{siretError}</p>
                       )}
-                      {siretVerified && (
-                        <BadgeCheck className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-success" />
+                      {siretVerified && formData.entreprise && (
+                        <div className="mt-2 p-3 bg-success/10 border border-success/20 rounded-lg animate-fade-in">
+                          <p className="text-sm font-medium text-foreground">{formData.entreprise}</p>
+                          <p className="text-xs text-muted-foreground mt-1">
+                            📍 {formData.adresseEntreprise && `${formData.adresseEntreprise}, `}{formData.cpEntreprise} {formData.villeEntreprise}
+                          </p>
+                        </div>
                       )}
                     </div>
-                    {siretError && <p className="text-destructive text-xs mt-1">{siretError}</p>}
-                  </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Nom de l'entreprise *</label>
-                    <input
-                      type="text"
-                      value={formData.entreprise}
-                      onChange={(e) => handleFieldChange("entreprise", e.target.value)}
-                      placeholder="Raison sociale"
-                      className="w-full px-4 py-3 md:py-4 border-2 border-border rounded-xl focus:border-primary focus:ring-0 transition-colors bg-background text-foreground min-w-0 box-border"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Adresse</label>
-                    <input
-                      type="text"
-                      value={formData.adresseEntreprise}
-                      onChange={(e) => handleFieldChange("adresseEntreprise", e.target.value)}
-                      placeholder="Adresse du siège"
-                      className="w-full px-4 py-3 md:py-4 border-2 border-border rounded-xl focus:border-primary focus:ring-0 transition-colors bg-background text-foreground min-w-0 box-border"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3 md:gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Code postal</label>
-                      <input
-                        type="text"
-                        inputMode="numeric"
-                        value={formData.cpEntreprise}
-                        onChange={(e) => handleFieldChange("cpEntreprise", e.target.value)}
-                        placeholder="67000"
-                        className="w-full px-4 py-3 md:py-4 border-2 border-border rounded-xl focus:border-primary focus:ring-0 transition-colors bg-background text-foreground min-w-0 box-border"
+                    {/* Nom entreprise - readonly if autocompleted, otherwise editable */}
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-foreground mb-2">Nom de l'entreprise *</label>
+                      <input 
+                        type="text" 
+                        className={`input-field ${siretVerified ? 'bg-muted' : ''}`}
+                        placeholder="Ex: EAP Location"
+                        value={formData.entreprise}
+                        onChange={(e) => handleFieldChange("entreprise", e.target.value)}
+                        readOnly={siretVerified}
                       />
+                      {validFields.entreprise && (
+                        <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                      )}
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Ville</label>
-                      <input
-                        type="text"
-                        value={formData.villeEntreprise}
-                        onChange={(e) => handleFieldChange("villeEntreprise", e.target.value)}
-                        placeholder="Strasbourg"
-                        className="w-full px-4 py-3 md:py-4 border-2 border-border rounded-xl focus:border-primary focus:ring-0 transition-colors bg-background text-foreground min-w-0 box-border"
-                      />
-                    </div>
-                  </div>
 
-                  <Button
-                    variant="cta"
-                    size="lg"
-                    className="w-full"
-                    disabled={!isStep1Complete}
-                    onClick={() => setFormStep(2)}
-                  >
-                    Continuer
-                    <ArrowRight className="w-5 h-5" />
-                  </Button>
-                  <p className="text-center text-xs text-muted-foreground">* Service réservé aux professionnels</p>
-                </div>
-              )}
-
-              {formStep === 2 && (
-                <div className="space-y-5 md:space-y-6">
-                  <h3 className="text-lg md:text-xl font-display font-bold text-foreground flex items-center gap-2">
-                    <User className="w-5 h-5 text-primary" />
-                    Contact
-                  </h3>
-
-                  <div className="grid grid-cols-2 gap-3 md:gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Nom *</label>
-                      <input
-                        type="text"
-                        autoComplete="family-name"
-                        name="family-name"
-                        value={formData.nom}
-                        onChange={(e) => handleFieldChange("nom", e.target.value)}
-                        placeholder="Dupont"
-                        className="w-full px-4 py-3 md:py-4 border-2 border-border rounded-xl focus:border-primary focus:ring-0 transition-colors bg-background text-foreground min-w-0 box-border"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Prénom *</label>
-                      <input
-                        type="text"
-                        autoComplete="given-name"
-                        name="given-name"
-                        value={formData.prenom}
-                        onChange={(e) => handleFieldChange("prenom", e.target.value)}
-                        placeholder="Jean"
-                        className="w-full px-4 py-3 md:py-4 border-2 border-border rounded-xl focus:border-primary focus:ring-0 transition-colors bg-background text-foreground min-w-0 box-border"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Email *</label>
-                    <input
-                      type="email"
-                      autoComplete="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={(e) => handleFieldChange("email", e.target.value)}
-                      placeholder="contact@entreprise.fr"
-                      className={`w-full px-4 py-3 md:py-4 border-2 rounded-xl focus:ring-0 transition-colors bg-background text-foreground min-w-0 box-border ${
-                        fieldErrors.email ? "border-destructive" : "border-border focus:border-primary"
-                      }`}
-                    />
-                    {fieldErrors.email && <p className="text-destructive text-xs mt-1">{fieldErrors.email}</p>}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Téléphone *</label>
-                    <input
-                      type="tel"
-                      autoComplete="tel"
-                      name="tel"
-                      value={formData.telephone}
-                      onChange={(e) => handleFieldChange("telephone", e.target.value)}
-                      placeholder="06 12 34 56 78"
-                      className="w-full px-4 py-3 md:py-4 border-2 border-border rounded-xl focus:border-primary focus:ring-0 transition-colors bg-background text-foreground min-w-0 box-border"
-                    />
-                  </div>
-
-                  <div className="flex gap-3 md:gap-4">
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className="flex-1"
-                      onClick={() => setFormStep(1)}
-                    >
-                      <ArrowLeft className="w-5 h-5" />
-                      Retour
-                    </Button>
-                    <Button
-                      variant="cta"
-                      size="lg"
-                      className="flex-1"
-                      disabled={!isStep2Complete}
-                      onClick={() => setFormStep(3)}
+                    <Button 
+                      type="button"
+                      variant="cta" 
+                      size="lg" 
+                      className="w-full mt-4"
+                      onClick={() => setFormStep(2)}
+                      disabled={!isStep1Complete}
                     >
                       Continuer
                       <ArrowRight className="w-5 h-5" />
                     </Button>
+                    <p className="text-xs text-muted-foreground text-center mt-3">* Service réservé aux professionnels</p>
                   </div>
-                </div>
-              )}
+                )}
 
-              {formStep === 3 && (
-                <div className="space-y-5 md:space-y-6">
-                  <h3 className="text-lg md:text-xl font-display font-bold text-foreground flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-primary" />
-                    Date et Lieu du chantier
-                  </h3>
+                {/* Step 2: Contact */}
+                {formStep === 2 && (
+                  <div className="space-y-4 animate-fade-in">
+                    <p className="text-xs font-semibold text-primary mb-3 flex items-center gap-2">
+                      <User className="w-4 h-4" strokeWidth={1.5} />
+                      ÉTAPE 2 : VOTRE CONTACT
+                    </p>
+                    
+                    {/* Récap entreprise */}
+                    {formData.entreprise && (
+                      <div className="p-3 bg-muted rounded-lg mb-4">
+                        <p className="text-xs text-muted-foreground">Entreprise sélectionnée :</p>
+                        <p className="text-sm font-medium text-foreground">{formData.entreprise}</p>
+                      </div>
+                    )}
 
-                  <div className="grid grid-cols-2 gap-3 md:gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Date de début *</label>
-                      <input
-                        type="date"
-                        value={formData.dateDebut}
-                        onChange={(e) => handleFieldChange("dateDebut", e.target.value)}
-                        min={getTodayDate()}
-                        className={`w-full px-4 py-3 md:py-4 border-2 rounded-xl focus:ring-0 transition-colors bg-background text-foreground min-w-0 box-border ${
-                          fieldErrors.dateDebut ? "border-destructive" : "border-border focus:border-primary"
-                        }`}
-                      />
-                      {fieldErrors.dateDebut && <p className="text-destructive text-xs mt-1">{fieldErrors.dateDebut}</p>}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                      <div className="relative w-full overflow-hidden">
+                        <label className="block text-sm font-medium text-foreground mb-2">Nom *</label>
+                        <input 
+                          type="text" 
+                          className="input-field" 
+                          placeholder="Dupont"
+                          name="family-name"
+                          autoComplete="family-name"
+                          value={formData.nom}
+                          onChange={(e) => handleFieldChange("nom", e.target.value)}
+                        />
+                        {validFields.nom && (
+                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                        )}
+                      </div>
+                      <div className="relative w-full overflow-hidden">
+                        <label className="block text-sm font-medium text-foreground mb-2">Prénom *</label>
+                        <input 
+                          type="text" 
+                          className="input-field" 
+                          placeholder="Jean"
+                          name="given-name"
+                          autoComplete="given-name"
+                          value={formData.prenom}
+                          onChange={(e) => handleFieldChange("prenom", e.target.value)}
+                        />
+                        {validFields.prenom && (
+                          <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                        )}
+                      </div>
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Date de fin *</label>
-                      <input
-                        type="date"
-                        value={formData.dateFin}
-                        onChange={(e) => handleFieldChange("dateFin", e.target.value)}
-                        min={formData.dateDebut || getTodayDate()}
-                        className={`w-full px-4 py-3 md:py-4 border-2 rounded-xl focus:ring-0 transition-colors bg-background text-foreground min-w-0 box-border ${
-                          fieldErrors.dateFin ? "border-destructive" : "border-border focus:border-primary"
-                        }`}
+                    
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-foreground mb-2">E-mail professionnel *</label>
+                      <input 
+                        type="email" 
+                        className={`input-field ${fieldErrors.email ? 'border-destructive' : ''}`}
+                        placeholder="email@entreprise.fr"
+                        name="email"
+                        autoComplete="email"
+                        value={formData.email}
+                        onChange={(e) => handleFieldChange("email", e.target.value)}
                       />
-                      {fieldErrors.dateFin && <p className="text-destructive text-xs mt-1">{fieldErrors.dateFin}</p>}
+                      {validFields.email && (
+                        <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                      )}
+                      {fieldErrors.email && (
+                        <p className="text-xs text-destructive mt-1">{fieldErrors.email}</p>
+                      )}
+                    </div>
+                    
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-foreground mb-2">Téléphone *</label>
+                      <input 
+                        type="tel" 
+                        className="input-field" 
+                        placeholder="06 XX XX XX XX"
+                        name="tel"
+                        autoComplete="tel"
+                        value={formData.telephone}
+                        onChange={(e) => handleFieldChange("telephone", e.target.value)}
+                      />
+                      {validFields.telephone && (
+                        <Check className="absolute right-3 top-9 w-5 h-5 text-success animate-scale-in" />
+                      )}
+                    </div>
+
+                    <div className="flex gap-3 mt-4">
+                      <Button 
+                        type="button"
+                        variant="outline" 
+                        size="lg" 
+                        className="flex-1"
+                        onClick={() => setFormStep(1)}
+                      >
+                        Retour
+                      </Button>
+                      <Button 
+                        type="button"
+                        variant="cta" 
+                        size="lg" 
+                        className="flex-1"
+                        onClick={() => setFormStep(3)}
+                        disabled={!isStep2Complete}
+                      >
+                        Continuer
+                        <ArrowRight className="w-5 h-5" />
+                      </Button>
                     </div>
                   </div>
+                )}
 
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Adresse du chantier</label>
-                    <input
-                      type="text"
-                      value={formData.adresseChantier}
-                      onChange={(e) => handleFieldChange("adresseChantier", e.target.value)}
-                      placeholder="Adresse de livraison"
-                      className="w-full px-4 py-3 md:py-4 border-2 border-border rounded-xl focus:border-primary focus:ring-0 transition-colors bg-background text-foreground min-w-0 box-border"
-                    />
-                  </div>
+                {/* Step 3: Chantier */}
+                {formStep === 3 && (
+                  <div className="space-y-4 animate-fade-in w-full max-w-full overflow-hidden box-border">
+                    <p className="text-xs font-semibold text-primary mb-3 flex items-center gap-2">
+                      <MapPin className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
+                      <span>ÉTAPE 3 : LIEU DU CHANTIER</span>
+                    </p>
 
-                  <div className="grid grid-cols-2 gap-3 md:gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Code postal *</label>
-                      <input
-                        type="text"
-                        inputMode="numeric"
-                        value={formData.cpChantier}
-                        onChange={(e) => handleFieldChange("cpChantier", e.target.value)}
-                        placeholder="67000"
-                        className="w-full px-4 py-3 md:py-4 border-2 border-border rounded-xl focus:border-primary focus:ring-0 transition-colors bg-background text-foreground min-w-0 box-border"
+                    {/* Récap */}
+                    <div className="p-3 bg-muted rounded-lg mb-4 space-y-1 overflow-hidden w-full max-w-full">
+                      <p className="text-xs text-muted-foreground">Récapitulatif :</p>
+                      <p className="text-sm font-medium text-foreground truncate">{formData.materiel}</p>
+                      <p className="text-xs text-muted-foreground truncate">{formData.entreprise} • {formData.prenom} {formData.nom}</p>
+                    </div>
+
+                    {/* Dates du chantier */}
+                    <div className="flex flex-col gap-3 w-full">
+                      <div className="w-full">
+                        <label className="block text-sm font-medium text-foreground mb-2">Date début *</label>
+                        <input 
+                          type="date" 
+                          className={`input-field ${fieldErrors.dateDebut ? 'border-destructive' : ''}`}
+                          value={formData.dateDebut}
+                          min={getTodayDate()}
+                          onChange={(e) => handleFieldChange("dateDebut", e.target.value)}
+                        />
+                        {fieldErrors.dateDebut && (
+                          <p className="text-xs text-destructive mt-1">{fieldErrors.dateDebut}</p>
+                        )}
+                      </div>
+                      <div className="w-full">
+                        <label className="block text-sm font-medium text-foreground mb-2">Date fin *</label>
+                        <input 
+                          type="date" 
+                          className={`input-field ${fieldErrors.dateFin ? 'border-destructive' : ''}`}
+                          value={formData.dateFin}
+                          min={formData.dateDebut || getTodayDate()}
+                          onChange={(e) => handleFieldChange("dateFin", e.target.value)}
+                        />
+                        {fieldErrors.dateFin && (
+                          <p className="text-xs text-destructive mt-1">{fieldErrors.dateFin}</p>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="w-full">
+                      <label className="block text-sm font-medium text-foreground mb-2">Adresse du chantier</label>
+                      <input 
+                        type="text" 
+                        className="input-field" 
+                        placeholder="12 rue de la Paix"
+                        value={formData.adresseChantier}
+                        onChange={(e) => handleFieldChange("adresseChantier", e.target.value)}
                       />
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Ville *</label>
-                      <input
-                        type="text"
-                        value={formData.villeChantier}
-                        onChange={(e) => handleFieldChange("villeChantier", e.target.value)}
-                        placeholder="Strasbourg"
-                        className="w-full px-4 py-3 md:py-4 border-2 border-border rounded-xl focus:border-primary focus:ring-0 transition-colors bg-background text-foreground min-w-0 box-border"
+
+                    <div className="flex flex-col gap-3 w-full">
+                      <div className="w-full">
+                        <label className="block text-sm font-medium text-foreground mb-2">Code postal *</label>
+                        <input 
+                          type="text" 
+                          className="input-field" 
+                          placeholder="75001"
+                          value={formData.cpChantier}
+                          onChange={(e) => handleFieldChange("cpChantier", e.target.value)}
+                          maxLength={5}
+                        />
+                      </div>
+                      <div className="w-full">
+                        <label className="block text-sm font-medium text-foreground mb-2">Ville *</label>
+                        <input 
+                          type="text" 
+                          className="input-field" 
+                          placeholder="Paris"
+                          value={formData.villeChantier}
+                          onChange={(e) => handleFieldChange("villeChantier", e.target.value)}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="relative">
+                      <label className="block text-sm font-medium text-foreground mb-2">Commentaire / précisions</label>
+                      <textarea 
+                        className="input-field min-h-[80px] resize-none" 
+                        placeholder="Accès difficile, contraintes horaires, besoins spécifiques..."
+                        value={formData.commentaire}
+                        onChange={(e) => handleFieldChange("commentaire", e.target.value)}
                       />
                     </div>
-                  </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Commentaire (optionnel)</label>
-                    <textarea
-                      value={formData.commentaire}
-                      onChange={(e) => handleFieldChange("commentaire", e.target.value)}
-                      placeholder="Précisions sur votre besoin..."
-                      rows={3}
-                      className="w-full px-4 py-3 md:py-4 border-2 border-border rounded-xl focus:border-primary focus:ring-0 transition-colors bg-background text-foreground resize-none min-w-0 box-border"
-                    />
-                  </div>
+                    {/* Social Proof Badge */}
+                    <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground py-2">
+                      <div className="flex text-primary">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-current" />
+                        ))}
+                      </div>
+                      <span>4.9/5 basé sur 150+ interventions le mois dernier</span>
+                    </div>
 
-                  <div className="flex gap-3 md:gap-4">
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className="flex-1"
-                      onClick={() => setFormStep(2)}
-                    >
-                      <ArrowLeft className="w-5 h-5" />
-                      Retour
-                    </Button>
-                    <Button
-                      variant="cta"
-                      size="lg"
-                      className="flex-1"
-                      disabled={!isStep3Complete}
-                    >
-                      <FileText className="w-5 h-5" />
-                      Créer mon devis
-                    </Button>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Button 
+                        type="button"
+                        variant="outline" 
+                        size="lg" 
+                        className="w-full sm:w-auto sm:flex-1"
+                        onClick={() => setFormStep(2)}
+                      >
+                        Retour
+                      </Button>
+                      <Button 
+                        type="submit"
+                        variant="cta" 
+                        size="lg" 
+                        className="w-full sm:w-auto sm:flex-1"
+                        disabled={!isStep3Complete}
+                      >
+                        Envoyer ma demande
+                        <ArrowRight className="w-5 h-5 flex-shrink-0 ml-2" />
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+              </form>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mobile Sticky CTA */}
-      <div className="fixed bottom-0 left-0 right-0 bg-card border-t border-border p-3 md:hidden z-40">
-        <div className="flex gap-2">
-          <Button variant="outline" size="sm" className="flex-1" asChild>
-            <a href="tel:0368385456">
-              <Phone className="w-4 h-4" />
-              Appeler
-            </a>
-          </Button>
-          <Button variant="cta" size="sm" className="flex-1" asChild>
-            <a href="#devis">Devis Express</a>
-          </Button>
+      {/* Footer */}
+      <footer className="bg-foreground text-background py-8 pb-24 md:pb-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-muted-foreground">
+            EAP Location - Spécialiste BTP depuis 2016 | contact@eap-location.fr | 03 68 38 54 56
+          </p>
         </div>
-      </div>
+      </footer>
 
-      {/* Footer spacing for mobile sticky */}
-      <div className="h-16 md:hidden"></div>
+      {/* Mobile Sticky CTA */}
+      <div className="fixed bottom-0 left-0 right-0 bg-card border-t border-border p-3 flex gap-3 md:hidden z-50 shadow-lg">
+        <Button variant="phone" size="lg" asChild className="flex-1">
+          <a href="tel:0368385456">
+            <Phone className="w-5 h-5" />
+            Appeler
+          </a>
+        </Button>
+        <Button variant="cta" size="lg" asChild className="flex-1">
+          <a href="#devis">
+            <FileText className="w-5 h-5" />
+            Devis Express
+          </a>
+        </Button>
+      </div>
     </div>
   );
 };
