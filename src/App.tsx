@@ -15,8 +15,11 @@ import NotFound from "./pages/NotFound";
 // Page produit existante (template Impact) - conservée pour référence
 import TemplateImpact from "./pages/TemplateImpact";
 
-// Page produit spécifique - Chariot Rotatif
+// Pages produits spécifiques - Manutention
 import ChariotRotatif from "./pages/products/ChariotRotatif";
+import ChariotIndustrielDiesel from "./pages/products/ChariotIndustrielDiesel";
+import ChariotIndustrielGaz from "./pages/products/ChariotIndustrielGaz";
+import ChariotIndustrielElectrique from "./pages/products/ChariotIndustrielElectrique";
 
 // Pages catégories
 import Terrassement from "./pages/categories/Terrassement";
@@ -59,8 +62,11 @@ const App = () => (
             {/* Pages produits dynamiques */}
             <Route path="/terrassement/:slug" element={<ProductPage />} />
             <Route path="/travail-en-hauteur/:slug" element={<ProductPage />} />
-            {/* Chariot Rotatif - page complète */}
+            {/* Pages produits complètes - Manutention */}
             <Route path="/manutention/chariot-rotatif" element={<ChariotRotatif />} />
+            <Route path="/manutention/chariot-industriel-diesel" element={<ChariotIndustrielDiesel />} />
+            <Route path="/manutention/chariot-industriel-gaz" element={<ChariotIndustrielGaz />} />
+            <Route path="/manutention/chariot-industriel-electrique" element={<ChariotIndustrielElectrique />} />
             <Route path="/manutention/:slug" element={<ProductPage />} />
             <Route path="/compactage/:slug" element={<ProductPage />} />
             <Route path="/base-vie/:slug" element={<ProductPage />} />
