@@ -370,16 +370,14 @@ const ProductTemplate = ({
       </header>
 
       {/* Hero Section - Full Impact */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden min-h-[60vh] md:min-h-[70vh]">
         <div className="absolute inset-0">
-          <div className="aspect-[16/9] md:aspect-auto md:h-full">
-            <img 
-              src={heroImage} 
-              alt={heroImageAlt} 
-              className="w-full h-full object-cover"
-              loading="eager"
-            />
-          </div>
+          <img 
+            src={heroImage} 
+            alt={heroImageAlt} 
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-transparent"></div>
           {/* Mention photo non contractuelle */}
           <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 z-10">
