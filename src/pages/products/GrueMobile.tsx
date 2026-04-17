@@ -16,7 +16,7 @@ const GrueMobile = () => {
 
   return (
     <ProductTemplate
-      title="Location Grue Mobile 35T à 160T | EAP Location"
+      title="Location Grue Mobile 35T à 160T | Travax"
       description="Location grue mobile de 35T à 160T. Avec grutier certifié. Disponibilité 99%, devis en 2h, livraison partout en France."
       keywords="grue mobile, location grue, grue automotrice, levage, location matériel BTP"
       canonicalUrl="/manutention/grue-mobile"

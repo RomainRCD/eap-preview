@@ -11,7 +11,7 @@ const MiniGrueChenilles = () => {
 
   return (
     <ProductTemplate
-      title="Location Mini Grue Télescopique sur Chenilles | EAP Location"
+      title="Location Mini Grue Télescopique sur Chenilles | Travax"
       description="Location mini grue télescopique sur chenilles de 5T-20m à 8T-26m. Disponibilité 99%, devis en 2h, livraison partout en France."
       keywords="mini grue chenilles, grue télescopique, spider crane, levage, location matériel BTP"
       canonicalUrl="/manutention/mini-grue-chenilles"

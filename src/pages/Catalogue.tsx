@@ -66,7 +66,7 @@ const Catalogue = () => {
   return (
     <PageLayout>
       <SEOHead
-        title="Catalogue Matériel BTP | EAP Location"
+        title="Catalogue Matériel BTP | Travax"
         description="Découvrez notre catalogue complet de matériel BTP en location : terrassement, travail en hauteur, manutention, compactage, base vie et plus encore."
         keywords="catalogue BTP, location matériel chantier, engins terrassement, nacelle, chariot télescopique"
         canonicalUrl="/catalogue"

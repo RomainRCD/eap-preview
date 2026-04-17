@@ -13,7 +13,7 @@ const ChariotIndustrielElectrique = () => {
 
   return (
     <ProductTemplate
-      title="Location Chariot Industriel Électrique jusqu'à 8T | EAP Location"
+      title="Location Chariot Industriel Électrique jusqu'à 8T | Travax"
       description="Location chariot industriel électrique de 1,5T à 8T. Disponibilité 99%, devis en 2h, livraison partout en France."
       keywords="chariot industriel électrique, fenwick électrique, chariot zéro émission, location chariot élévateur"
       canonicalUrl="/manutention/chariot-industriel-electrique"

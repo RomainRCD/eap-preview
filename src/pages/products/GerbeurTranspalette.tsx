@@ -12,7 +12,7 @@ const GerbeurTranspalette = () => {
 
   return (
     <ProductTemplate
-      title="Location Gerbeur et Transpalette | EAP Location"
+      title="Location Gerbeur et Transpalette | Travax"
       description="Location gerbeur et transpalette : manuel ou électrique. Disponibilité 99%, devis en 2h, livraison partout en France."
       keywords="gerbeur, transpalette, transpalette électrique, manutention légère, location matériel"
       canonicalUrl="/manutention/gerbeur-transpalette"

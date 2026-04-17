@@ -2,62 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
 
 @layer base {
   :root {
-    /* BTP Pro Color Palette - Orange Construction */
+    /* Travax Brand Palette */
     --background: 0 0% 98%;
-    --foreground: 220 20% 15%;
+    --foreground: 0 0% 20%; /* Anthracite #333333 */
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 15%;
+    --card-foreground: 0 0% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 15%;
+    --popover-foreground: 0 0% 20%;
 
-    /* Orange Construction - Primary */
-    --primary: 24 95% 53%;
+    /* Orange Travax #ED5722 - Principal */
+    --primary: 14 85% 53%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 24 95% 60%;
-    --primary-dark: 24 95% 45%;
+    --primary-light: 14 85% 60%;
+    --primary-dark: 14 85% 45%;
 
-    /* Gris Industriel - Secondary */
-    --secondary: 220 15% 25%;
+    /* Anthracite #333333 - Secondary */
+    --secondary: 0 0% 20%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Muted / Neutral */
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 10% 45%;
+    /* Muted / Neutral - Gris clair #E6E6E6 */
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 40%;
 
-    /* Accent - Teal Pro */
-    --accent: 180 50% 35%;
+    /* Vert Travax #80C66F - Accent (sécurité/innovation) */
+    --accent: 105 43% 60%;
     --accent-foreground: 0 0% 100%;
 
-    /* Success Green */
-    --success: 142 70% 45%;
+    /* Success - utilise le vert Travax */
+    --success: 105 43% 50%;
     --success-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 24 95% 53%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 14 85% 53%;
 
     --radius: 0.5rem;
 
-    /* Custom Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220, 20%, 15%) 0%, hsl(220, 15%, 25%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(24, 95%, 53%) 0%, hsl(24, 95%, 45%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(220, 15%, 98%) 100%);
+    /* Custom Gradients - Travax */
+    --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 12%) 0%, hsl(0, 0%, 25%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(14, 85%, 53%) 0%, hsl(14, 85%, 45%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 98%) 100%);
+    --gradient-brand: linear-gradient(135deg, hsl(14, 85%, 53%) 0%, hsl(105, 43%, 60%) 100%);
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    --shadow-orange: 0 10px 30px -10px hsla(24, 95%, 53%, 0.4);
+    --shadow-orange: 0 10px 30px -10px hsla(14, 85%, 53%, 0.4);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -79,16 +80,16 @@
     --popover: 220 20% 13%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 24 95% 55%;
+    --primary: 14 85% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 35%;
+    --secondary: 0 0% 30%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 220 15% 20%;
-    --muted-foreground: 220 10% 65%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 180 50% 40%;
+    --accent: 105 43% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
@@ -96,7 +97,7 @@
 
     --border: 220 15% 25%;
     --input: 220 15% 25%;
-    --ring: 24 95% 55%;
+    --ring: 14 85% 55%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -121,11 +122,11 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Roboto', system-ui, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
   }
 
   img {
@@ -142,7 +143,7 @@
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 15px 35px -10px hsla(24, 95%, 53%, 0.5);
+    box-shadow: 0 15px 35px -10px hsla(14, 85%, 53%, 0.5);
   }
 
   .btn-secondary {
@@ -155,12 +156,12 @@
 
   .stat-number {
     @apply text-4xl md:text-5xl font-bold text-primary;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .section-title {
     @apply text-3xl md:text-4xl font-bold text-foreground mb-4;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .badge-pro {

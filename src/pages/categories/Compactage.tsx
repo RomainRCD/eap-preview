@@ -17,7 +17,7 @@ const Compactage = () => {
   return (
     <PageLayout>
       <SEOHead
-        title="Location Matériel Compactage | EAP Location"
+        title="Location Matériel Compactage | Travax"
         description="Location de matériel de compactage : rouleaux vibrants, plaques vibrantes, pilonneuses. Équipements disponibles partout en France."
         keywords="location rouleau compacteur, plaque vibrante, pilonneuse, compactage"
         canonicalUrl="/compactage"

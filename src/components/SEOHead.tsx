@@ -15,18 +15,18 @@ const SEOHead = ({
   canonicalUrl,
   structuredData 
 }: SEOHeadProps) => {
-  const baseUrl = "https://www.eap-location.fr";
+  const baseUrl = "https://www.travax.fr";
   const fullCanonicalUrl = canonicalUrl ? `${baseUrl}${canonicalUrl}` : undefined;
 
   // Default LocalBusiness structured data
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "EAP Location",
+    "name": "Travax",
     "description": "Location de chariots télescopiques rotatifs pour professionnels du BTP partout en France",
     "url": baseUrl,
     "telephone": "+33368385456",
-    "email": "contact@eap-location.fr",
+    "email": "contact@travax.fr",
     "foundingDate": "2016",
     "areaServed": {
       "@type": "Country",
@@ -61,7 +61,7 @@ const SEOHead = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="author" content="EAP Location" />
+      <meta name="author" content="Travax" />
       <meta name="robots" content="index, follow" />
       
       {/* Canonical URL */}
@@ -72,7 +72,7 @@ const SEOHead = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content="/images/og-preview.png" />
-      <meta property="og:site_name" content="EAP Location" />
+      <meta property="og:site_name" content="Travax" />
       {fullCanonicalUrl && <meta property="og:url" content={fullCanonicalUrl} />}
       
       {/* Twitter */}

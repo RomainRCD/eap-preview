@@ -13,7 +13,7 @@ const ChariotSemiIndustriel = () => {
 
   return (
     <ProductTemplate
-      title="Location Chariot Semi-Industriel 2T à 5T | EAP Location"
+      title="Location Chariot Semi-Industriel 2T à 5T | Travax"
       description="Location chariot semi-industriel de 2T à 5T. Disponibilité 99%, devis en 2h, livraison partout en France."
       keywords="chariot semi-industriel, location chariot élévateur, manutention, location matériel BTP"
       canonicalUrl="/manutention/chariot-semi-industriel"

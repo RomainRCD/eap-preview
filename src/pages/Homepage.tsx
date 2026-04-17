@@ -116,8 +116,8 @@ const Homepage = () => {
   return (
     <PageLayout>
       <SEOHead
-        title="EAP Location | Location Matériel BTP Partout en France"
-        description="EAP Location, spécialiste de la location de matériel BTP pour professionnels. Terrassement, travaux en hauteur, manutention, compactage. 2400 agences partenaires en France."
+        title="Travax | Location Matériel BTP Partout en France"
+        description="Travax, spécialiste de la location de matériel BTP pour professionnels. Terrassement, travaux en hauteur, manutention, compactage. 2400 agences partenaires en France."
         keywords="location matériel BTP, location engins chantier, chariot télescopique, nacelle, pelle mécanique, France"
         canonicalUrl="/"
       />
@@ -211,7 +211,7 @@ const Homepage = () => {
               Catalogue
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
-              EAP location propose la plus large gamme de matériels BTP en France. Vous retrouverez dans notre catalogue du matériel de terrassements, de travaux en hauteur, de manutention, de compactage, de base vie et du matériel spécifique.
+              Travax propose la plus large gamme de matériels BTP en France. Vous retrouverez dans notre catalogue du matériel de terrassements, de travaux en hauteur, de manutention, de compactage, de base vie et du matériel spécifique.
             </p>
           </div>
 

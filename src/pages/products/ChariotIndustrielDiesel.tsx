@@ -16,7 +16,7 @@ const ChariotIndustrielDiesel = () => {
 
   return (
     <ProductTemplate
-      title="Location Chariot Industriel Diesel (Fenwick) jusqu'à 16T | EAP Location"
+      title="Location Chariot Industriel Diesel (Fenwick) jusqu'à 16T | Travax"
       description="Location chariot industriel diesel de 1,5T à 16T. Disponibilité 99%, devis en 2h, livraison partout en France."
       keywords="chariot industriel diesel, fenwick diesel, location chariot élévateur, location matériel BTP"
       canonicalUrl="/manutention/chariot-industriel-diesel"

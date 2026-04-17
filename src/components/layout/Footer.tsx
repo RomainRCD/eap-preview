@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-lg mb-4">A Propos de nous</h4>
             <p className="text-secondary-foreground/80 text-sm leading-relaxed">
-              EAP location est une société Française spécialisée dans la location de matériels BTP pour professionnels. Notre service s'adresse aux professionnels sur le territoire français. Nous sommes en partenariat avec 2400 agences, ce qui nous permet d'assurer un service de qualité où que vous soyez.
+              Travax est une société Française spécialisée dans la location de matériels BTP pour professionnels. Notre service s'adresse aux professionnels sur le territoire français. Nous sommes en partenariat avec 2400 agences, ce qui nous permet d'assurer un service de qualité où que vous soyez.
             </p>
           </div>
 
@@ -67,14 +67,14 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <a href="mailto:contact@eap-location.fr" className="hover:text-primary transition-colors">Contact@eap-location.fr</a>
+                <a href="mailto:contact@travax.fr" className="hover:text-primary transition-colors">contact@travax.fr</a>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-secondary-foreground/20 pt-8 text-center text-sm text-secondary-foreground/60">
-          <p>&copy; {new Date().getFullYear()} EAP Location. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} Travax. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

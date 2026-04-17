@@ -16,7 +16,7 @@ const ChariotIndustrielGaz = () => {
 
   return (
     <ProductTemplate
-      title="Location Chariot Industriel Gaz (GPL) jusqu'à 16T | EAP Location"
+      title="Location Chariot Industriel Gaz (GPL) jusqu'à 16T | Travax"
       description="Location chariot industriel gaz GPL de 1,5T à 16T. Disponibilité 99%, devis en 2h, livraison partout en France."
       keywords="chariot industriel gaz, fenwick gaz, chariot GPL, location chariot élévateur"
       canonicalUrl="/manutention/chariot-industriel-gaz"
