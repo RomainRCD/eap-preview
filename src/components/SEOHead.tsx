@@ -83,7 +83,7 @@ const SEOHead = ({
       
       {/* Mobile optimization */}
       <meta name="format-detection" content="telephone=yes" />
-      <meta name="theme-color" content="#E65100" />
+      <meta name="theme-color" content="#ED5722" />
       
       {/* Structured Data JSON-LD */}
       <script type="application/ld+json">

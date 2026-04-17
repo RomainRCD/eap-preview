@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import SEOHead from "@/components/SEOHead";
+import logoTravax from "@/assets/brand/travax-logo.png";
 
 import heroImage from "@/assets/hero-chariot.jpg";
 
@@ -319,10 +320,13 @@ const ChariotRotatif = () => {
                 <span className="hidden sm:inline">Manutention</span>
               </Link>
             </Button>
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
-                <span className="text-secondary-foreground font-bold text-lg">E</span>
-              </div>
+            <div className="flex items-center gap-3">
+              <img
+                src={logoTravax}
+                alt="Travax"
+                className="h-10 w-auto object-contain"
+                loading="eager"
+              />
               <span className="font-display font-bold text-xl text-foreground hidden sm:inline">Travax</span>
             </div>
           </div>
