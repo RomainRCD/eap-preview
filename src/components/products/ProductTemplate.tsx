@@ -156,7 +156,7 @@ const ProductTemplate = ({
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   
   // Debounce timer ref
-  const siretSearchTimeout = useRef<NodeJS.Timeout | null>(null);
+  const siretSearchTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Handle product selection and scroll to form
   const handleProductSelect = (product: ProductOption) => {
@@ -354,7 +354,7 @@ const ProductTemplate = ({
               <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
                 <span className="text-secondary-foreground font-bold text-lg">E</span>
               </div>
-              <span className="font-display font-bold text-xl text-foreground hidden sm:inline">EAP Location</span>
+              <span className="font-display font-bold text-xl text-foreground hidden sm:inline">Travax</span>
             </div>
           </div>
           <div className="hidden md:flex items-center gap-6">
@@ -652,7 +652,7 @@ const ProductTemplate = ({
                       <input 
                         type="text" 
                         className={`input-field ${siretVerified ? 'bg-muted' : ''}`}
-                        placeholder="Ex: EAP Location"
+                        placeholder="Ex: Travax"
                         value={formData.entreprise}
                         onChange={(e) => handleFieldChange("entreprise", e.target.value)}
                         readOnly={siretVerified}
@@ -919,7 +919,7 @@ const ProductTemplate = ({
       <footer className="bg-foreground text-background py-8 pb-24 md:pb-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">
-            EAP Location - Spécialiste BTP depuis 2016 | contact@eap-location.fr | 03 68 38 54 56
+            Travax - Spécialiste BTP depuis 2016 | contact@travax.fr | 03 68 38 54 56
           </p>
         </div>
       </footer>

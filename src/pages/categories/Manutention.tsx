@@ -37,7 +37,7 @@ const Manutention = () => {
   return (
     <PageLayout>
       <SEOHead
-        title="Location Chariot Télescopique & Manutention | EAP Location"
+        title="Location Chariot Télescopique & Manutention | Travax"
         description="Location de chariots télescopiques, élévateurs et équipements de manutention. Rotatifs, fixes, thermiques ou électriques. Livraison France entière."
         keywords="location chariot télescopique, chariot élévateur, manutention, Manitou, Merlo"
         canonicalUrl="/manutention"

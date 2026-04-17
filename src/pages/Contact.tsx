@@ -7,9 +7,9 @@ const Contact = () => {
   return (
     <PageLayout>
       <SEOHead
-        title="Contact | EAP Location"
-        description="Contactez EAP Location pour vos besoins en location de matériel BTP. Réponse garantie sous 2h."
-        keywords="contact EAP location, devis BTP, location matériel chantier"
+        title="Contact | Travax"
+        description="Contactez Travax pour vos besoins en location de matériel BTP. Réponse garantie sous 2h."
+        keywords="contact Travax, devis BTP, location matériel chantier"
         canonicalUrl="/contact"
       />
 
@@ -66,8 +66,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Email</h3>
-                    <a href="mailto:contact@eap-location.fr" className="text-primary hover:underline">
-                      contact@eap-location.fr
+                    <a href="mailto:contact@travax.fr" className="text-primary hover:underline">
+                      contact@travax.fr
                     </a>
                   </div>
                 </div>

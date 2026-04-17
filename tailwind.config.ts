@@ -70,8 +70,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Space Grotesk', 'Inter', 'sans-serif'],
+        sans: ['Roboto', 'system-ui', 'sans-serif'],
+        display: ['Montserrat', 'Roboto', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
@@ -103,8 +103,8 @@ export default {
         "scale-in": "scale-in 0.3s ease-out forwards",
       },
       boxShadow: {
-        'orange': '0 10px 30px -10px hsla(24, 95%, 53%, 0.4)',
-        'orange-lg': '0 15px 35px -10px hsla(24, 95%, 53%, 0.5)',
+        'orange': '0 10px 30px -10px hsla(14, 85%, 53%, 0.4)',
+        'orange-lg': '0 15px 35px -10px hsla(14, 85%, 53%, 0.5)',
       },
     },
   },

@@ -10,7 +10,7 @@ const MiniGrueAraignee = () => {
 
   return (
     <ProductTemplate
-      title="Location Mini Grue Araignée 3T à 4T | EAP Location"
+      title="Location Mini Grue Araignée 3T à 4T | Travax"
       description="Location mini grue araignée de 3T à 4T. Idéale pour espaces restreints. Disponibilité 99%, devis en 2h, livraison partout en France."
       keywords="mini grue araignée, spider crane, grue compacte, levage intérieur, location matériel BTP"
       canonicalUrl="/manutention/mini-grue-araignee"

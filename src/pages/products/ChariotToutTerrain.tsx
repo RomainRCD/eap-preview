@@ -13,7 +13,7 @@ const ChariotToutTerrain = () => {
 
   return (
     <ProductTemplate
-      title="Location Chariot Tout Terrain 4x2 et 4x4 | EAP Location"
+      title="Location Chariot Tout Terrain 4x2 et 4x4 | Travax"
       description="Location chariot tout terrain 4x2 ou 4x4, de 2T à 5T. Disponibilité 99%, devis en 2h, livraison partout en France."
       keywords="chariot tout terrain, chariot 4x4, location chariot élévateur, manutention chantier"
       canonicalUrl="/manutention/chariot-tout-terrain"

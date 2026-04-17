@@ -15,7 +15,7 @@ const ChariotGrosTonnage = () => {
 
   return (
     <ProductTemplate
-      title="Location Chariot Télescopique Gros Tonnage 6T à 33T | EAP Location"
+      title="Location Chariot Télescopique Gros Tonnage 6T à 33T | Travax"
       description="Location chariot télescopique gros tonnage de 6T-9m à 33T-12m. Disponibilité 99%, devis en 2h, livraison partout en France."
       keywords="chariot télescopique gros tonnage, chariot 33 tonnes, manitou, merlo, location matériel BTP"
       canonicalUrl="/manutention/chariot-gros-tonnage"

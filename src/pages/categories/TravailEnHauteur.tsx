@@ -23,7 +23,7 @@ const TravailEnHauteur = () => {
   return (
     <PageLayout>
       <SEOHead
-        title="Location Nacelle & Travail en Hauteur | EAP Location"
+        title="Location Nacelle & Travail en Hauteur | Travax"
         description="Location de nacelles et équipements pour le travail en hauteur : nacelles ciseaux, articulées, télescopiques, échafaudages. Disponibilité France entière."
         keywords="location nacelle, PEMP, nacelle articulée, nacelle télescopique, travail en hauteur"
         canonicalUrl="/travail-en-hauteur"

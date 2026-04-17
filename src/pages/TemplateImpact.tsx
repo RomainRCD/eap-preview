@@ -105,7 +105,7 @@ const TemplateImpact = () => {
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   
   // Debounce timer ref
-  const siretSearchTimeout = useRef<NodeJS.Timeout | null>(null);
+  const siretSearchTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const products = [
     { height: "16m", capacity: "4T" },
@@ -283,7 +283,7 @@ const TemplateImpact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Chariot Télescopique Rotatif jusqu'à 35m | Dispo Immédiate | EAP Location"
+        title="Chariot Télescopique Rotatif jusqu'à 35m | Dispo Immédiate | Travax"
         description="Location chariot télescopique rotatif 16m-35m. Disponibilité 99%, devis en 2h, livraison 48h partout en France. Avec ou sans opérateur."
         keywords="chariot télescopique 35m, location chariot rotatif, manitou location, nacelle grande hauteur, location matériel BTP"
         canonicalUrl="/chariot-rotatif-impact"
@@ -315,7 +315,7 @@ const TemplateImpact = () => {
             <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
               <span className="text-secondary-foreground font-bold text-lg">E</span>
             </div>
-            <span className="font-display font-bold text-xl text-foreground">EAP Location</span>
+            <span className="font-display font-bold text-xl text-foreground">Travax</span>
           </div>
           <div className="hidden md:flex items-center gap-6">
             <div className="flex items-center gap-2 text-muted-foreground">
@@ -630,7 +630,7 @@ const TemplateImpact = () => {
                       <input 
                         type="text" 
                         className={`input-field ${siretVerified ? 'bg-muted' : ''}`}
-                        placeholder="Ex: EAP Location"
+                        placeholder="Ex: Travax"
                         value={formData.entreprise}
                         onChange={(e) => handleFieldChange("entreprise", e.target.value)}
                         readOnly={siretVerified}
@@ -897,7 +897,7 @@ const TemplateImpact = () => {
       <footer className="bg-foreground text-background py-8 pb-24 md:pb-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">
-            EAP Location - Spécialiste BTP depuis 2016 | contact@eap-location.fr | 03 68 38 54 56
+            Travax - Spécialiste BTP depuis 2016 | contact@travax.fr | 03 68 38 54 56
           </p>
         </div>
       </footer>

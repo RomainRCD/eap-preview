@@ -16,7 +16,7 @@ const ChariotTelescopique = () => {
 
   return (
     <ProductTemplate
-      title="Location Chariot Télescopique Fixe 4m à 18m | EAP Location"
+      title="Location Chariot Télescopique Fixe 4m à 18m | Travax"
       description="Location chariot télescopique fixe de 4m à 18m. Disponibilité 99%, devis en 2h, livraison partout en France."
       keywords="chariot télescopique, télescopique fixe, manitou, merlo, location matériel BTP"
       canonicalUrl="/manutention/chariot-telescopique"

@@ -30,7 +30,7 @@ const ProductPage = () => {
   return (
     <PageLayout>
       <SEOHead
-        title={`Location ${productName} | EAP Location`}
+        title={`Location ${productName} | Travax`}
         description={`Location de ${productName.toLowerCase()} pour professionnels du BTP. Devis gratuit sous 2h, livraison partout en France.`}
         keywords={`location ${productName.toLowerCase()}, ${categoryName.toLowerCase()}, BTP`}
         canonicalUrl={`/${category}/${slug}`}

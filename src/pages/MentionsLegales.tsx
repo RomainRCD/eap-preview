@@ -5,8 +5,8 @@ const MentionsLegales = () => {
   return (
     <PageLayout>
       <SEOHead
-        title="Mentions Légales | EAP Location"
-        description="Mentions légales du site EAP Location, société de location de matériel BTP."
+        title="Mentions Légales | Travax"
+        description="Mentions légales du site Travax, société de location de matériel BTP."
         canonicalUrl="/mentions-legales"
       />
 
@@ -21,14 +21,14 @@ const MentionsLegales = () => {
               <div>
                 <h2 className="font-display font-bold text-xl text-foreground mb-4">Éditeur du site</h2>
                 <p className="text-muted-foreground">
-                  EAP Location<br />
+                  Travax<br />
                   15 avenue du Great EASTERN<br />
                   80330 LONGUEAU<br />
                   France
                 </p>
                 <p className="text-muted-foreground mt-2">
                   Téléphone : 03.68.38.54.56<br />
-                  Email : contact@eap-location.fr
+                  Email : contact@travax.fr
                 </p>
               </div>
 
@@ -43,7 +43,7 @@ const MentionsLegales = () => {
                 <h2 className="font-display font-bold text-xl text-foreground mb-4">Propriété intellectuelle</h2>
                 <p className="text-muted-foreground">
                   L'ensemble du contenu de ce site (textes, images, vidéos) est la propriété exclusive 
-                  d'EAP Location ou de ses partenaires. Toute reproduction, même partielle, est interdite 
+                  d'Travax ou de ses partenaires. Toute reproduction, même partielle, est interdite 
                   sans autorisation préalable.
                 </p>
               </div>
@@ -53,7 +53,7 @@ const MentionsLegales = () => {
                 <p className="text-muted-foreground">
                   Conformément à la loi Informatique et Libertés et au RGPD, vous disposez d'un droit 
                   d'accès, de rectification et de suppression des données vous concernant. Pour exercer 
-                  ce droit, contactez-nous à l'adresse contact@eap-location.fr.
+                  ce droit, contactez-nous à l'adresse contact@travax.fr.
                 </p>
               </div>
             </div>
