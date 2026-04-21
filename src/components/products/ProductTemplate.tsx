@@ -351,7 +351,7 @@ const ProductTemplate = ({
                 <span className="hidden sm:inline">{categoryLabel}</span>
               </Link>
             </Button>
-            <div className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3" aria-label="Travax - Accueil">
               <img
                 src={logoTravax}
                 alt="Travax"
@@ -359,7 +359,7 @@ const ProductTemplate = ({
                 loading="eager"
               />
               <span className="font-display font-bold text-xl text-foreground hidden sm:inline">Travax</span>
-            </div>
+            </Link>
           </div>
           <div className="hidden md:flex items-center gap-6">
             <div className="flex items-center gap-2 text-muted-foreground">
