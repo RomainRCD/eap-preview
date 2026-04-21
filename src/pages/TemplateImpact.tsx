@@ -3,7 +3,7 @@ import { Phone, Clock, Zap, CheckCircle, ArrowRight, Shield, TrendingUp, Star, C
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import SEOHead from "@/components/SEOHead";
-import logoTravax from "@/assets/brand/travax-logo.png";
+import logoTravax from "@/assets/brand/travax-logo.svg";
 
 import heroImage from "@/assets/hero-chariot.jpg";
 

@@ -1,7 +1,7 @@
 import { Phone, Clock, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import logoTravax from "@/assets/brand/travax-logo.png";
+import logoTravax from "@/assets/brand/travax-logo.svg";
 
 const Header = () => {
   return (
