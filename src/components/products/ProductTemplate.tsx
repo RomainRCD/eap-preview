@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import SEOHead from "@/components/SEOHead";
-import logoTravax from "@/assets/brand/travax-logo.png";
+import logoTravax from "@/assets/brand/travax-logo.svg";
 
 // Logos entreprises BTP
 import logoAssaAbloy from "@/assets/logos/assa-abloy.jpg";
