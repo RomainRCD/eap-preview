@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import SEOHead from "@/components/SEOHead";
+import { PRODUCTS } from "@/data/products";
 import logoTravax from "@/assets/brand/travax-logo.svg";
 
 // Logos entreprises BTP
@@ -127,6 +128,8 @@ const ProductTemplate = ({
   category,
   categoryLabel,
 }: ProductTemplateProps) => {
+  const slug = canonicalUrl.split("/").filter(Boolean).pop() ?? "";
+  const longDescription = PRODUCTS[slug]?.description;
   const [selectedProduct, setSelectedProduct] = useState<string>("");
   const [formStep, setFormStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -491,6 +494,22 @@ const ProductTemplate = ({
           </div>
         </div>
       </section>
+
+      {/* Description produit (ancien site) */}
+      {longDescription && (
+        <section className="py-10 md:py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="section-title text-center mb-6">À propos de ce matériel</h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                {longDescription.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Why Choose Us - Impact */}
       <section className="py-10 md:py-16 lg:py-24">

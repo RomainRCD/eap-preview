@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import SEOHead from "@/components/SEOHead";
+import { PRODUCTS } from "@/data/products";
 import logoTravax from "@/assets/brand/travax-logo.svg";
 
 import heroImage from "@/assets/hero-chariot.jpg";
@@ -478,6 +479,22 @@ const ChariotRotatif = () => {
           </div>
         </div>
       </section>
+
+      {/* Description produit (ancien site) */}
+      {PRODUCTS["chariot-rotatif"]?.description && (
+        <section className="py-10 md:py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="section-title text-center mb-6">À propos de ce matériel</h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                {PRODUCTS["chariot-rotatif"].description!.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Why Choose Us - Impact */}
       <section className="py-10 md:py-16 lg:py-24">
