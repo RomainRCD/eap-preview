@@ -5,6 +5,7 @@ const images = import.meta.glob('../assets/products/*.webp', { eager: true, impo
 export const productImage = (slug: string): string | undefined => images[`../assets/products/${slug}.webp`];
 
 export interface ProductInfo {
+  variants?: { label: string; value: string }[];
   name: string;
   category: string;
   spec?: string;

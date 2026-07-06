@@ -132,9 +132,10 @@ const ProductTemplate = ({
   const longDescription = PRODUCTS[slug]?.description;
   const [selectedProduct, setSelectedProduct] = useState<string>("");
   const [formStep, setFormStep] = useState(1);
+  const noVariants = products.length === 0;
   const [formData, setFormData] = useState({
     // Step 1: Matériel & Entreprise
-    materiel: "",
+    materiel: noVariants ? productNamePrefix : "",
     dateDebut: "",
     dateFin: "",
     siret: "",
@@ -465,6 +466,7 @@ const ProductTemplate = ({
       </section>
 
       {/* Product Selection - Quick Visual */}
+      {!noVariants && (
       <section className="py-10 md:py-16 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="section-title text-center mb-3 md:mb-4">{productSelectorTitle}</h2>
@@ -494,6 +496,7 @@ const ProductTemplate = ({
           </div>
         </div>
       </section>
+      )}
 
       {/* Description produit (ancien site) */}
       {longDescription && (
@@ -603,6 +606,9 @@ const ProductTemplate = ({
                     {/* Choix du matériel */}
                     <div className="relative">
                       <label className="block text-sm font-medium text-foreground mb-2">Choix du matériel *</label>
+                      {noVariants ? (
+                        <input className="input-field bg-muted/50" value={formData.materiel} readOnly />
+                      ) : (
                       <select 
                         className="input-field pr-8"
                         value={formData.materiel}
@@ -615,6 +621,7 @@ const ProductTemplate = ({
                           </option>
                         ))}
                       </select>
+                      )}
                       {validFields.materiel && (
                         <Check className="absolute right-10 top-9 w-5 h-5 text-success animate-scale-in" />
                       )}
