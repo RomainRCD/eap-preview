@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JCGCRQ5GCD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JCGCRQ5GCD');
+      document.addEventListener('click', function(e){
+        var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+        if (a) gtag('event', 'phone_click', { phone_number: a.getAttribute('href').replace('tel:','') });
+      }, true);
+    </script>
     <title>EAP Location - Location de matériel BTP</title>
     <meta name="description" content="EAP Location - Location de matériel BTP partout en France." />
     <meta name="author" content="EAP Location" />

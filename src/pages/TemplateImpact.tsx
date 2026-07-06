@@ -104,6 +104,41 @@ const TemplateImpact = () => {
   const [siretVerified, setSiretVerified] = useState(false);
   const [siretError, setSiretError] = useState("");
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+
+  const [submitState, setSubmitState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (submitState === "sending") return;
+    setSubmitState("sending");
+    try {
+      const r = await fetch("https://lnytoqspbcphamtvpvnw.supabase.co/functions/v1/site-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          materiel: formData.materiel,
+          siret: formData.siret,
+          entreprise: formData.entreprise,
+          nom: formData.nom,
+          prenom: formData.prenom,
+          telephone: formData.telephone,
+          email: formData.email,
+          date_debut: formData.dateDebut,
+          date_fin: formData.dateFin,
+          cp_chantier: formData.cpChantier,
+          ville_chantier: formData.villeChantier,
+          commentaire: formData.commentaire,
+          page: window.location.pathname,
+        }),
+      });
+      const j = await r.json();
+      if (!j.ok) throw new Error(String(j.error || "erreur"));
+      setSubmitState("sent");
+      (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.("event", "generate_lead", { method: "devis_express" });
+    } catch (_e) {
+      setSubmitState("error");
+    }
+  };
+
   
   // Debounce timer ref
   const siretSearchTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -547,7 +582,17 @@ const TemplateImpact = () => {
 
               <h3 className="font-display font-bold text-xl md:text-2xl text-foreground mb-4 md:mb-6">Devis Express</h3>
               
-              <form className="space-y-4 md:space-y-5 overflow-hidden">
+              {submitState === "sent" ? (
+                <div className="text-center py-12 animate-fade-in">
+                  <CheckCircle className="w-14 h-14 text-success mx-auto mb-4" strokeWidth={1.5} />
+                  <h3 className="font-display font-bold text-2xl text-foreground mb-2">Demande envoyée !</h3>
+                  <p className="text-muted-foreground">Merci. Un expert EAP Location vous recontacte sous 2h ouvrées (Lun-Ven 7h30-18h).</p>
+                </div>
+              ) : (
+              <form className="space-y-4 md:space-y-5 overflow-hidden" onSubmit={handleFormSubmit}>
+              {submitState === "error" && (
+                <p className="text-sm text-destructive bg-destructive/10 rounded-lg p-3">Une erreur est survenue lors de l'envoi. Réessayez ou appelez-nous au 03 68 38 54 56.</p>
+              )}
                 {/* Step 1: Produit & Entreprise */}
                 {formStep === 1 && (
                   <div className="space-y-4 animate-fade-in">
@@ -882,13 +927,14 @@ const TemplateImpact = () => {
                         className="w-full sm:w-auto sm:flex-1"
                         disabled={!isStep3Complete}
                       >
-                        Envoyer ma demande
+                        {submitState === "sending" ? "Envoi en cours..." : "Envoyer ma demande"}
                         <ArrowRight className="w-5 h-5 flex-shrink-0 ml-2" />
                       </Button>
                     </div>
                   </div>
                 )}
               </form>
+              )}
             </div>
           </div>
         </div>
