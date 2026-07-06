@@ -4,16 +4,25 @@ import PageLayout from "@/components/layout/PageLayout";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 
+// Images produits
+import imgBungalow from "@/assets/products/bungalow.webp";
+import imgRoulotte from "@/assets/products/roulotte.webp";
+import imgSanitaire from "@/assets/products/sanitaire.webp";
+import imgVestiaire from "@/assets/products/vestiaire.webp";
+import imgRefectoire from "@/assets/products/refectoire.webp";
+import imgBureau from "@/assets/products/bureau.webp";
+import imgContainer from "@/assets/products/container.webp";
+
 const BaseVie = () => {
   const products = [
-    { name: "Bungalow de chantier", slug: "bungalow", description: "Bureau, réfectoire" },
-    { name: "Roulotte de chantier", slug: "roulotte", description: "Mobile" },
-    { name: "Sanitaire mobile", slug: "sanitaire", description: "WC, douche" },
-    { name: "Vestiaire", slug: "vestiaire", description: "Casiers, bancs" },
-    { name: "Réfectoire", slug: "refectoire", description: "Cuisine équipée" },
-    { name: "Bureau de chantier", slug: "bureau", description: "Espace travail" },
+    { name: "Bungalow de chantier", slug: "bungalow", description: "Bureau, réfectoire", image: imgBungalow},
+    { name: "Roulotte de chantier", slug: "roulotte", description: "Mobile", image: imgRoulotte},
+    { name: "Sanitaire mobile", slug: "sanitaire", description: "WC, douche", image: imgSanitaire},
+    { name: "Vestiaire", slug: "vestiaire", description: "Casiers, bancs", image: imgVestiaire},
+    { name: "Réfectoire", slug: "refectoire", description: "Cuisine équipée", image: imgRefectoire},
+    { name: "Bureau de chantier", slug: "bureau", description: "Espace travail", image: imgBureau},
     { name: "Local technique", slug: "local-technique", description: "Stockage" },
-    { name: "Container maritime", slug: "container", description: "20' / 40'" },
+    { name: "Container maritime", slug: "container", description: "20' / 40'", image: imgContainer},
   ];
 
   return (
@@ -66,8 +75,17 @@ const BaseVie = () => {
                 to={`/base-vie/${product.slug}`}
                 className="group bg-card border border-border rounded-xl p-6 hover:border-primary hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-full h-40 bg-muted rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">Image à venir</span>
+                <div className="w-full h-40 bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                  {product.image ? (
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-contain p-2"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="text-muted-foreground text-sm">Image à venir</span>
+                  )}
                 </div>
                 <h3 className="font-display font-bold text-lg text-foreground group-hover:text-primary transition-colors">
                   {product.name}

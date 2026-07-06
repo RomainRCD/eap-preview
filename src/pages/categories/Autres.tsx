@@ -4,18 +4,28 @@ import PageLayout from "@/components/layout/PageLayout";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 
+// Images produits
+import imgGroupeElectrogene from "@/assets/products/groupe-electrogene.webp";
+import imgCompresseur from "@/assets/products/compresseur.webp";
+import imgEclairage from "@/assets/products/eclairage.webp";
+import imgBetonniere from "@/assets/products/betonniere.webp";
+import imgBroyeur from "@/assets/products/broyeur.webp";
+import imgDumper from "@/assets/products/dumper.webp";
+import imgMarteauPiqueur from "@/assets/products/marteau-piqueur.webp";
+import imgAspirateur from "@/assets/products/aspirateur.webp";
+
 const Autres = () => {
   const products = [
-    { name: "Groupe électrogène", slug: "groupe-electrogene", description: "10kVA à 500kVA" },
-    { name: "Compresseur d'air", slug: "compresseur", description: "Mobile chantier" },
+    { name: "Groupe électrogène", slug: "groupe-electrogene", description: "10kVA à 500kVA", image: imgGroupeElectrogene},
+    { name: "Compresseur d'air", slug: "compresseur", description: "Mobile chantier", image: imgCompresseur},
     { name: "Pompe à eau", slug: "pompe-eau", description: "Immergée, surface" },
-    { name: "Éclairage chantier", slug: "eclairage", description: "Tour lumineuse" },
-    { name: "Bétonnière", slug: "betonniere", description: "350L à 750L" },
-    { name: "Broyeur de branches", slug: "broyeur", description: "Espaces verts" },
-    { name: "Dumper", slug: "dumper", description: "1T à 10T" },
-    { name: "Marteau piqueur", slug: "marteau-piqueur", description: "Démolition" },
+    { name: "Éclairage chantier", slug: "eclairage", description: "Tour lumineuse", image: imgEclairage},
+    { name: "Bétonnière", slug: "betonniere", description: "350L à 750L", image: imgBetonniere},
+    { name: "Broyeur de branches", slug: "broyeur", description: "Espaces verts", image: imgBroyeur},
+    { name: "Dumper", slug: "dumper", description: "1T à 10T", image: imgDumper},
+    { name: "Marteau piqueur", slug: "marteau-piqueur", description: "Démolition", image: imgMarteauPiqueur},
     { name: "Découpeuse thermique", slug: "decoupeuse", description: "Béton, asphalte" },
-    { name: "Aspirateur industriel", slug: "aspirateur", description: "Chantier" },
+    { name: "Aspirateur industriel", slug: "aspirateur", description: "Chantier", image: imgAspirateur},
   ];
 
   return (
@@ -68,8 +78,17 @@ const Autres = () => {
                 to={`/autres/${product.slug}`}
                 className="group bg-card border border-border rounded-xl p-6 hover:border-primary hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-full h-40 bg-muted rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">Image à venir</span>
+                <div className="w-full h-40 bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                  {product.image ? (
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-contain p-2"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="text-muted-foreground text-sm">Image à venir</span>
+                  )}
                 </div>
                 <h3 className="font-display font-bold text-lg text-foreground group-hover:text-primary transition-colors">
                   {product.name}

@@ -4,14 +4,22 @@ import PageLayout from "@/components/layout/PageLayout";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 
+// Images produits
+import imgRouleauTandem from "@/assets/products/rouleau-tandem.webp";
+import imgRouleauMonocylindre from "@/assets/products/rouleau-monocylindre.webp";
+import imgRouleauMixte from "@/assets/products/rouleau-mixte.webp";
+import imgPlaqueVibrante from "@/assets/products/plaque-vibrante.webp";
+import imgPilonneuse from "@/assets/products/pilonneuse.webp";
+import imgRouleauPneus from "@/assets/products/rouleau-pneus.webp";
+
 const Compactage = () => {
   const products = [
-    { name: "Rouleau vibrant tandem", slug: "rouleau-tandem", description: "1T à 4T" },
-    { name: "Rouleau vibrant monocylindre", slug: "rouleau-monocylindre", description: "4T à 15T" },
-    { name: "Rouleau mixte", slug: "rouleau-mixte", description: "Bille + pneus" },
-    { name: "Plaque vibrante", slug: "plaque-vibrante", description: "50kg à 500kg" },
-    { name: "Pilonneuse", slug: "pilonneuse", description: "Tranchées" },
-    { name: "Rouleau à pneus", slug: "rouleau-pneus", description: "Finition" },
+    { name: "Rouleau vibrant tandem", slug: "rouleau-tandem", description: "1T à 4T", image: imgRouleauTandem},
+    { name: "Rouleau vibrant monocylindre", slug: "rouleau-monocylindre", description: "4T à 15T", image: imgRouleauMonocylindre},
+    { name: "Rouleau mixte", slug: "rouleau-mixte", description: "Bille + pneus", image: imgRouleauMixte},
+    { name: "Plaque vibrante", slug: "plaque-vibrante", description: "50kg à 500kg", image: imgPlaqueVibrante},
+    { name: "Pilonneuse", slug: "pilonneuse", description: "Tranchées", image: imgPilonneuse},
+    { name: "Rouleau à pneus", slug: "rouleau-pneus", description: "Finition", image: imgRouleauPneus},
   ];
 
   return (
@@ -64,8 +72,17 @@ const Compactage = () => {
                 to={`/compactage/${product.slug}`}
                 className="group bg-card border border-border rounded-xl p-6 hover:border-primary hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-full h-40 bg-muted rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">Image à venir</span>
+                <div className="w-full h-40 bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                  {product.image ? (
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-contain p-2"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="text-muted-foreground text-sm">Image à venir</span>
+                  )}
                 </div>
                 <h3 className="font-display font-bold text-lg text-foreground group-hover:text-primary transition-colors">
                   {product.name}

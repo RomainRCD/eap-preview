@@ -4,20 +4,34 @@ import PageLayout from "@/components/layout/PageLayout";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 
+// Images produits
+import imgNacelleCiseauxElectrique from "@/assets/products/nacelle-ciseaux-electrique.webp";
+import imgNacelleCiseauxDiesel from "@/assets/products/nacelle-ciseaux-diesel.webp";
+import imgNacelleArticuleeElectrique from "@/assets/products/nacelle-articulee-electrique.webp";
+import imgNacelleArticuleeDiesel from "@/assets/products/nacelle-articulee-diesel.webp";
+import imgNacelleTelescopique from "@/assets/products/nacelle-telescopique.webp";
+import imgNacelleAraignee from "@/assets/products/nacelle-araignee.webp";
+import imgNacelleCamion from "@/assets/products/nacelle-camion.webp";
+import imgEchafaudageRoulant from "@/assets/products/echafaudage-roulant.webp";
+import imgPirPirl from "@/assets/products/pir-pirl.webp";
+import imgNacelleMat from "@/assets/products/nacelle-mat.webp";
+import imgPlateformeSuspendue from "@/assets/products/plateforme-suspendue.webp";
+import imgMonteMateriaux from "@/assets/products/monte-materiaux.webp";
+
 const TravailEnHauteur = () => {
   const products = [
-    { name: "Nacelle ciseaux électrique", slug: "nacelle-ciseaux-electrique", description: "6m à 14m" },
-    { name: "Nacelle ciseaux diesel", slug: "nacelle-ciseaux-diesel", description: "10m à 18m" },
-    { name: "Nacelle articulée électrique", slug: "nacelle-articulee-electrique", description: "12m à 20m" },
-    { name: "Nacelle articulée diesel", slug: "nacelle-articulee-diesel", description: "16m à 45m" },
-    { name: "Nacelle télescopique", slug: "nacelle-telescopique", description: "20m à 56m" },
-    { name: "Nacelle araignée", slug: "nacelle-araignee", description: "Accès difficile" },
-    { name: "Nacelle sur camion", slug: "nacelle-camion", description: "Avec chauffeur" },
-    { name: "Échafaudage roulant", slug: "echafaudage-roulant", description: "3m à 12m" },
-    { name: "PIR / PIRL", slug: "pir-pirl", description: "Plateforme individuelle" },
-    { name: "Nacelle à mât", slug: "nacelle-mat", description: "Verticale compacte" },
-    { name: "Plateforme suspendue", slug: "plateforme-suspendue", description: "Travaux façade" },
-    { name: "Monte-matériaux", slug: "monte-materiaux", description: "Levage vertical" },
+    { name: "Nacelle ciseaux électrique", slug: "nacelle-ciseaux-electrique", description: "6m à 14m", image: imgNacelleCiseauxElectrique},
+    { name: "Nacelle ciseaux diesel", slug: "nacelle-ciseaux-diesel", description: "10m à 18m", image: imgNacelleCiseauxDiesel},
+    { name: "Nacelle articulée électrique", slug: "nacelle-articulee-electrique", description: "12m à 20m", image: imgNacelleArticuleeElectrique},
+    { name: "Nacelle articulée diesel", slug: "nacelle-articulee-diesel", description: "16m à 45m", image: imgNacelleArticuleeDiesel},
+    { name: "Nacelle télescopique", slug: "nacelle-telescopique", description: "20m à 56m", image: imgNacelleTelescopique},
+    { name: "Nacelle araignée", slug: "nacelle-araignee", description: "Accès difficile", image: imgNacelleAraignee},
+    { name: "Nacelle sur camion", slug: "nacelle-camion", description: "Avec chauffeur", image: imgNacelleCamion},
+    { name: "Échafaudage roulant", slug: "echafaudage-roulant", description: "3m à 12m", image: imgEchafaudageRoulant},
+    { name: "PIR / PIRL", slug: "pir-pirl", description: "Plateforme individuelle", image: imgPirPirl},
+    { name: "Nacelle à mât", slug: "nacelle-mat", description: "Verticale compacte", image: imgNacelleMat},
+    { name: "Plateforme suspendue", slug: "plateforme-suspendue", description: "Travaux façade", image: imgPlateformeSuspendue},
+    { name: "Monte-matériaux", slug: "monte-materiaux", description: "Levage vertical", image: imgMonteMateriaux},
   ];
 
   return (
@@ -70,8 +84,17 @@ const TravailEnHauteur = () => {
                 to={`/travail-en-hauteur/${product.slug}`}
                 className="group bg-card border border-border rounded-xl p-6 hover:border-primary hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-full h-40 bg-muted rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">Image à venir</span>
+                <div className="w-full h-40 bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                  {product.image ? (
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-contain p-2"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="text-muted-foreground text-sm">Image à venir</span>
+                  )}
                 </div>
                 <h3 className="font-display font-bold text-lg text-foreground group-hover:text-primary transition-colors">
                   {product.name}

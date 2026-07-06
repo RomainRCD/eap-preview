@@ -1,5 +1,5 @@
 import ProductTemplate from "@/components/products/ProductTemplate";
-import heroImage from "@/assets/products/chariot-industriel-electrique.jpg";
+import heroImage from "@/assets/products/chariot-industriel-electrique.webp";
 
 const ChariotIndustrielElectrique = () => {
   const products = [

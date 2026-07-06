@@ -1,5 +1,5 @@
 import ProductTemplate from "@/components/products/ProductTemplate";
-import heroImage from "@/assets/products/grue-mobile.jpg";
+import heroImage from "@/assets/products/grue-mobile.webp";
 
 const GrueMobile = () => {
   const products = [

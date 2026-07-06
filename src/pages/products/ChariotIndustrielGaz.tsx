@@ -1,5 +1,5 @@
 import ProductTemplate from "@/components/products/ProductTemplate";
-import heroImage from "@/assets/products/chariot-industriel-gaz.jpg";
+import heroImage from "@/assets/products/chariot-industriel-gaz.webp";
 
 const ChariotIndustrielGaz = () => {
   const products = [

@@ -1,5 +1,5 @@
 import ProductTemplate from "@/components/products/ProductTemplate";
-import heroImage from "@/assets/products/chariot-tout-terrain.jpg";
+import heroImage from "@/assets/products/chariot-tout-terrain.webp";
 
 const ChariotToutTerrain = () => {
   const products = [

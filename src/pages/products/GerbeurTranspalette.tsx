@@ -1,5 +1,5 @@
 import ProductTemplate from "@/components/products/ProductTemplate";
-import heroImage from "@/assets/products/gerbeur-transpalette.jpg";
+import heroImage from "@/assets/products/gerbeur-transpalette.webp";
 
 const GerbeurTranspalette = () => {
   const products = [

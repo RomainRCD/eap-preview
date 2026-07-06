@@ -1,5 +1,5 @@
 import ProductTemplate from "@/components/products/ProductTemplate";
-import heroImage from "@/assets/products/mini-grue-araignee.jpg";
+import heroImage from "@/assets/products/mini-grue-araignee.webp";
 
 const MiniGrueAraignee = () => {
   const products = [
