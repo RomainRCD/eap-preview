@@ -28,7 +28,7 @@ const BaseVie = () => {
   return (
     <PageLayout>
       <SEOHead
-        title="Location Base Vie Chantier | Travax"
+        title="Location Base Vie Chantier | EAP Location"
         description="Location de base vie pour chantiers : bungalows, sanitaires, vestiaires, réfectoires. Installation et livraison partout en France."
         keywords="location bungalow chantier, base vie, sanitaire mobile, vestiaire chantier"
         canonicalUrl="/base-vie"

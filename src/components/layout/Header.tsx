@@ -1,7 +1,6 @@
 import { Phone, Clock, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import logoTravax from "@/assets/brand/travax-logo.svg";
 
 const Header = () => {
   return (
@@ -25,8 +24,11 @@ const Header = () => {
       {/* Header */}
       <header className="bg-card border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3" aria-label="Travax - Accueil">
-            <img src={logoTravax} alt="Travax - Location de matériel BTP" className="h-12 w-auto object-contain" />
+          <Link to="/" className="flex items-center gap-3" aria-label="EAP Location - Accueil">
+            <span className="flex flex-col leading-none select-none">
+              <span className="font-display font-extrabold text-2xl tracking-wide text-foreground">E<span className="text-primary">A</span>P</span>
+              <span className="text-[10px] tracking-[0.35em] text-muted-foreground">LOCATION</span>
+            </span>
             <span className="hidden sm:block text-xs text-muted-foreground border-l border-border pl-3">
               Location de matériel BTP
             </span>

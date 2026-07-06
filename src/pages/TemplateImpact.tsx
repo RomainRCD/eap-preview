@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import SEOHead from "@/components/SEOHead";
-import logoTravax from "@/assets/brand/travax-logo.svg";
 
 import heroImage from "@/assets/hero-chariot.jpg";
 
@@ -285,7 +284,7 @@ const TemplateImpact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Chariot Télescopique Rotatif jusqu'à 35m | Dispo Immédiate | Travax"
+        title="Chariot Télescopique Rotatif jusqu'à 35m | Dispo Immédiate | EAP Location"
         description="Location chariot télescopique rotatif 16m-35m. Disponibilité 99%, devis en 2h, livraison 48h partout en France. Avec ou sans opérateur."
         keywords="chariot télescopique 35m, location chariot rotatif, manitou location, nacelle grande hauteur, location matériel BTP"
         canonicalUrl="/chariot-rotatif-impact"
@@ -313,14 +312,11 @@ const TemplateImpact = () => {
       {/* Header */}
       <header className="bg-card border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3" aria-label="Travax - Accueil">
-            <img
-              src={logoTravax}
-              alt="Travax"
-              className="h-10 w-auto object-contain"
-              loading="eager"
-            />
-            <span className="font-display font-bold text-xl text-foreground">Travax</span>
+          <Link to="/" className="flex items-center gap-3" aria-label="EAP Location - Accueil">
+            <span className="flex flex-col leading-none select-none">
+              <span className="font-display font-extrabold text-2xl tracking-wide text-foreground">E<span className="text-primary">A</span>P</span>
+              <span className="text-[10px] tracking-[0.35em] text-muted-foreground">LOCATION</span>
+            </span><span className="font-display font-bold text-xl text-foreground">EAP Location</span>
           </Link>
           <div className="hidden md:flex items-center gap-6">
             <div className="flex items-center gap-2 text-muted-foreground">
@@ -635,7 +631,7 @@ const TemplateImpact = () => {
                       <input 
                         type="text" 
                         className={`input-field ${siretVerified ? 'bg-muted' : ''}`}
-                        placeholder="Ex: Travax"
+                        placeholder="Ex: EAP Location"
                         value={formData.entreprise}
                         onChange={(e) => handleFieldChange("entreprise", e.target.value)}
                         readOnly={siretVerified}
@@ -902,7 +898,7 @@ const TemplateImpact = () => {
       <footer className="bg-foreground text-background py-8 pb-24 md:pb-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">
-            Travax - Spécialiste BTP depuis 2016 | contact@travax.fr | 03 68 38 54 56
+            EAP Location - Spécialiste BTP depuis 2016 | contact@eap-location.fr | 03 68 38 54 56
           </p>
         </div>
       </footer>

@@ -31,7 +31,7 @@ const Autres = () => {
   return (
     <PageLayout>
       <SEOHead
-        title="Location Matériel BTP Divers | Travax"
+        title="Location Matériel BTP Divers | EAP Location"
         description="Location de matériel BTP : groupes électrogènes, compresseurs, pompes, éclairage chantier, outillage professionnel."
         keywords="location groupe électrogène, compresseur chantier, outillage BTP"
         canonicalUrl="/autres"

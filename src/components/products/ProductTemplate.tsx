@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import SEOHead from "@/components/SEOHead";
 import { PRODUCTS } from "@/data/products";
-import logoTravax from "@/assets/brand/travax-logo.svg";
 
 // Logos entreprises BTP
 import logoAssaAbloy from "@/assets/logos/assa-abloy.jpg";
@@ -355,14 +354,11 @@ const ProductTemplate = ({
                 <span className="hidden sm:inline">{categoryLabel}</span>
               </Link>
             </Button>
-            <Link to="/" className="flex items-center gap-3" aria-label="Travax - Accueil">
-              <img
-                src={logoTravax}
-                alt="Travax"
-                className="h-10 w-auto object-contain"
-                loading="eager"
-              />
-              <span className="font-display font-bold text-xl text-foreground hidden sm:inline">Travax</span>
+            <Link to="/" className="flex items-center gap-3" aria-label="EAP Location - Accueil">
+              <span className="flex flex-col leading-none select-none">
+              <span className="font-display font-extrabold text-2xl tracking-wide text-foreground">E<span className="text-primary">A</span>P</span>
+              <span className="text-[10px] tracking-[0.35em] text-muted-foreground">LOCATION</span>
+            </span>
             </Link>
           </div>
           <div className="hidden md:flex items-center gap-6">
@@ -682,7 +678,7 @@ const ProductTemplate = ({
                       <input 
                         type="text" 
                         className={`input-field ${siretVerified ? 'bg-muted' : ''}`}
-                        placeholder="Ex: Travax"
+                        placeholder="Ex: EAP Location"
                         value={formData.entreprise}
                         onChange={(e) => handleFieldChange("entreprise", e.target.value)}
                         readOnly={siretVerified}
@@ -949,7 +945,7 @@ const ProductTemplate = ({
       <footer className="bg-foreground text-background py-8 pb-24 md:pb-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">
-            Travax - Spécialiste BTP depuis 2016 | contact@travax.fr | 03 68 38 54 56
+            EAP Location - Spécialiste BTP depuis 2016 | contact@eap-location.fr | 03 68 38 54 56
           </p>
         </div>
       </footer>

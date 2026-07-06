@@ -29,7 +29,7 @@ const Terrassement = () => {
   return (
     <PageLayout>
       <SEOHead
-        title="Location Matériel Terrassement | Travax"
+        title="Location Matériel Terrassement | EAP Location"
         description="Location de matériel de terrassement : mini-pelles, pelles sur chenilles, chargeuses, tractopelles. Disponibilité partout en France."
         keywords="location mini-pelle, location pelle mécanique, location chargeuse, terrassement"
         canonicalUrl="/terrassement"

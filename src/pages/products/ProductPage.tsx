@@ -32,7 +32,7 @@ const ProductPage = () => {
     return (
       <PageLayout>
         <SEOHead
-          title={`Location ${fallbackName} | Travax`}
+          title={`Location ${fallbackName} | EAP Location`}
           description={`Location de ${fallbackName.toLowerCase()} pour professionnels du BTP.`}
           keywords={`location ${fallbackName.toLowerCase()}, BTP`}
           canonicalUrl={`/${category}/${slug}`}
@@ -58,7 +58,7 @@ const ProductPage = () => {
 
   return (
     <ProductTemplate
-      title={`Location ${info.name} | Travax`}
+      title={`Location ${info.name} | EAP Location`}
       description={(firstSentence || `Location de ${info.name.toLowerCase()} pour professionnels du BTP`).slice(0, 155) + ". Devis en 2h, livraison partout en France."}
       keywords={`location ${info.name.toLowerCase()}, ${categoryName.toLowerCase()}, location matériel BTP`}
       canonicalUrl={`/${category}/${slug}`}
