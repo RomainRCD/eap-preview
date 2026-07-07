@@ -16,11 +16,11 @@ import imgAspirateur from "@/assets/products/aspirateur.webp";
 
 const Autres = () => {
   const products = [
-    { name: "Groupe électrogène", slug: "groupe-electrogene", description: "10kVA à 500kVA", image: imgGroupeElectrogene},
+    { name: "Groupe électrogène", slug: "groupe-electrogene", description: "5kVA à +150kVA", image: imgGroupeElectrogene},
     { name: "Compresseur d'air", slug: "compresseur", description: "Mobile chantier", image: imgCompresseur},
     { name: "Pompe à eau", slug: "pompe-eau", description: "Immergée, surface" },
     { name: "Éclairage chantier", slug: "eclairage", description: "Tour lumineuse", image: imgEclairage},
-    { name: "Bétonnière", slug: "betonniere", description: "350L à 750L", image: imgBetonniere},
+    { name: "Bétonnière", slug: "betonniere", description: "120L à 350L", image: imgBetonniere},
     { name: "Broyeur de branches", slug: "broyeur", description: "Espaces verts", image: imgBroyeur},
     { name: "Dumper", slug: "dumper", description: "1T à 10T", image: imgDumper},
     { name: "Marteau piqueur", slug: "marteau-piqueur", description: "Démolition", image: imgMarteauPiqueur},

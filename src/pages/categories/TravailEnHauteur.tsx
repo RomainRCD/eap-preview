@@ -20,18 +20,18 @@ import imgMonteMateriaux from "@/assets/products/monte-materiaux.webp";
 
 const TravailEnHauteur = () => {
   const products = [
-    { name: "Nacelle ciseaux électrique", slug: "nacelle-ciseaux-electrique", description: "6m à 14m", image: imgNacelleCiseauxElectrique},
-    { name: "Nacelle ciseaux diesel", slug: "nacelle-ciseaux-diesel", description: "10m à 18m", image: imgNacelleCiseauxDiesel},
+    { name: "Nacelle ciseaux électrique", slug: "nacelle-ciseaux-electrique", description: "8m à 33m", image: imgNacelleCiseauxElectrique},
+    { name: "Nacelle ciseaux diesel", slug: "nacelle-ciseaux-diesel", description: "10m à 33m", image: imgNacelleCiseauxDiesel},
     { name: "Nacelle articulée électrique", slug: "nacelle-articulee-electrique", description: "12m à 20m", image: imgNacelleArticuleeElectrique},
-    { name: "Nacelle articulée diesel", slug: "nacelle-articulee-diesel", description: "16m à 45m", image: imgNacelleArticuleeDiesel},
-    { name: "Nacelle télescopique", slug: "nacelle-telescopique", description: "20m à 56m", image: imgNacelleTelescopique},
+    { name: "Nacelle articulée diesel", slug: "nacelle-articulee-diesel", description: "12m à 48m", image: imgNacelleArticuleeDiesel},
+    { name: "Nacelle télescopique", slug: "nacelle-telescopique", description: "14m à 57m", image: imgNacelleTelescopique},
     { name: "Nacelle araignée", slug: "nacelle-araignee", description: "Accès difficile", image: imgNacelleAraignee},
     { name: "Nacelle sur camion", slug: "nacelle-camion", description: "Avec chauffeur", image: imgNacelleCamion},
-    { name: "Échafaudage roulant", slug: "echafaudage-roulant", description: "3m à 12m", image: imgEchafaudageRoulant},
+    { name: "Échafaudage roulant", slug: "echafaudage-roulant", description: "4,8m à 12,8m", image: imgEchafaudageRoulant},
     { name: "PIR / PIRL", slug: "pir-pirl", description: "Plateforme individuelle", image: imgPirPirl},
     { name: "Nacelle à mât", slug: "nacelle-mat", description: "Verticale compacte", image: imgNacelleMat},
     { name: "Plateforme suspendue", slug: "plateforme-suspendue", description: "Travaux façade", image: imgPlateformeSuspendue},
-    { name: "Monte-matériaux", slug: "monte-materiaux", description: "Levage vertical", image: imgMonteMateriaux},
+    { name: "Monte-matériaux", slug: "monte-materiaux", description: "Jusqu'à 37m / 400kg", image: imgMonteMateriaux},
   ];
 
   return (

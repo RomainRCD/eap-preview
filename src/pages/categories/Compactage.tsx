@@ -14,10 +14,10 @@ import imgRouleauPneus from "@/assets/products/rouleau-pneus.webp";
 
 const Compactage = () => {
   const products = [
-    { name: "Rouleau vibrant tandem", slug: "rouleau-tandem", description: "1T à 4T", image: imgRouleauTandem},
+    { name: "Rouleau vibrant tandem", slug: "rouleau-tandem", description: "1,5T à 12,25T", image: imgRouleauTandem},
     { name: "Rouleau vibrant monocylindre", slug: "rouleau-monocylindre", description: "4T à 15T", image: imgRouleauMonocylindre},
     { name: "Rouleau mixte", slug: "rouleau-mixte", description: "Bille + pneus", image: imgRouleauMixte},
-    { name: "Plaque vibrante", slug: "plaque-vibrante", description: "50kg à 500kg", image: imgPlaqueVibrante},
+    { name: "Plaque vibrante", slug: "plaque-vibrante", description: "80kg à 500kg", image: imgPlaqueVibrante},
     { name: "Pilonneuse", slug: "pilonneuse", description: "Tranchées", image: imgPilonneuse},
     { name: "Rouleau à pneus", slug: "rouleau-pneus", description: "Finition", image: imgRouleauPneus},
   ];

@@ -17,7 +17,7 @@ export const PRODUCTS: Record<string, ProductInfo> = {
     variants: [{"label": "5kVA", "value": "5kVA"}, {"label": "10kVA", "value": "10kVA"}, {"label": "15kVA", "value": "15kVA"}, {"label": "20kVA", "value": "20kVA"}, {"label": "30kVA", "value": "30kVA"}, {"label": "40kVA", "value": "40kVA"}, {"label": "50kVA", "value": "50kVA"}, {"label": "60kVA", "value": "60kVA"}, {"label": "70kVA", "value": "70kVA"}, {"label": "80kVA", "value": "80kVA"}, {"label": "100kVA", "value": "100kVA"}, {"label": "150kVA", "value": "150kVA"}, {"label": "+150kVA", "value": "+150kVA"}], // variants: ancien site
     name: "Groupe électrogène",
     category: "autres",
-    spec: "10kVA à 500kVA",
+    spec: "5kVA à +150kVA",
     description: ["EAP location propose le plus large choix de groupes électrogènes pour alimenter vos chantiers en France. Sur notre site vous retrouverez disponible à la location :", "- Groupe électrogène 5kVA", "- Groupe électrogène 10kVA", "- Groupe électrogène 15kVA", "- Groupe électrogène 20kVA", "- Groupe électrogène 30kVA", "- Groupe électrogène 40kVA", "- Groupe électrogène 50kVA", "- Groupe électrogène 60kVA", "- Groupe électrogène 70kVA", "- Groupe électrogène 80kVA", "- Groupe électrogène 100kVA", "- Groupe électrogène 150kVA", "- Groupe électrogène +150kVA"],
   },
   "compresseur": {
@@ -45,7 +45,7 @@ export const PRODUCTS: Record<string, ProductInfo> = {
     variants: [{"label": "120L", "value": "120L"}, {"label": "160L", "value": "160L"}, {"label": "250L", "value": "250L"}, {"label": "350L", "value": "350L"}], // variants [G] standard marché — à relire
     name: "Bétonnière",
     category: "autres",
-    spec: "350L à 750L",
+    spec: "120L à 350L",
     description: ["Bétonnières de chantier pour la préparation de béton et mortier sur place : modèles électriques ou thermiques, plusieurs capacités de cuve.", "Location à la journée, à la semaine ou au mois, livraison possible."], // [G]
   },
   "broyeur": {
@@ -143,7 +143,7 @@ export const PRODUCTS: Record<string, ProductInfo> = {
     variants: [{"label": "1,5T", "value": "1,5T"}, {"label": "2,5T", "value": "2,5T"}, {"label": "3,8T", "value": "3,8T"}, {"label": "7,8T", "value": "7,8T"}, {"label": "9,6T", "value": "9,6T"}, {"label": "10,4T", "value": "10,4T"}, {"label": "12,25T", "value": "12,25T"}], // variants: ancien site
     name: "Rouleau vibrant tandem",
     category: "compactage",
-    spec: "1T à 4T",
+    spec: "1,5T à 12,25T",
     description: ["EAP location propose le plus large choix de compacteur tandem en France. Sur notre site vous retrouverez à la location des compacteurs tandem allant jusqu’à 12.25t.", "Les disponibilités et caractéristiques de nos compacteurs tandems :", "- Compacteur tandem rouleau 1.5t", "- Compacteur tandem rouleau 2.5t", "- Compacteur tandem rouleau 3.8t", "- Compacteur tandem rouleau 7.8t", "- Compacteur tandem rouleau 9.6t", "- Compacteur tandem rouleau 10.4t", "- Compacteur tandem rouleau 12.25t"],
   },
   "rouleau-monocylindre": {
@@ -164,7 +164,7 @@ export const PRODUCTS: Record<string, ProductInfo> = {
     variants: [{"label": "80kg", "value": "80kg"}, {"label": "120kg", "value": "120kg"}, {"label": "200kg", "value": "200kg"}, {"label": "300kg", "value": "300kg"}, {"label": "500kg réversible", "value": "500kg réversible"}], // variants [G] standard marché — à relire
     name: "Plaque vibrante",
     category: "compactage",
-    spec: "50kg à 500kg",
+    spec: "80kg à 500kg",
     description: ["La plaque vibrante compacte sols, graves et enrobés sur les petites et moyennes surfaces : tranchées, trottoirs, abords de regards.", "Modèles essence ou diesel, marche avant seule ou réversible selon les besoins du chantier."], // [G]
   },
   "pilonneuse": {
@@ -265,7 +265,7 @@ export const PRODUCTS: Record<string, ProductInfo> = {
     variants: [{"label": "10T", "value": "10T"}, {"label": "14T", "value": "14T"}, {"label": "16T", "value": "16T"}, {"label": "18T", "value": "18T"}, {"label": "20T", "value": "20T"}, {"label": "22T", "value": "22T"}, {"label": "25T", "value": "25T"}], // variants: ancien site
     name: "Pelle sur chenilles",
     category: "terrassement",
-    spec: "De 10T à 50T",
+    spec: "De 10T à 25T",
     description: ["EAP location propose le plus large choix de pelle sur chenilles en France. Nous sommes à proximité de vos chantiers dans toute la France grâce à notre réseau de partenaires. Sur notre site vous retrouverez disponible à la location des pelles sur chenilles pouvant aller jusqu’à 25 tonnes.", "Les disponibilités et caractéristiques de nos pelles sur chenilles :", "- Pelle sur chenilles 10t", "- Pelle sur chenilles 14t", "- Pelle sur chenilles 16t", "- Pelle sur chenilles 18t", "- Pelle sur chenilles 20t", "- Pelle sur chenilles 22t", "- Pelle sur chenilles 25t"],
   },
   "pelle-pneus": {
@@ -314,14 +314,14 @@ export const PRODUCTS: Record<string, ProductInfo> = {
     variants: [{"label": "8m", "value": "8m"}, {"label": "10m", "value": "10m"}, {"label": "12m", "value": "12m"}, {"label": "14m", "value": "14m"}, {"label": "16m", "value": "16m"}, {"label": "18m", "value": "18m"}, {"label": "22m", "value": "22m"}, {"label": "28m", "value": "28m"}, {"label": "30m", "value": "30m"}, {"label": "33m", "value": "33m"}], // variants: ancien site
     name: "Nacelle ciseaux électrique",
     category: "travail-en-hauteur",
-    spec: "6m à 14m",
+    spec: "8m à 33m",
     description: ["EAP location propose le plus large choix de Nacelle Ciseaux Électrique pour votre travail en hauteur en France. Sur notre site vous retrouverez disponible à la location :", "- Nacelle Ciseaux Electrique de 8 mètres de hauteur de travail.", "- Nacelle Ciseaux Electrique de 10 mètres (et 10 mètres Grand Plateau) de hauteur de travail.", "- Nacelle Ciseaux Electrique de 12 mètres (et 12 mètres Grand Plateau) de hauteur de travail.", "- Nacelle Ciseaux Electrique de 14 mètres (et 14 mètres Grand Plateau) de hauteur de travail.", "- Nacelle Ciseaux Electrique de 16 mètres (et 16 mètres Grand Plateau) de hauteur de travail.", "- Nacelle Ciseaux Electrique de 18 mètres de hauteur de travail.", "- Nacelle Ciseaux Electrique de 22 mètres de hauteur de travail.", "- Nacelle Ciseaux Electrique de 28 mètres de hauteur de travail.", "- Nacelle Ciseaux Electrique de 30 mètres de hauteur de travail.", "- Nacelle Ciseaux Electrique de 33 mètres de hauteur de travail."],
   },
   "nacelle-ciseaux-diesel": {
     variants: [{"label": "10m", "value": "10m"}, {"label": "12m", "value": "12m"}, {"label": "15m", "value": "15m"}, {"label": "18m", "value": "18m"}, {"label": "23m", "value": "23m"}, {"label": "28m", "value": "28m"}, {"label": "30m", "value": "30m"}, {"label": "33m", "value": "33m"}], // variants: ancien site
     name: "Nacelle ciseaux diesel",
     category: "travail-en-hauteur",
-    spec: "10m à 18m",
+    spec: "10m à 33m",
     description: ["EAP location propose le plus large choix de Nacelle Ciseaux Diesel pour votre travail en hauteur en France. Sur notre site vous retrouverez disponible à la location :", "- Nacelle Ciseaux Diesel de 10 mètres de hauteur de travail.", "- Nacelle Ciseaux Diesel de 12 mètres de hauteur de travail.", "- Nacelle Ciseaux Diesel de 15 mètres de hauteur de travail.", "- Nacelle Ciseaux Diesel de 18 mètres de hauteur de travail.", "- Nacelle Ciseaux Diesel de 23 mètres de hauteur de travail.", "- Nacelle Ciseaux Diesel de 28 mètres de hauteur de travail.", "- Nacelle Ciseaux Diesel de 30 mètres de hauteur de travail.", "- Nacelle Ciseaux Diesel de 33 mètres de hauteur de travail."],
   },
   "nacelle-articulee-electrique": {
@@ -332,17 +332,17 @@ export const PRODUCTS: Record<string, ProductInfo> = {
     description: ["EAP location propose le plus large choix de Nacelle Articulée Électrique pour vos travaux en hauteur en France. Sur notre site vous retrouverez disponible à la location :", "- Nacelle Articulée électrique 12 mètres", "- Nacelle Articulée électrique 15 mètres", "- Nacelle Articulée électrique 17 mètres", "- Nacelle Articulée électrique 20 mètres"],
   },
   "nacelle-articulee-diesel": {
-    variants: [{"label": "12m", "value": "12m"}, {"label": "16m", "value": "16m"}, {"label": "18m", "value": "18m"}, {"label": "20m", "value": "20m"}, {"label": "26m", "value": "26m"}, {"label": "32m", "value": "32m"}, {"label": "40m", "value": "40m"}, {"label": "43m", "value": "43m"}], // variants: ancien site
+    variants: [{"label": "12m", "value": "12m"}, {"label": "16m", "value": "16m"}, {"label": "18m", "value": "18m"}, {"label": "20m", "value": "20m"}, {"label": "26m", "value": "26m"}, {"label": "32m", "value": "32m"}, {"label": "40m", "value": "40m"}, {"label": "43m", "value": "43m"}, {"label": "48m", "value": "48m"}], // variants: ancien site
     name: "Nacelle articulée diesel",
     category: "travail-en-hauteur",
-    spec: "16m à 45m",
+    spec: "12m à 48m",
     description: ["EAP location propose le plus large choix de Nacelle Articulée pour vos travaux en hauteur en France. Sur notre site vous retrouverez disponible à la location :", "Diesel :", "- Nacelle Articulée 12 mètres", "- Nacelle Articulée 16 mètres", "- Nacelle Articulée 18 mètres", "- Nacelle Articulée 20 mètres", "- Nacelle Articulée 26 mètres", "- Nacelle Articulée 26 mètres (grand déport)", "- Nacelle Articulée 32 mètres", "- Nacelle Articulée 40 mètres", "- Nacelle Articulée 43 mètres"],
   },
   "nacelle-telescopique": {
     variants: [{"label": "14m", "value": "14m"}, {"label": "16m", "value": "16m"}, {"label": "22m", "value": "22m"}, {"label": "28m", "value": "28m"}, {"label": "34m", "value": "34m"}, {"label": "40m", "value": "40m"}, {"label": "43m", "value": "43m"}, {"label": "48m", "value": "48m"}, {"label": "57m", "value": "57m"}], // variants: ancien site
     name: "Nacelle télescopique",
     category: "travail-en-hauteur",
-    spec: "20m à 56m",
+    spec: "14m à 57m",
     description: ["EAP location propose le plus large choix de Nacelle Télescopique (Diesel) pour vos travaux en hauteur en France. Sur notre site vous retrouverez disponible à la location :", "- Nacelle Télescopique de 14 mètres de hauteur de travail (Sur chenilles)", "- Nacelle Télescopique de 16 mètres de hauteur de travail", "- Nacelle Télescopique de 22 mètres de hauteur de travail (Sur roues et sur chenilles)", "- Nacelle Télescopique de 28 mètres de hauteur de travail", "- Nacelle Télescopique de 34 mètres de hauteur de travail", "- Nacelle Télescopique de 40 mètres de hauteur de travail", "- Nacelle Télescopique de 43 mètres de hauteur de travail", "- Nacelle Télescopique de 48 mètres de hauteur de travail", "- Nacelle Télescopique de 57 mètres de hauteur de travail"],
   },
   "nacelle-araignee": {
@@ -363,7 +363,7 @@ export const PRODUCTS: Record<string, ProductInfo> = {
     variants: [{"label": "4,8m", "value": "4,8m"}, {"label": "5,8m", "value": "5,8m"}, {"label": "6,8m", "value": "6,8m"}, {"label": "7,8m", "value": "7,8m"}, {"label": "8,8m", "value": "8,8m"}, {"label": "9,8m", "value": "9,8m"}, {"label": "10,8m", "value": "10,8m"}, {"label": "11,8m", "value": "11,8m"}, {"label": "12,8m", "value": "12,8m"}], // variants: ancien site
     name: "Échafaudage roulant",
     category: "travail-en-hauteur",
-    spec: "3m à 12m",
+    spec: "4,8m à 12,8m",
     description: ["EAP location propose le plus large choix d’Échafaudage roulant étroit ou large pour vos Travaux en Hauteur sur vos chantiers en France. Sur notre site vous retrouverez disponible à la location :", "- Échafaudage roulant 4,8 mètres", "- Échafaudage roulant 5,8 mètres", "- Échafaudage roulant 6,8 mètres", "- Échafaudage roulant 7,8 mètres", "- Échafaudage roulant 8,8 mètres", "- Échafaudage roulant 9,8 mètres", "- Échafaudage roulant 10,8 mètres", "- Échafaudage roulant 11,8 mètres", "- Échafaudage roulant 12,8 mètres"],
   },
   "pir-pirl": {
@@ -388,10 +388,10 @@ export const PRODUCTS: Record<string, ProductInfo> = {
     description: ["La plateforme suspendue permet de travailler en façade à grande hauteur : ravalement, peinture, isolation thermique par l'extérieur, pose de bardage.", "Installation en toiture par câbles, longueur et hauteur adaptables à votre chantier. Location avec assistance à l'installation."], // [G]
   },
   "monte-materiaux": {
-    variants: [{"label": "5m / 300kg", "value": "5m / 300kg"}, {"label": "8m / 300kg", "value": "8m / 300kg"}], // variants: ancien site
+    variants: [{"label": "5m / 300kg", "value": "5m / 300kg"}, {"label": "8m / 300kg", "value": "8m / 300kg"}, {"label": "37m / 400kg", "value": "37m / 400kg"}], // variants: ancien site
     name: "Monte-matériaux",
     category: "travail-en-hauteur",
-    spec: "Levage vertical",
+    spec: "Jusqu'à 37m / 400kg",
     description: ["EAP location propose le plus large choix d’élévateur mécanique de charge en France. Vous retrouverez disponible à la location :", "- Élévateur mécanique de charge 5 mètres et 300kg", "- Élévateur mécanique de charge 8 mètres et 300kg"],
   },
 };

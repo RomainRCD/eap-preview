@@ -17,8 +17,8 @@ import imgTombereau from "@/assets/products/tombereau.webp";
 const Terrassement = () => {
   const products = [
     { name: "Mini-pelle", slug: "mini-pelle", description: "De 0,8T à 8T", image: imgMiniPelle},
-    { name: "Pelle sur chenilles", slug: "pelle-chenilles", description: "De 10T à 50T", image: imgPelleChenilles},
-    { name: "Pelle sur pneus", slug: "pelle-pneus", description: "De 10T à 25T", image: imgPellePneus},
+    { name: "Pelle sur chenilles", slug: "pelle-chenilles", description: "De 10T à 25T", image: imgPelleChenilles},
+    { name: "Pelle sur pneus", slug: "pelle-pneus", description: "De 5T à 18T", image: imgPellePneus},
     { name: "Chargeuse sur pneus", slug: "chargeuse-pneus", description: "De 1m³ à 5m³", image: imgChargeusePneus},
     { name: "Chargeuse sur chenilles", slug: "chargeuse-chenilles", description: "Compacte et puissante", image: imgChargeuseChenilles},
     { name: "Chargeuse compacte", slug: "chargeuse-compacte", description: "Bobcat, Manitou", image: imgChargeuseCompacte},

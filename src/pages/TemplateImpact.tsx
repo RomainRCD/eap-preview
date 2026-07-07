@@ -151,6 +151,7 @@ const TemplateImpact = () => {
     { height: "30m", capacity: "6T" },
     { height: "32m", capacity: "6T" },
     { height: "35m", capacity: "6T" },
+    { height: "40m", capacity: "6T" },
   ];
 
   const trustLogos = [
@@ -319,9 +320,9 @@ const TemplateImpact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Chariot Télescopique Rotatif jusqu'à 35m | Dispo Immédiate | EAP Location"
-        description="Location chariot télescopique rotatif 16m-35m. Disponibilité 99%, devis en 2h, livraison 48h partout en France."
-        keywords="chariot télescopique 35m, location chariot rotatif, manitou location, nacelle grande hauteur, location matériel BTP"
+        title="Chariot Télescopique Rotatif jusqu'à 40m | Dispo Immédiate | EAP Location"
+        description="Location chariot télescopique rotatif 16m-40m. Disponibilité 99%, devis en 2h, livraison 48h partout en France."
+        keywords="chariot télescopique 40m, location chariot rotatif, manitou location, nacelle grande hauteur, location matériel BTP"
         canonicalUrl="/chariot-rotatif-impact"
       />
       
@@ -389,7 +390,7 @@ const TemplateImpact = () => {
           <div className="max-w-2xl">
             <h1 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold text-secondary-foreground leading-tight mb-4 md:mb-6">
               Chariot Rotatif
-              <span className="block text-primary">Jusqu'à 35m</span>
+              <span className="block text-primary">Jusqu'à 40m</span>
             </h1>
             
             <p className="text-base md:text-xl text-secondary-foreground/80 mb-6 md:mb-8">
