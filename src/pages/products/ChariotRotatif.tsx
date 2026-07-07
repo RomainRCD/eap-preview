@@ -374,65 +374,67 @@ const ChariotRotatif = () => {
         </div>
       </header>
 
-      {/* Hero Section - Full Impact */}
-      <section className="relative overflow-hidden min-h-[60vh] md:min-h-[70vh] bg-secondary">
+      {/* Hero Section - compact 2 colonnes */}
+      <section className="relative overflow-hidden bg-secondary">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary to-black/60"></div>
-        {/* Image produit — panneau blanc, object-contain : jamais zoomée/croppée */}
-        <div className="hidden md:flex absolute inset-y-0 right-0 w-[44%] lg:w-[42%] items-center justify-center p-8 lg:p-12 z-[1]">
-          <div className="relative w-full h-full max-h-[520px] bg-white rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden">
-            <img
-              src={heroImage}
-              alt="Chariot télescopique rotatif"
-              className="w-full h-full object-contain p-6"
-              loading="eager"
-            />
-            <span className="absolute bottom-2 right-3 text-[10px] text-slate-400">* Photo non contractuelle</span>
-          </div>
-        </div>
+        <div className="relative container mx-auto px-4 py-8 md:py-12 lg:py-14 z-[1]">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-14 items-center">
+            <div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-secondary-foreground leading-tight mb-3 md:mb-4">
+                Chariot Rotatif
+                <span className="block text-primary">Jusqu'à 35m</span>
+              </h1>
 
-        <div className="relative container mx-auto px-4 py-12 md:py-20 lg:py-32 z-[2]">
-          <div className="max-w-2xl md:max-w-[52%] lg:max-w-2xl">
-            {/* Image produit mobile — compacte, jamais croppée */}
-            <div className="md:hidden mb-6">
-              <div className="relative bg-white rounded-xl p-3 h-40 flex items-center justify-center overflow-hidden">
-                <img src={heroImage} alt="Chariot télescopique rotatif" className="w-full h-full object-contain" loading="eager" />
-                <span className="absolute bottom-1 right-2 text-[9px] text-slate-400">* Photo non contractuelle</span>
+              <p className="text-base md:text-lg text-secondary-foreground/80 mb-5 md:mb-6">
+                Location courte ou longue durée, avec ou sans opérateur. Partout en France.
+              </p>
+
+              <div className="flex gap-8 md:gap-12 mb-5 md:mb-7">
+                <div>
+                  <p className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-primary">99%</p>
+                  <p className="text-xs md:text-sm text-secondary-foreground/70">Disponibilité</p>
+                </div>
+                <div>
+                  <p className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-secondary-foreground">2 400</p>
+                  <p className="text-xs md:text-sm text-secondary-foreground/70">Agences partenaires</p>
+                </div>
+                <div>
+                  <p className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-secondary-foreground">&lt; 2h</p>
+                  <p className="text-xs md:text-sm text-secondary-foreground/70">Temps de réponse</p>
+                </div>
               </div>
+
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-5 md:mb-7">
+                <Button variant="cta" size="lg" asChild className="w-full sm:w-auto">
+                  <a href="#devis">
+                    Obtenir mon devis
+                    <ArrowRight className="w-5 h-5" />
+                  </a>
+                </Button>
+                <Button variant="phone" size="lg" asChild className="w-full sm:w-auto">
+                  <a href="tel:0368385456">
+                    <Phone className="w-5 h-5" strokeWidth={1.5} />
+                    03 68 38 54 56
+                  </a>
+                </Button>
+              </div>
+
+              <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-secondary-foreground/75">
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-success flex-shrink-0" strokeWidth={1.5} />Devis gratuit sous 2h</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-success flex-shrink-0" strokeWidth={1.5} />Livraison partout en France</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-success flex-shrink-0" strokeWidth={1.5} />Avec ou sans opérateur</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-success flex-shrink-0" strokeWidth={1.5} />Matériel récent et contrôlé</li>
+              </ul>
             </div>
-            <h1 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold text-secondary-foreground leading-tight mb-4 md:mb-6">
-              Chariot Rotatif
-              <span className="block text-primary">Jusqu'à 35m</span>
-            </h1>
-            
-            <p className="text-base md:text-xl text-secondary-foreground/80 mb-6 md:mb-8">
-              Location courte ou longue durée, avec ou sans opérateur. Partout en France.
-            </p>
 
-            {/* Big Stats - responsive */}
-            <div className="flex gap-8 md:gap-12 mb-6 md:mb-10">
-              <div>
-                <p className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-primary">99%</p>
-                <p className="text-xs md:text-sm text-secondary-foreground/70">Disponibilité</p>
-              </div>
-              <div>
-                <p className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-secondary-foreground">2 400</p>
-                <p className="text-xs md:text-sm text-secondary-foreground/70">Réseau d'agences</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-              <Button variant="cta" size="lg" asChild className="w-full sm:w-auto">
-                <a href="#devis">
-                  Obtenir mon devis
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </Button>
-              <Button variant="phone" size="lg" asChild className="w-full sm:w-auto">
-                <a href="tel:0368385456">
-                  <Phone className="w-5 h-5" strokeWidth={1.5} />
-                  03 68 38 54 56
-                </a>
-              </Button>
+            <div className="relative bg-white rounded-2xl shadow-2xl h-64 md:h-[380px] lg:h-[440px] flex items-center justify-center overflow-hidden">
+              <img
+                src={heroImage}
+                alt="Chariot télescopique rotatif"
+                className="w-full h-full object-contain p-5 md:p-8"
+                loading="eager"
+              />
+              <span className="absolute bottom-2 right-3 text-[10px] text-slate-400">* Photo non contractuelle</span>
             </div>
           </div>
         </div>
@@ -513,22 +515,6 @@ const ChariotRotatif = () => {
           </div>
         </div>
       </section>
-
-      {/* Description produit (ancien site) */}
-      {PRODUCTS["chariot-rotatif"]?.description && (
-        <section className="py-10 md:py-16 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="section-title text-center mb-6">À propos de ce matériel</h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                {PRODUCTS["chariot-rotatif"].description!.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Why Choose Us - Impact */}
       <section className="py-10 md:py-16 lg:py-24">
