@@ -2,8 +2,39 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { CheckCircle } from "lucide-react";
 
 const Contact = () => {
+  const [form, setForm] = useState({ nom: "", email: "", telephone: "", message: "" });
+  const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const canSend = form.nom.trim() && form.message.trim() && (form.email.trim() || form.telephone.trim());
+  const submit = async () => {
+    if (!canSend || state === "sending") return;
+    setState("sending");
+    try {
+      const r = await fetch("https://lnytoqspbcphamtvpvnw.supabase.co/functions/v1/site-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          materiel: "Contact — message libre",
+          entreprise: form.nom,
+          nom: form.nom,
+          telephone: form.telephone,
+          email: form.email,
+          commentaire: form.message,
+          page: "/contact",
+        }),
+      });
+      const j = await r.json();
+      if (!j.ok) throw new Error(String(j.error || "erreur"));
+      setState("sent");
+      (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.("event", "generate_lead", { method: "contact_form" });
+    } catch (_e) {
+      setState("error");
+    }
+  };
+
   return (
     <PageLayout>
       <SEOHead
@@ -99,27 +130,39 @@ const Contact = () => {
                 Envoyez-nous un message
               </h2>
               
+              {state === "sent" ? (
+                <div className="text-center py-10">
+                  <CheckCircle className="w-12 h-12 text-success mx-auto mb-4" strokeWidth={1.5} />
+                  <h3 className="font-display font-bold text-xl text-foreground mb-2">Message envoyé !</h3>
+                  <p className="text-muted-foreground">Merci. Nous vous recontactons sous 2h ouvrées (Lun-Ven 7h30-18h).</p>
+                </div>
+              ) : (
               <div className="space-y-4">
+                {state === "error" && (
+                  <p className="text-sm text-destructive bg-destructive/10 rounded-lg p-3">Une erreur est survenue. Réessayez ou appelez-nous au 03 68 38 54 56.</p>
+                )}
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Nom complet</label>
-                  <input type="text" className="input-field" placeholder="Votre nom" />
+                  <label className="block text-sm font-medium text-foreground mb-2">Nom complet *</label>
+                  <input type="text" className="input-field" placeholder="Votre nom" value={form.nom} onChange={(e) => setForm(f => ({ ...f, nom: e.target.value }))} />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Email</label>
-                  <input type="email" className="input-field" placeholder="votre@email.com" />
+                  <input type="email" className="input-field" placeholder="votre@email.com" value={form.email} onChange={(e) => setForm(f => ({ ...f, email: e.target.value }))} />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Téléphone</label>
-                  <input type="tel" className="input-field" placeholder="06 00 00 00 00" />
+                  <input type="tel" className="input-field" placeholder="06 00 00 00 00" value={form.telephone} onChange={(e) => setForm(f => ({ ...f, telephone: e.target.value }))} />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Message</label>
-                  <textarea className="input-field min-h-[120px]" placeholder="Votre message..."></textarea>
+                  <label className="block text-sm font-medium text-foreground mb-2">Message *</label>
+                  <textarea className="input-field min-h-[120px]" placeholder="Votre message..." value={form.message} onChange={(e) => setForm(f => ({ ...f, message: e.target.value }))}></textarea>
                 </div>
-                <Button variant="cta" className="w-full">
-                  Envoyer le message
+                <p className="text-xs text-muted-foreground">* obligatoires — indiquez au moins un email ou un téléphone</p>
+                <Button variant="cta" className="w-full" disabled={!canSend || state === "sending"} onClick={submit}>
+                  {state === "sending" ? "Envoi en cours..." : "Envoyer le message"}
                 </Button>
               </div>
+              )}
             </div>
           </div>
         </div>
