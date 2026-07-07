@@ -22,7 +22,7 @@ const ChariotTelescopique = () => {
       canonicalUrl="/manutention/chariot-telescopique"
       heroTitle="Chariot Télescopique"
       heroHighlight="Fixe - 4m à 18m"
-      heroSubtitle="Location courte ou longue durée, avec ou sans opérateur. Partout en France."
+      heroSubtitle="Location courte ou longue durée. Partout en France."
       heroImage={heroImage}
       heroImageAlt="Chariot télescopique fixe"
       products={products}

@@ -456,8 +456,6 @@ const ProductTemplate = ({
               <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-secondary-foreground/75">
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-success flex-shrink-0" strokeWidth={1.5} />Devis gratuit sous 2h</li>
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-success flex-shrink-0" strokeWidth={1.5} />Livraison partout en France</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-success flex-shrink-0" strokeWidth={1.5} />Avec ou sans opérateur</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-success flex-shrink-0" strokeWidth={1.5} />Matériel récent et contrôlé</li>
               </ul>
             </div>
 
@@ -588,10 +586,6 @@ const ProductTemplate = ({
                 <li className="flex items-center gap-2 md:gap-3">
                   <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-success shrink-0" strokeWidth={1.5} />
                   <span className="text-sm md:text-lg">Livraison partout en France</span>
-                </li>
-                <li className="flex items-center gap-2 md:gap-3">
-                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-success shrink-0" strokeWidth={1.5} />
-                  <span className="text-sm md:text-lg">Avec ou sans opérateur</span>
                 </li>
               </ul>
               

@@ -321,7 +321,7 @@ const ChariotRotatif = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Location Chariot Télescopique Rotatif jusqu'à 35m | Dispo Immédiate | EAP Location"
-        description="Location chariot télescopique rotatif 16m-35m. Disponibilité 99%, devis en 2h, livraison 48h partout en France. Avec ou sans opérateur."
+        description="Location chariot télescopique rotatif 16m-35m. Disponibilité 99%, devis en 2h, livraison 48h partout en France."
         keywords="chariot télescopique 35m, location chariot rotatif, manitou location, nacelle grande hauteur, location matériel BTP"
         canonicalUrl="/manutention/chariot-rotatif"
       />
@@ -386,7 +386,7 @@ const ChariotRotatif = () => {
               </h1>
 
               <p className="text-base md:text-lg text-secondary-foreground/80 mb-5 md:mb-6">
-                Location courte ou longue durée, avec ou sans opérateur. Partout en France.
+                Location courte ou longue durée. Partout en France.
               </p>
 
               <div className="flex gap-8 md:gap-12 mb-5 md:mb-7">
@@ -422,8 +422,6 @@ const ChariotRotatif = () => {
               <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-secondary-foreground/75">
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-success flex-shrink-0" strokeWidth={1.5} />Devis gratuit sous 2h</li>
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-success flex-shrink-0" strokeWidth={1.5} />Livraison partout en France</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-success flex-shrink-0" strokeWidth={1.5} />Avec ou sans opérateur</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-success flex-shrink-0" strokeWidth={1.5} />Matériel récent et contrôlé</li>
               </ul>
             </div>
 
@@ -568,10 +566,6 @@ const ChariotRotatif = () => {
                 <li className="flex items-center gap-2 md:gap-3">
                   <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-success shrink-0" strokeWidth={1.5} />
                   <span className="text-sm md:text-lg">Livraison partout en France</span>
-                </li>
-                <li className="flex items-center gap-2 md:gap-3">
-                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-success shrink-0" strokeWidth={1.5} />
-                  <span className="text-sm md:text-lg">Avec ou sans opérateur</span>
                 </li>
               </ul>
               

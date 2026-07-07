@@ -320,7 +320,7 @@ const TemplateImpact = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Chariot Télescopique Rotatif jusqu'à 35m | Dispo Immédiate | EAP Location"
-        description="Location chariot télescopique rotatif 16m-35m. Disponibilité 99%, devis en 2h, livraison 48h partout en France. Avec ou sans opérateur."
+        description="Location chariot télescopique rotatif 16m-35m. Disponibilité 99%, devis en 2h, livraison 48h partout en France."
         keywords="chariot télescopique 35m, location chariot rotatif, manitou location, nacelle grande hauteur, location matériel BTP"
         canonicalUrl="/chariot-rotatif-impact"
       />
@@ -393,7 +393,7 @@ const TemplateImpact = () => {
             </h1>
             
             <p className="text-base md:text-xl text-secondary-foreground/80 mb-6 md:mb-8">
-              Location courte ou longue durée, avec ou sans opérateur. Partout en France.
+              Location courte ou longue durée. Partout en France.
             </p>
 
             {/* Big Stats - responsive */}
@@ -554,10 +554,6 @@ const TemplateImpact = () => {
                 <li className="flex items-center gap-2 md:gap-3">
                   <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-success shrink-0" strokeWidth={1.5} />
                   <span className="text-sm md:text-lg">Livraison partout en France</span>
-                </li>
-                <li className="flex items-center gap-2 md:gap-3">
-                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-success shrink-0" strokeWidth={1.5} />
-                  <span className="text-sm md:text-lg">Avec ou sans opérateur</span>
                 </li>
               </ul>
               
