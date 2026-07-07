@@ -6,7 +6,7 @@ import { Progress } from "@/components/ui/progress";
 import SEOHead from "@/components/SEOHead";
 import { PRODUCTS } from "@/data/products";
 
-import heroImage from "@/assets/hero-chariot.jpg";
+import heroImage from "@/assets/products/chariot-rotatif.webp";
 
 // Logos entreprises BTP
 import logoAssaAbloy from "@/assets/logos/assa-abloy.jpg";
@@ -375,27 +375,30 @@ const ChariotRotatif = () => {
       </header>
 
       {/* Hero Section - Full Impact */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="aspect-[16/9] md:aspect-auto md:h-full">
-            <img 
-              src={heroImage} 
-              alt="Chariot télescopique rotatif" 
-              className="w-full h-full object-cover"
+      <section className="relative overflow-hidden min-h-[60vh] md:min-h-[70vh] bg-secondary">
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary to-black/60"></div>
+        {/* Image produit — panneau blanc, object-contain : jamais zoomée/croppée */}
+        <div className="hidden md:flex absolute inset-y-0 right-0 w-[44%] lg:w-[42%] items-center justify-center p-8 lg:p-12 z-[1]">
+          <div className="relative w-full h-full max-h-[520px] bg-white rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden">
+            <img
+              src={heroImage}
+              alt="Chariot télescopique rotatif"
+              className="w-full h-full object-contain p-6"
               loading="eager"
             />
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-transparent"></div>
-          {/* Mention photo non contractuelle */}
-          <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 z-10">
-            <span className="text-[10px] md:text-xs text-white/70 bg-black/40 px-2 py-1 rounded">
-              * Photo non contractuelle
-            </span>
+            <span className="absolute bottom-2 right-3 text-[10px] text-slate-400">* Photo non contractuelle</span>
           </div>
         </div>
-        
-        <div className="relative container mx-auto px-4 py-12 md:py-20 lg:py-32">
-          <div className="max-w-2xl">
+
+        <div className="relative container mx-auto px-4 py-12 md:py-20 lg:py-32 z-[2]">
+          <div className="max-w-2xl md:max-w-[52%] lg:max-w-2xl">
+            {/* Image produit mobile — compacte, jamais croppée */}
+            <div className="md:hidden mb-6">
+              <div className="relative bg-white rounded-xl p-3 h-40 flex items-center justify-center overflow-hidden">
+                <img src={heroImage} alt="Chariot télescopique rotatif" className="w-full h-full object-contain" loading="eager" />
+                <span className="absolute bottom-1 right-2 text-[9px] text-slate-400">* Photo non contractuelle</span>
+              </div>
+            </div>
             <h1 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold text-secondary-foreground leading-tight mb-4 md:mb-6">
               Chariot Rotatif
               <span className="block text-primary">Jusqu'à 35m</span>
