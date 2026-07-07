@@ -21,7 +21,7 @@ const MentionsLegales = () => {
               <div>
                 <h2 className="font-display font-bold text-xl text-foreground mb-4">Éditeur du site</h2>
                 <p className="text-muted-foreground">
-                  EAP Location<br />
+                  Equipements A Partager<br />
                   15 avenue du Great EASTERN<br />
                   80330 LONGUEAU<br />
                   France
@@ -35,7 +35,10 @@ const MentionsLegales = () => {
               <div>
                 <h2 className="font-display font-bold text-xl text-foreground mb-4">Hébergement</h2>
                 <p className="text-muted-foreground">
-                  [Informations hébergeur à compléter]
+                  Cloudflare, Inc.<br />
+                  101 Townsend Street<br />
+                  San Francisco, CA 94107, États-Unis<br />
+                  Site web : <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.cloudflare.com</a>
                 </p>
               </div>
 
@@ -43,7 +46,7 @@ const MentionsLegales = () => {
                 <h2 className="font-display font-bold text-xl text-foreground mb-4">Propriété intellectuelle</h2>
                 <p className="text-muted-foreground">
                   L'ensemble du contenu de ce site (textes, images, vidéos) est la propriété exclusive 
-                  d'EAP Location ou de ses partenaires. Toute reproduction, même partielle, est interdite 
+                  d'Equipements A Partager ou de ses partenaires. Toute reproduction, même partielle, est interdite 
                   sans autorisation préalable.
                 </p>
               </div>
