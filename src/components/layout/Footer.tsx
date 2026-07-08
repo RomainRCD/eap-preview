@@ -44,6 +44,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/mentions-legales" className="text-secondary-foreground/80 hover:text-primary transition-colors">Mentions Légales</Link>
+                <button onClick={() => (window as unknown as { __eapConsentReset?: () => void }).__eapConsentReset?.()} className="text-secondary-foreground/80 hover:text-primary transition-colors text-left">Gestion des cookies</button>
               </li>
             </ul>
           </div>

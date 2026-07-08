@@ -943,6 +943,7 @@ const TemplateImpact = () => {
           <p className="text-muted-foreground">
             EAP Location - Spécialiste BTP depuis 2016 | contact@eap-location.fr | 03 68 38 54 56
           </p>
+          <button onClick={() => (window as unknown as { __eapConsentReset?: () => void }).__eapConsentReset?.()} className="text-muted-foreground/70 hover:text-primary text-xs mt-2 underline">Gestion des cookies</button>
         </div>
       </footer>
 
