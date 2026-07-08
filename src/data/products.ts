@@ -136,7 +136,7 @@ export const PRODUCTS: Record<string, ProductInfo> = {
     variants: [{"label": "8 pieds", "value": "8 pieds"}, {"label": "10 pieds", "value": "10 pieds"}, {"label": "20 pieds", "value": "20 pieds"}, {"label": "20 pieds open side", "value": "20 pieds open side"}, {"label": "40 pieds", "value": "40 pieds"}], // variants: ancien site
     name: "Container maritime",
     category: "base-vie",
-    spec: "20' / 40'",
+    spec: "8' à 40'",
     description: ["EAP location propose le plus large choix de Container de Stockage pour vos base vie sur vos chantier en France. Sur notre site vous retrouverez disponible à la location :", "- Container stockage de 8 pieds (12m3) 2,5 mètres", "- Container stockage de 10 pieds (15m3) 3 mètres", "- Container stockage de 20 pieds (32m3) 6 mètres", "- Container stockage de 20 pieds (32m3) 6 mètres « open side »", "- Container stockage de 40 pieds (77m3) 12 mètres"],
   },
   "rouleau-tandem": {
@@ -258,7 +258,7 @@ export const PRODUCTS: Record<string, ProductInfo> = {
     variants: [{"label": "1,5T", "value": "1,5T"}, {"label": "2,5T", "value": "2,5T"}, {"label": "3,5T", "value": "3,5T"}, {"label": "5T", "value": "5T"}, {"label": "6T", "value": "6T"}, {"label": "8T", "value": "8T"}], // variants: ancien site
     name: "Mini-pelle",
     category: "terrassement",
-    spec: "De 0,8T à 8T",
+    spec: "De 1,5T à 8T",
     description: ["EAP location propose le plus large choix de mini pelle en France. Sur notre site vous retrouverez disponible à la location des mini-pelle pouvant aller jusqu’à 8 tonnes.", "Les accessoires disponibles : BRH, Godets et pince de tri", "Les disponibilités et caractéristiques de nos mini-pelle :", "- Mini pelle – 1,5 tonnes", "- Mini pelle – 2,5 tonnes", "- Mini pelle – 3,5 tonnes", "- Mini pelle – 5 tonnes", "- Mini pelle – 6 tonnes", "- Mini pelle – 8 tonnes"],
   },
   "pelle-chenilles": {
@@ -272,7 +272,7 @@ export const PRODUCTS: Record<string, ProductInfo> = {
     variants: [{"label": "5T", "value": "5T"}, {"label": "8T", "value": "8T"}, {"label": "10T", "value": "10T"}, {"label": "12T", "value": "12T"}, {"label": "14T", "value": "14T"}, {"label": "16T", "value": "16T"}, {"label": "18T", "value": "18T"}], // variants: ancien site
     name: "Pelle sur pneus",
     category: "terrassement",
-    spec: "De 10T à 25T",
+    spec: "De 5T à 18T",
     description: ["EAP location propose le plus large choix de pelle sur pneus en France. Nous sommes à proximité de vos chantiers dans toute la France grâce à notre réseau de partenaires. Sur notre site vous retrouverez disponible à la location des pelles sur pneus pouvant aller jusqu’à 18 tonnes.", "Les disponibilités et caractéristiques de nos pelles sur pneus :", "- Pelle sur pneus – 5 tonnes", "- Pelle sur pneus – 8 tonnes", "- Pelle sur pneus – 10 tonnes", "- Pelle sur pneus – 12 tonnes", "- Pelle sur pneus – 14 tonnes", "- Pelle sur pneus – 16 tonnes", "- Pelle sur pneus – 18 tonnes"],
   },
   "chargeuse-pneus": {
