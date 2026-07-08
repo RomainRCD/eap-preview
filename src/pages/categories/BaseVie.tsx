@@ -22,7 +22,7 @@ const BaseVie = () => {
     { name: "Réfectoire", slug: "refectoire", description: "Cuisine équipée", image: imgRefectoire},
     { name: "Bureau de chantier", slug: "bureau", description: "Espace travail", image: imgBureau},
     { name: "Local technique", slug: "local-technique", description: "Stockage" },
-    { name: "Container maritime", slug: "container", description: "20' / 40'", image: imgContainer},
+    { name: "Container maritime", slug: "container", description: "8' à 40'", image: imgContainer},
   ];
 
   return (
