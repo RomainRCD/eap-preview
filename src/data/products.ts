@@ -38,7 +38,7 @@ export const PRODUCTS: Record<string, ProductInfo> = {
     variants: [{"label": "Mât LED remorque", "value": "Mât LED remorque"}, {"label": "Ballon éclairant", "value": "Ballon éclairant"}, {"label": "Projecteur autonome", "value": "Projecteur autonome"}], // variants [G] standard marché — à relire
     name: "Éclairage chantier",
     category: "autres",
-    spec: "Tour lumineuse",
+    spec: "Mât d'éclairage",
     description: ["Mâts et tours d'éclairage pour travailler en sécurité de nuit ou en espace sombre : ballons éclairants, mâts LED sur remorque, projecteurs autonomes.", "Autonomie adaptée aux postes de nuit, location courte ou longue durée."], // [G]
   },
   "betonniere": {

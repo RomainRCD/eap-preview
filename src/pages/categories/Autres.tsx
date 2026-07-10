@@ -19,7 +19,7 @@ const Autres = () => {
     { name: "Groupe électrogène", slug: "groupe-electrogene", description: "5kVA à +150kVA", image: imgGroupeElectrogene},
     { name: "Compresseur d'air", slug: "compresseur", description: "Mobile chantier", image: imgCompresseur},
     { name: "Pompe à eau", slug: "pompe-eau", description: "Immergée, surface" },
-    { name: "Éclairage chantier", slug: "eclairage", description: "Tour lumineuse", image: imgEclairage},
+    { name: "Éclairage chantier", slug: "eclairage", description: "Mât d'éclairage", image: imgEclairage},
     { name: "Bétonnière", slug: "betonniere", description: "120L à 350L", image: imgBetonniere},
     { name: "Broyeur de branches", slug: "broyeur", description: "Espaces verts", image: imgBroyeur},
     { name: "Dumper", slug: "dumper", description: "1T à 10T", image: imgDumper},
