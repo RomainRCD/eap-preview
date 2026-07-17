@@ -135,7 +135,7 @@
     ],
     "name": "Pompe à eau",
     "category": "autres",
-    "spec": "Immergée, surface",
+    "spec": "Immergée ou surface",
     "description": [
       "Pompes à eau de chantier pour l'épuisement des fouilles, le pompage des eaux chargées ou claires : motopompes thermiques et pompes immergées.",
       "Plusieurs débits disponibles selon la hauteur de refoulement et la nature des eaux."
