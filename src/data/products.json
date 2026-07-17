@@ -1,0 +1,1817 @@
+{
+  "groupe-electrogene": {
+    "variants": [
+      {
+        "label": "5kVA",
+        "value": "5kVA"
+      },
+      {
+        "label": "10kVA",
+        "value": "10kVA"
+      },
+      {
+        "label": "15kVA",
+        "value": "15kVA"
+      },
+      {
+        "label": "20kVA",
+        "value": "20kVA"
+      },
+      {
+        "label": "30kVA",
+        "value": "30kVA"
+      },
+      {
+        "label": "40kVA",
+        "value": "40kVA"
+      },
+      {
+        "label": "50kVA",
+        "value": "50kVA"
+      },
+      {
+        "label": "60kVA",
+        "value": "60kVA"
+      },
+      {
+        "label": "70kVA",
+        "value": "70kVA"
+      },
+      {
+        "label": "80kVA",
+        "value": "80kVA"
+      },
+      {
+        "label": "100kVA",
+        "value": "100kVA"
+      },
+      {
+        "label": "150kVA",
+        "value": "150kVA"
+      },
+      {
+        "label": "+150kVA",
+        "value": "+150kVA"
+      }
+    ],
+    "name": "Groupe électrogène",
+    "category": "autres",
+    "spec": "5kVA à +150kVA",
+    "description": [
+      "EAP location propose le plus large choix de groupes électrogènes pour alimenter vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Groupe électrogène 5kVA",
+      "- Groupe électrogène 10kVA",
+      "- Groupe électrogène 15kVA",
+      "- Groupe électrogène 20kVA",
+      "- Groupe électrogène 30kVA",
+      "- Groupe électrogène 40kVA",
+      "- Groupe électrogène 50kVA",
+      "- Groupe électrogène 60kVA",
+      "- Groupe électrogène 70kVA",
+      "- Groupe électrogène 80kVA",
+      "- Groupe électrogène 100kVA",
+      "- Groupe électrogène 150kVA",
+      "- Groupe électrogène +150kVA"
+    ]
+  },
+  "compresseur": {
+    "variants": [
+      {
+        "label": "2500L",
+        "value": "2500L"
+      },
+      {
+        "label": "5000L",
+        "value": "5000L"
+      },
+      {
+        "label": "7000L",
+        "value": "7000L"
+      },
+      {
+        "label": "10000L",
+        "value": "10000L"
+      },
+      {
+        "label": "14000L",
+        "value": "14000L"
+      },
+      {
+        "label": "21000L",
+        "value": "21000L"
+      }
+    ],
+    "name": "Compresseur d'air",
+    "category": "autres",
+    "spec": "Mobile chantier",
+    "description": [
+      "EAP location propose le plus large choix de compresseur d’air pour alimenter vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Compresseur d’air 2500L",
+      "- Compresseur d’air 5000L",
+      "- Compresseur d’air 7000L",
+      "- Compresseur d’air 10000L",
+      "- Compresseur d’air 14000L",
+      "- Compresseur d’air 21000L"
+    ]
+  },
+  "pompe-eau": {
+    "variants": [
+      {
+        "label": "Eaux claires",
+        "value": "Eaux claires"
+      },
+      {
+        "label": "Eaux chargées",
+        "value": "Eaux chargées"
+      },
+      {
+        "label": "Immergée",
+        "value": "Immergée"
+      },
+      {
+        "label": "Motopompe thermique",
+        "value": "Motopompe thermique"
+      }
+    ],
+    "name": "Pompe à eau",
+    "category": "autres",
+    "spec": "Immergée, surface",
+    "description": [
+      "Pompes à eau de chantier pour l'épuisement des fouilles, le pompage des eaux chargées ou claires : motopompes thermiques et pompes immergées.",
+      "Plusieurs débits disponibles selon la hauteur de refoulement et la nature des eaux."
+    ]
+  },
+  "eclairage": {
+    "variants": [
+      {
+        "label": "Mât LED remorque",
+        "value": "Mât LED remorque"
+      },
+      {
+        "label": "Ballon éclairant",
+        "value": "Ballon éclairant"
+      },
+      {
+        "label": "Projecteur autonome",
+        "value": "Projecteur autonome"
+      }
+    ],
+    "name": "Éclairage chantier",
+    "category": "autres",
+    "spec": "Mât d'éclairage",
+    "description": [
+      "Mâts et tours d'éclairage pour travailler en sécurité de nuit ou en espace sombre : ballons éclairants, mâts LED sur remorque, projecteurs autonomes.",
+      "Autonomie adaptée aux postes de nuit, location courte ou longue durée."
+    ]
+  },
+  "betonniere": {
+    "variants": [
+      {
+        "label": "120L",
+        "value": "120L"
+      },
+      {
+        "label": "160L",
+        "value": "160L"
+      },
+      {
+        "label": "250L",
+        "value": "250L"
+      },
+      {
+        "label": "350L",
+        "value": "350L"
+      }
+    ],
+    "name": "Bétonnière",
+    "category": "autres",
+    "spec": "120L à 350L",
+    "description": [
+      "Bétonnières de chantier pour la préparation de béton et mortier sur place : modèles électriques ou thermiques, plusieurs capacités de cuve.",
+      "Location à la journée, à la semaine ou au mois, livraison possible."
+    ]
+  },
+  "broyeur": {
+    "variants": [
+      {
+        "label": "Ø 8cm",
+        "value": "Ø 8cm"
+      },
+      {
+        "label": "Ø 12cm",
+        "value": "Ø 12cm"
+      },
+      {
+        "label": "Ø 15cm",
+        "value": "Ø 15cm"
+      },
+      {
+        "label": "Ø 20cm",
+        "value": "Ø 20cm"
+      }
+    ],
+    "name": "Broyeur de branches",
+    "category": "autres",
+    "spec": "Espaces verts",
+    "description": [
+      "Broyeurs de branches pour l'entretien des espaces verts et le débroussaillage : réduction des végétaux en copeaux directement sur site.",
+      "Plusieurs diamètres de coupe admissibles, modèles sur remorque faciles à tracter."
+    ]
+  },
+  "dumper": {
+    "variants": [
+      {
+        "label": "1T",
+        "value": "1T"
+      },
+      {
+        "label": "1,5T",
+        "value": "1,5T"
+      },
+      {
+        "label": "2T",
+        "value": "2T"
+      },
+      {
+        "label": "3T",
+        "value": "3T"
+      },
+      {
+        "label": "4T",
+        "value": "4T"
+      },
+      {
+        "label": "5T",
+        "value": "5T"
+      },
+      {
+        "label": "6T",
+        "value": "6T"
+      },
+      {
+        "label": "7T",
+        "value": "7T"
+      },
+      {
+        "label": "9T",
+        "value": "9T"
+      }
+    ],
+    "name": "Dumper",
+    "category": "autres",
+    "spec": "1T à 10T",
+    "description": [
+      "EAP location propose le plus large choix de Dumper sur pneus pour vos travaux de terrassement en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Dumper sur pneus 1T",
+      "- Dumper sur pneus 1.5T",
+      "- Dumper sur pneus 2T",
+      "- Dumper sur pneus 3T",
+      "- Dumper sur pneus 4T",
+      "- Dumper sur pneus 5T",
+      "- Dumper sur pneus 6T",
+      "- Dumper sur pneus 7T",
+      "- Dumper sur pneus 9T"
+    ]
+  },
+  "marteau-piqueur": {
+    "variants": [
+      {
+        "label": "Électrique 5-10kg",
+        "value": "Électrique 5-10kg"
+      },
+      {
+        "label": "Électrique 15-30kg",
+        "value": "Électrique 15-30kg"
+      },
+      {
+        "label": "Pneumatique",
+        "value": "Pneumatique"
+      },
+      {
+        "label": "Thermique",
+        "value": "Thermique"
+      }
+    ],
+    "name": "Marteau piqueur",
+    "category": "autres",
+    "spec": "Démolition",
+    "description": [
+      "Marteaux-piqueurs pour la démolition de béton, dallages et enrobés : modèles électriques, pneumatiques ou thermiques selon l'usage.",
+      "Accessoires fournis (pointes, burins), location à la journée ou plus."
+    ]
+  },
+  "decoupeuse": {
+    "variants": [
+      {
+        "label": "Ø 350mm",
+        "value": "Ø 350mm"
+      },
+      {
+        "label": "Ø 400mm",
+        "value": "Ø 400mm"
+      },
+      {
+        "label": "Scie à sol",
+        "value": "Scie à sol"
+      }
+    ],
+    "name": "Découpeuse thermique",
+    "category": "autres",
+    "spec": "Béton, asphalte",
+    "description": [
+      "Découpeuses thermiques pour la coupe du béton, de l'asphalte et des matériaux durs : disques diamant, coupe à sec ou à eau.",
+      "Location courte durée avec consommables disponibles."
+    ]
+  },
+  "aspirateur": {
+    "variants": [
+      {
+        "label": "Classe L",
+        "value": "Classe L"
+      },
+      {
+        "label": "Classe M",
+        "value": "Classe M"
+      },
+      {
+        "label": "Classe H",
+        "value": "Classe H"
+      },
+      {
+        "label": "Eau + poussière",
+        "value": "Eau + poussière"
+      }
+    ],
+    "name": "Aspirateur industriel",
+    "category": "autres",
+    "spec": "Chantier",
+    "description": [
+      "Aspirateurs industriels de chantier pour poussières fines, gravats légers et liquides : filtration renforcée compatible poussières de classe M/H.",
+      "Indispensables pour les travaux de ponçage, perçage et démolition en intérieur."
+    ]
+  },
+  "bungalow": {
+    "variants": [
+      {
+        "label": "6 pers.",
+        "value": "6 pers."
+      },
+      {
+        "label": "8 pers.",
+        "value": "8 pers."
+      },
+      {
+        "label": "10 pers.",
+        "value": "10 pers."
+      },
+      {
+        "label": "12 pers.",
+        "value": "12 pers."
+      }
+    ],
+    "name": "Bungalow de chantier",
+    "category": "base-vie",
+    "spec": "Bureau, réfectoire",
+    "description": [
+      "EAP location propose le plus large choix de Bungalow en France. Vous retrouverez un grand nombre de choix de dispositions pour les bungalows comme réfectoire, vestiaire, bureau ou encore salle de réunion pouvant accueillir jusqu’à 200 personnes.",
+      "- Bungalow de 6 personnes.",
+      "- Bungalow de 8 personnes.",
+      "- Bungalow de 10 personnes.",
+      "- Bungalow de 12 personnes."
+    ]
+  },
+  "roulotte": {
+    "variants": [
+      {
+        "label": "2 pers.",
+        "value": "2 pers."
+      },
+      {
+        "label": "4 pers.",
+        "value": "4 pers."
+      },
+      {
+        "label": "6 pers.",
+        "value": "6 pers."
+      },
+      {
+        "label": "8 pers.",
+        "value": "8 pers."
+      },
+      {
+        "label": "10 pers.",
+        "value": "10 pers."
+      },
+      {
+        "label": "12 pers.",
+        "value": "12 pers."
+      }
+    ],
+    "name": "Roulotte de chantier",
+    "category": "base-vie",
+    "spec": "Mobile",
+    "description": [
+      "EAP location propose le plus large choix de Roulotte de Chantier pour votre base vie en France. Sur notre site vous retrouverez une multitude de dispositions pour votre roulotte de chantier comme vestiaire, réfectoire, bureau ou encore salle de réunion.",
+      "- Roulotte de chantier 2 personnes isolées avec vestiaire",
+      "- Roulotte de chantier 4 personnes isolées avec vestiaire",
+      "- Roulotte de chantier 6 personnes isolées avec vestiaire",
+      "- Roulotte de chantier 8 personnes isolées avec vestiaire.",
+      "- Roulotte de chantier 10 personnes isolées avec vestiaire.",
+      "- Roulotte de chantier 12 personnes isolées avec vestiaire."
+    ]
+  },
+  "sanitaire": {
+    "variants": [
+      {
+        "label": "1 WC",
+        "value": "1 WC"
+      },
+      {
+        "label": "2 WC",
+        "value": "2 WC"
+      },
+      {
+        "label": "1 WC + 1 douche",
+        "value": "1 WC + 1 douche"
+      },
+      {
+        "label": "2 WC + 2 douches",
+        "value": "2 WC + 2 douches"
+      },
+      {
+        "label": "4 douches + 4 lavabos",
+        "value": "4 douches + 4 lavabos"
+      }
+    ],
+    "name": "Sanitaire mobile",
+    "category": "base-vie",
+    "spec": "WC, douche",
+    "description": [
+      "EAP location propose le plus large choix de matériel base vie. Sur notre site vous retrouverez disponible à la location :",
+      "- Bungalow 1 WC raccordable.",
+      "- Bungalow 2 WC raccordable.",
+      "- Bungalow 1 WC et 1 douche raccordable.",
+      "- Bungalow 2 WC et 2 douches raccordables.",
+      "- Bungalow 4 douches et 4 lavabos raccordables."
+    ]
+  },
+  "vestiaire": {
+    "variants": [
+      {
+        "label": "8 pers.",
+        "value": "8 pers."
+      },
+      {
+        "label": "12 pers.",
+        "value": "12 pers."
+      },
+      {
+        "label": "16 pers.",
+        "value": "16 pers."
+      }
+    ],
+    "name": "Vestiaire",
+    "category": "base-vie",
+    "spec": "Casiers, bancs",
+    "description": [
+      "Bungalow vestiaire pour équiper la base vie de votre chantier : casiers, bancs, chauffage, éclairage. Conforme aux obligations d'accueil du personnel.",
+      "Plusieurs tailles disponibles, location toute durée, livraison et pose incluses."
+    ]
+  },
+  "refectoire": {
+    "variants": [
+      {
+        "label": "8 pers.",
+        "value": "8 pers."
+      },
+      {
+        "label": "12 pers.",
+        "value": "12 pers."
+      },
+      {
+        "label": "16 pers.",
+        "value": "16 pers."
+      },
+      {
+        "label": "20 pers.",
+        "value": "20 pers."
+      }
+    ],
+    "name": "Réfectoire",
+    "category": "base-vie",
+    "spec": "Cuisine équipée",
+    "description": [
+      "Bungalow réfectoire équipé pour les repas de vos équipes : tables, bancs, réchauffe-plats, réfrigérateur, chauffage. Conforme au Code du travail.",
+      "Plusieurs capacités disponibles, location toute durée avec livraison et pose."
+    ]
+  },
+  "bureau": {
+    "variants": [
+      {
+        "label": "Standard 15m²",
+        "value": "Standard 15m²"
+      },
+      {
+        "label": "Double 30m²",
+        "value": "Double 30m²"
+      }
+    ],
+    "name": "Bureau de chantier",
+    "category": "base-vie",
+    "spec": "Espace travail",
+    "description": [
+      "Bungalow bureau de chantier pour vos réunions et le pilotage des travaux : bureau, chaises, rangements, éclairage, chauffage et climatisation selon modèles.",
+      "Location toute durée, livraison, pose et raccordement sur demande."
+    ]
+  },
+  "local-technique": {
+    "variants": [
+      {
+        "label": "8 pieds",
+        "value": "8 pieds"
+      },
+      {
+        "label": "10 pieds",
+        "value": "10 pieds"
+      },
+      {
+        "label": "20 pieds",
+        "value": "20 pieds"
+      }
+    ],
+    "name": "Local technique",
+    "category": "base-vie",
+    "spec": "Stockage",
+    "description": [
+      "Local technique de chantier pour le stockage sécurisé de l'outillage et du petit matériel : structure robuste, fermeture sécurisée, plusieurs dimensions.",
+      "Location toute durée avec livraison sur chantier."
+    ]
+  },
+  "container": {
+    "variants": [
+      {
+        "label": "8 pieds",
+        "value": "8 pieds"
+      },
+      {
+        "label": "10 pieds",
+        "value": "10 pieds"
+      },
+      {
+        "label": "20 pieds",
+        "value": "20 pieds"
+      },
+      {
+        "label": "20 pieds open side",
+        "value": "20 pieds open side"
+      },
+      {
+        "label": "40 pieds",
+        "value": "40 pieds"
+      }
+    ],
+    "name": "Container maritime",
+    "category": "base-vie",
+    "spec": "8' à 40'",
+    "description": [
+      "EAP location propose le plus large choix de Container de Stockage pour vos base vie sur vos chantier en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Container stockage de 8 pieds (12m3) 2,5 mètres",
+      "- Container stockage de 10 pieds (15m3) 3 mètres",
+      "- Container stockage de 20 pieds (32m3) 6 mètres",
+      "- Container stockage de 20 pieds (32m3) 6 mètres « open side »",
+      "- Container stockage de 40 pieds (77m3) 12 mètres"
+    ]
+  },
+  "rouleau-tandem": {
+    "variants": [
+      {
+        "label": "1,5T",
+        "value": "1,5T"
+      },
+      {
+        "label": "2,5T",
+        "value": "2,5T"
+      },
+      {
+        "label": "3,8T",
+        "value": "3,8T"
+      },
+      {
+        "label": "7,8T",
+        "value": "7,8T"
+      },
+      {
+        "label": "9,6T",
+        "value": "9,6T"
+      },
+      {
+        "label": "10,4T",
+        "value": "10,4T"
+      },
+      {
+        "label": "12,25T",
+        "value": "12,25T"
+      }
+    ],
+    "name": "Rouleau vibrant tandem",
+    "category": "compactage",
+    "spec": "1,5T à 12,25T",
+    "description": [
+      "EAP location propose le plus large choix de compacteur tandem en France. Sur notre site vous retrouverez à la location des compacteurs tandem allant jusqu’à 12.25t.",
+      "Les disponibilités et caractéristiques de nos compacteurs tandems :",
+      "- Compacteur tandem rouleau 1.5t",
+      "- Compacteur tandem rouleau 2.5t",
+      "- Compacteur tandem rouleau 3.8t",
+      "- Compacteur tandem rouleau 7.8t",
+      "- Compacteur tandem rouleau 9.6t",
+      "- Compacteur tandem rouleau 10.4t",
+      "- Compacteur tandem rouleau 12.25t"
+    ]
+  },
+  "rouleau-monocylindre": {
+    "variants": [
+      {
+        "label": "V1",
+        "value": "V1"
+      },
+      {
+        "label": "V1 + PDM",
+        "value": "V1 + PDM"
+      },
+      {
+        "label": "V2",
+        "value": "V2"
+      },
+      {
+        "label": "V3",
+        "value": "V3"
+      },
+      {
+        "label": "V4",
+        "value": "V4"
+      },
+      {
+        "label": "V5 20T",
+        "value": "V5 20T"
+      },
+      {
+        "label": "V5 23T",
+        "value": "V5 23T"
+      },
+      {
+        "label": "V5 + PDM 16T",
+        "value": "V5 + PDM 16T"
+      },
+      {
+        "label": "V5 + PDM 19T",
+        "value": "V5 + PDM 19T"
+      }
+    ],
+    "name": "Rouleau vibrant monocylindre",
+    "category": "compactage",
+    "spec": "4T à 15T",
+    "description": [
+      "EAP location propose le plus large choix de compacteur monocylindre en France. Sur notre site vous retrouverez à la location des compacteurs monocylindres jusqu’à 23 tonnes",
+      "Les disponibilités et caractéristiques de nos compacteurs monocylindres :",
+      "- Compacteur monocylindre V1",
+      "- Compacteur monocylindre V1 + PDM 5 tonnes",
+      "- Compacteur monocylindre V2",
+      "- Compacteur monocylindre V3",
+      "- Compacteur monocylindre V4",
+      "- Compacteur monocylindre V5 20 tonnes",
+      "- Compacteur monocylindre V5 23 tonnes",
+      "- Compacteur monocylindre V5 + PDM 16 tonnes",
+      "- Compacteur monocylindre V5 + PDM 19 tonnes"
+    ]
+  },
+  "rouleau-mixte": {
+    "variants": [
+      {
+        "label": "7T",
+        "value": "7T"
+      },
+      {
+        "label": "9T",
+        "value": "9T"
+      },
+      {
+        "label": "13T",
+        "value": "13T"
+      }
+    ],
+    "name": "Rouleau mixte",
+    "category": "compactage",
+    "spec": "Bille + pneus",
+    "description": [
+      "Le rouleau mixte combine une bille vibrante à l'avant et des pneus à l'arrière : compactage efficace des enrobés et des couches de forme en une seule passe.",
+      "Disponible en plusieurs largeurs de bille. Location avec livraison sur chantier."
+    ]
+  },
+  "plaque-vibrante": {
+    "variants": [
+      {
+        "label": "80kg",
+        "value": "80kg"
+      },
+      {
+        "label": "120kg",
+        "value": "120kg"
+      },
+      {
+        "label": "200kg",
+        "value": "200kg"
+      },
+      {
+        "label": "300kg",
+        "value": "300kg"
+      },
+      {
+        "label": "500kg réversible",
+        "value": "500kg réversible"
+      }
+    ],
+    "name": "Plaque vibrante",
+    "category": "compactage",
+    "spec": "80kg à 500kg",
+    "description": [
+      "La plaque vibrante compacte sols, graves et enrobés sur les petites et moyennes surfaces : tranchées, trottoirs, abords de regards.",
+      "Modèles essence ou diesel, marche avant seule ou réversible selon les besoins du chantier."
+    ]
+  },
+  "pilonneuse": {
+    "variants": [
+      {
+        "label": "60kg",
+        "value": "60kg"
+      },
+      {
+        "label": "70kg",
+        "value": "70kg"
+      },
+      {
+        "label": "80kg",
+        "value": "80kg"
+      }
+    ],
+    "name": "Pilonneuse",
+    "category": "compactage",
+    "spec": "Tranchées",
+    "description": [
+      "La pilonneuse (pilon sauteur) compacte les sols cohésifs en espaces réduits : fonds de tranchée, abords de fondations, remblais localisés.",
+      "Légère et maniable, elle passe partout où les rouleaux ne passent pas."
+    ]
+  },
+  "rouleau-pneus": {
+    "variants": [
+      {
+        "label": "8T",
+        "value": "8T"
+      },
+      {
+        "label": "12T",
+        "value": "12T"
+      },
+      {
+        "label": "18T",
+        "value": "18T"
+      },
+      {
+        "label": "24T",
+        "value": "24T"
+      }
+    ],
+    "name": "Rouleau à pneus",
+    "category": "compactage",
+    "spec": "Finition",
+    "description": [
+      "Le rouleau à pneus assure la finition des enrobés et le compactage des couches de surface grâce à ses pneus lisses à pression réglable.",
+      "Indispensable en complément du tandem sur les chantiers d'enrobés."
+    ]
+  },
+  "chariot-industriel-diesel": {
+    "name": "Chariot industriel diesel",
+    "category": "manutention",
+    "spec": "1,5T à 16T",
+    "description": [
+      "EAP location propose le plus large choix de chariot industriel diesel en France. Sur notre site vous retrouverez disponible à la location des chariots industriels diesel avec une capacité de levage pouvant aller jusqu’à 16 tonnes.",
+      "Les disponibilités et caractéristiques de nos chariots :",
+      "- Chariot Industriel diesel de 1,5 tonnes",
+      "- Chariot Industriel diesel de 2,5 tonnes",
+      "- Chariot Industriel diesel de 3,5 tonnes",
+      "- Chariot Industriel diesel de 5 tonnes",
+      "- Chariot Industriel diesel de 8 tonnes",
+      "- Chariot Industriel diesel de 10 tonnes",
+      "- Chariot Industriel diesel de 12 tonnes",
+      "- Chariot Industriel diesel de 14 tonnes",
+      "- Chariot Industriel diesel de 16 tonnes"
+    ]
+  },
+  "chariot-industriel-gaz": {
+    "name": "Chariot industriel gaz",
+    "category": "manutention",
+    "spec": "1,5T à 16T",
+    "description": [
+      "EAP location propose le plus large choix de chariot industriel gaz en France. Sur notre site vous retrouverez disponible à la location des chariots industriels gaz avec une capacité de levage pouvant aller jusqu’à 16 tonnes.",
+      "Les disponibilités et caractéristiques de nos chariots :",
+      "- Chariot Industriel gaz de 1,5 tonnes",
+      "- Chariot Industriel gaz de 2,5 tonnes",
+      "- Chariot Industriel gaz de 3,5 tonnes",
+      "- Chariot Industriel gaz de 5 tonnes",
+      "- Chariot Industriel gaz de 8 tonnes",
+      "- Chariot Industriel gaz de 10 tonnes",
+      "- Chariot Industriel gaz de 12 tonnes",
+      "- Chariot Industriel gaz de 14 tonnes",
+      "- Chariot Industriel gaz de 16 tonnes"
+    ]
+  },
+  "chariot-industriel-electrique": {
+    "name": "Chariot industriel électrique",
+    "category": "manutention",
+    "spec": "1,5T à 8T",
+    "description": [
+      "EAP location propose le plus large choix de chariot industriel électrique en France. Sur notre site vous retrouverez disponible à la location des chariots industriels électrique avec une capacité de levage pouvant aller jusqu’à 6 tonnes.",
+      "Les disponibilités et caractéristiques de nos chariots :",
+      "- Chariot Industriel électrique de 1,5 tonnes",
+      "- Chariot Industriel électrique de 2,5 tonnes",
+      "- Chariot Industriel électrique de 3,5 tonnes",
+      "- Chariot Industriel électrique de 5 tonnes",
+      "- Chariot Industriel électrique de 6 tonnes",
+      "- Chariot Industriel électrique de 8 tonnes"
+    ]
+  },
+  "chariot-semi-industriel": {
+    "name": "Chariot semi-industriel",
+    "category": "manutention",
+    "spec": "2T à 5T",
+    "description": [
+      "EAP location propose le plus large choix de chariot semi-industriel en France. Sur notre site vous retrouverez disponible à la location des chariots semi-industriels avec une capacité de levage pouvant aller jusqu’a 5 tonnes.",
+      "Les disponibilités et caractéristiques de nos chariots :",
+      "- Chariot Semi-Industriel de 2 tonnes",
+      "- Chariot Semi-Industriel de 2,5 tonnes",
+      "- Chariot Semi-Industriel de 3 tonnes",
+      "- Chariot Semi-Industriel de 3,5 tonnes",
+      "- Chariot Semi-Industriel de 4 tonnes",
+      "- Chariot Semi-Industriel de 5 tonnes"
+    ]
+  },
+  "chariot-tout-terrain": {
+    "name": "Chariot tout terrain",
+    "category": "manutention",
+    "spec": "4x2 ou 4x4, 2T à 5T",
+    "description": [
+      "EAP location propose le plus large choix de chariot tout terrain en France. Sur notre site vous retrouverez disponible à la location des chariots tout terrain avec 4 roues motrices ou 2 roues motrices avec une capacité de levage pouvant aller jusqu’à 5 tonnes.",
+      "Les disponibilités et caractéristiques de nos chariots :",
+      "- Chariot tout terrain 4X2 de 2 tonnes",
+      "- Chariot tout terrain 4X4 de 2 tonnes",
+      "- Chariot tout terrain 4X2 de 2,5 tonnes",
+      "- Chariot tout terrain 4X4 de 3 tonnes",
+      "- Chariot tout terrain 4X4 de 3,5 tonnes",
+      "- Chariot tout terrain 4X4 de 4 tonnes",
+      "- Chariot tout terrain 4X4 de 5 tonnes"
+    ]
+  },
+  "chariot-telescopique": {
+    "name": "Chariot télescopique fixe",
+    "category": "manutention",
+    "spec": "4m à 18m",
+    "description": [
+      "EAP location propose le plus large choix de chariot télescopique en France. Sur notre site vous retrouverez disponible à la location des chariot télescopique pouvant aller jusqu’a 18 mètres de hauteur de travail.",
+      "Les disponibilités et caractéristiques de nos chariots :",
+      "- Chariot Télescopique fixe avec fourche – 4 mètres de hauteur de travail",
+      "- Chariot Télescopique fixe avec fourche – 6 mètres de hauteur de travail",
+      "- Chariot Télescopique fixe avec fourche – 7 mètres de hauteur de travail",
+      "- Chariot Télescopique fixe avec fourche – 9 mètres de hauteur de travail",
+      "- Chariot Télescopique fixe avec fourche – 11 mètres de hauteur de travail",
+      "- Chariot Télescopique fixe avec fourche – 13 mètres de hauteur de travail",
+      "- Chariot Télescopique fixe avec fourche – 14 mètres de hauteur de travail",
+      "- Chariot Télescopique fixe avec fourche – 17 mètres de hauteur de travail",
+      "- Chariot Télescopique fixe avec fourche – 18 mètres de hauteur de travail",
+      "Accessoires disponibles : Godet Terre et Potence"
+    ]
+  },
+  "chariot-rotatif": {
+    "name": "Chariot télescopique rotatif",
+    "category": "manutention",
+    "spec": "16m à 35m, 360°",
+    "description": [
+      "EAP location propose le plus large choix de chariot télescopique rotatif en France. Sur notre site vous retrouverez disponible à la location des chariot télescopique pouvant aller jusqu’à 35 mètres de hauteur de travail.",
+      "Les disponibilités et caractéristiques de nos chariots :",
+      "- Chariot Télescopique Rotatif avec fourche – 16 mètres de hauteur de travail",
+      "- Chariot Télescopique Rotatif avec fourche – 18 mètres de hauteur de travail",
+      "- Chariot Télescopique Rotatif avec fourche – 21 mètres de hauteur de travail",
+      "- Chariot Télescopique Rotatif avec fourche – 25 mètres de hauteur de travail",
+      "- Chariot Télescopique Rotatif avec fourche – 30 mètres de hauteur de travail",
+      "- Chariot Télescopique Rotatif avec fourche – 32 mètres de hauteur de travail",
+      "- Chariot Télescopique Rotatif avec fourche – 35 mètres de hauteur de travail",
+      "Accessoires disponibles : Godet Terre, Potence, Treuil 5T, Radio Télécommande"
+    ]
+  },
+  "chariot-gros-tonnage": {
+    "name": "Chariot télescopique gros tonnage",
+    "category": "manutention",
+    "spec": "6T-9m à 33T-12m",
+    "description": [
+      "EAP location propose le plus large choix de Chariot gros tonnage pour vos travaux de manutention en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Chariot gros tonnage 6T – 9M",
+      "- Chariot gros tonnage 9T – 7M",
+      "- Chariot gros tonnage 13T – 10M",
+      "- Chariot gros tonnage 16T – 10M",
+      "- Chariot gros tonnage 18T – 9.6M",
+      "- Chariot gros tonnage 23T – 10M",
+      "- Chariot gros tonnage 25T – 11M",
+      "- Chariot gros tonnage 33T – 12M"
+    ]
+  },
+  "grue-mobile": {
+    "name": "Grue mobile",
+    "category": "manutention",
+    "spec": "35T à 160T",
+    "description": [
+      "EAP location propose la location de grues mobiles dans toute la France en préconisant la proximité de votre chantier. Sur notre site vous retrouverez disponible à la location des grues mobiles avec une capacité de levage pouvant aller jusqu’à 160 tonnes.",
+      "Les disponibilités et caractéristiques de nos grues mobiles :",
+      "- Grue mobile de 35 tonnes.",
+      "- Grue mobile de 40 à 50 tonnes.",
+      "- Grue mobile de 60 à 80 tonnes.",
+      "- Grue mobile de 90 à 110 tonnes.",
+      "- Grue mobile de 120 à 160 tonnes."
+    ]
+  },
+  "mini-grue-chenilles": {
+    "name": "Mini grue télescopique sur chenilles",
+    "category": "manutention",
+    "spec": "5T-20m à 8T-26m",
+    "description": [
+      "EAP location propose le plus large choix de mini grue araignée en France. Sur notre site vous retrouverez disponible à la location des mini grue télescopique pouvant aller jusqu’à 26 mètres de hauteur de travail.",
+      "- Mini grue télescopique de 5T – 20M",
+      "- Mini grue télescopique de 6T – 22M",
+      "- Mini grue télescopique de 8T – 26M"
+    ]
+  },
+  "mini-grue-araignee": {
+    "name": "Mini grue araignée",
+    "category": "manutention",
+    "spec": "3T à 4T",
+    "description": [
+      "EAP location propose le plus large choix de Mini grue araignée pour vos travaux de manutention en France . Sur notre site vous retrouverez disponible à la location :",
+      "- Mini grue araignée 3T – 5M",
+      "- Mini grue araignée 3T – 8M",
+      "- Mini grue araignée 3.5T – 10M",
+      "- Mini grue araignée 3.5T – 14M",
+      "- Mini grue araignée 4T – 18M",
+      "- Mini grue araignée 4T – 20M"
+    ]
+  },
+  "gerbeur-transpalette": {
+    "variants": [
+      {
+        "label": "Transpalette manuel",
+        "value": "Transpalette manuel"
+      },
+      {
+        "label": "Transpalette électrique",
+        "value": "Transpalette électrique"
+      },
+      {
+        "label": "Gerbeur 1,2T",
+        "value": "Gerbeur 1,2T"
+      },
+      {
+        "label": "Gerbeur 1,6T",
+        "value": "Gerbeur 1,6T"
+      }
+    ],
+    "name": "Gerbeur / Transpalette",
+    "category": "manutention",
+    "spec": "Manutention légère",
+    "description": [
+      "Gerbeurs électriques et transpalettes pour la manutention légère en entrepôt, atelier ou surface de vente : levée de palettes, gerbage en rayonnage, déplacement de charges.",
+      "Location courte ou longue durée, matériel récent et entretenu."
+    ]
+  },
+  "mini-pelle": {
+    "variants": [
+      {
+        "label": "1,5T",
+        "value": "1,5T"
+      },
+      {
+        "label": "2,5T",
+        "value": "2,5T"
+      },
+      {
+        "label": "3,5T",
+        "value": "3,5T"
+      },
+      {
+        "label": "5T",
+        "value": "5T"
+      },
+      {
+        "label": "6T",
+        "value": "6T"
+      },
+      {
+        "label": "8T",
+        "value": "8T"
+      }
+    ],
+    "name": "Mini-pelle",
+    "category": "terrassement",
+    "spec": "De 1,5T à 8T",
+    "description": [
+      "EAP location propose le plus large choix de mini pelle en France. Sur notre site vous retrouverez disponible à la location des mini-pelle pouvant aller jusqu’à 8 tonnes.",
+      "Les accessoires disponibles : BRH, Godets et pince de tri",
+      "Les disponibilités et caractéristiques de nos mini-pelle :",
+      "- Mini pelle – 1,5 tonnes",
+      "- Mini pelle – 2,5 tonnes",
+      "- Mini pelle – 3,5 tonnes",
+      "- Mini pelle – 5 tonnes",
+      "- Mini pelle – 6 tonnes",
+      "- Mini pelle – 8 tonnes"
+    ]
+  },
+  "pelle-chenilles": {
+    "variants": [
+      {
+        "label": "10T",
+        "value": "10T"
+      },
+      {
+        "label": "14T",
+        "value": "14T"
+      },
+      {
+        "label": "16T",
+        "value": "16T"
+      },
+      {
+        "label": "18T",
+        "value": "18T"
+      },
+      {
+        "label": "20T",
+        "value": "20T"
+      },
+      {
+        "label": "22T",
+        "value": "22T"
+      },
+      {
+        "label": "25T",
+        "value": "25T"
+      }
+    ],
+    "name": "Pelle sur chenilles",
+    "category": "terrassement",
+    "spec": "De 10T à 25T",
+    "description": [
+      "EAP location propose le plus large choix de pelle sur chenilles en France. Nous sommes à proximité de vos chantiers dans toute la France grâce à notre réseau de partenaires. Sur notre site vous retrouverez disponible à la location des pelles sur chenilles pouvant aller jusqu’à 25 tonnes.",
+      "Les disponibilités et caractéristiques de nos pelles sur chenilles :",
+      "- Pelle sur chenilles 10t",
+      "- Pelle sur chenilles 14t",
+      "- Pelle sur chenilles 16t",
+      "- Pelle sur chenilles 18t",
+      "- Pelle sur chenilles 20t",
+      "- Pelle sur chenilles 22t",
+      "- Pelle sur chenilles 25t"
+    ]
+  },
+  "pelle-pneus": {
+    "variants": [
+      {
+        "label": "5T",
+        "value": "5T"
+      },
+      {
+        "label": "8T",
+        "value": "8T"
+      },
+      {
+        "label": "10T",
+        "value": "10T"
+      },
+      {
+        "label": "12T",
+        "value": "12T"
+      },
+      {
+        "label": "14T",
+        "value": "14T"
+      },
+      {
+        "label": "16T",
+        "value": "16T"
+      },
+      {
+        "label": "18T",
+        "value": "18T"
+      }
+    ],
+    "name": "Pelle sur pneus",
+    "category": "terrassement",
+    "spec": "De 5T à 18T",
+    "description": [
+      "EAP location propose le plus large choix de pelle sur pneus en France. Nous sommes à proximité de vos chantiers dans toute la France grâce à notre réseau de partenaires. Sur notre site vous retrouverez disponible à la location des pelles sur pneus pouvant aller jusqu’à 18 tonnes.",
+      "Les disponibilités et caractéristiques de nos pelles sur pneus :",
+      "- Pelle sur pneus – 5 tonnes",
+      "- Pelle sur pneus – 8 tonnes",
+      "- Pelle sur pneus – 10 tonnes",
+      "- Pelle sur pneus – 12 tonnes",
+      "- Pelle sur pneus – 14 tonnes",
+      "- Pelle sur pneus – 16 tonnes",
+      "- Pelle sur pneus – 18 tonnes"
+    ]
+  },
+  "chargeuse-pneus": {
+    "variants": [
+      {
+        "label": "700L",
+        "value": "700L"
+      },
+      {
+        "label": "800L",
+        "value": "800L"
+      },
+      {
+        "label": "1000L",
+        "value": "1000L"
+      },
+      {
+        "label": "1500L",
+        "value": "1500L"
+      },
+      {
+        "label": "2000L",
+        "value": "2000L"
+      },
+      {
+        "label": "2500L",
+        "value": "2500L"
+      }
+    ],
+    "name": "Chargeuse sur pneus",
+    "category": "terrassement",
+    "spec": "De 1m³ à 5m³",
+    "description": [
+      "EAP location propose le plus large choix de chargeuse articulée en France. Sur notre site vous retrouverez disponible à la location des chargeuses articulées pouvant aller jusqu’à 2500L.",
+      "Les disponibilités et caractéristiques de nos chargeuses articulées :",
+      "- Chargeuse articulée 700L",
+      "- Chargeuse articulée 800L",
+      "- Chargeuse articulée 1000L",
+      "- Chargeuse articulée 1500L",
+      "- Chargeuse articulée 2000L",
+      "- Chargeuse articulée 2500L"
+    ]
+  },
+  "chargeuse-chenilles": {
+    "variants": [
+      {
+        "label": "3T / 280L",
+        "value": "3T / 280L"
+      },
+      {
+        "label": "3,5T / 380L",
+        "value": "3,5T / 380L"
+      },
+      {
+        "label": "4,5T / 450L",
+        "value": "4,5T / 450L"
+      },
+      {
+        "label": "6T / 600L",
+        "value": "6T / 600L"
+      }
+    ],
+    "name": "Chargeuse sur chenilles",
+    "category": "terrassement",
+    "spec": "Compacte et puissante",
+    "description": [
+      "EAP location propose le plus large choix de chargeuse compacte sur chenilles en France. Sur notre site vous retrouverez disponible à la location des chargeuses compactes sur chenilles pouvant aller jusqu’a 6 tonnes et 600L.",
+      "Les disponibilités et caractéristiques de nos chargeuses compactes sur chenilles :",
+      "- Chargeuses compactes sur chenilles – 3 tonnes et 280 litres",
+      "- Chargeuses compactes sur chenilles – 3,5 tonnes et 380 litres",
+      "- Chargeuses compactes sur chenilles – 4,5 tonnes et 450 litres",
+      "- Chargeuses compactes sur chenilles – 6 tonnes et 600 litres",
+      "Accessoire disponibles : Fourche palette et godet."
+    ]
+  },
+  "chargeuse-compacte": {
+    "variants": [
+      {
+        "label": "150L",
+        "value": "150L"
+      },
+      {
+        "label": "200L",
+        "value": "200L"
+      },
+      {
+        "label": "300L",
+        "value": "300L"
+      },
+      {
+        "label": "400L",
+        "value": "400L"
+      },
+      {
+        "label": "450L",
+        "value": "450L"
+      },
+      {
+        "label": "600L",
+        "value": "600L"
+      }
+    ],
+    "name": "Chargeuse compacte",
+    "category": "terrassement",
+    "spec": "Bobcat, Manitou",
+    "description": [
+      "EAP location propose le plus large choix de chargeuse compacte sur pneus en France. Sur notre site vous retrouverez disponible à la location des chargeuses compactes sur pneus pouvant aller jusqu’à 6 tonnes et 600L.",
+      "Les disponibilités et caractéristiques de nos chargeuses compactes sur pneus :",
+      "- Chargeuse compacte sur pneus 150L – 0.90M – 1.3T",
+      "- Chargeuse compacte sur pneus 200L – 1.20M – 1.8T",
+      "- Chargeuse compacte sur pneus 300L – 1.40M – 2.5T",
+      "- Chargeuse compacte sur pneus 400L – 1.70M – 2.9T",
+      "- Chargeuse compacte sur pneus 450L – 1.80M – 3.8T",
+      "- Chargeuse compacte sur pneus 600L – 1.90M – 4.5T"
+    ]
+  },
+  "tractopelle": {
+    "variants": [
+      {
+        "label": "Compact",
+        "value": "Compact"
+      },
+      {
+        "label": "Standard 8T",
+        "value": "Standard 8T"
+      },
+      {
+        "label": "Grand modèle 10T",
+        "value": "Grand modèle 10T"
+      }
+    ],
+    "name": "Tractopelle",
+    "category": "terrassement",
+    "spec": "Polyvalent chantier",
+    "description": [
+      "Le tractopelle combine un godet chargeur à l'avant et une pelle rétro à l'arrière : un seul engin pour charger, creuser et remblayer. Polyvalent par excellence sur les chantiers de VRD, de terrassement léger et de réseaux.",
+      "Disponible en location courte ou longue durée, avec livraison sur chantier partout en France."
+    ]
+  },
+  "tombereau": {
+    "variants": [
+      {
+        "label": "25T",
+        "value": "25T"
+      },
+      {
+        "label": "30T",
+        "value": "30T"
+      },
+      {
+        "label": "40T",
+        "value": "40T"
+      }
+    ],
+    "name": "Tombereau articulé",
+    "category": "terrassement",
+    "spec": "Transport matériaux",
+    "description": [
+      "Le tombereau articulé transporte de gros volumes de matériaux (terre, gravats, enrochements) sur terrains accidentés grâce à son châssis articulé et sa transmission intégrale.",
+      "Idéal pour les chantiers de terrassement de masse. Location avec livraison sur chantier partout en France."
+    ]
+  },
+  "nacelle-ciseaux-electrique": {
+    "variants": [
+      {
+        "label": "8m",
+        "value": "8m"
+      },
+      {
+        "label": "10m",
+        "value": "10m"
+      },
+      {
+        "label": "12m",
+        "value": "12m"
+      },
+      {
+        "label": "14m",
+        "value": "14m"
+      },
+      {
+        "label": "16m",
+        "value": "16m"
+      },
+      {
+        "label": "18m",
+        "value": "18m"
+      },
+      {
+        "label": "22m",
+        "value": "22m"
+      },
+      {
+        "label": "28m",
+        "value": "28m"
+      },
+      {
+        "label": "30m",
+        "value": "30m"
+      },
+      {
+        "label": "33m",
+        "value": "33m"
+      }
+    ],
+    "name": "Nacelle ciseaux électrique",
+    "category": "travail-en-hauteur",
+    "spec": "8m à 33m",
+    "description": [
+      "EAP location propose le plus large choix de Nacelle Ciseaux Électrique pour votre travail en hauteur en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Nacelle Ciseaux Electrique de 8 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux Electrique de 10 mètres (et 10 mètres Grand Plateau) de hauteur de travail.",
+      "- Nacelle Ciseaux Electrique de 12 mètres (et 12 mètres Grand Plateau) de hauteur de travail.",
+      "- Nacelle Ciseaux Electrique de 14 mètres (et 14 mètres Grand Plateau) de hauteur de travail.",
+      "- Nacelle Ciseaux Electrique de 16 mètres (et 16 mètres Grand Plateau) de hauteur de travail.",
+      "- Nacelle Ciseaux Electrique de 18 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux Electrique de 22 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux Electrique de 28 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux Electrique de 30 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux Electrique de 33 mètres de hauteur de travail."
+    ]
+  },
+  "nacelle-ciseaux-diesel": {
+    "variants": [
+      {
+        "label": "10m",
+        "value": "10m"
+      },
+      {
+        "label": "12m",
+        "value": "12m"
+      },
+      {
+        "label": "15m",
+        "value": "15m"
+      },
+      {
+        "label": "18m",
+        "value": "18m"
+      },
+      {
+        "label": "23m",
+        "value": "23m"
+      },
+      {
+        "label": "28m",
+        "value": "28m"
+      },
+      {
+        "label": "30m",
+        "value": "30m"
+      },
+      {
+        "label": "33m",
+        "value": "33m"
+      }
+    ],
+    "name": "Nacelle ciseaux diesel",
+    "category": "travail-en-hauteur",
+    "spec": "10m à 33m",
+    "description": [
+      "EAP location propose le plus large choix de Nacelle Ciseaux Diesel pour votre travail en hauteur en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Nacelle Ciseaux Diesel de 10 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux Diesel de 12 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux Diesel de 15 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux Diesel de 18 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux Diesel de 23 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux Diesel de 28 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux Diesel de 30 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux Diesel de 33 mètres de hauteur de travail."
+    ]
+  },
+  "nacelle-articulee-electrique": {
+    "variants": [
+      {
+        "label": "12m",
+        "value": "12m"
+      },
+      {
+        "label": "15m",
+        "value": "15m"
+      },
+      {
+        "label": "17m",
+        "value": "17m"
+      },
+      {
+        "label": "20m",
+        "value": "20m"
+      }
+    ],
+    "name": "Nacelle articulée électrique",
+    "category": "travail-en-hauteur",
+    "spec": "12m à 20m",
+    "description": [
+      "EAP location propose le plus large choix de Nacelle Articulée Électrique pour vos travaux en hauteur en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Nacelle Articulée électrique 12 mètres",
+      "- Nacelle Articulée électrique 15 mètres",
+      "- Nacelle Articulée électrique 17 mètres",
+      "- Nacelle Articulée électrique 20 mètres"
+    ]
+  },
+  "nacelle-articulee-diesel": {
+    "variants": [
+      {
+        "label": "12m",
+        "value": "12m"
+      },
+      {
+        "label": "16m",
+        "value": "16m"
+      },
+      {
+        "label": "18m",
+        "value": "18m"
+      },
+      {
+        "label": "20m",
+        "value": "20m"
+      },
+      {
+        "label": "26m",
+        "value": "26m"
+      },
+      {
+        "label": "32m",
+        "value": "32m"
+      },
+      {
+        "label": "40m",
+        "value": "40m"
+      },
+      {
+        "label": "43m",
+        "value": "43m"
+      },
+      {
+        "label": "48m",
+        "value": "48m"
+      }
+    ],
+    "name": "Nacelle articulée diesel",
+    "category": "travail-en-hauteur",
+    "spec": "12m à 48m",
+    "description": [
+      "EAP location propose le plus large choix de Nacelle Articulée pour vos travaux en hauteur en France. Sur notre site vous retrouverez disponible à la location :",
+      "Diesel :",
+      "- Nacelle Articulée 12 mètres",
+      "- Nacelle Articulée 16 mètres",
+      "- Nacelle Articulée 18 mètres",
+      "- Nacelle Articulée 20 mètres",
+      "- Nacelle Articulée 26 mètres",
+      "- Nacelle Articulée 26 mètres (grand déport)",
+      "- Nacelle Articulée 32 mètres",
+      "- Nacelle Articulée 40 mètres",
+      "- Nacelle Articulée 43 mètres"
+    ]
+  },
+  "nacelle-telescopique": {
+    "variants": [
+      {
+        "label": "14m",
+        "value": "14m"
+      },
+      {
+        "label": "16m",
+        "value": "16m"
+      },
+      {
+        "label": "22m",
+        "value": "22m"
+      },
+      {
+        "label": "28m",
+        "value": "28m"
+      },
+      {
+        "label": "34m",
+        "value": "34m"
+      },
+      {
+        "label": "40m",
+        "value": "40m"
+      },
+      {
+        "label": "43m",
+        "value": "43m"
+      },
+      {
+        "label": "48m",
+        "value": "48m"
+      },
+      {
+        "label": "57m",
+        "value": "57m"
+      }
+    ],
+    "name": "Nacelle télescopique",
+    "category": "travail-en-hauteur",
+    "spec": "14m à 57m",
+    "description": [
+      "EAP location propose le plus large choix de Nacelle Télescopique (Diesel) pour vos travaux en hauteur en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Nacelle Télescopique de 14 mètres de hauteur de travail (Sur chenilles)",
+      "- Nacelle Télescopique de 16 mètres de hauteur de travail",
+      "- Nacelle Télescopique de 22 mètres de hauteur de travail (Sur roues et sur chenilles)",
+      "- Nacelle Télescopique de 28 mètres de hauteur de travail",
+      "- Nacelle Télescopique de 34 mètres de hauteur de travail",
+      "- Nacelle Télescopique de 40 mètres de hauteur de travail",
+      "- Nacelle Télescopique de 43 mètres de hauteur de travail",
+      "- Nacelle Télescopique de 48 mètres de hauteur de travail",
+      "- Nacelle Télescopique de 57 mètres de hauteur de travail"
+    ]
+  },
+  "nacelle-araignee": {
+    "variants": [
+      {
+        "label": "12m",
+        "value": "12m"
+      },
+      {
+        "label": "13m",
+        "value": "13m"
+      },
+      {
+        "label": "17m",
+        "value": "17m"
+      },
+      {
+        "label": "22m",
+        "value": "22m"
+      },
+      {
+        "label": "23m",
+        "value": "23m"
+      },
+      {
+        "label": "26m",
+        "value": "26m"
+      },
+      {
+        "label": "30m",
+        "value": "30m"
+      },
+      {
+        "label": "33m",
+        "value": "33m"
+      },
+      {
+        "label": "40m",
+        "value": "40m"
+      }
+    ],
+    "name": "Nacelle araignée",
+    "category": "travail-en-hauteur",
+    "spec": "Accès difficile",
+    "description": [
+      "EAP location propose le plus large choix de Nacelle Araignée (Bi-énergie) pour le travail en hauteur en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Nacelle Araignée Bi-énergie 12 mètres",
+      "- Nacelle Araignée Bi-énergie 13 mètres",
+      "- Nacelle Araignée Bi-énergie 17 mètres",
+      "- Nacelle Araignée Bi-énergie 22 mètres",
+      "- Nacelle Araignée Bi-énergie 23 mètres",
+      "- Nacelle Araignée Bi-énergie 26 mètres",
+      "- Nacelle Araignée Bi-énergie 30 mètres",
+      "- Nacelle Araignée Bi-énergie 33 mètres",
+      "- Nacelle Araignée Bi-énergie 40 mètres"
+    ]
+  },
+  "nacelle-camion": {
+    "variants": [
+      {
+        "label": "25-30m",
+        "value": "25-30m"
+      },
+      {
+        "label": "36-40m",
+        "value": "36-40m"
+      },
+      {
+        "label": "41-45m",
+        "value": "41-45m"
+      },
+      {
+        "label": "46-50m",
+        "value": "46-50m"
+      },
+      {
+        "label": "51-60m",
+        "value": "51-60m"
+      },
+      {
+        "label": "61-70m",
+        "value": "61-70m"
+      },
+      {
+        "label": "71-80m",
+        "value": "71-80m"
+      },
+      {
+        "label": "81-90m",
+        "value": "81-90m"
+      },
+      {
+        "label": "91-100m",
+        "value": "91-100m"
+      }
+    ],
+    "name": "Nacelle sur camion",
+    "category": "travail-en-hauteur",
+    "spec": "Avec chauffeur",
+    "description": [
+      "EAP location propose un large choix de Nacelle sur poids lourd pour vos travaux en hauteur sur vos chantiers en France. Nos nacelles sur poids lourds permettent d’opérer sur des édifices de grande hauteur et difficile telles que les antennes, les immeubles, les éoliennes ou les églises. Sur notre site vous retrouverez disponible à la location :",
+      "- Nacelle sur poids lourd 25-30mètres",
+      "- Nacelle sur poids lourd 36-40 mètres",
+      "- Nacelle sur poids lourd 41-45 mètres",
+      "- Nacelle sur poids lourd 46-50 mètres",
+      "- Nacelle sur poids lourd 51-60 mètres",
+      "- Nacelle sur poids lourd 61-70 mètres",
+      "- Nacelle sur poids lourd 71-80 mètres",
+      "- Nacelle sur poids lourd 81-90 mètres",
+      "- Nacelle sur poids lourd 91-100 mètres"
+    ]
+  },
+  "echafaudage-roulant": {
+    "variants": [
+      {
+        "label": "4,8m",
+        "value": "4,8m"
+      },
+      {
+        "label": "5,8m",
+        "value": "5,8m"
+      },
+      {
+        "label": "6,8m",
+        "value": "6,8m"
+      },
+      {
+        "label": "7,8m",
+        "value": "7,8m"
+      },
+      {
+        "label": "8,8m",
+        "value": "8,8m"
+      },
+      {
+        "label": "9,8m",
+        "value": "9,8m"
+      },
+      {
+        "label": "10,8m",
+        "value": "10,8m"
+      },
+      {
+        "label": "11,8m",
+        "value": "11,8m"
+      },
+      {
+        "label": "12,8m",
+        "value": "12,8m"
+      }
+    ],
+    "name": "Échafaudage roulant",
+    "category": "travail-en-hauteur",
+    "spec": "4,8m à 12,8m",
+    "description": [
+      "EAP location propose le plus large choix d’Échafaudage roulant étroit ou large pour vos Travaux en Hauteur sur vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Échafaudage roulant 4,8 mètres",
+      "- Échafaudage roulant 5,8 mètres",
+      "- Échafaudage roulant 6,8 mètres",
+      "- Échafaudage roulant 7,8 mètres",
+      "- Échafaudage roulant 8,8 mètres",
+      "- Échafaudage roulant 9,8 mètres",
+      "- Échafaudage roulant 10,8 mètres",
+      "- Échafaudage roulant 11,8 mètres",
+      "- Échafaudage roulant 12,8 mètres"
+    ]
+  },
+  "pir-pirl": {
+    "variants": [
+      {
+        "label": "8m",
+        "value": "8m"
+      },
+      {
+        "label": "9,5m",
+        "value": "9,5m"
+      },
+      {
+        "label": "11m",
+        "value": "11m"
+      },
+      {
+        "label": "13m",
+        "value": "13m"
+      },
+      {
+        "label": "14m",
+        "value": "14m"
+      }
+    ],
+    "name": "PIR / PIRL",
+    "category": "travail-en-hauteur",
+    "spec": "Plateforme individuelle",
+    "description": [
+      "EAP location propose le plus large choix de Nacelle Mat Vertical Manuel pour vos Travaux en Hauteur sur vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Nacelle Mat Vertical Manuel 8 mètres AWP-20S",
+      "- Nacelle Mat Vertical Manuel 9,5 mètres AWP-25S",
+      "- Nacelle Mat Vertical Manuel 11 mètres AWP-30S",
+      "- Nacelle Mat Vertical Manuel 13 mètres AWP-36S",
+      "- Nacelle Mat Vertical Manuel 14 mètres AWP-40S"
+    ]
+  },
+  "nacelle-mat": {
+    "variants": [
+      {
+        "label": "6m",
+        "value": "6m"
+      },
+      {
+        "label": "8m",
+        "value": "8m"
+      },
+      {
+        "label": "10m",
+        "value": "10m"
+      },
+      {
+        "label": "12m",
+        "value": "12m"
+      }
+    ],
+    "name": "Nacelle à mât",
+    "category": "travail-en-hauteur",
+    "spec": "Verticale compacte",
+    "description": [
+      "EAP location propose le plus large choix de Nacelle Mat Vertical (Toucan) pour vos Travaux en Hauteur sur vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Nacelle Mat Vertical 6 mètres",
+      "- Nacelle Mat Vertical 8 mètres",
+      "- Nacelle Mat Vertical 10 mètres (sur roues ou sur chenilles)",
+      "- Nacelle Mat Vertical 12 mètres"
+    ]
+  },
+  "plateforme-suspendue": {
+    "variants": [
+      {
+        "label": "2m",
+        "value": "2m"
+      },
+      {
+        "label": "4m",
+        "value": "4m"
+      },
+      {
+        "label": "6m",
+        "value": "6m"
+      },
+      {
+        "label": "8m",
+        "value": "8m"
+      }
+    ],
+    "name": "Plateforme suspendue",
+    "category": "travail-en-hauteur",
+    "spec": "Travaux façade",
+    "description": [
+      "La plateforme suspendue permet de travailler en façade à grande hauteur : ravalement, peinture, isolation thermique par l'extérieur, pose de bardage.",
+      "Installation en toiture par câbles, longueur et hauteur adaptables à votre chantier. Location avec assistance à l'installation."
+    ]
+  },
+  "monte-materiaux": {
+    "variants": [
+      {
+        "label": "5m / 300kg",
+        "value": "5m / 300kg"
+      },
+      {
+        "label": "8m / 300kg",
+        "value": "8m / 300kg"
+      },
+      {
+        "label": "37m / 400kg",
+        "value": "37m / 400kg"
+      }
+    ],
+    "name": "Monte-matériaux",
+    "category": "travail-en-hauteur",
+    "spec": "Jusqu'à 37m / 400kg",
+    "description": [
+      "EAP location propose le plus large choix d’élévateur mécanique de charge en France. Vous retrouverez disponible à la location :",
+      "- Élévateur mécanique de charge 5 mètres et 300kg",
+      "- Élévateur mécanique de charge 8 mètres et 300kg"
+    ]
+  }
+}
