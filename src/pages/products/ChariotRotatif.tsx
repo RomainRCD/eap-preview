@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { getAttribution } from "@/lib/tracking";
 import { Phone, Clock, Zap, CheckCircle, ArrowRight, Shield, TrendingUp, Star, Check, FileText, Loader2, BadgeCheck, Building2, MapPin, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -116,6 +117,7 @@ const ChariotRotatif = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          ...getAttribution(),
           materiel: formData.materiel,
           siret: formData.siret,
           entreprise: formData.entreprise,
