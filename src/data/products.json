@@ -258,7 +258,7 @@
       }
     ],
     "name": "Dumper",
-    "category": "autres",
+    "category": "terrassement",
     "spec": "1T à 10T",
     "description": [
       "EAP location propose le plus large choix de Dumper sur pneus pour vos travaux de terrassement en France. Sur notre site vous retrouverez disponible à la location :",
@@ -1812,6 +1812,41 @@
       "EAP location propose le plus large choix d’élévateur mécanique de charge en France. Vous retrouverez disponible à la location :",
       "- Élévateur mécanique de charge 5 mètres et 300kg",
       "- Élévateur mécanique de charge 8 mètres et 300kg"
+    ]
+  },
+  "benne-dib": {
+    "name": "Benne DIB",
+    "category": "autres",
+    "spec": "8M3 à 30M3",
+    "description": [
+      "EAP location propose le plus large choix de bennes DIB pour vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Benne DIB 8M3",
+      "- Benne DIB 10M3",
+      "- Benne DIB 15M3",
+      "- Benne DIB 20M3",
+      "- Benne DIB 30M3"
+    ],
+    "variants": [
+      {
+        "label": "8M3",
+        "value": "8M3"
+      },
+      {
+        "label": "10M3",
+        "value": "10M3"
+      },
+      {
+        "label": "15M3",
+        "value": "15M3"
+      },
+      {
+        "label": "20M3",
+        "value": "20M3"
+      },
+      {
+        "label": "30M3",
+        "value": "30M3"
+      }
     ]
   }
 }
