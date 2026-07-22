@@ -3,27 +3,13 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
+import { categoryProducts } from "@/data/products";
 
-// Images produits
-import imgBungalow from "@/assets/products/bungalow.webp";
-import imgRoulotte from "@/assets/products/roulotte.webp";
-import imgSanitaire from "@/assets/products/sanitaire.webp";
-import imgVestiaire from "@/assets/products/vestiaire.webp";
-import imgRefectoire from "@/assets/products/refectoire.webp";
-import imgBureau from "@/assets/products/bureau.webp";
-import imgContainer from "@/assets/products/container.webp";
 
 const BaseVie = () => {
-  const products = [
-    { name: "Bungalow de chantier", slug: "bungalow", description: "Bureau, réfectoire", image: imgBungalow},
-    { name: "Roulotte de chantier", slug: "roulotte", description: "Mobile", image: imgRoulotte},
-    { name: "Sanitaire mobile", slug: "sanitaire", description: "WC, douche", image: imgSanitaire},
-    { name: "Vestiaire", slug: "vestiaire", description: "Casiers, bancs", image: imgVestiaire},
-    { name: "Réfectoire", slug: "refectoire", description: "Cuisine équipée", image: imgRefectoire},
-    { name: "Bureau de chantier", slug: "bureau", description: "Espace travail", image: imgBureau},
-    { name: "Local technique", slug: "local-technique", description: "Stockage" },
-    { name: "Container maritime", slug: "container", description: "8' à 40'", image: imgContainer},
-  ];
+  // Vignettes pilotées par products.json — l'ordre historique est conservé,
+  // les nouveaux produits de la catégorie apparaissent automatiquement à la suite.
+  const products = categoryProducts("base-vie", ["bungalow", "roulotte", "sanitaire", "vestiaire", "refectoire", "bureau", "local-technique", "container"]);
 
   return (
     <PageLayout>

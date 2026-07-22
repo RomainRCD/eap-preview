@@ -3,28 +3,13 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
+import { categoryProducts } from "@/data/products";
 
-// Images produits
-import imgMiniPelle from "@/assets/products/mini-pelle.webp";
-import imgPelleChenilles from "@/assets/products/pelle-chenilles.webp";
-import imgPellePneus from "@/assets/products/pelle-pneus.webp";
-import imgChargeusePneus from "@/assets/products/chargeuse-pneus.webp";
-import imgChargeuseChenilles from "@/assets/products/chargeuse-chenilles.webp";
-import imgChargeuseCompacte from "@/assets/products/chargeuse-compacte.webp";
-import imgTractopelle from "@/assets/products/tractopelle.webp";
-import imgTombereau from "@/assets/products/tombereau.webp";
 
 const Terrassement = () => {
-  const products = [
-    { name: "Mini-pelle", slug: "mini-pelle", description: "De 1,5T à 8T", image: imgMiniPelle},
-    { name: "Pelle sur chenilles", slug: "pelle-chenilles", description: "De 10T à 25T", image: imgPelleChenilles},
-    { name: "Pelle sur pneus", slug: "pelle-pneus", description: "De 5T à 18T", image: imgPellePneus},
-    { name: "Chargeuse sur pneus", slug: "chargeuse-pneus", description: "De 1m³ à 5m³", image: imgChargeusePneus},
-    { name: "Chargeuse sur chenilles", slug: "chargeuse-chenilles", description: "Compacte et puissante", image: imgChargeuseChenilles},
-    { name: "Chargeuse compacte", slug: "chargeuse-compacte", description: "Bobcat, Manitou", image: imgChargeuseCompacte},
-    { name: "Tractopelle", slug: "tractopelle", description: "Polyvalent chantier", image: imgTractopelle},
-    { name: "Tombereau articulé", slug: "tombereau", description: "Transport matériaux", image: imgTombereau},
-  ];
+  // Vignettes pilotées par products.json — l'ordre historique est conservé,
+  // les nouveaux produits de la catégorie apparaissent automatiquement à la suite.
+  const products = categoryProducts("terrassement", ["mini-pelle", "pelle-chenilles", "pelle-pneus", "chargeuse-pneus", "chargeuse-chenilles", "chargeuse-compacte", "tractopelle", "tombereau"]);
 
   return (
     <PageLayout>

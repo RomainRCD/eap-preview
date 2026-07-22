@@ -3,36 +3,13 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
+import { categoryProducts } from "@/data/products";
 
-// Images produits
-import imgNacelleCiseauxElectrique from "@/assets/products/nacelle-ciseaux-electrique.webp";
-import imgNacelleCiseauxDiesel from "@/assets/products/nacelle-ciseaux-diesel.webp";
-import imgNacelleArticuleeElectrique from "@/assets/products/nacelle-articulee-electrique.webp";
-import imgNacelleArticuleeDiesel from "@/assets/products/nacelle-articulee-diesel.webp";
-import imgNacelleTelescopique from "@/assets/products/nacelle-telescopique.webp";
-import imgNacelleAraignee from "@/assets/products/nacelle-araignee.webp";
-import imgNacelleCamion from "@/assets/products/nacelle-camion.webp";
-import imgEchafaudageRoulant from "@/assets/products/echafaudage-roulant.webp";
-import imgPirPirl from "@/assets/products/pir-pirl.webp";
-import imgNacelleMat from "@/assets/products/nacelle-mat.webp";
-import imgPlateformeSuspendue from "@/assets/products/plateforme-suspendue.webp";
-import imgMonteMateriaux from "@/assets/products/monte-materiaux.webp";
 
 const TravailEnHauteur = () => {
-  const products = [
-    { name: "Nacelle ciseaux électrique", slug: "nacelle-ciseaux-electrique", description: "8m à 33m", image: imgNacelleCiseauxElectrique},
-    { name: "Nacelle ciseaux diesel", slug: "nacelle-ciseaux-diesel", description: "10m à 33m", image: imgNacelleCiseauxDiesel},
-    { name: "Nacelle articulée électrique", slug: "nacelle-articulee-electrique", description: "12m à 20m", image: imgNacelleArticuleeElectrique},
-    { name: "Nacelle articulée diesel", slug: "nacelle-articulee-diesel", description: "12m à 48m", image: imgNacelleArticuleeDiesel},
-    { name: "Nacelle télescopique", slug: "nacelle-telescopique", description: "14m à 57m", image: imgNacelleTelescopique},
-    { name: "Nacelle araignée", slug: "nacelle-araignee", description: "Accès difficile", image: imgNacelleAraignee},
-    { name: "Nacelle sur camion", slug: "nacelle-camion", description: "Avec chauffeur", image: imgNacelleCamion},
-    { name: "Échafaudage roulant", slug: "echafaudage-roulant", description: "4,8m à 12,8m", image: imgEchafaudageRoulant},
-    { name: "PIR / PIRL", slug: "pir-pirl", description: "Plateforme individuelle", image: imgPirPirl},
-    { name: "Nacelle à mât", slug: "nacelle-mat", description: "Verticale compacte", image: imgNacelleMat},
-    { name: "Plateforme suspendue", slug: "plateforme-suspendue", description: "Travaux façade", image: imgPlateformeSuspendue},
-    { name: "Monte-matériaux", slug: "monte-materiaux", description: "Jusqu'à 37m / 400kg", image: imgMonteMateriaux},
-  ];
+  // Vignettes pilotées par products.json — l'ordre historique est conservé,
+  // les nouveaux produits de la catégorie apparaissent automatiquement à la suite.
+  const products = categoryProducts("travail-en-hauteur", ["nacelle-ciseaux-electrique", "nacelle-ciseaux-diesel", "nacelle-articulee-electrique", "nacelle-articulee-diesel", "nacelle-telescopique", "nacelle-araignee", "nacelle-camion", "echafaudage-roulant", "pir-pirl", "nacelle-mat", "plateforme-suspendue", "monte-materiaux"]);
 
   return (
     <PageLayout>

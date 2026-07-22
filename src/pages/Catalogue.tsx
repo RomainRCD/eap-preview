@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Shovel, Building, Package, Hammer, Home, Wrench, ArrowRight } from "lucide-react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEOHead from "@/components/SEOHead";
+import { categoryCount } from "@/data/products";
 
 // Images catalogue
 import catalogTerrassement from "@/assets/catalog/terrassement.jpeg";
@@ -19,7 +20,7 @@ const Catalogue = () => {
       description: "Pelles, mini-pelles, chargeuses, tombereaux",
       link: "/terrassement",
       image: catalogTerrassement,
-      count: 8,
+      count: categoryCount("terrassement"),
     },
     {
       title: "Travail en Hauteur",
@@ -27,7 +28,7 @@ const Catalogue = () => {
       description: "Nacelles, PEMP, échafaudages, plateformes",
       link: "/travail-en-hauteur",
       image: catalogTravailHauteur,
-      count: 12,
+      count: categoryCount("travail-en-hauteur"),
     },
     {
       title: "Manutention",
@@ -35,7 +36,7 @@ const Catalogue = () => {
       description: "Chariots télescopiques, élévateurs, transpalettes",
       link: "/manutention",
       image: catalogManutention,
-      count: 12,
+      count: categoryCount("manutention"),
     },
     {
       title: "Compactage",
@@ -43,7 +44,7 @@ const Catalogue = () => {
       description: "Rouleaux, plaques vibrantes, pilonneuses",
       link: "/compactage",
       image: catalogCompactage,
-      count: 6,
+      count: categoryCount("compactage"),
     },
     {
       title: "Base Vie",
@@ -51,7 +52,7 @@ const Catalogue = () => {
       description: "Bungalows, roulottes, sanitaires, vestiaires",
       link: "/base-vie",
       image: catalogBaseVie,
-      count: 8,
+      count: categoryCount("base-vie"),
     },
     {
       title: "Autres",
@@ -59,7 +60,7 @@ const Catalogue = () => {
       description: "Groupes électrogènes, compresseurs, outillage",
       link: "/autres",
       image: catalogAutres,
-      count: 10,
+      count: categoryCount("autres"),
     },
   ];
 
