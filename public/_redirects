@@ -42,8 +42,8 @@
 /dumper-sur-pneus/ /autres/dumper 301
 /dumper-sur-chenilles-v2 /autres/dumper 301
 /dumper-sur-chenilles-v2/ /autres/dumper 301
-/robot-de-demolition-v2 /autres 301
-/robot-de-demolition-v2/ /autres 301
+/robot-de-demolition-v2 /autres/robot-demolition 301
+/robot-de-demolition-v2/ /autres/robot-demolition 301
 /nacelle-articulee-v2 /travail-en-hauteur/nacelle-articulee-diesel 301
 /nacelle-articulee-v2/ /travail-en-hauteur/nacelle-articulee-diesel 301
 /nacelle-articulee-electrique /travail-en-hauteur/nacelle-articulee-electrique 301
@@ -142,21 +142,5 @@
 /politique-de-confidentialite/ /mentions-legales 301
 /* /index.html 200
 # --- URLs de l'ancien site WP encore ciblées par Google Ads (audit 22/07/26) ---
-/benne-a-dechets-dib /autres/benne-dib 301
-/benne-a-dechets-dib/ /autres/benne-dib 301
-/roulotte-de-decontamination /base-vie/roulotte 301
-/roulotte-de-decontamination/ /base-vie/roulotte 301
 /home/elevateur-mecanique-de-charge /travail-en-hauteur/monte-materiaux 301
 /home/elevateur-mecanique-de-charge/ /travail-en-hauteur/monte-materiaux 301
-/nacelle-sur-poids-lourds-v2 /travail-en-hauteur/nacelle-camion 301
-/nacelle-sur-poids-lourds-v2/ /travail-en-hauteur/nacelle-camion 301
-/cuve-gnr /autres/cuve-gnr 301
-/cuve-gnr/ /autres/cuve-gnr 301
-/grille-heras /autres/grille-heras 301
-/grille-heras/ /autres/grille-heras 301
-/barriere-de-police /autres/barriere-police 301
-/barriere-de-police/ /autres/barriere-police 301
-/robot-de-demolition-v2 /autres/robot-demolition 301
-/robot-de-demolition-v2/ /autres/robot-demolition 301
-/citerne-a-eau-v2 /autres/citerne-eau 301
-/citerne-a-eau-v2/ /autres/citerne-eau 301
