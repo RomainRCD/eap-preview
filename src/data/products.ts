@@ -22,3 +22,26 @@ export interface ProductInfo {
 }
 
 export const PRODUCTS: Record<string, ProductInfo> = PRODUCTS_DATA as Record<string, ProductInfo>;
+
+export interface CategoryProduct {
+  slug: string;
+  name: string;
+  description: string;
+  image?: string;
+}
+
+// Liste des produits d'une catégorie, pilotée par products.json (source unique).
+// preferredOrder fixe l'ordre d'affichage des produits historiques ; tout produit
+// absent de cette liste (nouveau produit, changement de catégorie) est ajouté à la fin.
+export const categoryProducts = (category: string, preferredOrder: string[] = []): CategoryProduct[] =>
+  Object.entries(PRODUCTS)
+    .filter(([, p]) => p.category === category)
+    .sort(([a], [b]) => {
+      const ia = preferredOrder.indexOf(a);
+      const ib = preferredOrder.indexOf(b);
+      return (ia === -1 ? preferredOrder.length : ia) - (ib === -1 ? preferredOrder.length : ib);
+    })
+    .map(([slug, p]) => ({ slug, name: p.name, description: p.spec ?? "", image: productImage(slug) }));
+
+export const categoryCount = (category: string): number =>
+  Object.values(PRODUCTS).filter((p) => p.category === category).length;

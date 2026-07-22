@@ -3,30 +3,13 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
+import { categoryProducts } from "@/data/products";
 
-// Images produits
-import imgGroupeElectrogene from "@/assets/products/groupe-electrogene.webp";
-import imgCompresseur from "@/assets/products/compresseur.webp";
-import imgEclairage from "@/assets/products/eclairage.webp";
-import imgBetonniere from "@/assets/products/betonniere.webp";
-import imgBroyeur from "@/assets/products/broyeur.webp";
-import imgDumper from "@/assets/products/dumper.webp";
-import imgMarteauPiqueur from "@/assets/products/marteau-piqueur.webp";
-import imgAspirateur from "@/assets/products/aspirateur.webp";
 
 const Autres = () => {
-  const products = [
-    { name: "Groupe électrogène", slug: "groupe-electrogene", description: "5kVA à +150kVA", image: imgGroupeElectrogene},
-    { name: "Compresseur d'air", slug: "compresseur", description: "Mobile chantier", image: imgCompresseur},
-    { name: "Pompe à eau", slug: "pompe-eau", description: "Immergée, surface" },
-    { name: "Éclairage chantier", slug: "eclairage", description: "Mât d'éclairage", image: imgEclairage},
-    { name: "Bétonnière", slug: "betonniere", description: "120L à 350L", image: imgBetonniere},
-    { name: "Broyeur de branches", slug: "broyeur", description: "Espaces verts", image: imgBroyeur},
-    { name: "Dumper", slug: "dumper", description: "1T à 10T", image: imgDumper},
-    { name: "Marteau piqueur", slug: "marteau-piqueur", description: "Démolition", image: imgMarteauPiqueur},
-    { name: "Découpeuse thermique", slug: "decoupeuse", description: "Béton, asphalte" },
-    { name: "Aspirateur industriel", slug: "aspirateur", description: "Chantier", image: imgAspirateur},
-  ];
+  // Vignettes pilotées par products.json — l'ordre historique est conservé,
+  // les nouveaux produits de la catégorie apparaissent automatiquement à la suite.
+  const products = categoryProducts("autres", ["groupe-electrogene", "compresseur", "pompe-eau", "eclairage", "betonniere", "broyeur", "dumper", "marteau-piqueur", "decoupeuse", "aspirateur"]);
 
   return (
     <PageLayout>

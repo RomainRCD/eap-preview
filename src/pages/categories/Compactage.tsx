@@ -3,24 +3,13 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
+import { categoryProducts } from "@/data/products";
 
-// Images produits
-import imgRouleauTandem from "@/assets/products/rouleau-tandem.webp";
-import imgRouleauMonocylindre from "@/assets/products/rouleau-monocylindre.webp";
-import imgRouleauMixte from "@/assets/products/rouleau-mixte.webp";
-import imgPlaqueVibrante from "@/assets/products/plaque-vibrante.webp";
-import imgPilonneuse from "@/assets/products/pilonneuse.webp";
-import imgRouleauPneus from "@/assets/products/rouleau-pneus.webp";
 
 const Compactage = () => {
-  const products = [
-    { name: "Rouleau vibrant tandem", slug: "rouleau-tandem", description: "1,5T à 12,25T", image: imgRouleauTandem},
-    { name: "Rouleau vibrant monocylindre", slug: "rouleau-monocylindre", description: "4T à 15T", image: imgRouleauMonocylindre},
-    { name: "Rouleau mixte", slug: "rouleau-mixte", description: "Bille + pneus", image: imgRouleauMixte},
-    { name: "Plaque vibrante", slug: "plaque-vibrante", description: "80kg à 500kg", image: imgPlaqueVibrante},
-    { name: "Pilonneuse", slug: "pilonneuse", description: "Tranchées", image: imgPilonneuse},
-    { name: "Rouleau à pneus", slug: "rouleau-pneus", description: "Finition", image: imgRouleauPneus},
-  ];
+  // Vignettes pilotées par products.json — l'ordre historique est conservé,
+  // les nouveaux produits de la catégorie apparaissent automatiquement à la suite.
+  const products = categoryProducts("compactage", ["rouleau-tandem", "rouleau-monocylindre", "rouleau-mixte", "plaque-vibrante", "pilonneuse", "rouleau-pneus"]);
 
   return (
     <PageLayout>

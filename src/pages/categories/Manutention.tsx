@@ -3,39 +3,14 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
+import { categoryProducts } from "@/data/products";
 
-// Images produits
-import heroChariot from "@/assets/hero-chariot.jpg";
 
-// Images produits
-import imgChariotIndustrielDiesel from "@/assets/products/chariot-industriel-diesel.webp";
-import imgChariotIndustrielGaz from "@/assets/products/chariot-industriel-gaz.webp";
-import imgChariotIndustrielElectrique from "@/assets/products/chariot-industriel-electrique.webp";
-import imgChariotSemiIndustriel from "@/assets/products/chariot-semi-industriel.webp";
-import imgChariotToutTerrain from "@/assets/products/chariot-tout-terrain.webp";
-import imgChariotTelescopique from "@/assets/products/chariot-telescopique.webp";
-import imgChariotRotatif from "@/assets/products/chariot-rotatif.webp";
-import imgChariotGrosTonnage from "@/assets/products/chariot-gros-tonnage.webp";
-import imgGrueMobile from "@/assets/products/grue-mobile.webp";
-import imgMiniGrueChenilles from "@/assets/products/mini-grue-chenilles.webp";
-import imgMiniGrueAraignee from "@/assets/products/mini-grue-araignee.webp";
-import imgGerbeurTranspalette from "@/assets/products/gerbeur-transpalette.webp";
 
 const Manutention = () => {
-  const products = [
-    { name: "Chariot industriel diesel", slug: "chariot-industriel-diesel", description: "1,5T à 16T", image: imgChariotIndustrielDiesel },
-    { name: "Chariot industriel gaz", slug: "chariot-industriel-gaz", description: "1,5T à 16T", image: imgChariotIndustrielGaz },
-    { name: "Chariot industriel électrique", slug: "chariot-industriel-electrique", description: "1,5T à 8T", image: imgChariotIndustrielElectrique },
-    { name: "Chariot semi-industriel", slug: "chariot-semi-industriel", description: "2T à 5T", image: imgChariotSemiIndustriel },
-    { name: "Chariot tout terrain", slug: "chariot-tout-terrain", description: "4x2 ou 4x4, 2T à 5T", image: imgChariotToutTerrain },
-    { name: "Chariot télescopique fixe", slug: "chariot-telescopique", description: "4m à 18m", image: imgChariotTelescopique },
-    { name: "Chariot télescopique rotatif", slug: "chariot-rotatif", description: "16m à 40m, 360°", image: imgChariotRotatif },
-    { name: "Chariot télescopique gros tonnage", slug: "chariot-gros-tonnage", description: "6T-9m à 33T-12m", image: imgChariotGrosTonnage },
-    { name: "Grue mobile", slug: "grue-mobile", description: "35T à 300T", image: imgGrueMobile },
-    { name: "Mini grue télescopique sur chenilles", slug: "mini-grue-chenilles", description: "5T-20m à 8T-26m", image: imgMiniGrueChenilles },
-    { name: "Mini grue araignée", slug: "mini-grue-araignee", description: "3T à 4T", image: imgMiniGrueAraignee },
-    { name: "Gerbeur / Transpalette", slug: "gerbeur-transpalette", description: "Manutention légère", image: imgGerbeurTranspalette },
-  ];
+  // Vignettes pilotées par products.json — l'ordre historique est conservé,
+  // les nouveaux produits de la catégorie apparaissent automatiquement à la suite.
+  const products = categoryProducts("manutention", ["chariot-industriel-diesel", "chariot-industriel-gaz", "chariot-industriel-electrique", "chariot-semi-industriel", "chariot-tout-terrain", "chariot-telescopique", "chariot-rotatif", "chariot-gros-tonnage", "grue-mobile", "mini-grue-chenilles", "mini-grue-araignee", "gerbeur-transpalette"]);
 
   return (
     <PageLayout>
