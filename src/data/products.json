@@ -892,7 +892,7 @@
   "chariot-rotatif": {
     "name": "Chariot télescopique rotatif",
     "category": "manutention",
-    "spec": "16m à 35m, 360°",
+    "spec": "16m à 40m, 360°",
     "description": [
       "EAP location propose le plus large choix de chariot télescopique rotatif en France. Sur notre site vous retrouverez disponible à la location des chariot télescopique pouvant aller jusqu’à 35 mètres de hauteur de travail.",
       "Les disponibilités et caractéristiques de nos chariots :",
@@ -925,7 +925,7 @@
   "grue-mobile": {
     "name": "Grue mobile",
     "category": "manutention",
-    "spec": "35T à 160T",
+    "spec": "35T à 300T",
     "description": [
       "EAP location propose la location de grues mobiles dans toute la France en préconisant la proximité de votre chantier. Sur notre site vous retrouverez disponible à la location des grues mobiles avec une capacité de levage pouvant aller jusqu’à 160 tonnes.",
       "Les disponibilités et caractéristiques de nos grues mobiles :",
