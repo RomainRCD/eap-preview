@@ -278,33 +278,6 @@
       "- Dumper sur pneus 10T"
     ]
   },
-  "marteau-piqueur": {
-    "variants": [
-      {
-        "label": "Électrique 5-10kg",
-        "value": "Électrique 5-10kg"
-      },
-      {
-        "label": "Électrique 15-30kg",
-        "value": "Électrique 15-30kg"
-      },
-      {
-        "label": "Pneumatique",
-        "value": "Pneumatique"
-      },
-      {
-        "label": "Thermique",
-        "value": "Thermique"
-      }
-    ],
-    "name": "Marteau piqueur",
-    "category": "autres",
-    "spec": "Démolition",
-    "description": [
-      "Marteaux-piqueurs pour la démolition de béton, dallages et enrobés : modèles électriques, pneumatiques ou thermiques selon l'usage.",
-      "Accessoires fournis (pointes, burins), location à la journée ou plus."
-    ]
-  },
   "decoupeuse": {
     "variants": [
       {
