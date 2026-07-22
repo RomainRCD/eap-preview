@@ -1853,5 +1853,175 @@
         "value": "30M3"
       }
     ]
+  },
+  "cuve-gnr": {
+    "name": "Cuve GNR",
+    "category": "autres",
+    "spec": "1000 L à 3000 L",
+    "variants": [
+      {
+        "label": "1000 L",
+        "value": "1000L"
+      },
+      {
+        "label": "1500 L",
+        "value": "1500L"
+      },
+      {
+        "label": "2000 L",
+        "value": "2000L"
+      },
+      {
+        "label": "3000 L",
+        "value": "3000L"
+      }
+    ],
+    "description": [
+      "EAP Location met à disposition des cuves GNR (gazole non routier) pour l'alimentation en carburant de vos engins et groupes électrogènes sur chantier, partout en France. Cuves de stockage double paroi équipées de pompe de distribution, conformes à la réglementation ADR pour le transport et le stockage temporaire.",
+      "Capacités disponibles à la location :",
+      "- Cuve GNR 1000 L",
+      "- Cuve GNR 1500 L",
+      "- Cuve GNR 2000 L",
+      "- Cuve GNR 3000 L",
+      "Location courte ou longue durée, livraison sur site et reprise en fin de chantier. Contactez-nous pour un devis."
+    ]
+  },
+  "citerne-eau": {
+    "name": "Citerne à eau",
+    "category": "autres",
+    "spec": "500 L à 10 000 L",
+    "variants": [
+      {
+        "label": "500 L",
+        "value": "500L"
+      },
+      {
+        "label": "1000 L",
+        "value": "1000L"
+      },
+      {
+        "label": "2000 L",
+        "value": "2000L"
+      },
+      {
+        "label": "5000 L",
+        "value": "5000L"
+      },
+      {
+        "label": "10 000 L",
+        "value": "10000L"
+      }
+    ],
+    "description": [
+      "EAP Location propose des citernes à eau pour l'arrosage, l'abattage des poussières, l'alimentation en eau des bases-vie et l'approvisionnement de vos chantiers, partout en France. Citernes sur roues ou sur châssis, avec ou sans pompe selon vos besoins.",
+      "Capacités disponibles à la location :",
+      "- Citerne à eau 500 L",
+      "- Citerne à eau 1000 L",
+      "- Citerne à eau 2000 L",
+      "- Citerne à eau 5000 L",
+      "- Citerne à eau 10 000 L",
+      "Location courte ou longue durée, livraison sur site partout en France. Contactez-nous pour un devis."
+    ]
+  },
+  "grille-heras": {
+    "name": "Grille de chantier (Heras)",
+    "category": "autres",
+    "spec": "50 m à 5000 m linéaires",
+    "variants": [
+      {
+        "label": "50 à 200 m",
+        "value": "50-200m"
+      },
+      {
+        "label": "200 à 500 m",
+        "value": "200-500m"
+      },
+      {
+        "label": "500 à 1000 m",
+        "value": "500-1000m"
+      },
+      {
+        "label": "1000 à 5000 m",
+        "value": "1000-5000m"
+      }
+    ],
+    "description": [
+      "EAP Location fournit des grilles de chantier type Heras pour clôturer et sécuriser vos emprises de chantier, partout en France. Panneaux grillagés mobiles livrés avec plots béton et colliers de fixation, montage rapide et repli sans outillage.",
+      "Linéaires disponibles à la location :",
+      "- Clôture de chantier de 50 à 200 m",
+      "- Clôture de chantier de 200 à 500 m",
+      "- Clôture de chantier de 500 à 1000 m",
+      "- Clôture de chantier de 1000 à 5000 m",
+      "Location courte ou longue durée, livraison et pose possibles. Contactez-nous pour un devis."
+    ]
+  },
+  "barriere-police": {
+    "name": "Barrière de police",
+    "category": "autres",
+    "spec": "50 m à 5000 m linéaires",
+    "variants": [
+      {
+        "label": "50 à 200 m",
+        "value": "50-200m"
+      },
+      {
+        "label": "200 à 500 m",
+        "value": "200-500m"
+      },
+      {
+        "label": "500 à 1000 m",
+        "value": "500-1000m"
+      },
+      {
+        "label": "1000 à 5000 m",
+        "value": "1000-5000m"
+      }
+    ],
+    "description": [
+      "EAP Location met à disposition des barrières de police (barrières de sécurité type Vauban) pour la gestion des flux piétons, la protection des zones de travaux et la sécurisation d'événements, partout en France. Barrières métalliques emboîtables, stables et rapides à déployer.",
+      "Linéaires disponibles à la location :",
+      "- Barrières de police de 50 à 200 m",
+      "- Barrières de police de 200 à 500 m",
+      "- Barrières de police de 500 à 1000 m",
+      "- Barrières de police de 1000 à 5000 m",
+      "Location courte ou longue durée, livraison sur site partout en France. Contactez-nous pour un devis."
+    ]
+  },
+  "robot-demolition": {
+    "name": "Robot de démolition",
+    "category": "autres",
+    "spec": "0,5 T à 5 T",
+    "variants": [
+      {
+        "label": "0,5 T",
+        "value": "0.5T"
+      },
+      {
+        "label": "1 T",
+        "value": "1T"
+      },
+      {
+        "label": "2 T",
+        "value": "2T"
+      },
+      {
+        "label": "3 T",
+        "value": "3T"
+      },
+      {
+        "label": "5 T",
+        "value": "5T"
+      }
+    ],
+    "description": [
+      "EAP Location propose des robots de démolition télécommandés (type BROKK) pour vos travaux de démolition intérieure, de curage et de déconstruction en milieu contraint, partout en France. Machines compactes et radiocommandées, qui interviennent là où un engin classique ne passe pas et éloignent l'opérateur de la zone à risque.",
+      "Tonnages disponibles à la location :",
+      "- Robot de démolition 0,5 T",
+      "- Robot de démolition 1 T",
+      "- Robot de démolition 2 T",
+      "- Robot de démolition 3 T",
+      "- Robot de démolition 5 T",
+      "Équipements disponibles selon besoin : brise-roche hydraulique, pince de tri, godet. Contactez-nous pour un devis."
+    ]
   }
 }
