@@ -1962,7 +1962,7 @@
   },
   "robot-demolition": {
     "name": "Robot de démolition",
-    "category": "autres",
+    "category": "terrassement",
     "spec": "0,5 T à 5 T",
     "variants": [
       {
