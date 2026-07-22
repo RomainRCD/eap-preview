@@ -144,3 +144,6 @@
 # --- URLs de l'ancien site WP encore ciblées par Google Ads (audit 22/07/26) ---
 /home/elevateur-mecanique-de-charge /travail-en-hauteur/monte-materiaux 301
 /home/elevateur-mecanique-de-charge/ /travail-en-hauteur/monte-materiaux 301
+# Produit retiré du catalogue (22/07/26)
+/autres/marteau-piqueur /autres 301
+/autres/marteau-piqueur/ /autres 301

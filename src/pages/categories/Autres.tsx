@@ -9,7 +9,7 @@ import { categoryProducts } from "@/data/products";
 const Autres = () => {
   // Vignettes pilotées par products.json — l'ordre historique est conservé,
   // les nouveaux produits de la catégorie apparaissent automatiquement à la suite.
-  const products = categoryProducts("autres", ["groupe-electrogene", "compresseur", "pompe-eau", "eclairage", "betonniere", "broyeur", "dumper", "marteau-piqueur", "decoupeuse", "aspirateur"]);
+  const products = categoryProducts("autres", ["groupe-electrogene", "compresseur", "pompe-eau", "eclairage", "betonniere", "broyeur", "dumper", "decoupeuse", "aspirateur"]);
 
   return (
     <PageLayout>
