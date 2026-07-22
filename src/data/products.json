@@ -255,9 +255,13 @@
       {
         "label": "9T",
         "value": "9T"
+      },
+      {
+        "label": "10T",
+        "value": "10T"
       }
     ],
-    "name": "Dumper",
+    "name": "Dumper 1T à 10T",
     "category": "terrassement",
     "spec": "1T à 10T",
     "description": [
@@ -270,7 +274,8 @@
       "- Dumper sur pneus 5T",
       "- Dumper sur pneus 6T",
       "- Dumper sur pneus 7T",
-      "- Dumper sur pneus 9T"
+      "- Dumper sur pneus 9T",
+      "- Dumper sur pneus 10T"
     ]
   },
   "marteau-piqueur": {
