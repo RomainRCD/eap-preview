@@ -2027,5 +2027,36 @@
         "value": "10m"
       }
     ]
+  },
+  "nacelle-ciseaux-chenilles": {
+    "name": "Nacelle ciseaux sur chenilles",
+    "category": "travail-en-hauteur",
+    "spec": "8m à 14m",
+    "description": [
+      "EAP location propose une gamme complète de Nacelles Ciseaux sur Chenilles pour vos travaux en hauteur sur terrains difficiles. Idéale pour les chantiers extérieurs avec sol instable, accidenté ou en dévers, la nacelle ciseaux sur chenilles offre une stabilité et une mobilité incomparables là où une nacelle sur roues ne peut pas accéder. Sur notre site vous retrouverez disponible à la location :",
+      "- Nacelle Ciseaux sur Chenilles de 8 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux sur Chenilles de 10 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux sur Chenilles de 12 mètres de hauteur de travail.",
+      "- Nacelle Ciseaux sur Chenilles de 14 mètres de hauteur de travail.",
+      "Grâce à son train de chenilles, cette machine s'adapte aux sols meubles, boueux ou en pente, tout en garantissant une plateforme de travail stable et sécurisée. Elle est particulièrement adaptée aux chantiers de construction, de rénovation de façades, de travaux forestiers ou en zones non aménagées."
+    ],
+    "variants": [
+      {
+        "label": "8m",
+        "value": "8m"
+      },
+      {
+        "label": "10m",
+        "value": "10m"
+      },
+      {
+        "label": "12m",
+        "value": "12m"
+      },
+      {
+        "label": "14m",
+        "value": "14m"
+      }
+    ]
   }
 }
