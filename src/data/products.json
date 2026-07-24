@@ -2001,5 +2001,31 @@
       "- Robot de démolition 5 T",
       "Équipements disponibles selon besoin : brise-roche hydraulique, pince de tri, godet. Contactez-nous pour un devis."
     ]
+  },
+  "nacelle-mat-chenilles": {
+    "name": "Nacelle à mât (Toucan) sur chenilles",
+    "category": "travail-en-hauteur",
+    "spec": "Verticale compacte sur chenilles",
+    "description": [
+      "EAP location propose la Nacelle à mât (Toucan) sur chenilles pour vos travaux en hauteur sur terrains accidentés ou difficiles d'accès. Sa motorisation sur chenilles lui permet d'évoluer sur tous types de surfaces.",
+      "Disponibles à la location :",
+      "- Nacelle à mât sur chenilles 6 mètres",
+      "- Nacelle à mât sur chenilles 8 mètres",
+      "- Nacelle à mât sur chenilles 10 mètres"
+    ],
+    "variants": [
+      {
+        "label": "6m",
+        "value": "6m"
+      },
+      {
+        "label": "8m",
+        "value": "8m"
+      },
+      {
+        "label": "10m",
+        "value": "10m"
+      }
+    ]
   }
 }
