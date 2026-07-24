@@ -1714,6 +1714,10 @@
   "nacelle-mat": {
     "variants": [
       {
+        "label": "5m",
+        "value": "5m"
+      },
+      {
         "label": "6m",
         "value": "6m"
       },
@@ -1730,11 +1734,12 @@
         "value": "12m"
       }
     ],
-    "name": "Nacelle à mât",
+    "name": "Nacelle à mât (Toucan)",
     "category": "travail-en-hauteur",
     "spec": "Verticale compacte",
     "description": [
       "EAP location propose le plus large choix de Nacelle Mat Vertical (Toucan) pour vos Travaux en Hauteur sur vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Nacelle Mat Vertical 5 mètres",
       "- Nacelle Mat Vertical 6 mètres",
       "- Nacelle Mat Vertical 8 mètres",
       "- Nacelle Mat Vertical 10 mètres (sur roues ou sur chenilles)",
