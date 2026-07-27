@@ -1622,56 +1622,93 @@
   "nacelle-camion": {
     "variants": [
       {
-        "label": "25-30m",
-        "value": "25-30m"
+        "label": "VL - 12m",
+        "value": "VL 12m"
       },
       {
-        "label": "36-40m",
-        "value": "36-40m"
+        "label": "VL - 14m",
+        "value": "VL 14m"
       },
       {
-        "label": "41-45m",
-        "value": "41-45m"
+        "label": "VL - 16m",
+        "value": "VL 16m"
       },
       {
-        "label": "46-50m",
-        "value": "46-50m"
+        "label": "VL - 20m",
+        "value": "VL 20m"
       },
       {
-        "label": "51-60m",
-        "value": "51-60m"
+        "label": "VL - 22m",
+        "value": "VL 22m"
       },
       {
-        "label": "61-70m",
-        "value": "61-70m"
+        "label": "VL - 25m",
+        "value": "VL 25m"
       },
       {
-        "label": "71-80m",
-        "value": "71-80m"
+        "label": "VL - 27m",
+        "value": "VL 27m"
       },
       {
-        "label": "81-90m",
-        "value": "81-90m"
+        "label": "PL - 28m",
+        "value": "PL 28m"
       },
       {
-        "label": "91-100m",
-        "value": "91-100m"
+        "label": "PL - 30m",
+        "value": "PL 30m"
+      },
+      {
+        "label": "PL - 36-40m",
+        "value": "PL 36-40m"
+      },
+      {
+        "label": "PL - 41-45m",
+        "value": "PL 41-45m"
+      },
+      {
+        "label": "PL - 46-50m",
+        "value": "PL 46-50m"
+      },
+      {
+        "label": "PL - 51-60m",
+        "value": "PL 51-60m"
+      },
+      {
+        "label": "PL - 61-70m",
+        "value": "PL 61-70m"
+      },
+      {
+        "label": "PL - 71-80m",
+        "value": "PL 71-80m"
+      },
+      {
+        "label": "PL - 81-90m",
+        "value": "PL 81-90m"
       }
     ],
     "name": "Nacelle sur porteur VL ou PL",
     "category": "travail-en-hauteur",
-    "spec": "25m à 100m",
+    "spec": "12M à 90M",
     "description": [
-      "EAP location propose un large choix de Nacelle sur poids lourd pour vos travaux en hauteur sur vos chantiers en France. Nos nacelles sur poids lourds permettent d’opérer sur des édifices de grande hauteur et difficile telles que les antennes, les immeubles, les éoliennes ou les églises. Sur notre site vous retrouverez disponible à la location :",
-      "- Nacelle sur poids lourd 25-30mètres",
-      "- Nacelle sur poids lourd 36-40 mètres",
-      "- Nacelle sur poids lourd 41-45 mètres",
-      "- Nacelle sur poids lourd 46-50 mètres",
-      "- Nacelle sur poids lourd 51-60 mètres",
-      "- Nacelle sur poids lourd 61-70 mètres",
-      "- Nacelle sur poids lourd 71-80 mètres",
-      "- Nacelle sur poids lourd 81-90 mètres",
-      "- Nacelle sur poids lourd 91-100 mètres"
+      "EAP location propose un large choix de nacelles sur porteur VL ou PL pour vos travaux en hauteur sur vos chantiers en France. Nos nacelles sur porteur permettent d'opérer sur des édifices de grande hauteur tels que les antennes, les immeubles, les éoliennes ou les églises.",
+      "Nacelles sur porteur VL (12m à 27m) :",
+      "- Nacelle sur porteur VL 12 mètres",
+      "- Nacelle sur porteur VL 14 mètres",
+      "- Nacelle sur porteur VL 16 mètres",
+      "- Nacelle sur porteur VL 20 mètres",
+      "- Nacelle sur porteur VL 22 mètres",
+      "- Nacelle sur porteur VL 25 mètres",
+      "- Nacelle sur porteur VL 27 mètres",
+      "Nacelles sur porteur PL (28m à 90m) :",
+      "- Nacelle sur porteur PL 28 mètres",
+      "- Nacelle sur porteur PL 30 mètres",
+      "- Nacelle sur porteur PL 36-40 mètres",
+      "- Nacelle sur porteur PL 41-45 mètres",
+      "- Nacelle sur porteur PL 46-50 mètres",
+      "- Nacelle sur porteur PL 51-60 mètres",
+      "- Nacelle sur porteur PL 61-70 mètres",
+      "- Nacelle sur porteur PL 71-80 mètres",
+      "- Nacelle sur porteur PL 81-90 mètres"
     ]
   },
   "echafaudage-roulant": {
