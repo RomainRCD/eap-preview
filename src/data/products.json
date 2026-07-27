@@ -913,9 +913,9 @@
   "chariot-rotatif": {
     "name": "Chariot télescopique rotatif",
     "category": "manutention",
-    "spec": "16m à 40m, 360°",
+    "spec": "16m à 40m",
     "description": [
-      "EAP location propose le plus large choix de chariot télescopique rotatif en France. Sur notre site vous retrouverez disponible à la location des chariot télescopique pouvant aller jusqu’à 35 mètres de hauteur de travail.",
+      "EAP location propose le plus large choix de chariot télescopique rotatif en France. Sur notre site vous retrouverez disponible à la location des chariot télescopique pouvant aller jusqu'à 40 mètres de hauteur de travail.",
       "Les disponibilités et caractéristiques de nos chariots :",
       "- Chariot Télescopique Rotatif avec fourche – 16 mètres de hauteur de travail",
       "- Chariot Télescopique Rotatif avec fourche – 18 mètres de hauteur de travail",
@@ -924,6 +924,7 @@
       "- Chariot Télescopique Rotatif avec fourche – 30 mètres de hauteur de travail",
       "- Chariot Télescopique Rotatif avec fourche – 32 mètres de hauteur de travail",
       "- Chariot Télescopique Rotatif avec fourche – 35 mètres de hauteur de travail",
+      "- Chariot Télescopique Rotatif avec fourche – 40 mètres de hauteur de travail",
       "Accessoires disponibles : Godet Terre, Potence, Treuil 5T, Radio Télécommande"
     ]
   },
