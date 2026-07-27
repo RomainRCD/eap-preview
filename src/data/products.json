@@ -1306,6 +1306,10 @@
   "nacelle-ciseaux-electrique": {
     "variants": [
       {
+        "label": "6m",
+        "value": "6m"
+      },
+      {
         "label": "8m",
         "value": "8m"
       },
@@ -1348,9 +1352,10 @@
     ],
     "name": "Nacelle ciseaux électrique",
     "category": "travail-en-hauteur",
-    "spec": "8m à 33m",
+    "spec": "6m à 33m",
     "description": [
       "EAP location propose le plus large choix de Nacelle Ciseaux Électrique pour votre travail en hauteur en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Nacelle Ciseaux Electrique de 6 mètres de hauteur de travail.",
       "- Nacelle Ciseaux Electrique de 8 mètres de hauteur de travail.",
       "- Nacelle Ciseaux Electrique de 10 mètres (et 10 mètres Grand Plateau) de hauteur de travail.",
       "- Nacelle Ciseaux Electrique de 12 mètres (et 12 mètres Grand Plateau) de hauteur de travail.",
