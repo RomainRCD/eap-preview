@@ -1570,8 +1570,12 @@
         "value": "13m"
       },
       {
-        "label": "17m",
-        "value": "17m"
+        "label": "15m",
+        "value": "15m"
+      },
+      {
+        "label": "18m",
+        "value": "18m"
       },
       {
         "label": "22m",
@@ -1596,22 +1600,28 @@
       {
         "label": "40m",
         "value": "40m"
+      },
+      {
+        "label": "43m",
+        "value": "43m"
       }
     ],
     "name": "Nacelle araignée",
     "category": "travail-en-hauteur",
-    "spec": "Accès difficile",
+    "spec": "12M à 43M",
     "description": [
       "EAP location propose le plus large choix de Nacelle Araignée (Bi-énergie) pour le travail en hauteur en France. Sur notre site vous retrouverez disponible à la location :",
       "- Nacelle Araignée Bi-énergie 12 mètres",
       "- Nacelle Araignée Bi-énergie 13 mètres",
-      "- Nacelle Araignée Bi-énergie 17 mètres",
+      "- Nacelle Araignée Bi-énergie 15 mètres",
+      "- Nacelle Araignée Bi-énergie 18 mètres",
       "- Nacelle Araignée Bi-énergie 22 mètres",
       "- Nacelle Araignée Bi-énergie 23 mètres",
       "- Nacelle Araignée Bi-énergie 26 mètres",
       "- Nacelle Araignée Bi-énergie 30 mètres",
       "- Nacelle Araignée Bi-énergie 33 mètres",
-      "- Nacelle Araignée Bi-énergie 40 mètres"
+      "- Nacelle Araignée Bi-énergie 40 mètres",
+      "- Nacelle Araignée Bi-énergie 43 mètres"
     ]
   },
   "nacelle-camion": {
@@ -2104,6 +2114,37 @@
       {
         "label": "14m",
         "value": "14m"
+      }
+    ]
+  },
+  "nacelle-articulee-hybride": {
+    "name": "Nacelle articulée hybride",
+    "category": "travail-en-hauteur",
+    "spec": "12m à 28m",
+    "description": [
+      "EAP location propose le plus large choix de Nacelle Articulée pour vos travaux en hauteur en France. Sur notre site vous retrouverez disponible à la location :",
+      "Hybride :",
+      "- Nacelle Articulée Hybride 12 mètres",
+      "- Nacelle Articulée Hybride 16 mètres",
+      "- Nacelle Articulée Hybride 20 mètres",
+      "- Nacelle Articulée Hybride 28 mètres"
+    ],
+    "variants": [
+      {
+        "label": "12m",
+        "value": "12m"
+      },
+      {
+        "label": "16m",
+        "value": "16m"
+      },
+      {
+        "label": "20m",
+        "value": "20m"
+      },
+      {
+        "label": "28m",
+        "value": "28m"
       }
     ]
   }
