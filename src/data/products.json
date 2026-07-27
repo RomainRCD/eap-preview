@@ -1004,7 +1004,7 @@
     ],
     "name": "Gerbeur / Transpalette",
     "category": "manutention",
-    "spec": "Manutention légère",
+    "spec": "1T à 2T",
     "description": [
       "Gerbeurs électriques et transpalettes pour la manutention légère en entrepôt, atelier ou surface de vente : levée de palettes, gerbage en rayonnage, déplacement de charges.",
       "Location courte ou longue durée, matériel récent et entretenu."
@@ -1173,7 +1173,7 @@
     ],
     "name": "Chargeuse sur pneus",
     "category": "terrassement",
-    "spec": "De 1m³ à 5m³",
+    "spec": "1T à 4T",
     "description": [
       "EAP location propose le plus large choix de chargeuse articulée en France. Sur notre site vous retrouverez disponible à la location des chargeuses articulées pouvant aller jusqu’à 2500L.",
       "Les disponibilités et caractéristiques de nos chargeuses articulées :",
