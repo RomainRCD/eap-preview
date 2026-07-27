@@ -1596,11 +1596,15 @@
       {
         "label": "40m",
         "value": "40m"
+      },
+      {
+        "label": "43m",
+        "value": "43m"
       }
     ],
     "name": "Nacelle araignée",
     "category": "travail-en-hauteur",
-    "spec": "Accès difficile",
+    "spec": "Accès difficile | 12M à 43M",
     "description": [
       "EAP location propose le plus large choix de Nacelle Araignée (Bi-énergie) pour le travail en hauteur en France. Sur notre site vous retrouverez disponible à la location :",
       "- Nacelle Araignée Bi-énergie 12 mètres",
@@ -1611,7 +1615,8 @@
       "- Nacelle Araignée Bi-énergie 26 mètres",
       "- Nacelle Araignée Bi-énergie 30 mètres",
       "- Nacelle Araignée Bi-énergie 33 mètres",
-      "- Nacelle Araignée Bi-énergie 40 mètres"
+      "- Nacelle Araignée Bi-énergie 40 mètres",
+      "- Nacelle Araignée Bi-énergie 43 mètres"
     ]
   },
   "nacelle-camion": {
