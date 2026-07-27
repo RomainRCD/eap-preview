@@ -1874,6 +1874,10 @@
         "value": "8m / 300kg"
       },
       {
+        "label": "10.5m / 300kg",
+        "value": "10.5m / 300kg"
+      },
+      {
         "label": "37m / 400kg",
         "value": "37m / 400kg"
       }
@@ -1882,9 +1886,10 @@
     "category": "travail-en-hauteur",
     "spec": "Jusqu'à 37m / 400kg",
     "description": [
-      "EAP location propose le plus large choix d’élévateur mécanique de charge en France. Vous retrouverez disponible à la location :",
+      "EAP location propose le plus large choix d'élévateur mécanique de charge en France. Vous retrouverez disponible à la location :",
       "- Élévateur mécanique de charge 5 mètres et 300kg",
-      "- Élévateur mécanique de charge 8 mètres et 300kg"
+      "- Élévateur mécanique de charge 8 mètres et 300kg",
+      "- Élévateur mécanique de charge 10.5 mètres et 300kg"
     ]
   },
   "benne-dib": {
