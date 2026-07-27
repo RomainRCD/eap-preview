@@ -2106,5 +2106,36 @@
         "value": "14m"
       }
     ]
+  },
+  "nacelle-articulee-hybride": {
+    "name": "Nacelle articulée hybride",
+    "category": "travail-en-hauteur",
+    "spec": "12m à 28m",
+    "description": [
+      "EAP location propose le plus large choix de Nacelle Articulée pour vos travaux en hauteur en France. Sur notre site vous retrouverez disponible à la location :",
+      "Hybride :",
+      "- Nacelle Articulée Hybride 12 mètres",
+      "- Nacelle Articulée Hybride 16 mètres",
+      "- Nacelle Articulée Hybride 20 mètres",
+      "- Nacelle Articulée Hybride 28 mètres"
+    ],
+    "variants": [
+      {
+        "label": "12m",
+        "value": "12m"
+      },
+      {
+        "label": "16m",
+        "value": "16m"
+      },
+      {
+        "label": "20m",
+        "value": "20m"
+      },
+      {
+        "label": "28m",
+        "value": "28m"
+      }
+    ]
   }
 }
