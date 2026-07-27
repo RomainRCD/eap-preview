@@ -866,6 +866,48 @@
       "- Chariot Télescopique fixe avec fourche – 17 mètres de hauteur de travail",
       "- Chariot Télescopique fixe avec fourche – 18 mètres de hauteur de travail",
       "Accessoires disponibles : Godet Terre et Potence"
+    ],
+    "variants": [
+      {
+        "label": "Hauteur de travail",
+        "value": "4M"
+      },
+      {
+        "label": "Hauteur de travail",
+        "value": "5M électrique"
+      },
+      {
+        "label": "Hauteur de travail",
+        "value": "6M"
+      },
+      {
+        "label": "Hauteur de travail",
+        "value": "7M"
+      },
+      {
+        "label": "Hauteur de travail",
+        "value": "9M"
+      },
+      {
+        "label": "Hauteur de travail",
+        "value": "11M"
+      },
+      {
+        "label": "Hauteur de travail",
+        "value": "13M"
+      },
+      {
+        "label": "Hauteur de travail",
+        "value": "14M"
+      },
+      {
+        "label": "Hauteur de travail",
+        "value": "17M"
+      },
+      {
+        "label": "Hauteur de travail",
+        "value": "18M"
+      }
     ]
   },
   "chariot-rotatif": {
