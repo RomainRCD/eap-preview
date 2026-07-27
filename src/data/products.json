@@ -1271,16 +1271,12 @@
   "tractopelle": {
     "variants": [
       {
-        "label": "Compact",
-        "value": "Compact"
+        "label": "800L",
+        "value": "800L"
       },
       {
-        "label": "Standard 8T",
-        "value": "Standard 8T"
-      },
-      {
-        "label": "Grand modèle 10T",
-        "value": "Grand modèle 10T"
+        "label": "1000L",
+        "value": "1000L"
       }
     ],
     "name": "Tractopelle",
