@@ -1562,10 +1562,6 @@
   "nacelle-araignee": {
     "variants": [
       {
-        "label": "12m",
-        "value": "12m"
-      },
-      {
         "label": "13m",
         "value": "13m"
       },
@@ -1608,10 +1604,9 @@
     ],
     "name": "Nacelle araignée",
     "category": "travail-en-hauteur",
-    "spec": "12M à 43M",
+    "spec": "13M à 43M",
     "description": [
       "EAP location propose le plus large choix de Nacelle Araignée (Bi-énergie) pour le travail en hauteur en France. Sur notre site vous retrouverez disponible à la location :",
-      "- Nacelle Araignée Bi-énergie 12 mètres",
       "- Nacelle Araignée Bi-énergie 13 mètres",
       "- Nacelle Araignée Bi-énergie 15 mètres",
       "- Nacelle Araignée Bi-énergie 18 mètres",
