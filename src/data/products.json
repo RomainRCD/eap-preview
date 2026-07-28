@@ -124,33 +124,6 @@
       "- Compresseur d'air 21000L"
     ]
   },
-  "pompe-eau": {
-    "variants": [
-      {
-        "label": "Eaux claires",
-        "value": "Eaux claires"
-      },
-      {
-        "label": "Eaux chargées",
-        "value": "Eaux chargées"
-      },
-      {
-        "label": "Immergée",
-        "value": "Immergée"
-      },
-      {
-        "label": "Motopompe thermique",
-        "value": "Motopompe thermique"
-      }
-    ],
-    "name": "Pompe à eau",
-    "category": "autres",
-    "spec": "Immergée, surface",
-    "description": [
-      "Pompes à eau de chantier pour l'épuisement des fouilles, le pompage des eaux chargées ou claires : motopompes thermiques et pompes immergées.",
-      "Plusieurs débits disponibles selon la hauteur de refoulement et la nature des eaux."
-    ]
-  },
   "eclairage": {
     "variants": [
       {
@@ -168,60 +141,6 @@
     "description": [
       "Mâts et tours d'éclairage pour travailler en sécurité de nuit ou en espace sombre : ballons éclairants, mâts LED sur remorque, projecteurs autonomes.",
       "Autonomie adaptée aux postes de nuit, location courte ou longue durée."
-    ]
-  },
-  "betonniere": {
-    "variants": [
-      {
-        "label": "120L",
-        "value": "120L"
-      },
-      {
-        "label": "160L",
-        "value": "160L"
-      },
-      {
-        "label": "250L",
-        "value": "250L"
-      },
-      {
-        "label": "350L",
-        "value": "350L"
-      }
-    ],
-    "name": "Bétonnière",
-    "category": "autres",
-    "spec": "120L à 350L",
-    "description": [
-      "Bétonnières de chantier pour la préparation de béton et mortier sur place : modèles électriques ou thermiques, plusieurs capacités de cuve.",
-      "Location à la journée, à la semaine ou au mois, livraison possible."
-    ]
-  },
-  "broyeur": {
-    "variants": [
-      {
-        "label": "Ø 8cm",
-        "value": "Ø 8cm"
-      },
-      {
-        "label": "Ø 12cm",
-        "value": "Ø 12cm"
-      },
-      {
-        "label": "Ø 15cm",
-        "value": "Ø 15cm"
-      },
-      {
-        "label": "Ø 20cm",
-        "value": "Ø 20cm"
-      }
-    ],
-    "name": "Broyeur de branches",
-    "category": "autres",
-    "spec": "Espaces verts",
-    "description": [
-      "Broyeurs de branches pour l'entretien des espaces verts et le débroussaillage : réduction des végétaux en copeaux directement sur site.",
-      "Plusieurs diamètres de coupe admissibles, modèles sur remorque faciles à tracter."
     ]
   },
   "dumper": {
@@ -282,56 +201,6 @@
       "- Dumper sur pneus 7T",
       "- Dumper sur pneus 9T",
       "- Dumper sur pneus 10T"
-    ]
-  },
-  "decoupeuse": {
-    "variants": [
-      {
-        "label": "Ø 350mm",
-        "value": "Ø 350mm"
-      },
-      {
-        "label": "Ø 400mm",
-        "value": "Ø 400mm"
-      },
-      {
-        "label": "Scie à sol",
-        "value": "Scie à sol"
-      }
-    ],
-    "name": "Scie à sol",
-    "category": "autres",
-    "spec": "Béton, asphalte",
-    "description": [
-      "Découpeuses thermiques pour la coupe du béton, de l'asphalte et des matériaux durs : disques diamant, coupe à sec ou à eau.",
-      "Location courte durée avec consommables disponibles."
-    ]
-  },
-  "aspirateur": {
-    "variants": [
-      {
-        "label": "Classe L",
-        "value": "Classe L"
-      },
-      {
-        "label": "Classe M",
-        "value": "Classe M"
-      },
-      {
-        "label": "Classe H",
-        "value": "Classe H"
-      },
-      {
-        "label": "Eau + poussière",
-        "value": "Eau + poussière"
-      }
-    ],
-    "name": "Aspirateur industriel",
-    "category": "autres",
-    "spec": "Chantier",
-    "description": [
-      "Aspirateurs industriels de chantier pour poussières fines, gravats légers et liquides : filtration renforcée compatible poussières de classe M/H.",
-      "Indispensables pour les travaux de ponçage, perçage et démolition en intérieur."
     ]
   },
   "bungalow": {
@@ -578,29 +447,6 @@
     "description": [
       "Bungalow bureau de chantier pour vos réunions et le pilotage des travaux : bureau, chaises, rangements, éclairage, chauffage et climatisation selon modèles.",
       "Location toute durée, livraison, pose et raccordement sur demande."
-    ]
-  },
-  "local-technique": {
-    "variants": [
-      {
-        "label": "8 pieds",
-        "value": "8 pieds"
-      },
-      {
-        "label": "10 pieds",
-        "value": "10 pieds"
-      },
-      {
-        "label": "20 pieds",
-        "value": "20 pieds"
-      }
-    ],
-    "name": "Local technique",
-    "category": "base-vie",
-    "spec": "Stockage",
-    "description": [
-      "Local technique de chantier pour le stockage sécurisé de l'outillage et du petit matériel : structure robuste, fermeture sécurisée, plusieurs dimensions.",
-      "Location toute durée avec livraison sur chantier."
     ]
   },
   "container": {
@@ -1885,41 +1731,6 @@
       "- Échafaudage roulant 10,8 mètres",
       "- Échafaudage roulant 11,8 mètres",
       "- Échafaudage roulant 12,8 mètres"
-    ]
-  },
-  "pir-pirl": {
-    "variants": [
-      {
-        "label": "8m",
-        "value": "8m"
-      },
-      {
-        "label": "9,5m",
-        "value": "9,5m"
-      },
-      {
-        "label": "11m",
-        "value": "11m"
-      },
-      {
-        "label": "13m",
-        "value": "13m"
-      },
-      {
-        "label": "14m",
-        "value": "14m"
-      }
-    ],
-    "name": "PIR / PIRL",
-    "category": "travail-en-hauteur",
-    "spec": "Plateforme individuelle",
-    "description": [
-      "EAP location propose le plus large choix de Nacelle Mat Vertical Manuel pour vos Travaux en Hauteur sur vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
-      "- Nacelle Mat Vertical Manuel 8 mètres AWP-20S",
-      "- Nacelle Mat Vertical Manuel 9,5 mètres AWP-25S",
-      "- Nacelle Mat Vertical Manuel 11 mètres AWP-30S",
-      "- Nacelle Mat Vertical Manuel 13 mètres AWP-36S",
-      "- Nacelle Mat Vertical Manuel 14 mètres AWP-40S"
     ]
   },
   "nacelle-mat": {

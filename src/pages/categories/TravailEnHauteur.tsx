@@ -9,7 +9,7 @@ import { categoryProducts } from "@/data/products";
 const TravailEnHauteur = () => {
   // Vignettes pilotées par products.json — l'ordre historique est conservé,
   // les nouveaux produits de la catégorie apparaissent automatiquement à la suite.
-  const products = categoryProducts("travail-en-hauteur", ["nacelle-ciseaux-electrique", "nacelle-ciseaux-diesel", "nacelle-articulee-electrique", "nacelle-articulee-diesel", "nacelle-telescopique", "nacelle-araignee", "nacelle-camion", "echafaudage-roulant", "pir-pirl", "nacelle-mat", "plateforme-suspendue", "monte-materiaux"]);
+  const products = categoryProducts("travail-en-hauteur", ["nacelle-ciseaux-electrique", "nacelle-ciseaux-diesel", "nacelle-articulee-electrique", "nacelle-articulee-diesel", "nacelle-telescopique", "nacelle-araignee", "nacelle-camion", "echafaudage-roulant", "nacelle-mat", "plateforme-suspendue", "monte-materiaux"]);
 
   return (
     <PageLayout>
