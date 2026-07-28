@@ -2246,5 +2246,31 @@
         "value": "20T"
       }
     ]
+  },
+  "grue-mobile-mk": {
+    "name": "Grue mobile MK",
+    "category": "manutention",
+    "spec": "MK88 à MK140",
+    "description": [
+      "EAP location propose la location de grues mobiles MK dans toute la France en préconisant la proximité de votre chantier. Sur notre site vous retrouverez disponible à la location des grues mobiles MK avec une capacité de levage adaptée à vos besoins de chantier.",
+      "Les disponibilités et caractéristiques de nos grues mobiles MK :",
+      "- Grue mobile MK88.",
+      "- Grue mobile MK110.",
+      "- Grue mobile MK140."
+    ],
+    "variants": [
+      {
+        "label": "Modèle",
+        "value": "MK88"
+      },
+      {
+        "label": "Modèle",
+        "value": "MK110"
+      },
+      {
+        "label": "Modèle",
+        "value": "MK140"
+      }
+    ]
   }
 }
