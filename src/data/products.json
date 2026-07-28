@@ -2105,15 +2105,15 @@
     ]
   },
   "nacelle-mat-chenilles": {
-    "name": "Nacelle à mât (Toucan) sur chenilles",
+    "name": "Nacelle à mât verticale sur chenilles (Toucan)",
     "category": "travail-en-hauteur",
     "spec": "Verticale compacte sur chenilles",
     "description": [
-      "EAP location propose la Nacelle à mât (Toucan) sur chenilles pour vos travaux en hauteur sur terrains accidentés ou difficiles d'accès. Sa motorisation sur chenilles lui permet d'évoluer sur tous types de surfaces.",
+      "EAP location propose la Nacelle à mât verticale sur chenilles (Toucan) pour vos travaux en hauteur sur terrains accidentés ou difficiles d'accès. Sa motorisation sur chenilles lui permet d'évoluer sur tous types de surfaces.",
       "Disponibles à la location :",
-      "- Nacelle à mât sur chenilles 6 mètres",
-      "- Nacelle à mât sur chenilles 8 mètres",
-      "- Nacelle à mât sur chenilles 10 mètres"
+      "- Nacelle à mât verticale sur chenilles 6 mètres",
+      "- Nacelle à mât verticale sur chenilles 8 mètres",
+      "- Nacelle à mât verticale sur chenilles 10 mètres"
     ],
     "variants": [
       {
