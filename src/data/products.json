@@ -746,25 +746,21 @@
   "rouleau-pneus": {
     "variants": [
       {
-        "label": "8T",
-        "value": "8T"
+        "label": "13T",
+        "value": "13T"
       },
       {
-        "label": "12T",
-        "value": "12T"
+        "label": "20T",
+        "value": "20T"
       },
       {
-        "label": "18T",
-        "value": "18T"
-      },
-      {
-        "label": "24T",
-        "value": "24T"
+        "label": "28T",
+        "value": "28T"
       }
     ],
     "name": "Rouleau à pneus",
     "category": "compactage",
-    "spec": "Finition",
+    "spec": "13T à 28T",
     "description": [
       "Le rouleau à pneus assure la finition des enrobés et le compactage des couches de surface grâce à ses pneus lisses à pression réglable.",
       "Indispensable en complément du tandem sur les chantiers d'enrobés."
