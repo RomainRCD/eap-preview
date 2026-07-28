@@ -2402,7 +2402,7 @@
   "plaque-roulage": {
     "name": "Plaque de roulage",
     "category": "autres",
-    "spec": "Protection de sol pour chantier",
+    "spec": "Protection de sol pour chantier — 5T à 80T",
     "description": [
       "La plaque de roulage protège les sols lors du passage d'engins de chantier, de camions ou de tout matériel lourd.",
       "Idéale pour préserver les pelouses, allées, terrains instables ou zones sensibles le temps des travaux.",
@@ -2411,6 +2411,35 @@
       "- Résistante aux charges lourdes",
       "- Adaptée aux sols meubles, humides ou fragiles"
     ],
-    "variants": []
+    "variants": [
+      {
+        "label": "Capacité",
+        "value": "5T"
+      },
+      {
+        "label": "Capacité",
+        "value": "15T"
+      },
+      {
+        "label": "Capacité",
+        "value": "20T"
+      },
+      {
+        "label": "Capacité",
+        "value": "35T"
+      },
+      {
+        "label": "Capacité",
+        "value": "50T"
+      },
+      {
+        "label": "Capacité",
+        "value": "60T"
+      },
+      {
+        "label": "Capacité",
+        "value": "80T"
+      }
+    ]
   }
 }
