@@ -436,21 +436,45 @@
   "vestiaire": {
     "variants": [
       {
+        "label": "4 pers.",
+        "value": "4 pers."
+      },
+      {
+        "label": "6 pers.",
+        "value": "6 pers."
+      },
+      {
         "label": "8 pers.",
         "value": "8 pers."
+      },
+      {
+        "label": "10 pers.",
+        "value": "10 pers."
       },
       {
         "label": "12 pers.",
         "value": "12 pers."
       },
       {
+        "label": "14 pers.",
+        "value": "14 pers."
+      },
+      {
         "label": "16 pers.",
         "value": "16 pers."
+      },
+      {
+        "label": "18 pers.",
+        "value": "18 pers."
+      },
+      {
+        "label": "20 pers.",
+        "value": "20 pers."
       }
     ],
     "name": "Bungalow Vestiaire",
     "category": "base-vie",
-    "spec": "Casiers, bancs",
+    "spec": "4 à 20 casiers",
     "description": [
       "Bungalow vestiaire pour équiper la base vie de votre chantier : casiers, bancs, chauffage, éclairage. Conforme aux obligations d'accueil du personnel.",
       "Plusieurs tailles disponibles, location toute durée, livraison et pose incluses."
@@ -665,21 +689,25 @@
   "rouleau-mixte": {
     "variants": [
       {
-        "label": "7T",
-        "value": "7T"
+        "label": "2T5",
+        "value": "2T5"
       },
       {
-        "label": "9T",
-        "value": "9T"
+        "label": "3T",
+        "value": "3T"
       },
       {
-        "label": "13T",
-        "value": "13T"
+        "label": "3T5",
+        "value": "3T5"
+      },
+      {
+        "label": "4T",
+        "value": "4T"
       }
     ],
     "name": "Rouleau mixte",
     "category": "compactage",
-    "spec": "Bille + pneus",
+    "spec": "2T5 à 4T",
     "description": [
       "Le rouleau mixte combine une bille vibrante à l'avant et des pneus à l'arrière : compactage efficace des enrobés et des couches de forme en une seule passe.",
       "Disponible en plusieurs largeurs de bille. Location avec livraison sur chantier."
@@ -742,25 +770,21 @@
   "rouleau-pneus": {
     "variants": [
       {
-        "label": "8T",
-        "value": "8T"
+        "label": "13T",
+        "value": "13T"
       },
       {
-        "label": "12T",
-        "value": "12T"
+        "label": "20T",
+        "value": "20T"
       },
       {
-        "label": "18T",
-        "value": "18T"
-      },
-      {
-        "label": "24T",
-        "value": "24T"
+        "label": "28T",
+        "value": "28T"
       }
     ],
     "name": "Rouleau à pneus",
     "category": "compactage",
-    "spec": "Finition",
+    "spec": "13T à 28T",
     "description": [
       "Le rouleau à pneus assure la finition des enrobés et le compactage des couches de surface grâce à ses pneus lisses à pression réglable.",
       "Indispensable en complément du tandem sur les chantiers d'enrobés."
@@ -2250,7 +2274,7 @@
   "grue-mobile-mk": {
     "name": "Grue mobile MK",
     "category": "manutention",
-    "spec": "MK88 à MK140",
+    "spec": "MK88, MK110, MK140",
     "description": [
       "EAP location propose la location de grues mobiles MK dans toute la France en préconisant la proximité de votre chantier. Sur notre site vous retrouverez disponible à la location des grues mobiles MK avec une capacité de levage adaptée à vos besoins de chantier.",
       "Les disponibilités et caractéristiques de nos grues mobiles MK :",
