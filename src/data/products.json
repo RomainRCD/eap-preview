@@ -2,6 +2,10 @@
   "groupe-electrogene": {
     "variants": [
       {
+        "label": "3kVA",
+        "value": "3kVA"
+      },
+      {
         "label": "5kVA",
         "value": "5kVA"
       },
@@ -56,9 +60,10 @@
     ],
     "name": "Groupe électrogène",
     "category": "autres",
-    "spec": "5kVA à +150kVA",
+    "spec": "3kVA à +150kVA",
     "description": [
       "EAP location propose le plus large choix de groupes électrogènes pour alimenter vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Groupe électrogène 3kVA",
       "- Groupe électrogène 5kVA",
       "- Groupe électrogène 10kVA",
       "- Groupe électrogène 15kVA",
