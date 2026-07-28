@@ -2185,15 +2185,15 @@
     ],
     "variants": [
       {
-        "label": "MK",
+        "label": "MK88",
         "value": "MK88"
       },
       {
-        "label": "MK",
+        "label": "MK110",
         "value": "MK110"
       },
       {
-        "label": "MK",
+        "label": "MK140",
         "value": "MK140"
       }
     ]
