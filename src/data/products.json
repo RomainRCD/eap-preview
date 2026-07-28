@@ -1163,13 +1163,33 @@
       {
         "label": "25T",
         "value": "25T"
+      },
+      {
+        "label": "30T",
+        "value": "30T"
+      },
+      {
+        "label": "45T",
+        "value": "45T"
+      },
+      {
+        "label": "50T",
+        "value": "50T"
+      },
+      {
+        "label": "60T",
+        "value": "60T"
+      },
+      {
+        "label": "65T",
+        "value": "65T"
       }
     ],
     "name": "Pelle sur chenilles",
     "category": "terrassement",
-    "spec": "De 10T à 25T",
+    "spec": "De 10T à 65T",
     "description": [
-      "EAP location propose le plus large choix de pelle sur chenilles en France. Nous sommes à proximité de vos chantiers dans toute la France grâce à notre réseau de partenaires. Sur notre site vous retrouverez disponible à la location des pelles sur chenilles pouvant aller jusqu’à 25 tonnes.",
+      "EAP location propose le plus large choix de pelle sur chenilles en France. Nous sommes à proximité de vos chantiers dans toute la France grâce à notre réseau de partenaires. Sur notre site vous retrouverez disponible à la location des pelles sur chenilles pouvant aller jusqu'à 65 tonnes.",
       "Les disponibilités et caractéristiques de nos pelles sur chenilles :",
       "- Pelle sur chenilles 10t",
       "- Pelle sur chenilles 14t",
@@ -1177,7 +1197,12 @@
       "- Pelle sur chenilles 18t",
       "- Pelle sur chenilles 20t",
       "- Pelle sur chenilles 22t",
-      "- Pelle sur chenilles 25t"
+      "- Pelle sur chenilles 25t",
+      "- Pelle sur chenilles 30t",
+      "- Pelle sur chenilles 45t",
+      "- Pelle sur chenilles 50t",
+      "- Pelle sur chenilles 60t",
+      "- Pelle sur chenilles 65t"
     ]
   },
   "pelle-pneus": {
