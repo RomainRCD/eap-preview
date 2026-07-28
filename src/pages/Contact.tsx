@@ -87,8 +87,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Téléphone</h3>
-                    <a href="tel:0368385456" className="text-primary font-semibold hover:underline">
-                      03.68.38.54.56
+                    <a href="tel:+33368385456" className="text-primary font-semibold hover:underline">
+                      +33 3 68 38 54 56
                     </a>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ const Contact = () => {
               ) : (
               <div className="space-y-4">
                 {state === "error" && (
-                  <p className="text-sm text-destructive bg-destructive/10 rounded-lg p-3">Une erreur est survenue. Réessayez ou appelez-nous au 03 68 38 54 56.</p>
+                  <p className="text-sm text-destructive bg-destructive/10 rounded-lg p-3">Une erreur est survenue. Réessayez ou appelez-nous au +33 3 68 38 54 56.</p>
                 )}
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Nom complet *</label>

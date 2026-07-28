@@ -27,7 +27,7 @@ const MentionsLegales = () => {
                   France
                 </p>
                 <p className="text-muted-foreground mt-2">
-                  Téléphone : 03.68.38.54.56<br />
+                  Téléphone : +33 3 68 38 54 56<br />
                   Email : contact@eap-location.fr
                 </p>
               </div>

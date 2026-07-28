@@ -60,7 +60,7 @@ const Footer = () => {
               <li>Zone d'intervention : France métropole + EUROPE</li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <a href="tel:0368385456" className="hover:text-primary transition-colors font-semibold">03.68.38.54.56</a>
+                <a href="tel:+33368385456" className="hover:text-primary transition-colors font-semibold">+33 3 68 38 54 56</a>
               </li>
               <li className="flex items-center gap-2">
                 <Clock className="w-4 h-4 flex-shrink-0" />
