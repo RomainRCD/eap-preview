@@ -1117,21 +1117,33 @@
       {
         "label": "8T",
         "value": "8T"
+      },
+      {
+        "label": "Pince de tri",
+        "value": "Pince de tri"
+      },
+      {
+        "label": "BRH",
+        "value": "BRH"
+      },
+      {
+        "label": "Tarière",
+        "value": "Tarière"
       }
     ],
     "name": "Mini-pelle",
     "category": "terrassement",
     "spec": "De 1,5T à 8T",
     "description": [
-      "EAP location propose le plus large choix de mini pelle en France. Sur notre site vous retrouverez disponible à la location des mini-pelle pouvant aller jusqu’à 8 tonnes.",
-      "Les accessoires disponibles : BRH, Godets et pince de tri",
-      "Les disponibilités et caractéristiques de nos mini-pelle :",
+      "EAP location propose le plus large choix de mini pelle en France. Sur notre site vous retrouverez disponible à la location des mini-pelle pouvant aller jusqu'à 8 tonnes.",
+      "Les disponibilités et caractéristiques de nos mini-pelles :",
       "- Mini pelle – 1,5 tonnes",
       "- Mini pelle – 2,5 tonnes",
       "- Mini pelle – 3,5 tonnes",
       "- Mini pelle – 5 tonnes",
       "- Mini pelle – 6 tonnes",
-      "- Mini pelle – 8 tonnes"
+      "- Mini pelle – 8 tonnes",
+      "Accessoires disponibles : Pince de tri, BRH, Tarière"
     ]
   },
   "pelle-chenilles": {
