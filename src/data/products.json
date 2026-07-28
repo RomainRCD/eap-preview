@@ -665,21 +665,25 @@
   "rouleau-mixte": {
     "variants": [
       {
-        "label": "7T",
-        "value": "7T"
+        "label": "2T5",
+        "value": "2T5"
       },
       {
-        "label": "9T",
-        "value": "9T"
+        "label": "3T",
+        "value": "3T"
       },
       {
-        "label": "13T",
-        "value": "13T"
+        "label": "3T5",
+        "value": "3T5"
+      },
+      {
+        "label": "4T",
+        "value": "4T"
       }
     ],
     "name": "Rouleau mixte",
     "category": "compactage",
-    "spec": "Bille + pneus",
+    "spec": "2T5 à 4T",
     "description": [
       "Le rouleau mixte combine une bille vibrante à l'avant et des pneus à l'arrière : compactage efficace des enrobés et des couches de forme en une seule passe.",
       "Disponible en plusieurs largeurs de bille. Location avec livraison sur chantier."
