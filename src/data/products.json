@@ -2398,5 +2398,19 @@
       "- Robot de pose 1 000 kg",
       "Contactez-nous pour un devis adapté à votre chantier."
     ]
+  },
+  "plaque-roulage": {
+    "name": "Plaque de roulage",
+    "category": "autres",
+    "spec": "Protection de sol pour chantier",
+    "description": [
+      "La plaque de roulage protège les sols lors du passage d'engins de chantier, de camions ou de tout matériel lourd.",
+      "Idéale pour préserver les pelouses, allées, terrains instables ou zones sensibles le temps des travaux.",
+      "- Pose rapide sans ancrage",
+      "- Emboîtement entre plaques pour couvrir de grandes surfaces",
+      "- Résistante aux charges lourdes",
+      "- Adaptée aux sols meubles, humides ou fragiles"
+    ],
+    "variants": []
   }
 }
