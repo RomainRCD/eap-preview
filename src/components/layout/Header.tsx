@@ -14,9 +14,9 @@ const Header = () => {
               Lundi - Vendredi : 7h30 - 18h
             </span>
           </div>
-          <a href="tel:0368385456" className="flex items-center gap-1.5 font-semibold hover:text-primary transition-colors">
+          <a href="tel:+33368385456" className="flex items-center gap-1.5 font-semibold hover:text-primary transition-colors">
             <Phone className="w-4 h-4" />
-            03.68.38.54.56
+            +33 3 68 38 54 56
           </a>
         </div>
       </div>

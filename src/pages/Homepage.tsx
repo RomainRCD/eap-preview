@@ -157,8 +157,8 @@ const Homepage = () => {
                 </Link>
               </Button>
               <Button variant="phone" size="xl" asChild>
-                <a href="tel:0368385456">
-                  03 68 38 54 56
+                <a href="tel:+33368385456">
+                  +33 3 68 38 54 56
                 </a>
               </Button>
             </div>

@@ -7,7 +7,7 @@ const MobileCTA = () => {
     <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-card border-t border-border p-3 z-50">
       <div className="flex gap-3">
         <Button variant="phone" className="flex-1" asChild>
-          <a href="tel:0368385456">
+          <a href="tel:+33368385456">
             <Phone className="w-4 h-4" />
             Appeler
           </a>

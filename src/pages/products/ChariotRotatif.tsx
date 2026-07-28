@@ -340,9 +340,9 @@ const ChariotRotatif = () => {
             Réponse garantie en 2h max
           </span>
           <Button variant="white" size="sm" asChild>
-            <a href="tel:0368385456">
+            <a href="tel:+33368385456">
               <Phone className="w-4 h-4" />
-              <span className="hidden sm:inline">03 68 38 54 56</span>
+              <span className="hidden sm:inline">+33 3 68 38 54 56</span>
             </a>
           </Button>
         </div>
@@ -415,9 +415,9 @@ const ChariotRotatif = () => {
                   </a>
                 </Button>
                 <Button variant="phone" size="lg" asChild className="w-full sm:w-auto">
-                  <a href="tel:0368385456">
+                  <a href="tel:+33368385456">
                     <Phone className="w-5 h-5" strokeWidth={1.5} />
-                    03 68 38 54 56
+                    +33 3 68 38 54 56
                   </a>
                 </Button>
               </div>
@@ -574,8 +574,8 @@ const ChariotRotatif = () => {
               
               <div className="mt-6 md:mt-10 p-4 md:p-6 bg-secondary-foreground/10 rounded-xl hidden sm:block">
                 <p className="text-secondary-foreground/80 mb-2 text-sm md:text-base">Besoin d'une réponse immédiate ?</p>
-                <a href="tel:0368385456" className="text-2xl md:text-3xl font-display font-bold text-primary hover:underline">
-                  03 68 38 54 56
+                <a href="tel:+33368385456" className="text-2xl md:text-3xl font-display font-bold text-primary hover:underline">
+                  +33 3 68 38 54 56
                 </a>
               </div>
             </div>
@@ -602,7 +602,7 @@ const ChariotRotatif = () => {
               ) : (
               <form className="space-y-4 md:space-y-5 overflow-hidden" onSubmit={handleFormSubmit}>
               {submitState === "error" && (
-                <p className="text-sm text-destructive bg-destructive/10 rounded-lg p-3">Une erreur est survenue lors de l'envoi. Réessayez ou appelez-nous au 03 68 38 54 56.</p>
+                <p className="text-sm text-destructive bg-destructive/10 rounded-lg p-3">Une erreur est survenue lors de l'envoi. Réessayez ou appelez-nous au +33 3 68 38 54 56.</p>
               )}
                 {/* Step 1: Produit & Entreprise */}
                 {formStep === 1 && (
@@ -955,7 +955,7 @@ const ChariotRotatif = () => {
       <footer className="bg-foreground text-background py-8 pb-24 md:pb-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">
-            EAP Location - Spécialiste BTP depuis 2016 | contact@eap-location.fr | 03 68 38 54 56
+            EAP Location - Spécialiste BTP depuis 2016 | contact@eap-location.fr | +33 3 68 38 54 56
           </p>
           <button onClick={() => (window as unknown as { __eapConsentReset?: () => void }).__eapConsentReset?.()} className="text-muted-foreground/70 hover:text-primary text-xs mt-2 underline">Gestion des cookies</button>
         </div>
@@ -964,7 +964,7 @@ const ChariotRotatif = () => {
       {/* Mobile Sticky CTA */}
       <div className="fixed bottom-0 left-0 right-0 bg-card border-t border-border p-3 flex gap-3 md:hidden z-50 shadow-lg">
         <Button variant="phone" size="lg" asChild className="flex-1">
-          <a href="tel:0368385456">
+          <a href="tel:+33368385456">
             <Phone className="w-5 h-5" />
             Appeler
           </a>
