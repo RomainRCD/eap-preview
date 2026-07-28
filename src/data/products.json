@@ -2197,5 +2197,87 @@
         "value": "MK140"
       }
     ]
+  },
+  "grue-chenilles": {
+    "name": "Grue sur chenilles",
+    "category": "manutention",
+    "spec": "50 à 600T",
+    "description": [
+      "La grue sur chenilles est la référence pour les levages lourds et les chantiers d'envergure nécessitant stabilité, mobilité sur terrain difficile et grande capacité de levage. Grâce à ses chenilles, elle se déplace chargée, sans avoir besoin d'une surface dure ou plane, ce qui en fait un outil incontournable sur les chantiers industriels, pétrochimiques, d'infrastructures et de construction lourde.",
+      "**Polyvalence tout terrain :**",
+      "- Déplacement en charge sur sol meuble, sableux ou accidenté",
+      "- Stabilité optimale sans mise en œuvre de béquilles",
+      "- Accès aux zones difficiles ou confinées inaccessibles aux grues mobiles",
+      "- Idéale pour les travaux en séries de levage sur un même site",
+      "**Capacités de levage :**",
+      "- Gamme disponible : 50T, 60T, 70T, 80T, 100T, 120T, 160T, 180T, 200T, 300T, 400T, 500T, 600T",
+      "- Flèche principale et configuration avec fléchette selon les besoins de portée",
+      "- Configurations Super-Lift et Luffing Jib disponibles sur les grandes capacités",
+      "- Hauteur de levage pouvant dépasser 150 m selon configuration",
+      "**Applications typiques :**",
+      "- Montage et démontage de structures métalliques lourdes",
+      "- Levage de charpentes, passerelles et équipements industriels",
+      "- Pose de modules et de chaudières en pétrochimie et raffinerie",
+      "- Construction de ponts, viaducs et ouvrages d'art",
+      "- Tandem lift avec une seconde grue pour charges exceptionnelles",
+      "**Étude de levage et accompagnement :**",
+      "- Analyse de votre chantier et définition du tonnage adapté",
+      "- Calcul des charges et des portées avec nos équipes techniques",
+      "- Coordination transport et manutention pour l'acheminement de la machine"
+    ],
+    "variants": [
+      {
+        "label": "50 tonnes",
+        "value": "50T"
+      },
+      {
+        "label": "60 tonnes",
+        "value": "60T"
+      },
+      {
+        "label": "70 tonnes",
+        "value": "70T"
+      },
+      {
+        "label": "80 tonnes",
+        "value": "80T"
+      },
+      {
+        "label": "100 tonnes",
+        "value": "100T"
+      },
+      {
+        "label": "120 tonnes",
+        "value": "120T"
+      },
+      {
+        "label": "160 tonnes",
+        "value": "160T"
+      },
+      {
+        "label": "180 tonnes",
+        "value": "180T"
+      },
+      {
+        "label": "200 tonnes",
+        "value": "200T"
+      },
+      {
+        "label": "300 tonnes",
+        "value": "300T"
+      },
+      {
+        "label": "400 tonnes",
+        "value": "400T"
+      },
+      {
+        "label": "500 tonnes",
+        "value": "500T"
+      },
+      {
+        "label": "600 tonnes",
+        "value": "600T"
+      }
+    ]
   }
 }
