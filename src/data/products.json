@@ -261,7 +261,7 @@
         "value": "10T"
       }
     ],
-    "name": "Dumper 1T à 10T",
+    "name": "Dumper sur pneus",
     "category": "terrassement",
     "spec": "1T à 10T",
     "description": [
@@ -925,7 +925,7 @@
       "- Chariot Télescopique Rotatif avec fourche – 32 mètres de hauteur de travail",
       "- Chariot Télescopique Rotatif avec fourche – 35 mètres de hauteur de travail",
       "- Chariot Télescopique Rotatif avec fourche – 40 mètres de hauteur de travail",
-      "Accessoires disponibles : Godet Terre, Potence, Treuil 5T, Radio Télécommande"
+      "Accessoires disponibles : Godet Terre, Potence, Treuil 5T, Radio Télécommande, Panier Nacelle"
     ]
   },
   "chariot-gros-tonnage": {
@@ -1304,7 +1304,7 @@
     ],
     "name": "Tombereau articulé",
     "category": "terrassement",
-    "spec": "Transport matériaux",
+    "spec": "25T à 40T",
     "description": [
       "Le tombereau articulé transporte de gros volumes de matériaux (terre, gravats, enrochements) sur terrains accidentés grâce à son châssis articulé et sa transmission intégrale.",
       "Idéal pour les chantiers de terrassement de masse. Location avec livraison sur chantier partout en France."
@@ -2105,15 +2105,15 @@
     ]
   },
   "nacelle-mat-chenilles": {
-    "name": "Nacelle à mât (Toucan) sur chenilles",
+    "name": "Nacelle à mât verticale sur chenilles (Toucan)",
     "category": "travail-en-hauteur",
-    "spec": "Verticale compacte sur chenilles",
+    "spec": "Location Nacelle à mât verticale sur chenilles (Toucan)",
     "description": [
-      "EAP location propose la Nacelle à mât (Toucan) sur chenilles pour vos travaux en hauteur sur terrains accidentés ou difficiles d'accès. Sa motorisation sur chenilles lui permet d'évoluer sur tous types de surfaces.",
+      "EAP location propose la Nacelle à mât verticale sur chenilles (Toucan) pour vos travaux en hauteur sur terrains accidentés ou difficiles d'accès. Sa motorisation sur chenilles lui permet d'évoluer sur tous types de surfaces.",
       "Disponibles à la location :",
-      "- Nacelle à mât sur chenilles 6 mètres",
-      "- Nacelle à mât sur chenilles 8 mètres",
-      "- Nacelle à mât sur chenilles 10 mètres"
+      "- Nacelle à mât verticale sur chenilles 6 mètres",
+      "- Nacelle à mât verticale sur chenilles 8 mètres",
+      "- Nacelle à mât verticale sur chenilles 10 mètres"
     ],
     "variants": [
       {
@@ -2189,6 +2189,61 @@
       {
         "label": "28m",
         "value": "28m"
+      }
+    ]
+  },
+  "dumper-chenilles": {
+    "name": "Dumper sur chenilles",
+    "category": "terrassement",
+    "spec": "2T5 à 20T",
+    "description": [
+      "EAP location propose le plus large choix de Dumper sur chenilles pour vos travaux de terrassement en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Dumper sur chenilles 2T5",
+      "- Dumper sur chenilles 3T5",
+      "- Dumper sur chenilles 5T",
+      "- Dumper sur chenilles 8T",
+      "- Dumper sur chenilles 10T",
+      "- Dumper sur chenilles 12T",
+      "- Dumper sur chenilles 15T",
+      "- Dumper sur chenilles 17T",
+      "- Dumper sur chenilles 20T"
+    ],
+    "variants": [
+      {
+        "label": "2T5",
+        "value": "2T5"
+      },
+      {
+        "label": "3T5",
+        "value": "3T5"
+      },
+      {
+        "label": "5T",
+        "value": "5T"
+      },
+      {
+        "label": "8T",
+        "value": "8T"
+      },
+      {
+        "label": "10T",
+        "value": "10T"
+      },
+      {
+        "label": "12T",
+        "value": "12T"
+      },
+      {
+        "label": "15T",
+        "value": "15T"
+      },
+      {
+        "label": "17T",
+        "value": "17T"
+      },
+      {
+        "label": "20T",
+        "value": "20T"
       }
     ]
   }
