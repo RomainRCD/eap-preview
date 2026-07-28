@@ -889,12 +889,31 @@
   "mini-grue-chenilles": {
     "name": "Mini grue télescopique sur chenilles",
     "category": "manutention",
-    "spec": "5T-20m à 8T-26m",
+    "spec": "3T-10M à 8T-26M",
     "description": [
-      "EAP location propose le plus large choix de mini grue araignée en France. Sur notre site vous retrouverez disponible à la location des mini grue télescopique pouvant aller jusqu’à 26 mètres de hauteur de travail.",
+      "EAP location propose le plus large choix de mini grue télescopique sur chenilles en France. Sur notre site vous retrouverez disponible à la location des mini grue télescopique pouvant aller jusqu'à 26 mètres de hauteur de travail.",
+      "- Mini grue télescopique de 3T – 10M",
       "- Mini grue télescopique de 5T – 20M",
-      "- Mini grue télescopique de 6T – 22M",
+      "- Mini grue télescopique de 6T – 20M",
       "- Mini grue télescopique de 8T – 26M"
+    ],
+    "variants": [
+      {
+        "label": "Capacité",
+        "value": "3T — 10M"
+      },
+      {
+        "label": "Capacité",
+        "value": "5T — 20M"
+      },
+      {
+        "label": "Capacité",
+        "value": "6T — 20M"
+      },
+      {
+        "label": "Capacité",
+        "value": "8T — 26M"
+      }
     ]
   },
   "mini-grue-araignee": {
