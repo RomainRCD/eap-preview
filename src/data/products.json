@@ -2,6 +2,10 @@
   "groupe-electrogene": {
     "variants": [
       {
+        "label": "3kVA",
+        "value": "3kVA"
+      },
+      {
         "label": "5kVA",
         "value": "5kVA"
       },
@@ -56,9 +60,10 @@
     ],
     "name": "Groupe électrogène",
     "category": "autres",
-    "spec": "5kVA à +150kVA",
+    "spec": "3kVA à +150kVA",
     "description": [
       "EAP location propose le plus large choix de groupes électrogènes pour alimenter vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Groupe électrogène 3kVA",
       "- Groupe électrogène 5kVA",
       "- Groupe électrogène 10kVA",
       "- Groupe électrogène 15kVA",
@@ -79,6 +84,10 @@
       {
         "label": "2500L",
         "value": "2500L"
+      },
+      {
+        "label": "3000L",
+        "value": "3000L"
       },
       {
         "label": "5000L",
@@ -103,15 +112,16 @@
     ],
     "name": "Compresseur d'air",
     "category": "autres",
-    "spec": "Mobile chantier",
+    "spec": "2500L à 21000L",
     "description": [
-      "EAP location propose le plus large choix de compresseur d’air pour alimenter vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
-      "- Compresseur d’air 2500L",
-      "- Compresseur d’air 5000L",
-      "- Compresseur d’air 7000L",
-      "- Compresseur d’air 10000L",
-      "- Compresseur d’air 14000L",
-      "- Compresseur d’air 21000L"
+      "EAP location propose le plus large choix de compresseur d'air pour alimenter vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Compresseur d'air 2500L",
+      "- Compresseur d'air 3000L",
+      "- Compresseur d'air 5000L",
+      "- Compresseur d'air 7000L",
+      "- Compresseur d'air 10000L",
+      "- Compresseur d'air 14000L",
+      "- Compresseur d'air 21000L"
     ]
   },
   "pompe-eau": {
@@ -144,21 +154,17 @@
   "eclairage": {
     "variants": [
       {
-        "label": "Mât LED remorque",
-        "value": "Mât LED remorque"
+        "label": "Mât d'éclairage sur SKID",
+        "value": "Mât d'éclairage sur SKID"
       },
       {
-        "label": "Ballon éclairant",
-        "value": "Ballon éclairant"
-      },
-      {
-        "label": "Projecteur autonome",
-        "value": "Projecteur autonome"
+        "label": "Mât d'éclairage sur REMORQUE",
+        "value": "Mât d'éclairage sur REMORQUE"
       }
     ],
     "name": "Mât d'éclairage",
     "category": "autres",
-    "spec": "Mât d'éclairage",
+    "spec": "Sur skid ou sur remorque",
     "description": [
       "Mâts et tours d'éclairage pour travailler en sécurité de nuit ou en espace sombre : ballons éclairants, mâts LED sur remorque, projecteurs autonomes.",
       "Autonomie adaptée aux postes de nuit, location courte ou longue durée."
@@ -1157,13 +1163,33 @@
       {
         "label": "25T",
         "value": "25T"
+      },
+      {
+        "label": "30T",
+        "value": "30T"
+      },
+      {
+        "label": "45T",
+        "value": "45T"
+      },
+      {
+        "label": "50T",
+        "value": "50T"
+      },
+      {
+        "label": "60T",
+        "value": "60T"
+      },
+      {
+        "label": "65T",
+        "value": "65T"
       }
     ],
     "name": "Pelle sur chenilles",
     "category": "terrassement",
-    "spec": "De 10T à 25T",
+    "spec": "De 10T à 65T",
     "description": [
-      "EAP location propose le plus large choix de pelle sur chenilles en France. Nous sommes à proximité de vos chantiers dans toute la France grâce à notre réseau de partenaires. Sur notre site vous retrouverez disponible à la location des pelles sur chenilles pouvant aller jusqu’à 25 tonnes.",
+      "EAP location propose le plus large choix de pelle sur chenilles en France. Nous sommes à proximité de vos chantiers dans toute la France grâce à notre réseau de partenaires. Sur notre site vous retrouverez disponible à la location des pelles sur chenilles pouvant aller jusqu'à 65 tonnes.",
       "Les disponibilités et caractéristiques de nos pelles sur chenilles :",
       "- Pelle sur chenilles 10t",
       "- Pelle sur chenilles 14t",
@@ -1171,7 +1197,12 @@
       "- Pelle sur chenilles 18t",
       "- Pelle sur chenilles 20t",
       "- Pelle sur chenilles 22t",
-      "- Pelle sur chenilles 25t"
+      "- Pelle sur chenilles 25t",
+      "- Pelle sur chenilles 30t",
+      "- Pelle sur chenilles 45t",
+      "- Pelle sur chenilles 50t",
+      "- Pelle sur chenilles 60t",
+      "- Pelle sur chenilles 65t"
     ]
   },
   "pelle-pneus": {
