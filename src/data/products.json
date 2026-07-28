@@ -349,7 +349,7 @@
     ],
     "name": "Bungalow Bureau",
     "category": "base-vie",
-    "spec": "Bureau, réfectoire",
+    "spec": "Module de 6m bureau",
     "description": [
       "EAP location propose le plus large choix de Bungalow en France. Vous retrouverez un grand nombre de choix de dispositions pour les bungalows comme réfectoire, vestiaire, bureau ou encore salle de réunion pouvant accueillir jusqu’à 200 personnes.",
       "- Bungalow de 6 personnes.",
@@ -423,7 +423,7 @@
     ],
     "name": "Sanitaire mobile",
     "category": "base-vie",
-    "spec": "WC, douche",
+    "spec": "1 WC à 4 douches",
     "description": [
       "EAP location propose le plus large choix de matériel base vie. Sur notre site vous retrouverez disponible à la location :",
       "- Bungalow 1 WC raccordable.",
@@ -865,7 +865,7 @@
       "- Chariot Télescopique fixe avec fourche – 14 mètres de hauteur de travail",
       "- Chariot Télescopique fixe avec fourche – 17 mètres de hauteur de travail",
       "- Chariot Télescopique fixe avec fourche – 18 mètres de hauteur de travail",
-      "Accessoires disponibles : Godet Terre et Potence"
+      "Accessoires disponibles : Godet Terre, Potence courte, Potence longue, Rallonge de fourches"
     ],
     "variants": [
       {
@@ -2244,6 +2244,32 @@
       {
         "label": "20T",
         "value": "20T"
+      }
+    ]
+  },
+  "grue-mobile-mk": {
+    "name": "Grue mobile MK",
+    "category": "manutention",
+    "spec": "MK88 à MK140",
+    "description": [
+      "EAP location propose la location de grues mobiles MK dans toute la France en préconisant la proximité de votre chantier. Sur notre site vous retrouverez disponible à la location des grues mobiles MK avec une capacité de levage adaptée à vos besoins de chantier.",
+      "Les disponibilités et caractéristiques de nos grues mobiles MK :",
+      "- Grue mobile MK88.",
+      "- Grue mobile MK110.",
+      "- Grue mobile MK140."
+    ],
+    "variants": [
+      {
+        "label": "Modèle",
+        "value": "MK88"
+      },
+      {
+        "label": "Modèle",
+        "value": "MK110"
+      },
+      {
+        "label": "Modèle",
+        "value": "MK140"
       }
     ]
   }
