@@ -483,16 +483,36 @@
   "refectoire": {
     "variants": [
       {
+        "label": "4 pers.",
+        "value": "4 pers."
+      },
+      {
+        "label": "6 pers.",
+        "value": "6 pers."
+      },
+      {
         "label": "8 pers.",
         "value": "8 pers."
+      },
+      {
+        "label": "10 pers.",
+        "value": "10 pers."
       },
       {
         "label": "12 pers.",
         "value": "12 pers."
       },
       {
+        "label": "14 pers.",
+        "value": "14 pers."
+      },
+      {
         "label": "16 pers.",
         "value": "16 pers."
+      },
+      {
+        "label": "18 pers.",
+        "value": "18 pers."
       },
       {
         "label": "20 pers.",
@@ -501,7 +521,7 @@
     ],
     "name": "Bungalow Réfectoire",
     "category": "base-vie",
-    "spec": "Cuisine équipée",
+    "spec": "4 à 20 personnes",
     "description": [
       "Bungalow réfectoire équipé pour les repas de vos équipes : tables, bancs, réchauffe-plats, réfrigérateur, chauffage. Conforme au Code du travail.",
       "Plusieurs capacités disponibles, location toute durée avec livraison et pose."
@@ -510,17 +530,45 @@
   "bureau": {
     "variants": [
       {
-        "label": "Standard 15m²",
-        "value": "Standard 15m²"
+        "label": "4 pers.",
+        "value": "4 pers."
       },
       {
-        "label": "Double 30m²",
-        "value": "Double 30m²"
+        "label": "6 pers.",
+        "value": "6 pers."
+      },
+      {
+        "label": "8 pers.",
+        "value": "8 pers."
+      },
+      {
+        "label": "10 pers.",
+        "value": "10 pers."
+      },
+      {
+        "label": "12 pers.",
+        "value": "12 pers."
+      },
+      {
+        "label": "14 pers.",
+        "value": "14 pers."
+      },
+      {
+        "label": "16 pers.",
+        "value": "16 pers."
+      },
+      {
+        "label": "18 pers.",
+        "value": "18 pers."
+      },
+      {
+        "label": "20 pers.",
+        "value": "20 pers."
       }
     ],
-    "name": "Bureau de chantier",
+    "name": "Bungalow de réunion",
     "category": "base-vie",
-    "spec": "Espace travail",
+    "spec": "4 à 20 personnes",
     "description": [
       "Bungalow bureau de chantier pour vos réunions et le pilotage des travaux : bureau, chaises, rangements, éclairage, chauffage et climatisation selon modèles.",
       "Location toute durée, livraison, pose et raccordement sur demande."
@@ -671,7 +719,7 @@
     ],
     "name": "Rouleau vibrant monocylindre",
     "category": "compactage",
-    "spec": "4T à 15T",
+    "spec": "V1 à V5 + PDM",
     "description": [
       "EAP location propose le plus large choix de compacteur monocylindre en France. Sur notre site vous retrouverez à la location des compacteurs monocylindres jusqu’à 23 tonnes",
       "Les disponibilités et caractéristiques de nos compacteurs monocylindres :",
@@ -757,11 +805,15 @@
       {
         "label": "80kg",
         "value": "80kg"
+      },
+      {
+        "label": "90kg",
+        "value": "90kg"
       }
     ],
     "name": "Pilonneuse",
     "category": "compactage",
-    "spec": "Tranchées",
+    "spec": "60kg à 90kg",
     "description": [
       "La pilonneuse (pilon sauteur) compacte les sols cohésifs en espaces réduits : fonds de tranchée, abords de fondations, remblais localisés.",
       "Légère et maniable, elle passe partout où les rouleaux ne passent pas."
@@ -889,7 +941,7 @@
       "- Chariot Télescopique fixe avec fourche – 14 mètres de hauteur de travail",
       "- Chariot Télescopique fixe avec fourche – 17 mètres de hauteur de travail",
       "- Chariot Télescopique fixe avec fourche – 18 mètres de hauteur de travail",
-      "Accessoires disponibles : Godet Terre, Potence courte, Potence longue, Rallonge de fourches"
+      "Accessoires disponibles : Potence courte, Potence longue, Rallonge de fourches, Godet"
     ],
     "variants": [
       {
@@ -2284,15 +2336,15 @@
     ],
     "variants": [
       {
-        "label": "Modèle",
+        "label": "MK",
         "value": "MK88"
       },
       {
-        "label": "Modèle",
+        "label": "MK",
         "value": "MK110"
       },
       {
-        "label": "Modèle",
+        "label": "MK",
         "value": "MK140"
       }
     ]
