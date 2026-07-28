@@ -82,6 +82,10 @@
   "compresseur": {
     "variants": [
       {
+        "label": "3000L",
+        "value": "3000L"
+      },
+      {
         "label": "2500L",
         "value": "2500L"
       },
@@ -110,13 +114,14 @@
     "category": "autres",
     "spec": "Mobile chantier",
     "description": [
-      "EAP location propose le plus large choix de compresseur d’air pour alimenter vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
-      "- Compresseur d’air 2500L",
-      "- Compresseur d’air 5000L",
-      "- Compresseur d’air 7000L",
-      "- Compresseur d’air 10000L",
-      "- Compresseur d’air 14000L",
-      "- Compresseur d’air 21000L"
+      "EAP location propose le plus large choix de compresseur d'air pour alimenter vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Compresseur d'air 3000L",
+      "- Compresseur d'air 2500L",
+      "- Compresseur d'air 5000L",
+      "- Compresseur d'air 7000L",
+      "- Compresseur d'air 10000L",
+      "- Compresseur d'air 14000L",
+      "- Compresseur d'air 21000L"
     ]
   },
   "pompe-eau": {
