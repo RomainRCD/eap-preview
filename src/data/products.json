@@ -2191,5 +2191,60 @@
         "value": "28m"
       }
     ]
+  },
+  "dumper-chenilles": {
+    "name": "Dumper sur chenilles",
+    "category": "terrassement",
+    "spec": "2T5 à 20T",
+    "description": [
+      "EAP location propose le plus large choix de Dumper sur chenilles pour vos travaux de terrassement en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Dumper sur chenilles 2T5",
+      "- Dumper sur chenilles 3T5",
+      "- Dumper sur chenilles 5T",
+      "- Dumper sur chenilles 8T",
+      "- Dumper sur chenilles 10T",
+      "- Dumper sur chenilles 12T",
+      "- Dumper sur chenilles 15T",
+      "- Dumper sur chenilles 17T",
+      "- Dumper sur chenilles 20T"
+    ],
+    "variants": [
+      {
+        "label": "2T5",
+        "value": "2T5"
+      },
+      {
+        "label": "3T5",
+        "value": "3T5"
+      },
+      {
+        "label": "5T",
+        "value": "5T"
+      },
+      {
+        "label": "8T",
+        "value": "8T"
+      },
+      {
+        "label": "10T",
+        "value": "10T"
+      },
+      {
+        "label": "12T",
+        "value": "12T"
+      },
+      {
+        "label": "15T",
+        "value": "15T"
+      },
+      {
+        "label": "17T",
+        "value": "17T"
+      },
+      {
+        "label": "20T",
+        "value": "20T"
+      }
+    ]
   }
 }
