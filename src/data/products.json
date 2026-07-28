@@ -1111,13 +1111,25 @@
       {
         "label": "18T",
         "value": "18T"
+      },
+      {
+        "label": "20T",
+        "value": "20T"
+      },
+      {
+        "label": "25T",
+        "value": "25T"
+      },
+      {
+        "label": "40T",
+        "value": "40T"
       }
     ],
     "name": "Pelle sur pneus",
     "category": "terrassement",
-    "spec": "De 5T à 18T",
+    "spec": "De 5T à 40T",
     "description": [
-      "EAP location propose le plus large choix de pelle sur pneus en France. Nous sommes à proximité de vos chantiers dans toute la France grâce à notre réseau de partenaires. Sur notre site vous retrouverez disponible à la location des pelles sur pneus pouvant aller jusqu’à 18 tonnes.",
+      "EAP location propose le plus large choix de pelle sur pneus en France. Nous sommes à proximité de vos chantiers dans toute la France grâce à notre réseau de partenaires. Sur notre site vous retrouverez disponible à la location des pelles sur pneus pouvant aller jusqu'à 40 tonnes.",
       "Les disponibilités et caractéristiques de nos pelles sur pneus :",
       "- Pelle sur pneus – 5 tonnes",
       "- Pelle sur pneus – 8 tonnes",
@@ -1125,7 +1137,10 @@
       "- Pelle sur pneus – 12 tonnes",
       "- Pelle sur pneus – 14 tonnes",
       "- Pelle sur pneus – 16 tonnes",
-      "- Pelle sur pneus – 18 tonnes"
+      "- Pelle sur pneus – 18 tonnes",
+      "- Pelle sur pneus – 20 tonnes",
+      "- Pelle sur pneus – 25 tonnes",
+      "- Pelle sur pneus – 40 tonnes"
     ]
   },
   "chargeuse-pneus": {
@@ -2296,6 +2311,51 @@
       {
         "label": "600 tonnes",
         "value": "600T"
+      }
+    ]
+  },
+  "grue-electrique": {
+    "name": "Grue électrique",
+    "category": "manutention",
+    "spec": "5 à 40T",
+    "description": [
+      "La grue électrique est la solution idéale pour les chantiers en milieu urbain ou en espace confiné, où les émissions sonores et les gaz d'échappement sont à limiter.",
+      "Fonctionnement 100 % électrique, zéro émission directe — adaptée aux chantiers en intérieur, zones sensibles ou réglementations environnementales strictes.",
+      "Capacités de 5 à 40 tonnes pour répondre aux besoins de levage des chantiers de construction, de rénovation industrielle et de manutention lourde.",
+      "- Fonctionnement silencieux adapté aux zones résidentielles et chantiers nocturnes",
+      "- Zéro émission directe — conformité aux zones ZFE et chantiers verts",
+      "- Précision de levage et régularité de vitesse grâce à la motorisation électrique",
+      "- Faibles coûts d'exploitation et d'entretien",
+      "- Disponible en plusieurs configurations selon la hauteur et le rayon de travail"
+    ],
+    "variants": [
+      {
+        "label": "Capacité",
+        "value": "5T"
+      },
+      {
+        "label": "Capacité",
+        "value": "10T"
+      },
+      {
+        "label": "Capacité",
+        "value": "15T"
+      },
+      {
+        "label": "Capacité",
+        "value": "20T"
+      },
+      {
+        "label": "Capacité",
+        "value": "25T"
+      },
+      {
+        "label": "Capacité",
+        "value": "30T"
+      },
+      {
+        "label": "Capacité",
+        "value": "40T"
       }
     ]
   }
