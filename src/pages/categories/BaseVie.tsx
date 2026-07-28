@@ -9,7 +9,7 @@ import { categoryProducts } from "@/data/products";
 const BaseVie = () => {
   // Vignettes pilotées par products.json — l'ordre historique est conservé,
   // les nouveaux produits de la catégorie apparaissent automatiquement à la suite.
-  const products = categoryProducts("base-vie", ["bungalow", "roulotte", "sanitaire", "vestiaire", "refectoire", "bureau", "local-technique", "container"]);
+  const products = categoryProducts("base-vie", ["bungalow", "roulotte", "sanitaire", "vestiaire", "refectoire", "bureau", "container"]);
 
   return (
     <PageLayout>

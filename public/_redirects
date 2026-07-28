@@ -58,8 +58,8 @@
 /nacelle-telescopique-sur-chenilles/ /travail-en-hauteur/nacelle-telescopique 301
 /nacelle-mat-vertical-toucan-v2 /travail-en-hauteur/nacelle-mat 301
 /nacelle-mat-vertical-toucan-v2/ /travail-en-hauteur/nacelle-mat 301
-/nacelle-mat-vertical-manuel-v2 /travail-en-hauteur/pir-pirl 301
-/nacelle-mat-vertical-manuel-v2/ /travail-en-hauteur/pir-pirl 301
+/nacelle-mat-vertical-manuel-v2 /travail-en-hauteur 301
+/nacelle-mat-vertical-manuel-v2/ /travail-en-hauteur 301
 /nacelle-araignee-bi-energie-v2 /travail-en-hauteur/nacelle-araignee 301
 /nacelle-araignee-bi-energie-v2/ /travail-en-hauteur/nacelle-araignee 301
 /nacelle-ciseaux-diesel /travail-en-hauteur/nacelle-ciseaux-diesel 301
@@ -140,10 +140,28 @@
 /barriere-de-police/ /autres/barriere-police 301
 /politique-de-confidentialite /mentions-legales 301
 /politique-de-confidentialite/ /mentions-legales 301
-/* /index.html 200
 # --- URLs de l'ancien site WP encore ciblées par Google Ads (audit 22/07/26) ---
 /home/elevateur-mecanique-de-charge /travail-en-hauteur/monte-materiaux 301
 /home/elevateur-mecanique-de-charge/ /travail-en-hauteur/monte-materiaux 301
 # Produit retiré du catalogue (22/07/26)
 /autres/marteau-piqueur /autres 301
 /autres/marteau-piqueur/ /autres 301
+
+# Fiches produits supprimées (28/07/26)
+/travail-en-hauteur/pir-pirl /travail-en-hauteur 301
+/travail-en-hauteur/pir-pirl/ /travail-en-hauteur 301
+/autres/pompe-eau /autres 301
+/autres/pompe-eau/ /autres 301
+/autres/betonniere /autres 301
+/autres/betonniere/ /autres 301
+/autres/broyeur /autres 301
+/autres/broyeur/ /autres 301
+/autres/decoupeuse /autres 301
+/autres/decoupeuse/ /autres 301
+/autres/aspirateur /autres 301
+/autres/aspirateur/ /autres 301
+/base-vie/local-technique /base-vie/container 301
+/base-vie/local-technique/ /base-vie/container 301
+
+# Fallback SPA — DOIT rester la DERNIÈRE règle (première correspondance gagne)
+/* /index.html 200
