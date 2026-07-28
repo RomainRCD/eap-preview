@@ -805,11 +805,15 @@
       {
         "label": "80kg",
         "value": "80kg"
+      },
+      {
+        "label": "90kg",
+        "value": "90kg"
       }
     ],
     "name": "Pilonneuse",
     "category": "compactage",
-    "spec": "Tranchées",
+    "spec": "60kg à 90kg",
     "description": [
       "La pilonneuse (pilon sauteur) compacte les sols cohésifs en espaces réduits : fonds de tranchée, abords de fondations, remblais localisés.",
       "Légère et maniable, elle passe partout où les rouleaux ne passent pas."
