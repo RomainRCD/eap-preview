@@ -154,21 +154,17 @@
   "eclairage": {
     "variants": [
       {
-        "label": "Mât LED remorque",
-        "value": "Mât LED remorque"
+        "label": "Mât d'éclairage sur SKID",
+        "value": "Mât d'éclairage sur SKID"
       },
       {
-        "label": "Ballon éclairant",
-        "value": "Ballon éclairant"
-      },
-      {
-        "label": "Projecteur autonome",
-        "value": "Projecteur autonome"
+        "label": "Mât d'éclairage sur REMORQUE",
+        "value": "Mât d'éclairage sur REMORQUE"
       }
     ],
     "name": "Mât d'éclairage",
     "category": "autres",
-    "spec": "Mât d'éclairage",
+    "spec": "Sur skid ou sur remorque",
     "description": [
       "Mâts et tours d'éclairage pour travailler en sécurité de nuit ou en espace sombre : ballons éclairants, mâts LED sur remorque, projecteurs autonomes.",
       "Autonomie adaptée aux postes de nuit, location courte ou longue durée."
