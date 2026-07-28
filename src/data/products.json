@@ -2366,5 +2366,37 @@
         "value": "40T"
       }
     ]
+  },
+  "robot-pose": {
+    "name": "Robot de pose",
+    "category": "manutention",
+    "spec": "280 kg à 1 000 kg",
+    "variants": [
+      {
+        "label": "280 kg",
+        "value": "280KG"
+      },
+      {
+        "label": "380 kg",
+        "value": "380KG"
+      },
+      {
+        "label": "600 kg",
+        "value": "600KG"
+      },
+      {
+        "label": "1 000 kg",
+        "value": "1000KG"
+      }
+    ],
+    "description": [
+      "EAP Location propose des robots de pose télécommandés pour la manutention et la mise en œuvre de charges lourdes sur chantier : pavés, bordures, blocs, buses, dalles préfabriquées. Idéal pour soulager les équipes et gagner en précision sur les travaux de voirie, réseaux et aménagements extérieurs.",
+      "Capacités disponibles à la location :",
+      "- Robot de pose 280 kg",
+      "- Robot de pose 380 kg",
+      "- Robot de pose 600 kg",
+      "- Robot de pose 1 000 kg",
+      "Contactez-nous pour un devis adapté à votre chantier."
+    ]
   }
 }
