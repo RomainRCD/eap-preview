@@ -2335,11 +2335,19 @@
       },
       {
         "label": "Capacité",
+        "value": "8T"
+      },
+      {
+        "label": "Capacité",
         "value": "10T"
       },
       {
         "label": "Capacité",
-        "value": "15T"
+        "value": "12T"
+      },
+      {
+        "label": "Capacité",
+        "value": "16T"
       },
       {
         "label": "Capacité",
