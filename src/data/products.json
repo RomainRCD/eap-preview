@@ -2470,5 +2470,32 @@
         "value": "Double cabine"
       }
     ]
+  },
+  "fourgon-hayon": {
+    "name": "Fourgon Hayon",
+    "category": "autres",
+    "spec": "12 m³ / 14 m³ / 20 m³ — Hayon élévateur",
+    "description": [
+      "Le fourgon hayon est la solution idéale pour le transport et la livraison de charges lourdes sur chantier ou en milieu urbain.",
+      "Équipé d'un hayon élévateur, il facilite le chargement et déchargement sans manutention manuelle excessive, réduisant les risques et gagnant du temps.",
+      "Disponible en trois volumes de caisse :",
+      "- 12 m³ : compact et maniable, adapté aux livraisons en centre-ville",
+      "- 14 m³ : polyvalent, bon compromis entre volume et accessibilité",
+      "- 20 m³ : grand volume pour les chantiers nécessitant des apports importants de matériaux ou matériels"
+    ],
+    "variants": [
+      {
+        "label": "12 m³",
+        "value": "12m3"
+      },
+      {
+        "label": "14 m³",
+        "value": "14m3"
+      },
+      {
+        "label": "20 m³",
+        "value": "20m3"
+      }
+    ]
   }
 }
