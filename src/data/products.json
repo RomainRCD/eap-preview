@@ -2444,8 +2444,8 @@
   },
   "camion-benne-3t5": {
     "name": "Camion benne 3,5 t",
-    "category": "terrassement",
-    "spec": "PTAC 3,5 t — Simple ou double cabine",
+    "category": "autres",
+    "spec": "Simple ou double cabine",
     "description": [
       "Le camion benne 3,5 t est la solution idéale pour l'évacuation rapide de déblais, gravats, terres et matériaux sur les chantiers de taille intermédiaire. Accessible avec le permis B, il offre une grande souplesse d'utilisation en milieu urbain ou sur site contraint.",
       "**Caractéristiques techniques :**",
@@ -2468,6 +2468,33 @@
       {
         "label": "Cabine",
         "value": "Double cabine"
+      }
+    ]
+  },
+  "fourgon-hayon": {
+    "name": "Fourgon Hayon",
+    "category": "autres",
+    "spec": "12 m³ / 14 m³ / 20 m³ — Hayon élévateur",
+    "description": [
+      "Le fourgon hayon est la solution idéale pour le transport et la livraison de charges lourdes sur chantier ou en milieu urbain.",
+      "Équipé d'un hayon élévateur, il facilite le chargement et déchargement sans manutention manuelle excessive, réduisant les risques et gagnant du temps.",
+      "Disponible en trois volumes de caisse :",
+      "- 12 m³ : compact et maniable, adapté aux livraisons en centre-ville",
+      "- 14 m³ : polyvalent, bon compromis entre volume et accessibilité",
+      "- 20 m³ : grand volume pour les chantiers nécessitant des apports importants de matériaux ou matériels"
+    ],
+    "variants": [
+      {
+        "label": "12 m³",
+        "value": "12m3"
+      },
+      {
+        "label": "14 m³",
+        "value": "14m3"
+      },
+      {
+        "label": "20 m³",
+        "value": "20m3"
       }
     ]
   }
