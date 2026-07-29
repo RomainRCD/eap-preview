@@ -1790,7 +1790,7 @@
         "value": "12m"
       }
     ],
-    "name": "Nacelle à mat verticale (toucan)",
+    "name": "Nacelle à mât verticale sur chenilles (Toucan)",
     "category": "travail-en-hauteur",
     "spec": "5M à 12M",
     "description": [
@@ -2439,6 +2439,35 @@
       {
         "label": "Capacité",
         "value": "80T"
+      }
+    ]
+  },
+  "camion-benne-3t5": {
+    "name": "Camion benne 3,5 t",
+    "category": "terrassement",
+    "spec": "PTAC 3,5 t — Simple ou double cabine",
+    "description": [
+      "Le camion benne 3,5 t est la solution idéale pour l'évacuation rapide de déblais, gravats, terres et matériaux sur les chantiers de taille intermédiaire. Accessible avec le permis B, il offre une grande souplesse d'utilisation en milieu urbain ou sur site contraint.",
+      "**Caractéristiques techniques :**",
+      "- PTAC : 3,5 t",
+      "- Benne basculante hydraulique",
+      "- Hayon arrière rabattable",
+      "- Permis B suffisant",
+      "- Disponible en simple cabine ou double cabine (5 places)",
+      "**Points forts :**",
+      "- Maniable et compact pour accéder aux chantiers en zone urbaine",
+      "- Chargement facile grâce au hayon bas",
+      "- Double cabine : transport de l'équipe et du matériel en un seul véhicule",
+      "- Adapté aux chantiers de terrassement, démolition, VRD et aménagements extérieurs"
+    ],
+    "variants": [
+      {
+        "label": "Cabine",
+        "value": "Simple cabine"
+      },
+      {
+        "label": "Cabine",
+        "value": "Double cabine"
       }
     ]
   }
