@@ -2463,11 +2463,7 @@
     "variants": [
       {
         "label": "Cabine",
-        "value": "Simple cabine"
-      },
-      {
-        "label": "Cabine",
-        "value": "Double cabine"
+        "value": "Simple cabine / Double cabine"
       }
     ]
   },
