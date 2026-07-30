@@ -789,7 +789,7 @@
     "category": "manutention",
     "spec": "4x2 ou 4x4, 2T à 5T",
     "description": [
-      "EAP location propose le plus large choix de chariot tout terrain en France. Sur notre site vous retrouverez disponible à la location des chariots tout terrain avec 4 roues motrices ou 2 roues motrices avec une capacité de levage pouvant aller jusqu’à 5 tonnes.",
+      "EAP location propose le plus large choix de chariot tout terrain en France. Sur notre site vous retrouverez disponible à la location des chariots tout terrain avec 4 roues motrices ou 2 roues motrices avec une capacité de levage pouvant aller jusqu'à 5 tonnes.",
       "Les disponibilités et caractéristiques de nos chariots :",
       "- Chariot tout terrain 4X2 de 2 tonnes",
       "- Chariot tout terrain 4X4 de 2 tonnes",
@@ -797,7 +797,13 @@
       "- Chariot tout terrain 4X4 de 3 tonnes",
       "- Chariot tout terrain 4X4 de 3,5 tonnes",
       "- Chariot tout terrain 4X4 de 4 tonnes",
-      "- Chariot tout terrain 4X4 de 5 tonnes"
+      "- Chariot tout terrain 4X4 de 5 tonnes",
+      "Des accessoires sont disponibles en option pour compléter votre location :",
+      "- Rallonge de fourches 1,80 m",
+      "- Rallonge de fourches 2,00 m",
+      "- Rallonge de fourches 2,20 m",
+      "- Rallonge de fourches 2,40 m",
+      "- Tête rotative"
     ]
   },
   "chariot-telescopique": {
