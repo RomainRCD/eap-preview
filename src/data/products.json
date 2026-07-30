@@ -747,14 +747,20 @@
     "category": "manutention",
     "spec": "1,5T à 8T",
     "description": [
-      "EAP location propose le plus large choix de chariot industriel électrique en France. Sur notre site vous retrouverez disponible à la location des chariots industriels électrique avec une capacité de levage pouvant aller jusqu’à 6 tonnes.",
+      "EAP location propose le plus large choix de chariot industriel électrique en France. Sur notre site vous retrouverez disponible à la location des chariots industriels électrique avec une capacité de levage pouvant aller jusqu'à 6 tonnes.",
       "Les disponibilités et caractéristiques de nos chariots :",
       "- Chariot Industriel électrique de 1,5 tonnes",
       "- Chariot Industriel électrique de 2,5 tonnes",
       "- Chariot Industriel électrique de 3,5 tonnes",
       "- Chariot Industriel électrique de 5 tonnes",
       "- Chariot Industriel électrique de 6 tonnes",
-      "- Chariot Industriel électrique de 8 tonnes"
+      "- Chariot Industriel électrique de 8 tonnes",
+      "Des accessoires sont disponibles en option pour compléter votre location :",
+      "- Rallonge de fourches 1,80 m",
+      "- Rallonge de fourches 2,00 m",
+      "- Rallonge de fourches 2,20 m",
+      "- Rallonge de fourches 2,40 m",
+      "- Tête rotative"
     ]
   },
   "chariot-semi-industriel": {
