@@ -699,7 +699,7 @@
     "category": "manutention",
     "spec": "1,5T à 16T",
     "description": [
-      "EAP location propose le plus large choix de chariot industriel diesel en France. Sur notre site vous retrouverez disponible à la location des chariots industriels diesel avec une capacité de levage pouvant aller jusqu’à 16 tonnes.",
+      "EAP location propose le plus large choix de chariot industriel diesel en France. Sur notre site vous retrouverez disponible à la location des chariots industriels diesel avec une capacité de levage pouvant aller jusqu'à 16 tonnes.",
       "Les disponibilités et caractéristiques de nos chariots :",
       "- Chariot Industriel diesel de 1,5 tonnes",
       "- Chariot Industriel diesel de 2,5 tonnes",
@@ -709,7 +709,13 @@
       "- Chariot Industriel diesel de 10 tonnes",
       "- Chariot Industriel diesel de 12 tonnes",
       "- Chariot Industriel diesel de 14 tonnes",
-      "- Chariot Industriel diesel de 16 tonnes"
+      "- Chariot Industriel diesel de 16 tonnes",
+      "Des accessoires sont disponibles en option pour compléter votre location :",
+      "- Rallonge de fourches 1,80 m",
+      "- Rallonge de fourches 2,00 m",
+      "- Rallonge de fourches 2,20 m",
+      "- Rallonge de fourches 2,40 m",
+      "- Tête rotative"
     ]
   },
   "chariot-industriel-gaz": {
