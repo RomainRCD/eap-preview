@@ -2141,6 +2141,18 @@
       {
         "label": "5 T",
         "value": "5T"
+      },
+      {
+        "label": "Marteau BHB",
+        "value": "marteau-bhb"
+      },
+      {
+        "label": "Cisaille à béton",
+        "value": "cisaille-beton"
+      },
+      {
+        "label": "Fraise hydraulique",
+        "value": "fraise-hydraulique"
       }
     ],
     "description": [
