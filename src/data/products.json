@@ -1114,6 +1114,42 @@
       {
         "label": "65T",
         "value": "65T"
+      },
+      {
+        "label": "Pince de tri",
+        "value": "Pince de tri"
+      },
+      {
+        "label": "BRH",
+        "value": "BRH"
+      },
+      {
+        "label": "Tarière",
+        "value": "Tarière"
+      },
+      {
+        "label": "Croc à Béton",
+        "value": "Croc à Béton"
+      },
+      {
+        "label": "Cisaille Fer",
+        "value": "Cisaille Fer"
+      },
+      {
+        "label": "Broyeur Béton Godet carrière",
+        "value": "Broyeur Béton Godet carrière"
+      },
+      {
+        "label": "Carrière Trapeze",
+        "value": "Carrière Trapeze"
+      },
+      {
+        "label": "Godet Concasseur",
+        "value": "Godet Concasseur"
+      },
+      {
+        "label": "Fraise",
+        "value": "Fraise"
       }
     ],
     "name": "Pelle sur chenilles",
@@ -1133,7 +1169,8 @@
       "- Pelle sur chenilles 45t",
       "- Pelle sur chenilles 50t",
       "- Pelle sur chenilles 60t",
-      "- Pelle sur chenilles 65t"
+      "- Pelle sur chenilles 65t",
+      "Accessoires disponibles : Pince de tri, BRH, Tarière, Croc à Béton, Cisaille Fer, Broyeur Béton Godet carrière, Carrière Trapeze, Godet Concasseur, Fraise"
     ]
   },
   "pelle-pneus": {
