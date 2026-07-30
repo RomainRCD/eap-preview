@@ -1296,6 +1296,10 @@
       {
         "label": "6T / 600L",
         "value": "6T / 600L"
+      },
+      {
+        "label": "Fourches",
+        "value": "Fourches"
       }
     ],
     "name": "Chargeuse sur chenilles",
