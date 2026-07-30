@@ -1259,6 +1259,10 @@
       {
         "label": "2500L",
         "value": "2500L"
+      },
+      {
+        "label": "Fourches",
+        "value": "Fourches"
       }
     ],
     "name": "Chargeuse sur pneus",
@@ -1292,6 +1296,10 @@
       {
         "label": "6T / 600L",
         "value": "6T / 600L"
+      },
+      {
+        "label": "Fourches",
+        "value": "Fourches"
       }
     ],
     "name": "Chargeuse sur chenilles",
