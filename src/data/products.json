@@ -1024,6 +1024,30 @@
       {
         "label": "Tarière",
         "value": "Tarière"
+      },
+      {
+        "label": "Croc à Béton",
+        "value": "Croc à Béton"
+      },
+      {
+        "label": "Cisaille Fer",
+        "value": "Cisaille Fer"
+      },
+      {
+        "label": "Broyeur Béton Godet carrière",
+        "value": "Broyeur Béton Godet carrière"
+      },
+      {
+        "label": "Carrière Trapeze",
+        "value": "Carrière Trapeze"
+      },
+      {
+        "label": "Godet Concasseur",
+        "value": "Godet Concasseur"
+      },
+      {
+        "label": "Fraise",
+        "value": "Fraise"
       }
     ],
     "name": "Mini-pelle",
@@ -1038,7 +1062,7 @@
       "- Mini pelle – 5 tonnes",
       "- Mini pelle – 6 tonnes",
       "- Mini pelle – 8 tonnes",
-      "Accessoires disponibles : Pince de tri, BRH, Tarière"
+      "Accessoires disponibles : Pince de tri, BRH, Tarière, Croc à Béton, Cisaille Fer, Broyeur Béton Godet carrière, Carrière Trapeze, Godet Concasseur, Fraise"
     ]
   },
   "pelle-chenilles": {
