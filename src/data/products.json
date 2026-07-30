@@ -1186,14 +1186,6 @@
       {
         "label": "Tarière",
         "value": "Tarière"
-      },
-      {
-        "label": "Croc à Béton",
-        "value": "Croc à Béton"
-      },
-      {
-        "label": "Cisaille Fer",
-        "value": "Cisaille Fer"
       }
     ],
     "name": "Mini-pelle",
@@ -1208,7 +1200,7 @@
       "- Mini pelle – 5 tonnes",
       "- Mini pelle – 6 tonnes",
       "- Mini pelle – 8 tonnes",
-      "Accessoires disponibles : Pince de tri, BRH, Tarière, Croc à Béton, Cisaille Fer"
+      "Accessoires disponibles : Pince de tri, BRH, Tarière"
     ]
   },
   "pelle-chenilles": {
