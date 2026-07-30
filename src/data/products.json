@@ -2090,7 +2090,7 @@
       "- Robot de démolition 2 T",
       "- Robot de démolition 3 T",
       "- Robot de démolition 5 T",
-      "Équipements disponibles selon besoin : brise-roche hydraulique, pince de tri, godet. Contactez-nous pour un devis."
+      "Équipements disponibles selon besoin : brise-roche hydraulique, pince de tri, godet, marteau BHB, cisaille à béton, fraise hydraulique. Contactez-nous pour un devis."
     ]
   },
   "nacelle-mat-chenilles": {
@@ -2525,6 +2525,41 @@
       {
         "label": "20 m³",
         "value": "20m3"
+      }
+    ]
+  },
+  "tente-canopy": {
+    "name": "Tente canopy pliable (Barnum)",
+    "category": "base-vie",
+    "spec": "De 9 m² à 200 m²",
+    "description": [
+      "EAP Location propose une large gamme de tentes canopy pliables et de chapiteaux pour vos chantiers, événements de chantier, zones de stockage temporaires ou espaces de travail couverts.",
+      "- Barnum 9 m² (3 x 3 m)",
+      "- Barnum 25 m² (5 x 5 m)",
+      "- Chapiteau 40 m² (5 x 8 m)",
+      "- Chapiteau 60 m² (5 x 12 m)",
+      "- Chapiteau 200 m² (20 x 10 m)"
+    ],
+    "variants": [
+      {
+        "label": "9 m² — 3 x 3",
+        "value": "9 m² — 3 x 3"
+      },
+      {
+        "label": "25 m² — 5 x 5",
+        "value": "25 m² — 5 x 5"
+      },
+      {
+        "label": "Chapiteau 40 m² — 5 x 8",
+        "value": "Chapiteau 40 m² — 5 x 8"
+      },
+      {
+        "label": "Chapiteau 60 m² — 5 x 12",
+        "value": "Chapiteau 60 m² — 5 x 12"
+      },
+      {
+        "label": "Chapiteau 200 m² — 20 x 10",
+        "value": "Chapiteau 200 m² — 20 x 10"
       }
     ]
   }
