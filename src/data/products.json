@@ -819,6 +819,52 @@
       "- Rallonge de fourches 2,20 m",
       "- Rallonge de fourches 2,40 m",
       "- Tête rotative"
+    ],
+    "variants": [
+      {
+        "label": "Capacité de levage",
+        "value": "1,5T"
+      },
+      {
+        "label": "Capacité de levage",
+        "value": "2,5T"
+      },
+      {
+        "label": "Capacité de levage",
+        "value": "3,5T"
+      },
+      {
+        "label": "Capacité de levage",
+        "value": "5T"
+      },
+      {
+        "label": "Capacité de levage",
+        "value": "6T"
+      },
+      {
+        "label": "Capacité de levage",
+        "value": "8T"
+      },
+      {
+        "label": "Accessoire",
+        "value": "Rallonge de fourches 1,80 m"
+      },
+      {
+        "label": "Accessoire",
+        "value": "Rallonge de fourches 2,00 m"
+      },
+      {
+        "label": "Accessoire",
+        "value": "Rallonge de fourches 2,20 m"
+      },
+      {
+        "label": "Accessoire",
+        "value": "Rallonge de fourches 2,40 m"
+      },
+      {
+        "label": "Accessoire",
+        "value": "Tête rotative (retourneur de fourches)"
+      }
     ]
   },
   "chariot-semi-industriel": {
