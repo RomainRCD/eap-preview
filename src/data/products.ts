@@ -14,10 +14,16 @@ export const productImage = (slug: string): string | undefined => {
 };
 
 export interface ProductInfo {
-  variants?: { label: string; value: string }[];
   name: string;
   category: string;
   spec?: string;
+  /** PROFONDEUR DE GAMME : les déclinaisons de la machine elle-même (tonnage, hauteur,
+   *  capacité, nb de personnes...). Une variante = un choix possible dans le sélecteur de devis. */
+  variants?: { label: string; value: string }[];
+  /** OPTIONS / ACCESSOIRES : équipements ajoutables à la machine (BRH, pince de tri, fourches...).
+   *  Affichés en bloc « Options disponibles », indicatifs, JAMAIS dans le sélecteur de devis.
+   *  Ne jamais mettre une option dans variants (et inversement). */
+  options?: string[];
   description?: string[];
 }
 
