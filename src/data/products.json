@@ -979,7 +979,14 @@
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Chariot Semi-Industriel",
       "imageAlt": "Chariot semi-industriel"
-    }
+    },
+    "options": [
+      "Rallonge de fourches 1,80 m",
+      "Rallonge de fourches 2,00 m",
+      "Rallonge de fourches 2,20 m",
+      "Rallonge de fourches 2,40 m",
+      "Tête rotative (retourneur de fourches)"
+    ]
   },
   "chariot-tout-terrain": {
     "name": "Chariot tout terrain",
