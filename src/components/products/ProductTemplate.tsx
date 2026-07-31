@@ -135,6 +135,11 @@ const ProductTemplate = ({
   const slug = canonicalUrl.split("/").filter(Boolean).pop() ?? "";
   const longDescription = PRODUCTS[slug]?.description;
   const [selectedProduct, setSelectedProduct] = useState<string>("");
+  // Options cochées par le client dans le formulaire (accessoires ajoutés à la machine).
+  // Indépendant de `materiel` qui porte la profondeur de gamme (un seul choix).
+  const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+  const toggleOption = (opt: string) =>
+    setSelectedOptions(prev => prev.includes(opt) ? prev.filter(o => o !== opt) : [...prev, opt]);
   const [formStep, setFormStep] = useState(1);
   const noVariants = products.length === 0;
   const [formData, setFormData] = useState({
@@ -176,6 +181,7 @@ const ProductTemplate = ({
         body: JSON.stringify({
           ...getAttribution(),
           materiel: formData.materiel,
+          options: selectedOptions,
           siret: formData.siret,
           entreprise: formData.entreprise,
           nom: formData.nom,
@@ -678,6 +684,40 @@ const ProductTemplate = ({
                       )}
                     </div>
 
+                    {/* Options / accessoires — affiché UNIQUEMENT si la fiche produit en déclare */}
+                    {options.length > 0 && (
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">
+                          Options souhaitées
+                          <span className="text-muted-foreground font-normal ml-1">(facultatif — plusieurs choix possibles)</span>
+                        </label>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {options.map((option, i) => {
+                            const checked = selectedOptions.includes(option);
+                            return (
+                              <label
+                                key={i}
+                                className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg border cursor-pointer transition-colors ${checked ? "border-primary bg-primary/5" : "border-border bg-card hover:border-primary/50"}`}
+                              >
+                                <input
+                                  type="checkbox"
+                                  className="w-4 h-4 accent-primary flex-shrink-0"
+                                  checked={checked}
+                                  onChange={() => toggleOption(option)}
+                                />
+                                <span className="text-sm text-foreground">{option}</span>
+                              </label>
+                            );
+                          })}
+                        </div>
+                        {selectedOptions.length > 0 && (
+                          <p className="text-xs text-muted-foreground mt-2">
+                            {selectedOptions.length} option{selectedOptions.length > 1 ? "s" : ""} sélectionnée{selectedOptions.length > 1 ? "s" : ""}
+                          </p>
+                        )}
+                      </div>
+                    )}
+
 
                     {/* Séparateur */}
                     <div className="border-t border-border pt-4 mt-4">
@@ -879,6 +919,9 @@ const ProductTemplate = ({
                     <div className="p-3 bg-muted rounded-lg mb-4 space-y-1 overflow-hidden w-full max-w-full">
                       <p className="text-xs text-muted-foreground">Récapitulatif :</p>
                       <p className="text-sm font-medium text-foreground truncate">{formData.materiel}</p>
+                      {selectedOptions.length > 0 && (
+                        <p className="text-xs text-primary">Options : {selectedOptions.join(", ")}</p>
+                      )}
                       <p className="text-xs text-muted-foreground truncate">{formData.entreprise} • {formData.prenom} {formData.nom}</p>
                     </div>
 

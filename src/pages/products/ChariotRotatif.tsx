@@ -78,7 +78,12 @@ const getTodayDate = (): string => {
 };
 
 const ChariotRotatif = () => {
+  // Options/accessoires : pilotées par products.json (donc éditables depuis l'outil Site de Pilot).
+  const OPTIONS = PRODUCTS["chariot-rotatif"]?.options ?? [];
   const [selectedProduct, setSelectedProduct] = useState<string>("");
+  const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+  const toggleOption = (opt: string) =>
+    setSelectedOptions(prev => prev.includes(opt) ? prev.filter(o => o !== opt) : [...prev, opt]);
   const [formStep, setFormStep] = useState(1);
   const [formData, setFormData] = useState({
     // Step 1: Matériel & Entreprise
@@ -119,6 +124,7 @@ const ChariotRotatif = () => {
         body: JSON.stringify({
           ...getAttribution(),
           materiel: formData.materiel,
+          options: selectedOptions,
           siret: formData.siret,
           entreprise: formData.entreprise,
           nom: formData.nom,
@@ -501,10 +507,11 @@ const ChariotRotatif = () => {
           </div>
 
           {/* Options disponibles - Affichage indicatif */}
+          {OPTIONS.length > 0 && (
           <div className="mt-10 md:mt-14 max-w-2xl mx-auto">
             <h3 className="text-center text-sm md:text-base font-semibold text-foreground mb-4">Options disponibles</h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {["Godet Terre", "Potence", "Treuil 5T", "Radio Télécommande"].map((option, i) => (
+              {OPTIONS.map((option, i) => (
                 <div
                   key={i}
                   className="flex items-center justify-center px-5 py-3 min-w-[140px] bg-card border border-border rounded-lg text-muted-foreground text-center"
@@ -514,6 +521,7 @@ const ChariotRotatif = () => {
               ))}
             </div>
           </div>
+          )}
         </div>
       </section>
 
@@ -631,6 +639,40 @@ const ChariotRotatif = () => {
                         <Check className="absolute right-10 top-9 w-5 h-5 text-success animate-scale-in" />
                       )}
                     </div>
+
+                    {/* Options / accessoires — affiché UNIQUEMENT si la fiche produit en déclare */}
+                    {OPTIONS.length > 0 && (
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">
+                          Options souhaitées
+                          <span className="text-muted-foreground font-normal ml-1">(facultatif — plusieurs choix possibles)</span>
+                        </label>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {OPTIONS.map((option, i) => {
+                            const checked = selectedOptions.includes(option);
+                            return (
+                              <label
+                                key={i}
+                                className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg border cursor-pointer transition-colors ${checked ? "border-primary bg-primary/5" : "border-border bg-card hover:border-primary/50"}`}
+                              >
+                                <input
+                                  type="checkbox"
+                                  className="w-4 h-4 accent-primary flex-shrink-0"
+                                  checked={checked}
+                                  onChange={() => toggleOption(option)}
+                                />
+                                <span className="text-sm text-foreground">{option}</span>
+                              </label>
+                            );
+                          })}
+                        </div>
+                        {selectedOptions.length > 0 && (
+                          <p className="text-xs text-muted-foreground mt-2">
+                            {selectedOptions.length} option{selectedOptions.length > 1 ? "s" : ""} sélectionnée{selectedOptions.length > 1 ? "s" : ""}
+                          </p>
+                        )}
+                      </div>
+                    )}
 
 
                     {/* Séparateur */}
@@ -833,6 +875,9 @@ const ChariotRotatif = () => {
                     <div className="p-3 bg-muted rounded-lg mb-4 space-y-1 overflow-hidden w-full max-w-full">
                       <p className="text-xs text-muted-foreground">Récapitulatif :</p>
                       <p className="text-sm font-medium text-foreground truncate">{formData.materiel}</p>
+                      {selectedOptions.length > 0 && (
+                        <p className="text-xs text-primary">Options : {selectedOptions.join(", ")}</p>
+                      )}
                       <p className="text-xs text-muted-foreground truncate">{formData.entreprise} • {formData.prenom} {formData.nom}</p>
                     </div>
 

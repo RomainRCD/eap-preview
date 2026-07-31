@@ -995,6 +995,12 @@
     "name": "Chariot télescopique rotatif",
     "category": "manutention",
     "spec": "16m à 40m",
+    "options": [
+      "Godet Terre",
+      "Potence",
+      "Treuil 5T",
+      "Radio Télécommande"
+    ],
     "description": [
       "EAP location propose le plus large choix de chariot télescopique rotatif en France. Sur notre site vous retrouverez disponible à la location des chariot télescopique pouvant aller jusqu'à 40 mètres de hauteur de travail.",
       "Les disponibilités et caractéristiques de nos chariots :",
