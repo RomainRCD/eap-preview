@@ -15,19 +15,8 @@ import NotFound from "./pages/NotFound";
 // Page produit existante (template Impact) - conservée pour référence
 import TemplateImpact from "./pages/TemplateImpact";
 
-// Pages produits spécifiques - Manutention
+// Pages produits spécifiques - Manutention (les autres sont pilotées par products.json)
 import ChariotRotatif from "./pages/products/ChariotRotatif";
-import ChariotIndustrielDiesel from "./pages/products/ChariotIndustrielDiesel";
-import ChariotIndustrielGaz from "./pages/products/ChariotIndustrielGaz";
-import ChariotIndustrielElectrique from "./pages/products/ChariotIndustrielElectrique";
-import ChariotSemiIndustriel from "./pages/products/ChariotSemiIndustriel";
-import ChariotToutTerrain from "./pages/products/ChariotToutTerrain";
-import ChariotTelescopique from "./pages/products/ChariotTelescopique";
-import ChariotGrosTonnage from "./pages/products/ChariotGrosTonnage";
-import GrueMobile from "./pages/products/GrueMobile";
-import MiniGrueChenilles from "./pages/products/MiniGrueChenilles";
-import MiniGrueAraignee from "./pages/products/MiniGrueAraignee";
-import GerbeurTranspalette from "./pages/products/GerbeurTranspalette";
 
 // Pages catégories
 import Terrassement from "./pages/categories/Terrassement";
@@ -73,17 +62,6 @@ const App = () => (
             
             {/* Pages produits complètes - Manutention */}
             <Route path="/manutention/chariot-rotatif" element={<ChariotRotatif />} />
-            <Route path="/manutention/chariot-industriel-diesel" element={<ChariotIndustrielDiesel />} />
-            <Route path="/manutention/chariot-industriel-gaz" element={<ChariotIndustrielGaz />} />
-            <Route path="/manutention/chariot-industriel-electrique" element={<ChariotIndustrielElectrique />} />
-            <Route path="/manutention/chariot-semi-industriel" element={<ChariotSemiIndustriel />} />
-            <Route path="/manutention/chariot-tout-terrain" element={<ChariotToutTerrain />} />
-            <Route path="/manutention/chariot-telescopique" element={<ChariotTelescopique />} />
-            <Route path="/manutention/chariot-gros-tonnage" element={<ChariotGrosTonnage />} />
-            <Route path="/manutention/grue-mobile" element={<GrueMobile />} />
-            <Route path="/manutention/mini-grue-chenilles" element={<MiniGrueChenilles />} />
-            <Route path="/manutention/mini-grue-araignee" element={<MiniGrueAraignee />} />
-            <Route path="/manutention/gerbeur-transpalette" element={<GerbeurTranspalette />} />
             <Route path="/manutention/:slug" element={<ProductPage />} />
             
             <Route path="/compactage/:slug" element={<ProductPage />} />

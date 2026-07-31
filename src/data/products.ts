@@ -25,6 +25,15 @@ export interface ProductInfo {
    *  Ne jamais mettre une option dans variants (et inversement). */
   options?: string[];
   description?: string[];
+  /** Surcharges rédactionnelles d'une fiche historique (SEO + hero + titre du sélecteur).
+   *  Champ ADMIN : l'outil Site de Pilot ne peut pas l'écrire (absent de sa liste blanche).
+   *  Absent = ProductPage génère ces textes depuis name/spec/description. */
+  page?: {
+    title?: string; description?: string; keywords?: string;
+    heroTitle?: string; heroHighlight?: string; heroSubtitle?: string;
+    selectorTitle?: string; selectorSubtitle?: string;
+    namePrefix?: string; imageAlt?: string;
+  };
 }
 
 export const PRODUCTS: Record<string, ProductInfo> = PRODUCTS_DATA as Record<string, ProductInfo>;

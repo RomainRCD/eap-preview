@@ -55,23 +55,25 @@ const ProductPage = () => {
 
   const firstSentence = info.description?.[0]?.split(". ")[0];
   const heroSubtitle = `${info.spec ? info.spec + ". " : ""}Location courte ou longue durée. Livraison partout en France.`;
+  // Surcharges rédactionnelles des fiches historiques (ex-pages dédiées) — sinon textes générés.
+  const o = info.page ?? {};
 
   return (
     <ProductTemplate
-      title={`Location ${info.name} | EAP Location`}
-      description={(firstSentence || `Location de ${info.name.toLowerCase()} pour professionnels du BTP`).slice(0, 155) + ". Devis en 2h, livraison partout en France."}
-      keywords={`location ${info.name.toLowerCase()}, ${categoryName.toLowerCase()}, location matériel BTP`}
+      title={o.title ?? `Location ${info.name} | EAP Location`}
+      description={o.description ?? (firstSentence || `Location de ${info.name.toLowerCase()} pour professionnels du BTP`).slice(0, 155) + ". Devis en 2h, livraison partout en France."}
+      keywords={o.keywords ?? `location ${info.name.toLowerCase()}, ${categoryName.toLowerCase()}, location matériel BTP`}
       canonicalUrl={`/${category}/${slug}`}
-      heroTitle={`Location ${info.name}`}
-      heroHighlight={info.spec || categoryName}
-      heroSubtitle={heroSubtitle}
+      heroTitle={o.heroTitle ?? `Location ${info.name}`}
+      heroHighlight={o.heroHighlight ?? info.spec ?? categoryName}
+      heroSubtitle={o.heroSubtitle ?? heroSubtitle}
       heroImage={image || heroChantier}
-      heroImageAlt={info.name}
+      heroImageAlt={o.imageAlt ?? info.name}
       products={info.variants ?? []}
       options={info.options ?? []}
-      productSelectorTitle="Quelle configuration pour votre chantier ?"
-      productSelectorSubtitle="Sélectionnez et obtenez un devis immédiat"
-      productNamePrefix={info.name}
+      productSelectorTitle={o.selectorTitle ?? "Quelle configuration pour votre chantier ?"}
+      productSelectorSubtitle={o.selectorSubtitle ?? "Sélectionnez et obtenez un devis immédiat"}
+      productNamePrefix={o.namePrefix ?? info.name}
       category={category}
       categoryLabel={categoryName}
     />

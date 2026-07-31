@@ -761,7 +761,19 @@
       "- Rallonge de fourches 2,20 m",
       "- Rallonge de fourches 2,40 m",
       "- Tête rotative"
-    ]
+    ],
+    "page": {
+      "title": "Location Chariot Industriel Diesel (Fenwick) jusqu'à 16T | EAP Location",
+      "description": "Location chariot industriel diesel de 1,5T à 16T. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "keywords": "chariot industriel diesel, fenwick diesel, location chariot élévateur, location matériel BTP",
+      "heroTitle": "Chariot Industriel",
+      "heroHighlight": "Diesel",
+      "heroSubtitle": "De 1,5T à 16T. Location courte ou longue durée, partout en France.",
+      "selectorTitle": "Quelle capacité pour votre chantier ?",
+      "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
+      "namePrefix": "Chariot Industriel Diesel",
+      "imageAlt": "Chariot industriel diesel"
+    }
   },
   "chariot-industriel-gaz": {
     "name": "Chariot industriel gaz",
@@ -830,7 +842,19 @@
       "- Rallonge de fourches 2,20 m",
       "- Rallonge de fourches 2,40 m",
       "- Tête rotative"
-    ]
+    ],
+    "page": {
+      "title": "Location Chariot Industriel Gaz (GPL) jusqu'à 16T | EAP Location",
+      "description": "Location chariot industriel gaz GPL de 1,5T à 16T. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "keywords": "chariot industriel gaz, fenwick gaz, chariot GPL, location chariot élévateur",
+      "heroTitle": "Chariot Industriel",
+      "heroHighlight": "Gaz (GPL)",
+      "heroSubtitle": "De 1,5T à 16T. Location courte ou longue durée, partout en France.",
+      "selectorTitle": "Quelle capacité pour votre chantier ?",
+      "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
+      "namePrefix": "Chariot Industriel Gaz",
+      "imageAlt": "Chariot industriel gaz"
+    }
   },
   "chariot-industriel-electrique": {
     "name": "Chariot industriel électrique",
@@ -884,12 +908,50 @@
       "- Rallonge de fourches 2,20 m",
       "- Rallonge de fourches 2,40 m",
       "- Tête rotative"
-    ]
+    ],
+    "page": {
+      "title": "Location Chariot Industriel Électrique jusqu'à 8T | EAP Location",
+      "description": "Location chariot industriel électrique de 1,5T à 8T. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "keywords": "chariot industriel électrique, fenwick électrique, chariot zéro émission, location chariot élévateur",
+      "heroTitle": "Chariot Industriel",
+      "heroHighlight": "Électrique",
+      "heroSubtitle": "De 1,5T à 8T. Location courte ou longue durée, partout en France.",
+      "selectorTitle": "Quelle capacité pour votre chantier ?",
+      "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
+      "namePrefix": "Chariot Industriel Électrique",
+      "imageAlt": "Chariot industriel électrique"
+    }
   },
   "chariot-semi-industriel": {
     "name": "Chariot semi-industriel",
     "category": "manutention",
     "spec": "2T à 5T",
+    "variants": [
+      {
+        "label": "2T",
+        "value": "2T"
+      },
+      {
+        "label": "2,5T",
+        "value": "2,5T"
+      },
+      {
+        "label": "3T",
+        "value": "3T"
+      },
+      {
+        "label": "3,5T",
+        "value": "3,5T"
+      },
+      {
+        "label": "4T",
+        "value": "4T"
+      },
+      {
+        "label": "5T",
+        "value": "5T"
+      }
+    ],
     "description": [
       "EAP location propose le plus large choix de chariot semi-industriel en France. Sur notre site vous retrouverez disponible à la location des chariots semi-industriels avec une capacité de levage pouvant aller jusqu'a 5 tonnes.",
       "Les disponibilités et caractéristiques de nos chariots :",
@@ -905,12 +967,50 @@
       "- Rallonge de fourches 2,20 m",
       "- Rallonge de fourches 2,40 m",
       "- Tête rotative"
-    ]
+    ],
+    "page": {
+      "title": "Location Chariot Semi-Industriel 2T à 5T | EAP Location",
+      "description": "Location chariot semi-industriel de 2T à 5T. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "keywords": "chariot semi-industriel, location chariot élévateur, manutention, location matériel BTP",
+      "heroTitle": "Chariot Semi-Industriel",
+      "heroHighlight": "2T à 5T",
+      "heroSubtitle": "Location courte ou longue durée, partout en France.",
+      "selectorTitle": "Quelle capacité pour votre chantier ?",
+      "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
+      "namePrefix": "Chariot Semi-Industriel",
+      "imageAlt": "Chariot semi-industriel"
+    }
   },
   "chariot-tout-terrain": {
     "name": "Chariot tout terrain",
     "category": "manutention",
     "spec": "4x2 ou 4x4, 2T à 5T",
+    "variants": [
+      {
+        "label": "4x2 - 2T",
+        "value": "4x2 2T"
+      },
+      {
+        "label": "4x2 - 2,5T",
+        "value": "4x2 2,5T"
+      },
+      {
+        "label": "4x2 - 3,5T",
+        "value": "4x2 3,5T"
+      },
+      {
+        "label": "4x4 - 2,5T",
+        "value": "4x4 2,5T"
+      },
+      {
+        "label": "4x4 - 3,5T",
+        "value": "4x4 3,5T"
+      },
+      {
+        "label": "4x4 - 5T",
+        "value": "4x4 5T"
+      }
+    ],
     "description": [
       "EAP location propose le plus large choix de chariot tout terrain en France. Sur notre site vous retrouverez disponible à la location des chariots tout terrain avec 4 roues motrices ou 2 roues motrices avec une capacité de levage pouvant aller jusqu'à 5 tonnes.",
       "Les disponibilités et caractéristiques de nos chariots :",
@@ -927,7 +1027,19 @@
       "- Rallonge de fourches 2,20 m",
       "- Rallonge de fourches 2,40 m",
       "- Tête rotative"
-    ]
+    ],
+    "page": {
+      "title": "Location Chariot Tout Terrain 4x2 et 4x4 | EAP Location",
+      "description": "Location chariot tout terrain 4x2 ou 4x4, de 2T à 5T. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "keywords": "chariot tout terrain, chariot 4x4, location chariot élévateur, manutention chantier",
+      "heroTitle": "Chariot Tout Terrain",
+      "heroHighlight": "4x2 ou 4x4",
+      "heroSubtitle": "De 2T à 5T. Location courte ou longue durée, partout en France.",
+      "selectorTitle": "Quelle configuration pour votre chantier ?",
+      "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
+      "namePrefix": "Chariot Tout Terrain",
+      "imageAlt": "Chariot tout terrain"
+    }
   },
   "chariot-telescopique": {
     "name": "Chariot télescopique fixe",
@@ -935,45 +1047,47 @@
     "spec": "4m à 18m",
     "variants": [
       {
-        "label": "4M",
-        "value": "4M"
+        "label": "4m",
+        "value": "4m"
       },
       {
-        "label": "5M électrique",
-        "value": "5M électrique"
+        "label": "6m",
+        "value": "6m"
       },
       {
-        "label": "6M",
-        "value": "6M"
+        "label": "7m",
+        "value": "7m"
       },
       {
-        "label": "7M",
-        "value": "7M"
+        "label": "9m",
+        "value": "9m"
       },
       {
-        "label": "9M",
-        "value": "9M"
+        "label": "10m",
+        "value": "10m"
       },
       {
-        "label": "11M",
-        "value": "11M"
+        "label": "12m",
+        "value": "12m"
       },
       {
-        "label": "13M",
-        "value": "13M"
+        "label": "14m",
+        "value": "14m"
       },
       {
-        "label": "14M",
-        "value": "14M"
+        "label": "17m",
+        "value": "17m"
       },
       {
-        "label": "17M",
-        "value": "17M"
-      },
-      {
-        "label": "18M",
-        "value": "18M"
+        "label": "18m",
+        "value": "18m"
       }
+    ],
+    "options": [
+      "Potence courte",
+      "Potence longue",
+      "Rallonge de fourches",
+      "Godet"
     ],
     "description": [
       "EAP location propose le plus large choix de chariot télescopique en France. Sur notre site vous retrouverez disponible à la location des chariot télescopique pouvant aller jusqu'a 18 mètres de hauteur de travail.",
@@ -989,7 +1103,19 @@
       "- Chariot Télescopique fixe avec fourche – 17 mètres de hauteur de travail",
       "- Chariot Télescopique fixe avec fourche – 18 mètres de hauteur de travail",
       "Accessoires disponibles : Potence courte, Potence longue, Rallonge de fourches, Godet"
-    ]
+    ],
+    "page": {
+      "title": "Location Chariot Télescopique Fixe 4m à 18m | EAP Location",
+      "description": "Location chariot télescopique fixe de 4m à 18m. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "keywords": "chariot télescopique, télescopique fixe, manitou, merlo, location matériel BTP",
+      "heroTitle": "Chariot Télescopique",
+      "heroHighlight": "Fixe - 4m à 18m",
+      "heroSubtitle": "Location courte ou longue durée. Partout en France.",
+      "selectorTitle": "Quelle hauteur pour votre chantier ?",
+      "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
+      "namePrefix": "Chariot Télescopique Fixe",
+      "imageAlt": "Chariot télescopique fixe"
+    }
   },
   "chariot-rotatif": {
     "name": "Chariot télescopique rotatif",
@@ -1019,6 +1145,40 @@
     "name": "Chariot télescopique gros tonnage",
     "category": "manutention",
     "spec": "6T-9m à 33T-12m",
+    "variants": [
+      {
+        "label": "6T - 9m",
+        "value": "6T-9m"
+      },
+      {
+        "label": "7T - 10m",
+        "value": "7T-10m"
+      },
+      {
+        "label": "10T - 10m",
+        "value": "10T-10m"
+      },
+      {
+        "label": "14T - 10m",
+        "value": "14T-10m"
+      },
+      {
+        "label": "18T - 10m",
+        "value": "18T-10m"
+      },
+      {
+        "label": "21T - 11m",
+        "value": "21T-11m"
+      },
+      {
+        "label": "25T - 11m",
+        "value": "25T-11m"
+      },
+      {
+        "label": "33T - 12m",
+        "value": "33T-12m"
+      }
+    ],
     "description": [
       "EAP location propose le plus large choix de Chariot gros tonnage pour vos travaux de manutention en France. Sur notre site vous retrouverez disponible à la location :",
       "- Chariot gros tonnage 6T – 9M",
@@ -1029,12 +1189,66 @@
       "- Chariot gros tonnage 23T – 10M",
       "- Chariot gros tonnage 25T – 11M",
       "- Chariot gros tonnage 33T – 12M"
-    ]
+    ],
+    "page": {
+      "title": "Location Chariot Télescopique Gros Tonnage 6T à 33T | EAP Location",
+      "description": "Location chariot télescopique gros tonnage de 6T-9m à 33T-12m. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "keywords": "chariot télescopique gros tonnage, chariot 33 tonnes, manitou, merlo, location matériel BTP",
+      "heroTitle": "Chariot Télescopique",
+      "heroHighlight": "Gros Tonnage",
+      "heroSubtitle": "De 6T-9m à 33T-12m. Location courte ou longue durée. Partout en France.",
+      "selectorTitle": "Quelle capacité pour votre chantier ?",
+      "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
+      "namePrefix": "Chariot Gros Tonnage",
+      "imageAlt": "Chariot télescopique gros tonnage"
+    }
   },
   "grue-mobile": {
     "name": "Grue mobile",
     "category": "manutention",
     "spec": "35T à 300T",
+    "variants": [
+      {
+        "label": "35T",
+        "value": "35T"
+      },
+      {
+        "label": "40T",
+        "value": "40T"
+      },
+      {
+        "label": "50T",
+        "value": "50T"
+      },
+      {
+        "label": "60T",
+        "value": "60T"
+      },
+      {
+        "label": "70T",
+        "value": "70T"
+      },
+      {
+        "label": "80T",
+        "value": "80T"
+      },
+      {
+        "label": "100T",
+        "value": "100T"
+      },
+      {
+        "label": "130T",
+        "value": "130T"
+      },
+      {
+        "label": "160T",
+        "value": "160T"
+      },
+      {
+        "label": "300T",
+        "value": "300T"
+      }
+    ],
     "description": [
       "EAP location propose la location de grues mobiles dans toute la France en préconisant la proximité de votre chantier. Sur notre site vous retrouverez disponible à la location des grues mobiles avec une capacité de levage pouvant aller jusqu’à 160 tonnes.",
       "Les disponibilités et caractéristiques de nos grues mobiles :",
@@ -1043,7 +1257,19 @@
       "- Grue mobile de 60 à 80 tonnes.",
       "- Grue mobile de 90 à 110 tonnes.",
       "- Grue mobile de 120 à 160 tonnes."
-    ]
+    ],
+    "page": {
+      "title": "Location Grue Mobile 35T à 300T | EAP Location",
+      "description": "Location grue mobile de 35T à 300T. Avec grutier certifié. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "keywords": "grue mobile, location grue, grue automotrice, levage, location matériel BTP",
+      "heroTitle": "Grue Mobile",
+      "heroHighlight": "35T à 300T",
+      "heroSubtitle": "Avec grutier certifié. Location courte ou longue durée. Partout en France.",
+      "selectorTitle": "Quelle capacité pour votre chantier ?",
+      "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
+      "namePrefix": "Grue Mobile",
+      "imageAlt": "Grue mobile"
+    }
   },
   "mini-grue-chenilles": {
     "name": "Mini grue télescopique sur chenilles",
@@ -1051,20 +1277,20 @@
     "spec": "3T-10M à 8T-26M",
     "variants": [
       {
-        "label": "3T — 10M",
-        "value": "3T — 10M"
+        "label": "5T - 20m",
+        "value": "5T-20m"
       },
       {
-        "label": "5T — 20M",
-        "value": "5T — 20M"
+        "label": "6T - 22m",
+        "value": "6T-22m"
       },
       {
-        "label": "6T — 20M",
-        "value": "6T — 20M"
+        "label": "6T - 24m",
+        "value": "6T-24m"
       },
       {
-        "label": "8T — 26M",
-        "value": "8T — 26M"
+        "label": "8T - 26m",
+        "value": "8T-26m"
       }
     ],
     "description": [
@@ -1073,12 +1299,38 @@
       "- Mini grue télescopique de 5T – 20M",
       "- Mini grue télescopique de 6T – 20M",
       "- Mini grue télescopique de 8T – 26M"
-    ]
+    ],
+    "page": {
+      "title": "Location Mini Grue Télescopique sur Chenilles | EAP Location",
+      "description": "Location mini grue télescopique sur chenilles de 5T-20m à 8T-26m. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "keywords": "mini grue chenilles, grue télescopique, spider crane, levage, location matériel BTP",
+      "heroTitle": "Mini Grue Télescopique",
+      "heroHighlight": "Sur Chenilles",
+      "heroSubtitle": "De 5T-20m à 8T-26m. Location courte ou longue durée. Partout en France.",
+      "selectorTitle": "Quelle configuration pour votre chantier ?",
+      "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
+      "namePrefix": "Mini Grue Chenilles",
+      "imageAlt": "Mini grue télescopique sur chenilles"
+    }
   },
   "mini-grue-araignee": {
     "name": "Mini grue araignée",
     "category": "manutention",
     "spec": "3T à 4T",
+    "variants": [
+      {
+        "label": "3T",
+        "value": "3T"
+      },
+      {
+        "label": "3,5T",
+        "value": "3,5T"
+      },
+      {
+        "label": "4T",
+        "value": "4T"
+      }
+    ],
     "description": [
       "EAP location propose le plus large choix de Mini grue araignée pour vos travaux de manutention en France . Sur notre site vous retrouverez disponible à la location :",
       "- Mini grue araignée 3T – 5M",
@@ -1087,7 +1339,19 @@
       "- Mini grue araignée 3.5T – 14M",
       "- Mini grue araignée 4T – 18M",
       "- Mini grue araignée 4T – 20M"
-    ]
+    ],
+    "page": {
+      "title": "Location Mini Grue Araignée 3T à 4T | EAP Location",
+      "description": "Location mini grue araignée de 3T à 4T. Idéale pour espaces restreints. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "keywords": "mini grue araignée, spider crane, grue compacte, levage intérieur, location matériel BTP",
+      "heroTitle": "Mini Grue",
+      "heroHighlight": "Araignée",
+      "heroSubtitle": "De 3T à 4T. Idéale pour espaces restreints. Partout en France.",
+      "selectorTitle": "Quelle capacité pour votre chantier ?",
+      "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
+      "namePrefix": "Mini Grue Araignée",
+      "imageAlt": "Mini grue araignée"
+    }
   },
   "gerbeur-transpalette": {
     "name": "Gerbeur / Transpalette",
@@ -1103,18 +1367,33 @@
         "value": "Transpalette électrique"
       },
       {
-        "label": "Gerbeur 1,2T",
-        "value": "Gerbeur 1,2T"
+        "label": "Gerbeur manuel",
+        "value": "Gerbeur manuel"
       },
       {
-        "label": "Gerbeur 1,6T",
-        "value": "Gerbeur 1,6T"
+        "label": "Gerbeur électrique",
+        "value": "Gerbeur électrique"
+      },
+      {
+        "label": "Gerbeur à mât rétractable",
+        "value": "Gerbeur mât rétractable"
       }
     ],
     "description": [
       "Gerbeurs électriques et transpalettes pour la manutention légère en entrepôt, atelier ou surface de vente : levée de palettes, gerbage en rayonnage, déplacement de charges.",
       "Location courte ou longue durée, matériel récent et entretenu."
-    ]
+    ],
+    "page": {
+      "title": "Location Gerbeur et Transpalette | EAP Location",
+      "description": "Location gerbeur et transpalette : manuel ou électrique. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "keywords": "gerbeur, transpalette, transpalette électrique, manutention légère, location matériel",
+      "heroTitle": "Gerbeur",
+      "heroHighlight": "& Transpalette",
+      "heroSubtitle": "Manuel ou électrique. Manutention légère. Partout en France.",
+      "selectorTitle": "Quel équipement pour votre besoin ?",
+      "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
+      "imageAlt": "Gerbeur et transpalette"
+    }
   },
   "mini-pelle": {
     "name": "Mini-pelle",
