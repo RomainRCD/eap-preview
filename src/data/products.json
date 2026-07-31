@@ -1046,7 +1046,14 @@
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Chariot Tout Terrain",
       "imageAlt": "Chariot tout terrain"
-    }
+    },
+    "options": [
+      "Rallonge de fourches 1,80 m",
+      "Rallonge de fourches 2,00 m",
+      "Rallonge de fourches 2,20 m",
+      "Rallonge de fourches 2,40 m",
+      "Tête rotative (retourneur de fourches)"
+    ]
   },
   "chariot-telescopique": {
     "name": "Chariot télescopique fixe",
