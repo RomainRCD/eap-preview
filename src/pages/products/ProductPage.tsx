@@ -68,6 +68,7 @@ const ProductPage = () => {
       heroImage={image || heroChantier}
       heroImageAlt={info.name}
       products={info.variants ?? []}
+      options={info.options ?? []}
       productSelectorTitle="Quelle configuration pour votre chantier ?"
       productSelectorSubtitle="Sélectionnez et obtenez un devis immédiat"
       productNamePrefix={info.name}

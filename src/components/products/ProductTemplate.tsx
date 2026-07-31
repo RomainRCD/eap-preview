@@ -93,7 +93,10 @@ interface ProductTemplateProps {
   heroImage: string;
   heroImageAlt: string;
   // Products
+  /** Profondeur de gamme : déclinaisons sélectionnables (alimente le sélecteur + le formulaire). */
   products: ProductOption[];
+  /** Options / accessoires : affichage indicatif seul, non sélectionnable. */
+  options?: string[];
   productSelectorTitle: string;
   productSelectorSubtitle: string;
   productNamePrefix: string;
@@ -122,6 +125,7 @@ const ProductTemplate = ({
   heroImage,
   heroImageAlt,
   products,
+  options = [],
   productSelectorTitle,
   productSelectorSubtitle,
   productNamePrefix,
@@ -504,12 +508,14 @@ const ProductTemplate = ({
       </section>
 
       {/* Product Selection - Quick Visual */}
-      {!noVariants && (
+      {!(noVariants && options.length === 0) && (
       <section className="py-10 md:py-16 bg-muted">
         <div className="container mx-auto px-4">
+          {!noVariants && (<>
           <h2 className="section-title text-center mb-3 md:mb-4">{productSelectorTitle}</h2>
           <p className="text-center text-muted-foreground mb-8 md:mb-12 text-sm md:text-base">{productSelectorSubtitle}</p>
-          
+          </>)}
+
           <div className="grid grid-cols-3 sm:grid-cols-4 md:flex md:flex-wrap md:justify-center gap-2 md:gap-4">
             {products.map((product, index) => (
               <button 
@@ -532,6 +538,23 @@ const ProductTemplate = ({
               </button>
             ))}
           </div>
+
+          {/* Options disponibles - Affichage indicatif (jamais dans le sélecteur) */}
+          {options.length > 0 && (
+            <div className={`${noVariants ? "" : "mt-10 md:mt-14"} max-w-2xl mx-auto`}>
+              <h3 className="text-center text-sm md:text-base font-semibold text-foreground mb-4">Options disponibles</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                {options.map((option, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center justify-center px-3 py-3 bg-card border border-border rounded-lg text-muted-foreground text-center"
+                  >
+                    <span className="text-xs md:text-sm font-medium">{option}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
       )}
