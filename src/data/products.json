@@ -1429,7 +1429,8 @@
     "options": [
       "Pince de tri",
       "BRH",
-      "Tarière"
+      "Tarière",
+      "Godet"
     ],
     "description": [
       "EAP location propose le plus large choix de mini pelle en France. Sur notre site vous retrouverez disponible à la location des mini-pelle pouvant aller jusqu'à 8 tonnes.",
@@ -1506,7 +1507,8 @@
       "Broyeur Béton Godet carrière",
       "Carrière Trapeze",
       "Godet Concasseur",
-      "Fraise"
+      "Fraise",
+      "Godet"
     ],
     "description": [
       "EAP location propose le plus large choix de pelle sur chenilles en France. Nous sommes à proximité de vos chantiers dans toute la France grâce à notre réseau de partenaires. Sur notre site vous retrouverez disponible à la location des pelles sur chenilles pouvant aller jusqu'à 65 tonnes.",
@@ -1585,6 +1587,10 @@
       "- Pelle sur pneus – 20 tonnes",
       "- Pelle sur pneus – 25 tonnes",
       "- Pelle sur pneus – 40 tonnes"
+    ],
+    "options": [
+      "Pince de tri",
+      "BRH"
     ]
   },
   "chargeuse-pneus": {
@@ -2506,7 +2512,8 @@
     "options": [
       "Marteau BHB",
       "Cisaille à béton",
-      "Fraise hydraulique"
+      "Fraise hydraulique",
+      "Pince de tri"
     ],
     "description": [
       "EAP Location propose des robots de démolition télécommandés (type BROKK) pour vos travaux de démolition intérieure, de curage et de déconstruction en milieu contraint, partout en France. Machines compactes et radiocommandées, qui interviennent là où un engin classique ne passe pas et éloignent l'opérateur de la zone à risque.",
