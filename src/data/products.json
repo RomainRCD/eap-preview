@@ -1587,6 +1587,10 @@
       "- Pelle sur pneus – 20 tonnes",
       "- Pelle sur pneus – 25 tonnes",
       "- Pelle sur pneus – 40 tonnes"
+    ],
+    "options": [
+      "Pince de tri",
+      "BRH"
     ]
   },
   "chargeuse-pneus": {
