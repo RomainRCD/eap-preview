@@ -168,7 +168,7 @@
 # Ces 25 adresses étaient encore ciblées par des annonces Ads et/ou présentes dans l'index Google.
 # Faute de règle, elles tombaient sur la page 404 — en HTTP 200, donc invisibles à un contrôle de liens.
 # Le fichier couvrait la variante /slug-v2 mais pas la variante /home/slug.
-# Première correspondance gagne : ce bloc doit rester AVANT le fallback SPA.
+# Première correspondance gagne : ce bloc doit rester AVANT le repli.
 /home/bungalow /base-vie/bungalow 301
 /home/bungalow/ /base-vie/bungalow 301
 /home/bungalow-sanitaire /base-vie/sanitaire 301
@@ -228,5 +228,17 @@
 /autres/dumper /terrassement/dumper 301
 /autres/robot-demolition /terrassement/robot-demolition 301
 
-# Fallback SPA — DOIT rester la DERNIÈRE règle (première correspondance gagne)
-/* /index.html 200
+# --- Canonique orpheline de /devis (03/08/2026) ---
+# La page /devis se déclare canonique sur /chariot-rotatif-impact, une URL qui
+# n'existe plus : un canonical vers une 404 est ignoré par Google. Cette règle
+# le fait résoudre vers la vraie fiche, ce qui consolide les deux pages.
+# Correction de fond : une ligne dans src/pages/TemplateImpact.tsx.
+/chariot-rotatif-impact /manutention/chariot-rotatif 301
+/chariot-rotatif-impact/ /manutention/chariot-rotatif 301
+
+# Repli — DOIT rester la DERNIÈRE règle (première correspondance gagne).
+# Toutes les routes réelles sont prérendues en fichiers statiques au build
+# (scripts/prerender.mjs), donc ce qui arrive ici n'existe pas : on renvoie un
+# VRAI code 404 avec la page 404 prérendue, au lieu de l'ancien 200 sur
+# index.html qui faisait passer n'importe quelle URL morte pour une page valide.
+/* /404.html 404
