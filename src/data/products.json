@@ -2918,6 +2918,18 @@
       "- Emboîtement entre plaques pour couvrir de grandes surfaces",
       "- Résistante aux charges lourdes",
       "- Adaptée aux sols meubles, humides ou fragiles"
+    ],
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12",
+      "14",
+      "16",
+      "18",
+      "20+"
     ]
   },
   "camion-benne-3t5": {
