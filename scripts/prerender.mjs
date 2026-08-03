@@ -58,9 +58,15 @@ for (const route of routes) {
       `<div id="root">${html}</div>`
     );
 
-    const dir = route === '/' ? DIST : join(DIST, route);
-    mkdirSync(dir, { recursive: true });
-    writeFileSync(join(dir, 'index.html'), page, 'utf-8');
+    // On écrit `<route>.html`, PAS `<route>/index.html` : avec un index.html,
+    // Cloudflare Pages redirige en 308 vers l'URL avec barre oblique finale.
+    // Or nos canonicals, notre sitemap et toutes les URLs finales des annonces
+    // Google Ads sont SANS barre finale — chaque visite aurait pris un saut
+    // inutile et contredit le canonical. Avec `<route>.html`, c'est l'inverse :
+    // l'URL sans barre est servie directement, celle avec barre y redirige.
+    const target = route === '/' ? join(DIST, 'index.html') : join(DIST, route + '.html');
+    mkdirSync(dirname(target), { recursive: true });
+    writeFileSync(target, page, 'utf-8');
     done++;
   } catch (e) {
     failures.push(`${route} : ${e.message}`);
