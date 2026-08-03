@@ -35,7 +35,7 @@ const ProductPage = () => {
           title={`Location ${fallbackName} | EAP Location`}
           description={`Location de ${fallbackName.toLowerCase()} pour professionnels du BTP.`}
           keywords={`location ${fallbackName.toLowerCase()}, BTP`}
-          canonicalUrl={`/${category}/${slug}`}
+          noindex
         />
         <section className="py-24 bg-background">
           <div className="container mx-auto px-4 text-center">
