@@ -2440,24 +2440,24 @@
     "spec": "50 m à 5000 m linéaires",
     "variants": [
       {
+        "label": "0 à 50 m",
+        "value": "0 à 50 m"
+      },
+      {
         "label": "50 à 200 m",
-        "value": "50-200m"
+        "value": "50 à 200 m"
       },
       {
         "label": "200 à 500 m",
-        "value": "200-500m"
+        "value": "200 à 500 m"
       },
       {
         "label": "500 à 1000 m",
-        "value": "500-1000m"
+        "value": "500 à 1000 m"
       },
       {
         "label": "1000 à 5000 m",
-        "value": "1000-5000m"
-      },
-      {
-        "label": "0 à 50 m",
-        "value": "0 à 50 m"
+        "value": "1000 à 5000 m"
       }
     ],
     "description": [
