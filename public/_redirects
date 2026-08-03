@@ -36,14 +36,14 @@
 /chargeur-compacte-sur-pneus-v2/ /terrassement/chargeuse-compacte 301
 /chargeuse-compacte-ou-bobcat-sur-chenilles /terrassement/chargeuse-chenilles 301
 /chargeuse-compacte-ou-bobcat-sur-chenilles/ /terrassement/chargeuse-chenilles 301
-/chargeuse-articulee-v2 /terrassement/chargeuse-pneus 301
-/chargeuse-articulee-v2/ /terrassement/chargeuse-pneus 301
-/dumper-sur-pneus /autres/dumper 301
-/dumper-sur-pneus/ /autres/dumper 301
-/dumper-sur-chenilles-v2 /autres/dumper 301
-/dumper-sur-chenilles-v2/ /autres/dumper 301
-/robot-de-demolition-v2 /autres/robot-demolition 301
-/robot-de-demolition-v2/ /autres/robot-demolition 301
+/chargeuse-articulee-v2 /terrassement/chargeuse-compacte 301
+/chargeuse-articulee-v2/ /terrassement/chargeuse-compacte 301
+/dumper-sur-pneus /terrassement/dumper 301
+/dumper-sur-pneus/ /terrassement/dumper 301
+/dumper-sur-chenilles-v2 /terrassement/dumper-chenilles 301
+/dumper-sur-chenilles-v2/ /terrassement/dumper-chenilles 301
+/robot-de-demolition-v2 /terrassement/robot-demolition 301
+/robot-de-demolition-v2/ /terrassement/robot-demolition 301
 /nacelle-articulee-v2 /travail-en-hauteur/nacelle-articulee-diesel 301
 /nacelle-articulee-v2/ /travail-en-hauteur/nacelle-articulee-diesel 301
 /nacelle-articulee-electrique /travail-en-hauteur/nacelle-articulee-electrique 301
@@ -102,8 +102,8 @@
 /compacteur-monocylindre-v2/ /compactage/rouleau-monocylindre 301
 /compacteur-tandem-v2 /compactage/rouleau-tandem 301
 /compacteur-tandem-v2/ /compactage/rouleau-tandem 301
-/compacteur-de-tranchee-a-pieds-dameurs /compactage/pilonneuse 301
-/compacteur-de-tranchee-a-pieds-dameurs/ /compactage/pilonneuse 301
+/compacteur-de-tranchee-a-pieds-dameurs /compactage/rouleau-monocylindre 301
+/compacteur-de-tranchee-a-pieds-dameurs/ /compactage/rouleau-monocylindre 301
 /bungalow-v2 /base-vie/bungalow 301
 /bungalow-v2/ /base-vie/bungalow 301
 /landing-page-2 /base-vie/sanitaire 301
@@ -162,6 +162,71 @@
 /autres/aspirateur/ /autres 301
 /base-vie/local-technique /base-vie/container 301
 /base-vie/local-technique/ /base-vie/container 301
+
+
+# --- URLs /home/... de l'ancien WordPress, constatées mortes le 03/08/2026 ---
+# Ces 25 adresses étaient encore ciblées par des annonces Ads et/ou présentes dans l'index Google.
+# Faute de règle, elles tombaient sur la page 404 — en HTTP 200, donc invisibles à un contrôle de liens.
+# Le fichier couvrait la variante /slug-v2 mais pas la variante /home/slug.
+# Première correspondance gagne : ce bloc doit rester AVANT le fallback SPA.
+/home/bungalow /base-vie/bungalow 301
+/home/bungalow/ /base-vie/bungalow 301
+/home/bungalow-sanitaire /base-vie/sanitaire 301
+/home/bungalow-sanitaire/ /base-vie/sanitaire 301
+/home/chargeuse-compacte-sur-chenilles /terrassement/chargeuse-chenilles 301
+/home/chargeuse-compacte-sur-chenilles/ /terrassement/chargeuse-chenilles 301
+/home/chariot-industriel /manutention/chariot-industriel-diesel 301
+/home/chariot-industriel/ /manutention/chariot-industriel-diesel 301
+/home/chariot-semi-industriel /manutention/chariot-semi-industriel 301
+/home/chariot-semi-industriel/ /manutention/chariot-semi-industriel 301
+/home/chariot-telescopique /manutention/chariot-telescopique 301
+/home/chariot-telescopique/ /manutention/chariot-telescopique 301
+/home/chariot-telescopique-rotatif /manutention/chariot-rotatif 301
+/home/chariot-telescopique-rotatif/ /manutention/chariot-rotatif 301
+/home/chariot-tout-terrain /manutention/chariot-tout-terrain 301
+/home/chariot-tout-terrain/ /manutention/chariot-tout-terrain 301
+/home/compacteur-de-tranchee-a-pieds-dameurs /compactage/rouleau-monocylindre 301
+/home/compacteur-de-tranchee-a-pieds-dameurs/ /compactage/rouleau-monocylindre 301
+/home/compacteur-monocylindre /compactage/rouleau-monocylindre 301
+/home/compacteur-monocylindre/ /compactage/rouleau-monocylindre 301
+/home/dumper-sur-chenilles /terrassement/dumper-chenilles 301
+/home/dumper-sur-chenilles/ /terrassement/dumper-chenilles 301
+/home/grue-mobile /manutention/grue-mobile 301
+/home/grue-mobile/ /manutention/grue-mobile 301
+/home/mini-grue-araignee /manutention/mini-grue-araignee 301
+/home/mini-grue-araignee/ /manutention/mini-grue-araignee 301
+/home/mini-pelle /terrassement/mini-pelle 301
+/home/mini-pelle/ /terrassement/mini-pelle 301
+/home/nacelle-araignee /travail-en-hauteur/nacelle-araignee 301
+/home/nacelle-araignee/ /travail-en-hauteur/nacelle-araignee 301
+/home/nacelle-articulee /travail-en-hauteur/nacelle-articulee-diesel 301
+/home/nacelle-articulee/ /travail-en-hauteur/nacelle-articulee-diesel 301
+/home/nacelle-ciseaux /travail-en-hauteur/nacelle-ciseaux-electrique 301
+/home/nacelle-ciseaux/ /travail-en-hauteur/nacelle-ciseaux-electrique 301
+/home/nacelle-mat-vertical-manuel /travail-en-hauteur/nacelle-mat 301
+/home/nacelle-mat-vertical-manuel/ /travail-en-hauteur/nacelle-mat 301
+/home/nacelle-sur-poids-lourd /travail-en-hauteur/nacelle-camion 301
+/home/nacelle-sur-poids-lourd/ /travail-en-hauteur/nacelle-camion 301
+/home/nacelle-sur-vehicule-leger /travail-en-hauteur/nacelle-camion 301
+/home/nacelle-sur-vehicule-leger/ /travail-en-hauteur/nacelle-camion 301
+/home/nacelle-telescopique /travail-en-hauteur/nacelle-telescopique 301
+/home/nacelle-telescopique/ /travail-en-hauteur/nacelle-telescopique 301
+/home/pelle-sur-pneus /terrassement/pelle-pneus 301
+/home/pelle-sur-pneus/ /terrassement/pelle-pneus 301
+/home/roulotte-de-chantier /base-vie/roulotte 301
+/home/roulotte-de-chantier/ /base-vie/roulotte 301
+/home/roulotte-de-chantier-avec-wc-et-douche /base-vie/roulotte 301
+/home/roulotte-de-chantier-avec-wc-et-douche/ /base-vie/roulotte 301
+/home/wc-chimique /base-vie/sanitaire 301
+/home/wc-chimique/ /base-vie/sanitaire 301
+
+
+# --- Canonicalisation : fiches accessibles sous deux catégories (03/08/2026) ---
+# ProductPage cherche le slug sans vérifier la catégorie, donc /autres/dumper affichait
+# la fiche « Dumper sur pneus » qui vit en réalité dans /terrassement. Deux URLs pour
+# une même page = contenu dupliqué.
+/autres/dumper /terrassement/dumper 301
+/autres/robot-demolition /terrassement/robot-demolition 301
 
 # Fallback SPA — DOIT rester la DERNIÈRE règle (première correspondance gagne)
 /* /index.html 200
