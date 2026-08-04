@@ -4,19 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
+      // Mesure d'audience avec mode consentement (Consent Mode v2).
+      //
+      // Avant : gtag n'était chargé QUE si l'internaute cliquait « Accepter ».
+      // Résultat, du 06/07 au 04/08/2026 : 935 clics facturés par Google Ads mais
+      // seulement 202 sessions vues dans GA4 — 78 % du trafic était invisible.
+      //
+      // Maintenant : gtag est toujours chargé, mais démarre avec TOUS les
+      // consentements refusés. Dans cet état Google ne dépose aucun cookie et
+      // n'envoie que des mesures anonymes : on voit le volume réel sans identifier
+      // personne. Le clic sur « Accepter » remonte le consentement.
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       (function(){
         var KEY = 'eap_cookie_consent';
-        var loaded = false;
-        function loadGA(){
-          if (loaded) return; loaded = true;
-          gtag('js', new Date());
-          gtag('config', 'G-JCGCRQ5GCD');
-          var s = document.createElement('script');
-          s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JCGCRQ5GCD';
-          document.head.appendChild(s);
-        }
+        var GRANTED = { ad_storage:'granted', ad_user_data:'granted', ad_personalization:'granted', analytics_storage:'granted' };
+
+        // Par défaut : rien n'est autorisé. Doit être déclaré AVANT tout autre appel gtag.
+        gtag('consent', 'default', {
+          ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+          analytics_storage: 'denied', wait_for_update: 500
+        });
+        gtag('js', new Date());
+        gtag('config', 'G-JCGCRQ5GCD');
+
+        var s = document.createElement('script');
+        s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JCGCRQ5GCD';
+        document.head.appendChild(s);
+
+        function accepter(){ gtag('consent', 'update', GRANTED); }
+
         function banner(){
           if (document.getElementById('eap-cookies')) return;
           var d = document.createElement('div');
@@ -28,13 +45,13 @@
             + '<div style="display:flex;gap:10px;flex-wrap:wrap"><button id="eap-ck-no" style="flex:1;min-width:120px;padding:10px 14px;border-radius:9px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#e2e8f0;font-weight:600;cursor:pointer">Refuser</button>'
             + '<button id="eap-ck-yes" style="flex:1;min-width:120px;padding:10px 14px;border-radius:9px;border:0;background:#ED5722;color:#fff;font-weight:700;cursor:pointer">Accepter</button></div>';
           document.body.appendChild(d);
-          document.getElementById('eap-ck-yes').onclick = function(){ localStorage.setItem(KEY,'granted'); d.remove(); loadGA(); };
+          document.getElementById('eap-ck-yes').onclick = function(){ localStorage.setItem(KEY,'granted'); d.remove(); accepter(); };
           document.getElementById('eap-ck-no').onclick = function(){ localStorage.setItem(KEY,'denied'); d.remove(); };
         }
         window.__eapConsentReset = function(){ localStorage.removeItem(KEY); banner(); };
         function init(){
           var v = localStorage.getItem(KEY);
-          if (v === 'granted') loadGA();
+          if (v === 'granted') accepter();
           else if (v !== 'denied') banner();
         }
         if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
