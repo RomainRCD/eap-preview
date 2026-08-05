@@ -77,5 +77,63 @@
       "imageAlt": "Benne DIB 30 m³ pour l'évacuation des déchets de chantier",
       "contentTitle": "Benne DIB : ce qu'il faut savoir avant de commander"
     }
+  },
+  "dumper-chenilles": {
+    "spec": "1,5 à 20 T",
+    "description": [
+      "Le dumper sur chenilles — aussi appelé transporteur sur chenilles, motobasculeur chenillé ou, chez les compacts, brouette à chenilles — sert à déplacer de la terre, des gravats ou des matériaux là où un dumper sur pneus ne passe pas, ou passerait en abîmant tout. Les chenilles répartissent le poids de la machine au sol : elle avance sur terrain meuble, boueux, en pente ou fraîchement remblayé sans s'enliser et sans creuser d'ornières. C'est un matériel rare en location, et c'est précisément pour cela qu'EAP Location en a fait une spécialité.",
+      "**Pourquoi des chenilles plutôt que des roues :**",
+      "- **Terrain meuble, boue, sable, remblai frais** — la pression au sol d'un engin chenillé est trois à quatre fois plus faible que celle d'un dumper sur pneus à charge égale.",
+      "- **Pente et dévers** — la surface de contact au sol donne une adhérence que les pneus n'ont pas, y compris chargé.",
+      "- **Sol fini qu'il ne faut pas marquer** — pelouse, dallage, enrobé récent, sous-couche : on passe sans laisser de traces ni de contraintes de charge ponctuelle.",
+      "- **Accès étroit** — les gabarits compacts passent dans un portail, un couloir de maison ou une allée de jardin, ce qui rend le chantier possible sans démolir un accès.",
+      "**Les capacités disponibles :**",
+      "**1,5 T** — le format qui passe partout : accès de maison, jardin, terrasse, cour intérieure. Le choix des paysagistes et des chantiers de rénovation en zone contrainte.",
+      "**2,5 T** — c'est la machine la plus demandée, et de très loin, sur l'ensemble de nos locations de dumper chenillé. Le bon équilibre entre charge utile réelle et encombrement : elle avale un chantier de terrassement de maison individuelle tout en franchissant un accès standard.",
+      "**3,5 T à 6 T** — terrassement de volume, évacuation continue derrière une pelle, chantiers de VRD sur terrain difficile.",
+      "**8 T à 20 T** — rotation de gros volumes sur terrain porteur médiocre : carrières, chantiers de génie civil, zones humides, aménagements de berges.",
+      "**Ce qu'il faut nous dire pour choisir la bonne machine :**",
+      "Trois informations suffisent : la **charge utile** dont vous avez besoin, la **largeur du passage le plus étroit** de l'accès au chantier, et la **nature du terrain**. Ces trois éléments déterminent la machine — le reste, disponibilité et logistique, est notre travail. Si vous hésitez entre chenilles et pneus, décrivez simplement le sol : nous tranchons avec vous.",
+      "**Ce sur quoi vous pouvez compter :**",
+      "- Location sans chauffeur, en courte comme en longue durée, avec un tarif dégressif à partir du cinquième jour.",
+      "- Livraison et reprise sur le chantier, partout en France métropolitaine, via un réseau de 2 400 agences partenaires.",
+      "- Un seul interlocuteur du devis à la restitution du matériel, et une réponse chiffrée en moins de 2 heures ouvrées.",
+      "- Un sourcing actif : le dumper chenillé est un matériel peu répandu en parc de location, nous allons le chercher là où il est disponible plutôt que de vous proposer un équivalent sur pneus."
+    ],
+    "faq": [
+      {
+        "q": "Quelle différence entre un dumper sur chenilles et un dumper sur pneus ?",
+        "a": "Le dumper sur pneus va plus vite et coûte moins cher : c'est le bon choix sur une piste stabilisée ou un terrain porteur. Le dumper sur chenilles répartit son poids au sol, ce qui lui permet de rouler chargé sur du meuble, de la boue, du sable ou une pente, et de passer sur un sol fini sans le marquer. Dès que le terrain est incertain ou que l'accès est étroit, ce sont les chenilles qui font le chantier."
+      },
+      {
+        "q": "Quelle capacité de dumper chenillé choisir ?",
+        "a": "Le 2,5 T couvre la grande majorité des besoins : c'est notre machine la plus louée. En dessous, le 1,5 T passe dans un accès de maison ou de jardin. Au-dessus, on part sur du 3,5 à 6 T pour du terrassement de volume, et jusqu'à 20 T pour de la rotation continue sur terrain porteur médiocre. Donnez-nous la charge utile et la largeur de votre accès le plus étroit, nous vous orientons."
+      },
+      {
+        "q": "Quels modèles de dumper sur chenilles proposez-vous ?",
+        "a": "Le modèle exact dépend de l'agence disponible près de votre chantier : nous travaillons avec un réseau de 2 400 agences partenaires. Sur la gamme compacte, les machines proposées relèvent des familles habituelles du marché — transporteurs sur chenilles type Kubota KC, Yanmar, Cormidi, Messersì ou Hinowa. Ce qui compte pour votre chantier, c'est la charge utile et la largeur de passage : précisez-les, nous vous proposons la machine qui correspond."
+      },
+      {
+        "q": "Un dumper sur chenilles passe-t-il sur une pelouse ou un dallage ?",
+        "a": "Oui, et c'est l'une des principales raisons de le choisir. La pression exercée au sol est bien plus faible que celle d'un engin sur pneus, ce qui évite les ornières sur une pelouse et les contraintes ponctuelles sur un dallage ou un enrobé récent. Sur sol fini fragile, on peut en plus travailler avec des chenilles caoutchouc."
+      },
+      {
+        "q": "Combien coûte la location d'un dumper sur chenilles ?",
+        "a": "Le prix dépend de la capacité de la machine, de la durée de mise à disposition et du lieu du chantier, avec un tarif dégressif dès le cinquième jour de location. Il n'y a donc pas de tarif unique. Décrivez votre besoin, vous recevez un devis chiffré gratuit en moins de 2 heures ouvrées."
+      },
+      {
+        "q": "Livrez-vous un dumper chenillé partout en France ?",
+        "a": "Oui. Le dumper sur chenilles est un matériel peu répandu dans les parcs de location, mais notre réseau de 2 400 agences partenaires couvre la France métropolitaine. Livraison et reprise sur le chantier sont organisées avec votre interlocuteur dédié, y compris sur les sites isolés."
+      }
+    ],
+    "page": {
+      "title": "Location Dumper sur chenilles 2,5T | Transporteur chenillé | EAP Location",
+      "description": "Location de dumper sur chenilles de 1,5 à 20 T : terrain meuble, pente, accès étroit, sol à ne pas marquer. Livraison partout en France, devis gratuit en moins de 2 h.",
+      "keywords": "location dumper sur chenilles, location dumper chenille, dumper chenillé, transporteur sur chenilles, motobasculeur chenille, brouette à chenilles, location dumper 2.5t, dumper chenille 1.5t, location tombereau sur chenilles",
+      "heroSubtitle": "De 1,5 à 20 T pour franchir le terrain meuble, la pente et les accès étroits sans marquer le sol. Location sans chauffeur, livraison partout en France.",
+      "selectorTitle": "Quelle capacité de dumper chenillé pour votre chantier ?",
+      "imageAlt": "Dumper sur chenilles 2,5 T en évacuation de terre sur terrain meuble",
+      "contentTitle": "Dumper sur chenilles : ce qu'il faut savoir avant de commander"
+    }
   }
 }
