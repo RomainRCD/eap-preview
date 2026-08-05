@@ -1,0 +1,81 @@
+{
+  "benne-dib": {
+    "spec": "8 à 30 m³",
+    "variants": [
+      {
+        "label": "8 m³",
+        "value": "8M3"
+      },
+      {
+        "label": "10 m³",
+        "value": "10M3"
+      },
+      {
+        "label": "15 m³",
+        "value": "15M3"
+      },
+      {
+        "label": "20 m³",
+        "value": "20M3"
+      },
+      {
+        "label": "30 m³",
+        "value": "30M3"
+      }
+    ],
+    "description": [
+      "La benne DIB — pour déchets industriels banals — est le contenant dans lequel on évacue tout ce qu'un chantier produit de non dangereux : gravats, bois, plâtre, isolants, cartons, plastiques, ferrailles, mobilier. Selon les régions et les métiers on l'appelle aussi benne à déchets, benne tout venant ou conteneur de chantier : c'est le même matériel. EAP Location met à disposition la gamme complète, du 8 m³ au 30 m³, en location courte ou longue durée, partout en France.",
+      "**Quel volume pour quel chantier :**",
+      "**8 m³** — rénovation d'appartement, petits volumes, et surtout déchets denses : une benne à gravats se remplit en poids bien avant de se remplir en volume.",
+      "**10 m³** — le format le plus demandé en rénovation, bon compromis entre encombrement au sol et capacité.",
+      "**15 m³** — démolition légère et déchets encombrants : bois, placo, emballages, menuiseries déposées.",
+      "**20 m³** — tout venant de fin de chantier, gros volumes peu denses, plusieurs corps d'état sur le même site.",
+      "**30 m³** — évacuation massive et tri en sortie de chantier, sur des matériaux légers.",
+      "**Benne DIB, benne à gravats, benne tout venant : où est la différence :**",
+      "La **benne DIB** accueille un mélange de déchets non dangereux, ce qu'on appelle couramment le **tout venant** : bois, plastiques, cartons, métaux, plâtre, isolants, revêtements.",
+      "La **benne à gravats** reçoit des déchets inertes — béton, briques, tuiles, carrelage, terre. Ils pèsent trois à quatre fois plus lourd à volume égal, c'est pourquoi on part sur un petit contenant.",
+      "Ne se mettent jamais dans une benne DIB : amiante, produits chimiques, peintures et solvants, pneus, équipements électriques, déchets d'activité de soins. Ils relèvent de filières dédiées.",
+      "Au moment du devis, deux informations suffisent à choisir le bon contenant : la **nature des déchets** et le **volume estimé**. En cas de doute, décrivez le chantier, nous tranchons avec vous.",
+      "**Ce sur quoi vous pouvez compter :**",
+      "- Mise à disposition de la benne sur le chantier, en location courte ou longue durée.",
+      "- Livraison partout en France métropolitaine, grâce à un réseau de 2 400 agences partenaires.",
+      "- Enlèvement et rotations organisés avec votre interlocuteur, au rythme d'avancement du chantier.",
+      "- Un seul interlocuteur du devis à la reprise du matériel, et une réponse en moins de 2 heures."
+    ],
+    "faq": [
+      {
+        "q": "Quels déchets peut-on mettre dans une benne DIB ?",
+        "a": "Tous les déchets de chantier non dangereux, en mélange : bois, plâtre, isolants, cartons, plastiques, ferrailles, menuiseries, mobilier, revêtements de sol. Sont exclus l'amiante, les produits chimiques, peintures et solvants, les pneus et les équipements électriques, qui relèvent de filières spécifiques. Les gravats et déchets inertes se traitent à part, dans une benne dédiée."
+      },
+      {
+        "q": "Quelle différence entre une benne DIB et une benne à gravats ?",
+        "a": "La benne DIB reçoit du tout venant non dangereux, mélangé. La benne à gravats reçoit des déchets inertes : béton, briques, tuiles, carrelage, terre. La différence tient au poids — à volume égal les gravats pèsent trois à quatre fois plus lourd, on part donc sur un petit contenant même quand le chantier en produit beaucoup."
+      },
+      {
+        "q": "Quelle taille de benne choisir pour mon chantier ?",
+        "a": "8 m³ pour une rénovation d'appartement ou des déchets denses, 10 m³ pour la majorité des chantiers de rénovation, 15 m³ dès qu'il y a du volumineux (bois, placo, emballages), 20 et 30 m³ pour les fins de chantier et le tri sur des matériaux légers. Décrivez-nous le chantier dans le devis, nous confirmons le volume."
+      },
+      {
+        "q": "Combien coûte la location d'une benne à déchets ?",
+        "a": "Le prix dépend de quatre choses : le volume de la benne, la durée de mise à disposition, le lieu du chantier et la nature des déchets. Il n'y a donc pas de tarif unique. Décrivez votre besoin, vous recevez un devis chiffré gratuit en moins de 2 heures ouvrées."
+      },
+      {
+        "q": "Livrez-vous une benne partout en France ?",
+        "a": "Oui. Notre réseau de 2 400 agences partenaires couvre la France métropolitaine, y compris les chantiers isolés. Livraison et enlèvement sont organisés avec votre interlocuteur dédié."
+      },
+      {
+        "q": "Peut-on garder la benne plusieurs semaines ?",
+        "a": "Oui, la location est possible en courte comme en longue durée, et les rotations se règlent au fil de l'avancement : on remplace la benne pleine plutôt que d'immobiliser le chantier."
+      }
+    ],
+    "page": {
+      "title": "Location Benne DIB, gravats et tout venant | EAP Location",
+      "description": "Location de benne DIB de 8 à 30 m³ pour évacuer gravats, tout venant et déchets de chantier. Livraison partout en France, devis gratuit en moins de 2 h.",
+      "keywords": "location benne dib, location benne à déchets, location benne gravats, location benne tout venant, location conteneur déchets, benne de chantier, location benne 10m3, location benne 20m3",
+      "heroSubtitle": "De 8 à 30 m³ pour vos gravats, votre tout venant et vos déchets de chantier. Location courte ou longue durée, livraison partout en France.",
+      "selectorTitle": "Quel volume de benne pour votre chantier ?",
+      "imageAlt": "Benne DIB 30 m³ pour l'évacuation des déchets de chantier",
+      "contentTitle": "Benne DIB : ce qu'il faut savoir avant de commander"
+    }
+  }
+}
