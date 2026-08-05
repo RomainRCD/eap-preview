@@ -55,9 +55,65 @@
           else if (v !== 'denied') banner();
         }
         if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+        // ---------------------------------------------------------------
+        // Clic sur un numéro de téléphone → événement GA4 `phone_click`.
+        //
+        // Écouteur délégué sur document : couvre TOUS les liens tel: du site
+        // (18 au 05/08/2026) sans rien câbler dans les composants, y compris
+        // ceux montés après coup par React et ceux ajoutés plus tard.
+        //
+        // Paramètres envoyés — à déclarer en dimensions personnalisées GA4 :
+        //   zone      : header / hero / corps_de_page / footer / cta_mobile_fixe
+        //   page_type : accueil / categorie / fiche_produit / contact / devis…
+        //   produit   : "famille/slug" sur une fiche produit, sinon "(aucun)"
+        // La page et la catégorie d'appareil (mobile/desktop) sont déjà
+        // fournies nativement par GA4 : inutile de les dupliquer ici.
+        //
+        // La zone est déduite de la POSITION du lien, pas d'un attribut :
+        // les deux gabarits du site (pages avec en-tête partagé, fiches
+        // produits autonomes) n'ont aucun marqueur commun, et un attribut
+        // oublié sur un futur lien produirait un trou silencieux.
+        // ---------------------------------------------------------------
+        var FAMILLES = ['terrassement','travail-en-hauteur','manutention','compactage','base-vie','autres'];
+
+        function contextePage(){
+          var seg = (location.pathname || '/').split('/').filter(Boolean);
+          if (!seg.length) return { page_type: 'accueil', produit: '(aucun)' };
+          if (FAMILLES.indexOf(seg[0]) !== -1) {
+            return seg[1]
+              ? { page_type: 'fiche_produit', produit: seg[0] + '/' + seg[1] }
+              : { page_type: 'categorie', produit: '(aucun)' };
+          }
+          return { page_type: seg[0], produit: '(aucun)' };
+        }
+
+        function zoneDuLien(a){
+          // 1. Barre d'appel fixe en bas d'écran (mobile) : un ancêtre est en
+          //    position:fixed. À tester en premier — elle flotte au-dessus de tout.
+          for (var el = a; el && el !== document.body; el = el.parentElement) {
+            try { if (getComputedStyle(el).position === 'fixed') return 'cta_mobile_fixe'; }
+            catch (_e) { /* élément détaché */ }
+          }
+          if (a.closest('footer')) return 'footer';
+          if (a.closest('header')) return 'header';
+          // 2. Sinon on se repère à la hauteur ABSOLUE du lien dans la page.
+          var y = 0;
+          try { y = a.getBoundingClientRect().top + (window.pageYOffset || 0); } catch (_e) {}
+          if (y < 150) return 'header';                                   // bandeau de contact tout en haut
+          if (y < (window.innerHeight || 800)) return 'hero';             // 1er écran : hero accueil / hero produit
+          return 'corps_de_page';                                          // bloc devis, page contact, bas de fiche
+        }
+
         document.addEventListener('click', function(e){
           var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
-          if (a) gtag('event', 'phone_click', { phone_number: a.getAttribute('href').replace('tel:','') });
+          if (!a) return;
+          var c = contextePage();
+          gtag('event', 'phone_click', {
+            zone: zoneDuLien(a),
+            page_type: c.page_type,
+            produit: c.produit,
+            phone_number: a.getAttribute('href').replace('tel:','')
+          });
         }, true);
       })();
     </script>
