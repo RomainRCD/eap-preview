@@ -165,14 +165,64 @@
       }
     ],
     "description": [
-      "EAP location propose le plus large choix de chargeuse compacte sur chenilles en France. Sur notre site vous retrouverez disponible à la location des chargeuses compactes sur chenilles de 2 à 6 tonnes, jusqu'à 600 L de godet.",
-      "Les disponibilités et caractéristiques de nos chargeuses compactes sur chenilles :",
-      "- Chargeuse compacte sur chenilles – 2 tonnes",
-      "- Chargeuse compacte sur chenilles – 3 tonnes et 280 litres",
-      "- Chargeuse compacte sur chenilles – 3,5 tonnes et 380 litres",
-      "- Chargeuse compacte sur chenilles – 4,5 tonnes et 450 litres",
-      "- Chargeuse compacte sur chenilles – 6 tonnes et 600 litres",
-      "Accessoires disponibles : fourche à palette et godet."
-    ]
+      "La chargeuse compacte sur chenilles — que tout le monde appelle **mini chargeuse**, et que beaucoup nomment simplement **Bobcat**, du nom de la marque qui a popularisé l'engin — charge, déplace et nivelle sur les chantiers où une chargeuse sur pneus ne passe pas ou s'enlise. Les chenilles répartissent son poids au sol : elle travaille sur terrain meuble, boueux ou en pente, et passe sur un sol fini sans le marquer. EAP Location la propose de 2 à 6 tonnes, avec godet ou fourche à palette, partout en France.",
+      "**Ce qu'elle sait faire :**",
+      "- **Charger et évacuer** — terre, gravats, sable, remblai, déchets de chantier, avec un godet de 280 à 600 litres selon le modèle.",
+      "- **Reprendre et niveler** — préparation de plateforme, réglage de fond de forme, régalage de terre végétale.",
+      "- **Manutentionner** — avec la fourche à palette : sacs de ciment, parpaings, plaques, palettes de matériaux.",
+      "- **Travailler en espace contraint** — le gabarit compact passe là où un engin sur pneus est trop large ou trop lourd.",
+      "**Chenilles ou pneus, comment choisir :**",
+      "La **chargeuse sur chenilles** est faite pour le sol incertain : boue, terre fraîchement remuée, sable, pente, ou dallage qu'on ne veut pas marquer. Sa pression au sol est bien plus faible, elle n'ornière pas.",
+      "La **chargeuse sur pneus** va plus vite sur piste stabilisée et coûte moins cher. C'est le bon choix sur une plateforme dure et roulante.",
+      "En cas de doute, décrivez-nous simplement le sol du chantier : nous tranchons avec vous.",
+      "**Les capacités disponibles :**",
+      "**2 T** — le format qui passe partout : accès de maison, jardin, cour intérieure, chantier de rénovation en zone contrainte.",
+      "**3 T – 280 L** et **3,5 T – 380 L** — le cœur de gamme, celui qu'on nous demande le plus : assez de charge pour avancer vite, assez compact pour franchir un accès standard.",
+      "**4,5 T – 450 L** et **6 T – 600 L** — terrassement de volume, chargement continu, chantiers de VRD et d'aménagement.",
+      "**Ce sur quoi vous pouvez compter :**",
+      "- Location sans chauffeur, en courte comme en longue durée, avec un tarif dégressif dès le cinquième jour.",
+      "- Godet et fourche à palette disponibles : précisez l'usage, l'équipement suit.",
+      "- Livraison et reprise sur le chantier, partout en France métropolitaine, via un réseau de 2 400 agences partenaires.",
+      "- Un seul interlocuteur du devis à la restitution, et une réponse chiffrée en moins de 2 heures ouvrées."
+    ],
+    "faq": [
+      {
+        "q": "Mini chargeuse, chargeuse compacte, Bobcat : est-ce la même machine ?",
+        "a": "Oui. « Bobcat » est une marque devenue nom commun, comme Frigidaire pour le réfrigérateur. « Mini chargeuse » et « chargeuse compacte » désignent le même engin : une chargeuse de petit gabarit, ici sur chenilles, équipée d'un godet ou d'une fourche à palette. Quelle que soit l'appellation que vous employez, c'est le matériel que nous livrons, de 2 à 6 tonnes."
+      },
+      {
+        "q": "Quelle différence entre une chargeuse sur chenilles et une chargeuse sur pneus ?",
+        "a": "Les chenilles répartissent le poids au sol : la machine avance chargée sur du meuble, de la boue, du sable ou une pente, et passe sur un sol fini sans creuser d'ornières. Les pneus vont plus vite et coûtent moins cher, mais demandent une piste stabilisée. Dès que le terrain est incertain, ce sont les chenilles."
+      },
+      {
+        "q": "Quelle taille de mini chargeuse choisir ?",
+        "a": "Le 2 T passe dans un accès de maison ou de jardin. Le 3 T – 280 L et le 3,5 T – 380 L couvrent la majorité des chantiers : bon compromis entre charge et encombrement. Au-dessus, le 4,5 T – 450 L et le 6 T – 600 L servent au terrassement de volume. Donnez-nous la nature du sol et la largeur de votre accès le plus étroit, nous vous orientons."
+      },
+      {
+        "q": "Quels équipements sont disponibles ?",
+        "a": "Godet et fourche à palette, selon l'usage. Le godet pour charger, évacuer, niveler ; la fourche pour manutentionner des palettes, des sacs ou des plaques. Précisez ce que vous avez à faire au moment du devis, l'équipement est monté avant livraison."
+      },
+      {
+        "q": "Une mini chargeuse sur chenilles abîme-t-elle une pelouse ou un dallage ?",
+        "a": "Bien moins qu'un engin sur pneus, et c'est l'une des raisons de la choisir. La pression exercée au sol est nettement plus faible, ce qui évite les ornières sur une pelouse et les contraintes ponctuelles sur un dallage ou un enrobé récent. Sur sol fini fragile, on peut travailler avec des chenilles caoutchouc."
+      },
+      {
+        "q": "Combien coûte la location d'une mini chargeuse sur chenilles ?",
+        "a": "Le prix dépend de la capacité de la machine, de l'équipement, de la durée de mise à disposition et du lieu du chantier, avec un tarif dégressif dès le cinquième jour. Il n'y a donc pas de tarif unique. Décrivez votre besoin, vous recevez un devis chiffré gratuit en moins de 2 heures ouvrées."
+      },
+      {
+        "q": "Livrez-vous partout en France ?",
+        "a": "Oui. Notre réseau de 2 400 agences partenaires couvre la France métropolitaine, y compris les chantiers isolés. Livraison et reprise sont organisées avec votre interlocuteur dédié."
+      }
+    ],
+    "page": {
+      "title": "Location Mini Chargeuse sur chenilles (Bobcat) 2 à 6 T | EAP Location",
+      "description": "Location de mini chargeuse compacte sur chenilles de 2 à 6 T, godet ou fourche à palette. Terrain meuble, pente, accès étroit. Livraison partout en France, devis en moins de 2 h.",
+      "keywords": "location mini chargeuse, mini chargeuse, location bobcat, location bobcat sur chenilles, chargeuse compacte sur chenilles, location chargeuse compacte, chargeuse sur chenilles, location chargeuse chenilles, mini chargeuse sur chenilles, location chargeuse godet",
+      "heroSubtitle": "La mini chargeuse compacte sur chenilles, de 2 à 6 T, godet ou fourche à palette. Elle charge là où les pneus s'enlisent, sans marquer le sol. Livraison partout en France.",
+      "selectorTitle": "Quelle capacité de mini chargeuse pour votre chantier ?",
+      "imageAlt": "Mini chargeuse compacte sur chenilles avec godet sur un chantier de terrassement",
+      "contentTitle": "Mini chargeuse sur chenilles : ce qu'il faut savoir avant de commander"
+    }
   }
 }
