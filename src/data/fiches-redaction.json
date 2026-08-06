@@ -137,16 +137,38 @@
     }
   },
   "chargeuse-chenilles": {
-    "spec": "3 à 6 T"
-  },
-  "mini-grue-chenilles": {
-    "spec": "5 T – 20 m à 8 T – 26 m",
+    "spec": "2 à 6 T",
+    "variants": [
+      {
+        "label": "2T",
+        "value": "2T"
+      },
+      {
+        "label": "3T / 280L",
+        "value": "3T / 280L"
+      },
+      {
+        "label": "3,5T / 380L",
+        "value": "3,5T / 380L"
+      },
+      {
+        "label": "4,5T / 450L",
+        "value": "4,5T / 450L"
+      },
+      {
+        "label": "6T / 600L",
+        "value": "6T / 600L"
+      }
+    ],
     "description": [
-      "EAP location propose le plus large choix de mini grue télescopique sur chenilles en France. Sur notre site vous retrouverez disponible à la location des mini grue télescopique pouvant aller jusqu'à 26 mètres de hauteur de travail.",
-      "- Mini grue télescopique de 5T – 20 m",
-      "- Mini grue télescopique de 6T – 22 m",
-      "- Mini grue télescopique de 6T – 24 m",
-      "- Mini grue télescopique de 8T – 26 m"
+      "EAP location propose le plus large choix de chargeuse compacte sur chenilles en France. Sur notre site vous retrouverez disponible à la location des chargeuses compactes sur chenilles de 2 à 6 tonnes, jusqu'à 600 L de godet.",
+      "Les disponibilités et caractéristiques de nos chargeuses compactes sur chenilles :",
+      "- Chargeuse compacte sur chenilles – 2 tonnes",
+      "- Chargeuse compacte sur chenilles – 3 tonnes et 280 litres",
+      "- Chargeuse compacte sur chenilles – 3,5 tonnes et 380 litres",
+      "- Chargeuse compacte sur chenilles – 4,5 tonnes et 450 litres",
+      "- Chargeuse compacte sur chenilles – 6 tonnes et 600 litres",
+      "Accessoires disponibles : fourche à palette et godet."
     ]
   }
 }
