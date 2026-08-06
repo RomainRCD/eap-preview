@@ -135,5 +135,18 @@
       "imageAlt": "Dumper sur chenilles 2,5 T en évacuation de terre sur terrain meuble",
       "contentTitle": "Dumper sur chenilles : ce qu'il faut savoir avant de commander"
     }
+  },
+  "chargeuse-chenilles": {
+    "spec": "3 à 6 T"
+  },
+  "mini-grue-chenilles": {
+    "spec": "5 T – 20 m à 8 T – 26 m",
+    "description": [
+      "EAP location propose le plus large choix de mini grue télescopique sur chenilles en France. Sur notre site vous retrouverez disponible à la location des mini grue télescopique pouvant aller jusqu'à 26 mètres de hauteur de travail.",
+      "- Mini grue télescopique de 5T – 20 m",
+      "- Mini grue télescopique de 6T – 22 m",
+      "- Mini grue télescopique de 6T – 24 m",
+      "- Mini grue télescopique de 8T – 26 m"
+    ]
   }
 }
