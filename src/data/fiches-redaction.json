@@ -24,7 +24,7 @@
       }
     ],
     "description": [
-      "La benne DIB — pour déchets industriels banals — est le contenant dans lequel on évacue tout ce qu'un chantier produit de non dangereux : gravats, bois, plâtre, isolants, cartons, plastiques, ferrailles, mobilier. Selon les régions et les métiers on l'appelle aussi benne à déchets, benne tout venant ou conteneur de chantier : c'est le même matériel. EAP Location met à disposition la gamme complète, du 8 m³ au 30 m³, en location courte ou longue durée, partout en France.",
+      "La benne DIB — pour déchets industriels banals — est le contenant dans lequel on évacue tout ce qu'un chantier produit de non dangereux : gravats, bois, plâtre, isolants, cartons, plastiques, ferrailles, mobilier. Selon les régions et les métiers on l'appelle aussi benne de chantier, benne à déchets, benne tout venant ou conteneur de chantier : c'est le même matériel. EAP Location met à disposition la gamme complète, du 8 m³ au 30 m³, en location courte ou longue durée, partout en France.",
       "**Quel volume pour quel chantier :**",
       "**8 m³** — rénovation d'appartement, petits volumes, et surtout déchets denses : une benne à gravats se remplit en poids bien avant de se remplir en volume.",
       "**10 m³** — le format le plus demandé en rénovation, bon compromis entre encombrement au sol et capacité.",
@@ -46,6 +46,10 @@
       {
         "q": "Quels déchets peut-on mettre dans une benne DIB ?",
         "a": "Tous les déchets de chantier non dangereux, en mélange : bois, plâtre, isolants, cartons, plastiques, ferrailles, menuiseries, mobilier, revêtements de sol. Sont exclus l'amiante, les produits chimiques, peintures et solvants, les pneus et les équipements électriques, qui relèvent de filières spécifiques. Les gravats et déchets inertes se traitent à part, dans une benne dédiée."
+      },
+      {
+        "q": "Benne de chantier, benne DIB : est-ce la même chose ?",
+        "a": "Oui. « Benne de chantier » est le terme générique : c'est le contenant qu'on dépose sur un chantier pour évacuer les déchets. « Benne DIB » précise ce qu'on met dedans — des déchets industriels banals, c'est-à-dire tout ce qui n'est ni inerte ni dangereux. On parle aussi de benne à déchets, de benne tout venant ou de conteneur de chantier : dans tous les cas, c'est le matériel que nous livrons, du 8 au 30 m³."
       },
       {
         "q": "Quelle différence entre une benne DIB et une benne à gravats ?",
@@ -71,11 +75,11 @@
     "page": {
       "title": "Location Benne DIB, gravats et tout venant | EAP Location",
       "description": "Location de benne DIB de 8 à 30 m³ pour évacuer gravats, tout venant et déchets de chantier. Livraison partout en France, devis gratuit en moins de 2 h.",
-      "keywords": "location benne dib, location benne à déchets, location benne gravats, location benne tout venant, location conteneur déchets, benne de chantier, location benne 10m3, location benne 20m3",
-      "heroSubtitle": "De 8 à 30 m³ pour vos gravats, votre tout venant et vos déchets de chantier. Location courte ou longue durée, livraison partout en France.",
+      "keywords": "location benne dib, benne de chantier, location benne de chantier, location benne à déchets, location benne gravats, location benne tout venant, location conteneur déchets, location benne 10m3, location benne 20m3",
+      "heroSubtitle": "La benne de chantier qu'il vous faut, de 8 à 30 m³, pour vos gravats, votre tout venant et vos déchets de chantier. Location courte ou longue durée, livraison partout en France.",
       "selectorTitle": "Quel volume de benne pour votre chantier ?",
       "imageAlt": "Benne DIB 30 m³ pour l'évacuation des déchets de chantier",
-      "contentTitle": "Benne DIB : ce qu'il faut savoir avant de commander"
+      "contentTitle": "Benne de chantier : ce qu'il faut savoir avant de commander"
     }
   },
   "dumper-chenilles": {
