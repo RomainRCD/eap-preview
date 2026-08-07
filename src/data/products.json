@@ -2093,73 +2093,37 @@
     ]
   },
   "nacelle-camion": {
-    "name": "Nacelle sur porteur VL ou PL",
+    "name": "Location nacelle VL",
     "category": "travail-en-hauteur",
-    "spec": "12M à 90M",
+    "spec": "12M à 27M",
     "variants": [
       {
-        "label": "VL - 12m",
-        "value": "VL 12m"
+        "label": "12",
+        "value": "12"
       },
       {
-        "label": "VL - 14m",
-        "value": "VL 14m"
+        "label": "14",
+        "value": "14"
       },
       {
-        "label": "VL - 16m",
-        "value": "VL 16m"
+        "label": "16",
+        "value": "16"
       },
       {
-        "label": "VL - 20m",
-        "value": "VL 20m"
+        "label": "20",
+        "value": "20"
       },
       {
-        "label": "VL - 22m",
-        "value": "VL 22m"
+        "label": "22",
+        "value": "22"
       },
       {
-        "label": "VL - 25m",
-        "value": "VL 25m"
+        "label": "25",
+        "value": "25"
       },
       {
-        "label": "VL - 27m",
-        "value": "VL 27m"
-      },
-      {
-        "label": "PL - 28m",
-        "value": "PL 28m"
-      },
-      {
-        "label": "PL - 30m",
-        "value": "PL 30m"
-      },
-      {
-        "label": "PL - 36-40m",
-        "value": "PL 36-40m"
-      },
-      {
-        "label": "PL - 41-45m",
-        "value": "PL 41-45m"
-      },
-      {
-        "label": "PL - 46-50m",
-        "value": "PL 46-50m"
-      },
-      {
-        "label": "PL - 51-60m",
-        "value": "PL 51-60m"
-      },
-      {
-        "label": "PL - 61-70m",
-        "value": "PL 61-70m"
-      },
-      {
-        "label": "PL - 71-80m",
-        "value": "PL 71-80m"
-      },
-      {
-        "label": "PL - 81-90m",
-        "value": "PL 81-90m"
+        "label": "27",
+        "value": "27"
       }
     ],
     "description": [
