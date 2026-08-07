@@ -3059,5 +3059,52 @@
       "Grâce à sa flèche articulée, elle permet de contourner les obstacles et d'atteindre des points de travail en hauteur inaccessibles aux nacelles classiques sur pneus.",
       "- Déplacement sur chenilles pour sols meubles et terrains difficiles\n- Flèche articulée multi-bras pour franchir les obstacles\n- Haute stabilité sur terrain en pente\n- Idéale pour chantiers forestiers, espaces verts, façades, réseaux"
     ]
+  },
+  "nacelle-porteur-pl": {
+    "name": "Nacelle sur porteur PL",
+    "category": "travail-en-hauteur",
+    "spec": "28M à 90M",
+    "description": [
+      "Location de nacelles sur porteur poids lourds pour travaux en grande hauteur. Disponibles de 28 à 90 mètres de hauteur de travail, ces nacelles offrent une grande portée et une capacité d'intervention sur des chantiers exigeants."
+    ],
+    "variants": [
+      {
+        "label": "28",
+        "value": "28M"
+      },
+      {
+        "label": "30",
+        "value": "30M"
+      },
+      {
+        "label": "36-40",
+        "value": "36-40M"
+      },
+      {
+        "label": "41-45",
+        "value": "41-45M"
+      },
+      {
+        "label": "46-50",
+        "value": "46-50M"
+      },
+      {
+        "label": "51-60",
+        "value": "51-60M"
+      },
+      {
+        "label": "61-70",
+        "value": "61-70M"
+      },
+      {
+        "label": "71-80",
+        "value": "71-80M"
+      },
+      {
+        "label": "81-90",
+        "value": "81-90M"
+      }
+    ],
+    "options": []
   }
 }
