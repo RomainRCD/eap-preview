@@ -3030,5 +3030,34 @@
       "- Chapiteau 60 m² (5 x 12 m)",
       "- Chapiteau 200 m² (20 x 10 m)"
     ]
+  },
+  "nacelle-fleche-articulee-chenilles": {
+    "name": "Nacelle flèche articulée sur chenilles",
+    "category": "travail-en-hauteur",
+    "spec": "14m à 22m",
+    "variants": [
+      {
+        "label": "14M",
+        "value": "14M"
+      },
+      {
+        "label": "16M",
+        "value": "16M"
+      },
+      {
+        "label": "20M",
+        "value": "20M"
+      },
+      {
+        "label": "22M",
+        "value": "22M"
+      }
+    ],
+    "options": [],
+    "description": [
+      "La nacelle flèche articulée sur chenilles est conçue pour intervenir sur des chantiers à accès difficile : sols meubles, terrains accidentés, zones boueuses ou en pente. Ses chenilles lui confèrent une excellente stabilité et une mobilité tout-terrain sans dégrader le sol.",
+      "Grâce à sa flèche articulée, elle permet de contourner les obstacles et d'atteindre des points de travail en hauteur inaccessibles aux nacelles classiques sur pneus.",
+      "- Déplacement sur chenilles pour sols meubles et terrains difficiles\n- Flèche articulée multi-bras pour franchir les obstacles\n- Haute stabilité sur terrain en pente\n- Idéale pour chantiers forestiers, espaces verts, façades, réseaux"
+    ]
   }
 }
