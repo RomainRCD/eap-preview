@@ -3037,20 +3037,20 @@
     "spec": "14m à 22m",
     "variants": [
       {
-        "label": "Hauteur de travail",
-        "value": "14m"
+        "label": "14M",
+        "value": "14M"
       },
       {
-        "label": "Hauteur de travail",
-        "value": "16m"
+        "label": "16M",
+        "value": "16M"
       },
       {
-        "label": "Hauteur de travail",
-        "value": "20m"
+        "label": "20M",
+        "value": "20M"
       },
       {
-        "label": "Hauteur de travail",
-        "value": "22m"
+        "label": "22M",
+        "value": "22M"
       }
     ],
     "options": [],
