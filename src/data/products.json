@@ -2093,9 +2093,9 @@
     ]
   },
   "nacelle-camion": {
-    "name": "Nacelle sur porteur VL ou PL",
+    "name": "Location nacelle VL",
     "category": "travail-en-hauteur",
-    "spec": "12M à 90M",
+    "spec": "12M à 27M",
     "variants": [
       {
         "label": "VL - 12m",
