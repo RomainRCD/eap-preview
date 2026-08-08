@@ -3033,40 +3033,40 @@
     ],
     "variants": [
       {
-        "label": "28",
-        "value": "28M"
+        "label": "28m",
+        "value": "28m"
       },
       {
-        "label": "30",
-        "value": "30M"
+        "label": "30m",
+        "value": "30m"
       },
       {
-        "label": "36-40",
-        "value": "36-40M"
+        "label": "36-40m",
+        "value": "36-40m"
       },
       {
-        "label": "41-45",
-        "value": "41-45M"
+        "label": "41-45m",
+        "value": "41-45m"
       },
       {
-        "label": "46-50",
-        "value": "46-50M"
+        "label": "46-50m",
+        "value": "46-50m"
       },
       {
-        "label": "51-60",
-        "value": "51-60M"
+        "label": "51-60m",
+        "value": "51-60m"
       },
       {
-        "label": "61-70",
-        "value": "61-70M"
+        "label": "61-70m",
+        "value": "61-70m"
       },
       {
-        "label": "71-80",
-        "value": "71-80M"
+        "label": "71-80m",
+        "value": "71-80m"
       },
       {
-        "label": "81-90",
-        "value": "81-90M"
+        "label": "81-90m",
+        "value": "81-90m"
       }
     ],
     "options": []
