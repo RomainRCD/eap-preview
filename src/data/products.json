@@ -2679,7 +2679,7 @@
   "grue-chenilles": {
     "name": "Grue sur chenilles",
     "category": "manutention",
-    "spec": "50 à 600T",
+    "spec": "50T à 600T",
     "variants": [
       {
         "label": "50 tonnes",
