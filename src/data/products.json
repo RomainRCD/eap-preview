@@ -2846,7 +2846,7 @@
   "plaque-roulage": {
     "name": "Plaque de roulage",
     "category": "autres",
-    "spec": "Protection de sol pour chantier — 5T à 80T",
+    "spec": "5T à 80T",
     "variants": [
       {
         "label": "5T",
