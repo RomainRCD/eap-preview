@@ -1655,7 +1655,7 @@
   "chargeuse-chenilles": {
     "name": "Chargeuse sur chenilles",
     "category": "terrassement",
-    "spec": "de 2T à 6T",
+    "spec": "150L à 700L",
     "variants": [
       {
         "label": "3T / 280L",
