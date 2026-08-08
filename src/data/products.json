@@ -2095,7 +2095,7 @@
   "nacelle-camion": {
     "name": "Location nacelle VL",
     "category": "travail-en-hauteur",
-    "spec": "12M à 27M",
+    "spec": "12m à 27m",
     "variants": [
       {
         "label": "12m",
