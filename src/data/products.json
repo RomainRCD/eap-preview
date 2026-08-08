@@ -2206,7 +2206,7 @@
   "nacelle-mat": {
     "name": "Nacelle à mât verticale (Toucan)",
     "category": "travail-en-hauteur",
-    "spec": "5M à 12M",
+    "spec": "5m à 12m",
     "variants": [
       {
         "label": "5m",
