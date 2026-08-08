@@ -2682,55 +2682,55 @@
     "spec": "50T à 600T",
     "variants": [
       {
-        "label": "50 tonnes",
+        "label": "50T",
         "value": "50T"
       },
       {
-        "label": "60 tonnes",
+        "label": "60T",
         "value": "60T"
       },
       {
-        "label": "70 tonnes",
+        "label": "70T",
         "value": "70T"
       },
       {
-        "label": "80 tonnes",
+        "label": "80T",
         "value": "80T"
       },
       {
-        "label": "100 tonnes",
+        "label": "100T",
         "value": "100T"
       },
       {
-        "label": "120 tonnes",
+        "label": "120T",
         "value": "120T"
       },
       {
-        "label": "160 tonnes",
+        "label": "160T",
         "value": "160T"
       },
       {
-        "label": "180 tonnes",
+        "label": "180T",
         "value": "180T"
       },
       {
-        "label": "200 tonnes",
+        "label": "200T",
         "value": "200T"
       },
       {
-        "label": "300 tonnes",
+        "label": "300T",
         "value": "300T"
       },
       {
-        "label": "400 tonnes",
+        "label": "400T",
         "value": "400T"
       },
       {
-        "label": "500 tonnes",
+        "label": "500T",
         "value": "500T"
       },
       {
-        "label": "600 tonnes",
+        "label": "600T",
         "value": "600T"
       }
     ],
