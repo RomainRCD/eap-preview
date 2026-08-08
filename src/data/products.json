@@ -2761,7 +2761,7 @@
   "grue-electrique": {
     "name": "Grue électrique",
     "category": "manutention",
-    "spec": "5 à 40T",
+    "spec": "5T à 40T",
     "variants": [
       {
         "label": "5T",
