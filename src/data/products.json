@@ -1658,20 +1658,32 @@
     "spec": "150L à 700L",
     "variants": [
       {
-        "label": "3T / 280L",
-        "value": "3T / 280L"
+        "label": "150L",
+        "value": "150L"
       },
       {
-        "label": "3,5T / 380L",
-        "value": "3,5T / 380L"
+        "label": "200L",
+        "value": "200L"
       },
       {
-        "label": "4,5T / 450L",
-        "value": "4,5T / 450L"
+        "label": "280L",
+        "value": "280L"
       },
       {
-        "label": "6T / 600L",
-        "value": "6T / 600L"
+        "label": "380L",
+        "value": "380L"
+      },
+      {
+        "label": "450L",
+        "value": "450L"
+      },
+      {
+        "label": "600L",
+        "value": "600L"
+      },
+      {
+        "label": "700L",
+        "value": "700L"
       }
     ],
     "options": [
