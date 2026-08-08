@@ -2427,7 +2427,7 @@
   "barriere-police": {
     "name": "Barrière de police",
     "category": "autres",
-    "spec": "50 m à 5000 m linéaires",
+    "spec": "50 m à 5000 m",
     "variants": [
       {
         "label": "0 à 50M",
