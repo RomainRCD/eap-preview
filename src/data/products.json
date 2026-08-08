@@ -3001,20 +3001,20 @@
     "spec": "14m à 22m",
     "variants": [
       {
-        "label": "14M",
-        "value": "14M"
+        "label": "14m",
+        "value": "14m"
       },
       {
-        "label": "16M",
-        "value": "16M"
+        "label": "16m",
+        "value": "16m"
       },
       {
-        "label": "20M",
-        "value": "20M"
+        "label": "20m",
+        "value": "20m"
       },
       {
-        "label": "22M",
-        "value": "22M"
+        "label": "22m",
+        "value": "22m"
       }
     ],
     "options": [],
