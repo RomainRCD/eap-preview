@@ -231,6 +231,16 @@
       "- Bungalow de 8 personnes.",
       "- Bungalow de 10 personnes.",
       "- Bungalow de 12 personnes."
+    ],
+    "options": [
+      "Armoire de rangement",
+      "Table de réunion",
+      "Tableau blanc",
+      "Chauffage",
+      "Climatisation",
+      "Équipement audiovisuel",
+      "Raccordement internet (STARLINK)",
+      "Accès PMR (accès handicapé adapté)"
     ]
   },
   "roulotte": {
