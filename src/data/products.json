@@ -2594,7 +2594,7 @@
   "dumper-chenilles": {
     "name": "Dumper sur chenilles",
     "category": "terrassement",
-    "spec": "1T à 20T",
+    "spec": "1T5 à 20T",
     "variants": [
       {
         "label": "1,5T",
