@@ -400,6 +400,14 @@
     "description": [
       "Bungalow réfectoire équipé pour les repas de vos équipes : tables, bancs, réchauffe-plats, réfrigérateur, chauffage. Conforme au Code du travail.",
       "Plusieurs capacités disponibles, location toute durée avec livraison et pose."
+    ],
+    "options": [
+      "Kitchenette (évier + plan de travail)",
+      "Réfrigérateur",
+      "Plaque de cuisson (gaz ou électrique)",
+      "Micro-ondes",
+      "Chauffage",
+      "Climatisation"
     ]
   },
   "bureau": {
