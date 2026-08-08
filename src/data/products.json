@@ -2391,7 +2391,7 @@
   "grille-heras": {
     "name": "Grille de chantier (Heras)",
     "category": "autres",
-    "spec": "50 m à 5000 m linéaires",
+    "spec": "50 m à 5000 m",
     "variants": [
       {
         "label": "0 à 50 m",
