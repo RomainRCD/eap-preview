@@ -2597,6 +2597,10 @@
     "spec": "2T5 à 20T",
     "variants": [
       {
+        "label": "1,5T",
+        "value": "1,5T"
+      },
+      {
         "label": "2T5",
         "value": "2T5"
       },
