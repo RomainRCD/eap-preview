@@ -1611,7 +1611,7 @@
   "chargeuse-pneus": {
     "name": "Chargeuse sur pneus",
     "category": "terrassement",
-    "spec": "1T à 4T",
+    "spec": "700L à 2500L",
     "variants": [
       {
         "label": "700L",
@@ -2135,17 +2135,7 @@
       "- Nacelle sur porteur VL 20 mètres",
       "- Nacelle sur porteur VL 22 mètres",
       "- Nacelle sur porteur VL 25 mètres",
-      "- Nacelle sur porteur VL 27 mètres",
-      "Nacelles sur porteur PL (28m à 90m) :",
-      "- Nacelle sur porteur PL 28 mètres",
-      "- Nacelle sur porteur PL 30 mètres",
-      "- Nacelle sur porteur PL 36-40 mètres",
-      "- Nacelle sur porteur PL 41-45 mètres",
-      "- Nacelle sur porteur PL 46-50 mètres",
-      "- Nacelle sur porteur PL 51-60 mètres",
-      "- Nacelle sur porteur PL 61-70 mètres",
-      "- Nacelle sur porteur PL 71-80 mètres",
-      "- Nacelle sur porteur PL 81-90 mètres"
+      "- Nacelle sur porteur VL 27 mètres"
     ]
   },
   "echafaudage-roulant": {
@@ -2476,23 +2466,23 @@
     "spec": "0,5 T à 5 T",
     "variants": [
       {
-        "label": "0,5 T",
-        "value": "0.5T"
+        "label": "0,5T",
+        "value": "0,5T"
       },
       {
-        "label": "1 T",
+        "label": "1T",
         "value": "1T"
       },
       {
-        "label": "2 T",
+        "label": "2T",
         "value": "2T"
       },
       {
-        "label": "3 T",
+        "label": "3T",
         "value": "3T"
       },
       {
-        "label": "5 T",
+        "label": "5T",
         "value": "5T"
       }
     ],
@@ -2604,8 +2594,12 @@
   "dumper-chenilles": {
     "name": "Dumper sur chenilles",
     "category": "terrassement",
-    "spec": "2T5 à 20T",
+    "spec": "1,5T à 20T",
     "variants": [
+      {
+        "label": "1,5T",
+        "value": "1,5T"
+      },
       {
         "label": "2T5",
         "value": "2T5"
