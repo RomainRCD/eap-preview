@@ -353,6 +353,12 @@
     "description": [
       "Bungalow vestiaire pour équiper la base vie de votre chantier : casiers, bancs, chauffage, éclairage. Conforme aux obligations d'accueil du personnel.",
       "Plusieurs tailles disponibles, location toute durée, livraison et pose incluses."
+    ],
+    "options": [
+      "Extincteur",
+      "Accès PMR (accès handicapé adapté)",
+      "Chauffage",
+      "Climatisation"
     ]
   },
   "refectoire": {
