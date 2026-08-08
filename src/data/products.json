@@ -407,7 +407,10 @@
       "Plaque de cuisson (gaz ou électrique)",
       "Micro-ondes",
       "Chauffage",
-      "Climatisation"
+      "Climatisation",
+      "Option PMR (accès handicapé adapté)",
+      "Extincteur",
+      "Fontaine à eau"
     ]
   },
   "bureau": {
