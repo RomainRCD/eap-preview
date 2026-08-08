@@ -1611,7 +1611,7 @@
   "chargeuse-pneus": {
     "name": "Chargeuse sur pneus",
     "category": "terrassement",
-    "spec": "1T à 4T",
+    "spec": "700L à 2500L",
     "variants": [
       {
         "label": "700L",
