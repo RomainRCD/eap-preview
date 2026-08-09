@@ -1276,15 +1276,11 @@
   "chariot-gros-tonnage": {
     "name": "Chariot télescopique gros tonnage",
     "category": "manutention",
-    "spec": "7,5T-6m à 33T-12m",
+    "spec": "7,5T - 6m à 33T - 12m",
     "variants": [
       {
         "label": "7,5T - 6m",
         "value": "7,5T - 6m"
-      },
-      {
-        "label": "6T - 9m",
-        "value": "6T - 9m"
       },
       {
         "label": "12T - 10m",
@@ -1338,15 +1334,11 @@
   "grue-mobile": {
     "name": "Grue mobile",
     "category": "manutention",
-    "spec": "35T à 300T",
+    "spec": "35T à 600T",
     "variants": [
       {
         "label": "35T",
         "value": "35T"
-      },
-      {
-        "label": "40T",
-        "value": "40T"
       },
       {
         "label": "50T",
@@ -1365,30 +1357,79 @@
         "value": "80T"
       },
       {
+        "label": "90T",
+        "value": "90T"
+      },
+      {
         "label": "100T",
         "value": "100T"
       },
       {
-        "label": "130T",
-        "value": "130T"
+        "label": "120T",
+        "value": "120T"
       },
       {
-        "label": "160T",
-        "value": "160T"
+        "label": "150T",
+        "value": "150T"
+      },
+      {
+        "label": "200T",
+        "value": "200T"
+      },
+      {
+        "label": "250T",
+        "value": "250T"
       },
       {
         "label": "300T",
         "value": "300T"
+      },
+      {
+        "label": "350T",
+        "value": "350T"
+      },
+      {
+        "label": "400T",
+        "value": "400T"
+      },
+      {
+        "label": "450T",
+        "value": "450T"
+      },
+      {
+        "label": "500T",
+        "value": "500T"
+      },
+      {
+        "label": "550T",
+        "value": "550T"
+      },
+      {
+        "label": "600T",
+        "value": "600T"
       }
     ],
     "description": [
-      "EAP location propose la location de grues mobiles dans toute la France en préconisant la proximité de votre chantier. Sur notre site vous retrouverez disponible à la location des grues mobiles avec une capacité de levage pouvant aller jusqu’à 160 tonnes.",
+      "EAP location propose la location de grues mobiles dans toute la France en préconisant la proximité de votre chantier. Retrouvez à la location des grues mobiles avec une capacité de levage pouvant aller jusqu'à 600 tonnes.",
       "Les disponibilités et caractéristiques de nos grues mobiles :",
       "- Grue mobile de 35 tonnes.",
-      "- Grue mobile de 40 à 50 tonnes.",
-      "- Grue mobile de 60 à 80 tonnes.",
-      "- Grue mobile de 90 à 110 tonnes.",
-      "- Grue mobile de 120 à 160 tonnes."
+      "- Grue mobile de 50 tonnes.",
+      "- Grue mobile de 60 tonnes.",
+      "- Grue mobile de 70 tonnes.",
+      "- Grue mobile de 80 tonnes.",
+      "- Grue mobile de 90 tonnes.",
+      "- Grue mobile de 100 tonnes.",
+      "- Grue mobile de 120 tonnes.",
+      "- Grue mobile de 150 tonnes.",
+      "- Grue mobile de 200 tonnes.",
+      "- Grue mobile de 250 tonnes.",
+      "- Grue mobile de 300 tonnes.",
+      "- Grue mobile de 350 tonnes.",
+      "- Grue mobile de 400 tonnes.",
+      "- Grue mobile de 450 tonnes.",
+      "- Grue mobile de 500 tonnes.",
+      "- Grue mobile de 550 tonnes.",
+      "- Grue mobile de 600 tonnes."
     ],
     "page": {
       "title": "Location Grue Mobile 35T à 300T | EAP Location",
@@ -1409,20 +1450,24 @@
     "spec": "3T-10M à 8T-26M",
     "variants": [
       {
-        "label": "5T - 20m",
-        "value": "5T-20m"
+        "label": "3T - 10m",
+        "value": "3T - 10m"
+      },
+      {
+        "label": "5T - 16m",
+        "value": "5T - 16m"
+      },
+      {
+        "label": "6T - 17m",
+        "value": "6T - 17m"
       },
       {
         "label": "6T - 22m",
-        "value": "6T-22m"
+        "value": "6T - 22m"
       },
       {
-        "label": "6T - 24m",
-        "value": "6T-24m"
-      },
-      {
-        "label": "8T - 26m",
-        "value": "8T-26m"
+        "label": "8T - 19m",
+        "value": "8T - 19m"
       }
     ],
     "description": [
@@ -1443,7 +1488,12 @@
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Mini Grue Chenilles",
       "imageAlt": "Mini grue télescopique sur chenilles"
-    }
+    },
+    "options": [
+      "Fléchette (Fly JIB)",
+      "Palonnier ventouses",
+      "Treuil"
+    ]
   },
   "mini-grue-araignee": {
     "name": "Mini grue araignée",
