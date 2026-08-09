@@ -163,5 +163,9 @@
 /base-vie/local-technique /base-vie/container 301
 /base-vie/local-technique/ /base-vie/container 301
 
+# Fiche supprimée via Pilot (valentin@equipementsapartager.com)
+/base-vie/bureau /base-vie 301
+/base-vie/bureau/ /base-vie 301
+
 # Fallback SPA — DOIT rester la DERNIÈRE règle (première correspondance gagne)
 /* /index.html 200
