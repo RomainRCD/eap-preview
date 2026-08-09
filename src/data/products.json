@@ -1488,7 +1488,12 @@
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Mini Grue Chenilles",
       "imageAlt": "Mini grue télescopique sur chenilles"
-    }
+    },
+    "options": [
+      "Fléchette (Fly JIB)",
+      "Palonnier ventouses",
+      "Treuil"
+    ]
   },
   "mini-grue-araignee": {
     "name": "Mini grue araignée",
