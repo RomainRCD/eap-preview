@@ -57,8 +57,32 @@
         "value": "150kVA"
       },
       {
-        "label": "+150kVA",
-        "value": "+150kVA"
+        "label": "200kVA",
+        "value": "200kVA"
+      },
+      {
+        "label": "250kVA",
+        "value": "250kVA"
+      },
+      {
+        "label": "300kVA",
+        "value": "300kVA"
+      },
+      {
+        "label": "450kVA",
+        "value": "450kVA"
+      },
+      {
+        "label": "500kVA",
+        "value": "500kVA"
+      },
+      {
+        "label": "650kVA",
+        "value": "650kVA"
+      },
+      {
+        "label": "+650kVA",
+        "value": "+650kVA"
       }
     ],
     "description": [
