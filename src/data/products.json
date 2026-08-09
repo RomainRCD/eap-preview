@@ -3149,5 +3149,38 @@
       }
     ],
     "options": []
+  },
+  "gerbeur-electrique": {
+    "name": "Gerbeur électrique",
+    "category": "manutention",
+    "spec": "1T à 2T",
+    "variants": [
+      {
+        "label": "1T",
+        "value": "1T"
+      },
+      {
+        "label": "1,5T",
+        "value": "1,5T"
+      },
+      {
+        "label": "2T",
+        "value": "2T"
+      }
+    ],
+    "options": [
+      "1600mm (standard)",
+      "2000mm",
+      "2500mm",
+      "3000mm",
+      "3500mm"
+    ],
+    "description": [
+      "Le gerbeur électrique est idéal pour la manutention de charges en entrepôt ou sur chantier.",
+      "EAP location propose la location de gerbeurs électriques de 1T à 2T, disponibles avec différentes hauteurs de levée.",
+      "- Gerbeur électrique 1T",
+      "- Gerbeur électrique 1,5T",
+      "- Gerbeur électrique 2T"
+    ]
   }
 }
