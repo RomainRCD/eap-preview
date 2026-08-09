@@ -1501,16 +1501,24 @@
     "spec": "3T à 4T",
     "variants": [
       {
-        "label": "3T",
-        "value": "3T"
+        "label": "1,5T - 5,5m",
+        "value": "1,5T - 5,5m"
       },
       {
-        "label": "3,5T",
-        "value": "3,5T"
+        "label": "2,5T - 9m",
+        "value": "2,5T - 9m"
       },
       {
-        "label": "4T",
-        "value": "4T"
+        "label": "3,5T - 17m",
+        "value": "3,5T - 17m"
+      },
+      {
+        "label": "6T - 17m",
+        "value": "6T - 17m"
+      },
+      {
+        "label": "8T - 20m",
+        "value": "8T - 20m"
       }
     ],
     "description": [
@@ -1533,7 +1541,12 @@
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Mini Grue Araignée",
       "imageAlt": "Mini grue araignée"
-    }
+    },
+    "options": [
+      "Fléchette (Fly JIB)",
+      "Palonnier à ventouses",
+      "Treuil"
+    ]
   },
   "gerbeur-transpalette": {
     "name": "Transpalette électrique",
