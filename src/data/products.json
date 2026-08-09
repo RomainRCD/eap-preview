@@ -2,7 +2,7 @@
   "groupe-electrogene": {
     "name": "Groupe électrogène",
     "category": "autres",
-    "spec": "3kVA à +150kVA",
+    "spec": "3kVA à +650kVA",
     "variants": [
       {
         "label": "3kVA",
