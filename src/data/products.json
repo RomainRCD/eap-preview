@@ -2358,7 +2358,7 @@
     ]
   },
   "benne-dib": {
-    "name": "Benne DIB",
+    "name": "Benne à déchets",
     "category": "autres",
     "spec": "8M3 à 30M3",
     "variants": [
@@ -2384,12 +2384,12 @@
       }
     ],
     "description": [
-      "EAP location propose le plus large choix de bennes DIB pour vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
-      "- Benne DIB 8M3",
-      "- Benne DIB 10M3",
-      "- Benne DIB 15M3",
-      "- Benne DIB 20M3",
-      "- Benne DIB 30M3"
+      "EAP location propose le plus large choix de bennes à déchets pour vos chantiers en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Benne à déchets 8M3",
+      "- Benne à déchets 10M3",
+      "- Benne à déchets 15M3",
+      "- Benne à déchets 20M3",
+      "- Benne à déchets 30M3"
     ],
     "options": [
       "DIB",
