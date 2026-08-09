@@ -1814,7 +1814,7 @@
   "tractopelle": {
     "name": "Tractopelle",
     "category": "terrassement",
-    "spec": "800L à 1000L",
+    "spec": "500L à 1300L",
     "variants": [
       {
         "label": "500L",
@@ -1835,7 +1835,7 @@
     ],
     "description": [
       "Le tractopelle combine un godet chargeur à l'avant et une pelle rétro à l'arrière : un seul engin pour charger, creuser et remblayer. Polyvalent par excellence sur les chantiers de VRD, de terrassement léger et de réseaux.",
-      "Disponible en location courte ou longue durée, avec livraison sur chantier partout en France."
+      "Disponible en 500L, 800L, 1000L et 1300L, en location courte ou longue durée, avec livraison sur chantier partout en France."
     ]
   },
   "tombereau": {
