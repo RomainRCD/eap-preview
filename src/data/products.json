@@ -2390,6 +2390,11 @@
       "- Benne DIB 15M3",
       "- Benne DIB 20M3",
       "- Benne DIB 30M3"
+    ],
+    "options": [
+      "DIB",
+      "Gravats",
+      "Bois"
     ]
   },
   "cuve-gnr": {
