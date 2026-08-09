@@ -1334,7 +1334,7 @@
   "grue-mobile": {
     "name": "Grue mobile",
     "category": "manutention",
-    "spec": "35T à 300T",
+    "spec": "35T à 600T",
     "variants": [
       {
         "label": "35T",
@@ -1410,13 +1410,26 @@
       }
     ],
     "description": [
-      "EAP location propose la location de grues mobiles dans toute la France en préconisant la proximité de votre chantier. Sur notre site vous retrouverez disponible à la location des grues mobiles avec une capacité de levage pouvant aller jusqu’à 160 tonnes.",
+      "EAP location propose la location de grues mobiles dans toute la France en préconisant la proximité de votre chantier. Retrouvez à la location des grues mobiles avec une capacité de levage pouvant aller jusqu'à 600 tonnes.",
       "Les disponibilités et caractéristiques de nos grues mobiles :",
       "- Grue mobile de 35 tonnes.",
-      "- Grue mobile de 40 à 50 tonnes.",
-      "- Grue mobile de 60 à 80 tonnes.",
-      "- Grue mobile de 90 à 110 tonnes.",
-      "- Grue mobile de 120 à 160 tonnes."
+      "- Grue mobile de 50 tonnes.",
+      "- Grue mobile de 60 tonnes.",
+      "- Grue mobile de 70 tonnes.",
+      "- Grue mobile de 80 tonnes.",
+      "- Grue mobile de 90 tonnes.",
+      "- Grue mobile de 100 tonnes.",
+      "- Grue mobile de 120 tonnes.",
+      "- Grue mobile de 150 tonnes.",
+      "- Grue mobile de 200 tonnes.",
+      "- Grue mobile de 250 tonnes.",
+      "- Grue mobile de 300 tonnes.",
+      "- Grue mobile de 350 tonnes.",
+      "- Grue mobile de 400 tonnes.",
+      "- Grue mobile de 450 tonnes.",
+      "- Grue mobile de 500 tonnes.",
+      "- Grue mobile de 550 tonnes.",
+      "- Grue mobile de 600 tonnes."
     ],
     "page": {
       "title": "Location Grue Mobile 35T à 300T | EAP Location",
