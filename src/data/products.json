@@ -3156,15 +3156,15 @@
     "spec": "1T à 2T",
     "variants": [
       {
-        "label": "Capacité",
+        "label": "1T",
         "value": "1T"
       },
       {
-        "label": "Capacité",
+        "label": "1,5T",
         "value": "1,5T"
       },
       {
-        "label": "Capacité",
+        "label": "2T",
         "value": "2T"
       }
     ],
