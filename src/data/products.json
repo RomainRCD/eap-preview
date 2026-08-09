@@ -352,24 +352,32 @@
     "spec": "1 WC à 4 douches",
     "variants": [
       {
-        "label": "1 WC",
-        "value": "1 WC"
+        "label": "1 WC — raccordable ou autonome",
+        "value": "1 WC — raccordable ou autonome"
       },
       {
-        "label": "2 WC",
-        "value": "2 WC"
+        "label": "2 WC — raccordable ou autonome",
+        "value": "2 WC — raccordable ou autonome"
       },
       {
-        "label": "1 WC + 1 douche",
-        "value": "1 WC + 1 douche"
+        "label": "1 WC + 1 douche — raccordable ou autonome",
+        "value": "1 WC + 1 douche — raccordable ou autonome"
       },
       {
-        "label": "2 WC + 2 douches",
-        "value": "2 WC + 2 douches"
+        "label": "2 WC + 2 douches — raccordable ou autonome",
+        "value": "2 WC + 2 douches — raccordable ou autonome"
       },
       {
-        "label": "4 douches + 4 lavabos",
-        "value": "4 douches + 4 lavabos"
+        "label": "2 WC + 2 douches + 2 urinoirs — raccordable ou autonome",
+        "value": "2 WC + 2 douches + 2 urinoirs — raccordable ou autonome"
+      },
+      {
+        "label": "Toilettes séparées H/F + urinoir",
+        "value": "Toilettes séparées H/F + urinoir"
+      },
+      {
+        "label": "4 douches + 4 lavabos — raccordable ou autonome",
+        "value": "4 douches + 4 lavabos — raccordable ou autonome"
       }
     ],
     "description": [
