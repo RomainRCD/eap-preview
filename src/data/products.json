@@ -1276,7 +1276,7 @@
   "chariot-gros-tonnage": {
     "name": "Chariot télescopique gros tonnage",
     "category": "manutention",
-    "spec": "7,5T-6m à 33T-12m",
+    "spec": "7,5T - 6m à 33T - 12m",
     "variants": [
       {
         "label": "7,5T - 6m",
