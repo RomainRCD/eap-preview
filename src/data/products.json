@@ -1341,10 +1341,6 @@
         "value": "35T"
       },
       {
-        "label": "40T",
-        "value": "40T"
-      },
-      {
         "label": "50T",
         "value": "50T"
       },
@@ -1361,20 +1357,56 @@
         "value": "80T"
       },
       {
+        "label": "90T",
+        "value": "90T"
+      },
+      {
         "label": "100T",
         "value": "100T"
       },
       {
-        "label": "130T",
-        "value": "130T"
+        "label": "120T",
+        "value": "120T"
       },
       {
-        "label": "160T",
-        "value": "160T"
+        "label": "150T",
+        "value": "150T"
+      },
+      {
+        "label": "200T",
+        "value": "200T"
+      },
+      {
+        "label": "250T",
+        "value": "250T"
       },
       {
         "label": "300T",
         "value": "300T"
+      },
+      {
+        "label": "350T",
+        "value": "350T"
+      },
+      {
+        "label": "400T",
+        "value": "400T"
+      },
+      {
+        "label": "450T",
+        "value": "450T"
+      },
+      {
+        "label": "500T",
+        "value": "500T"
+      },
+      {
+        "label": "550T",
+        "value": "550T"
+      },
+      {
+        "label": "600T",
+        "value": "600T"
       }
     ],
     "description": [
