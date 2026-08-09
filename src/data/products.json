@@ -1450,20 +1450,24 @@
     "spec": "3T-10M à 8T-26M",
     "variants": [
       {
-        "label": "5T - 20m",
-        "value": "5T-20m"
+        "label": "3T - 10m",
+        "value": "3T - 10m"
+      },
+      {
+        "label": "5T - 16m",
+        "value": "5T - 16m"
+      },
+      {
+        "label": "6T - 17m",
+        "value": "6T - 17m"
       },
       {
         "label": "6T - 22m",
-        "value": "6T-22m"
+        "value": "6T - 22m"
       },
       {
-        "label": "6T - 24m",
-        "value": "6T-24m"
-      },
-      {
-        "label": "8T - 26m",
-        "value": "8T-26m"
+        "label": "8T - 19m",
+        "value": "8T - 19m"
       }
     ],
     "description": [
