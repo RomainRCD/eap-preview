@@ -1435,9 +1435,9 @@
     }
   },
   "gerbeur-transpalette": {
-    "name": "Gerbeur / Transpalette",
+    "name": "Transpalette électrique",
     "category": "manutention",
-    "spec": "1T à 2T",
+    "spec": "1T à 2,5T",
     "variants": [
       {
         "label": "Transpalette manuel",
