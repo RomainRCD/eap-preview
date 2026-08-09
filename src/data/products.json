@@ -1237,6 +1237,40 @@
       "- Chariot Télescopique Rotatif avec fourche – 35 mètres de hauteur de travail",
       "- Chariot Télescopique Rotatif avec fourche – 40 mètres de hauteur de travail",
       "Accessoires disponibles : Godet Terre, Potence, Treuil 5T, Radio Télécommande, Panier Nacelle"
+    ],
+    "variants": [
+      {
+        "label": "16m",
+        "value": "16m"
+      },
+      {
+        "label": "18m",
+        "value": "18m"
+      },
+      {
+        "label": "21m",
+        "value": "21m"
+      },
+      {
+        "label": "25m",
+        "value": "25m"
+      },
+      {
+        "label": "30m",
+        "value": "30m"
+      },
+      {
+        "label": "32m",
+        "value": "32m"
+      },
+      {
+        "label": "35m",
+        "value": "35m"
+      },
+      {
+        "label": "40m",
+        "value": "40m"
+      }
     ]
   },
   "chariot-gros-tonnage": {
