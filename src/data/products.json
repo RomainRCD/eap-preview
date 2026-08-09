@@ -1753,13 +1753,15 @@
       "Godet"
     ],
     "description": [
-      "EAP location propose le plus large choix de chargeuse compacte sur chenilles en France. Sur notre site vous retrouverez disponible à la location des chargeuses compactes sur chenilles pouvant aller jusqu’a 6 tonnes et 600L.",
+      "EAP location propose le plus large choix de chargeuses compactes sur chenilles en France. Sur notre site vous retrouverez disponible à la location des chargeuses compactes sur chenilles de 150L à 700L.",
       "Les disponibilités et caractéristiques de nos chargeuses compactes sur chenilles :",
-      "- Chargeuses compactes sur chenilles – 3 tonnes et 280 litres",
-      "- Chargeuses compactes sur chenilles – 3,5 tonnes et 380 litres",
-      "- Chargeuses compactes sur chenilles – 4,5 tonnes et 450 litres",
-      "- Chargeuses compactes sur chenilles – 6 tonnes et 600 litres",
-      "Accessoire disponibles : Fourche palette et godet."
+      "- Chargeuse compacte sur chenilles – 150L",
+      "- Chargeuse compacte sur chenilles – 280L",
+      "- Chargeuse compacte sur chenilles – 380L",
+      "- Chargeuse compacte sur chenilles – 450L",
+      "- Chargeuse compacte sur chenilles – 600L",
+      "- Chargeuse compacte sur chenilles – 700L",
+      "Accessoires disponibles : Fourches et godet."
     ]
   },
   "chargeuse-compacte": {
