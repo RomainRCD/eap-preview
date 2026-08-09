@@ -1817,12 +1817,20 @@
     "spec": "800L à 1000L",
     "variants": [
       {
+        "label": "500L",
+        "value": "500L"
+      },
+      {
         "label": "800L",
         "value": "800L"
       },
       {
         "label": "1000L",
         "value": "1000L"
+      },
+      {
+        "label": "1300L",
+        "value": "1300L"
       }
     ],
     "description": [
