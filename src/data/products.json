@@ -1969,6 +1969,9 @@
       "- Nacelle Ciseaux Diesel de 28 mètres de hauteur de travail.",
       "- Nacelle Ciseaux Diesel de 30 mètres de hauteur de travail.",
       "- Nacelle Ciseaux Diesel de 33 mètres de hauteur de travail."
+    ],
+    "options": [
+      "Grand plateau"
     ]
   },
   "nacelle-articulee-electrique": {
