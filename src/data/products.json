@@ -1279,36 +1279,36 @@
     "spec": "6T-9m à 33T-12m",
     "variants": [
       {
+        "label": "7,5T - 6m",
+        "value": "7,5T - 6m"
+      },
+      {
         "label": "6T - 9m",
-        "value": "6T-9m"
+        "value": "6T - 9m"
       },
       {
-        "label": "7T - 10m",
-        "value": "7T-10m"
+        "label": "12T - 10m",
+        "value": "12T - 10m"
       },
       {
-        "label": "10T - 10m",
-        "value": "10T-10m"
+        "label": "13T - 10m",
+        "value": "13T - 10m"
       },
       {
-        "label": "14T - 10m",
-        "value": "14T-10m"
+        "label": "16T - 10m",
+        "value": "16T - 10m"
       },
       {
         "label": "18T - 10m",
-        "value": "18T-10m"
+        "value": "18T - 10m"
       },
       {
-        "label": "21T - 11m",
-        "value": "21T-11m"
-      },
-      {
-        "label": "25T - 11m",
-        "value": "25T-11m"
+        "label": "25T - 12m",
+        "value": "25T - 12m"
       },
       {
         "label": "33T - 12m",
-        "value": "33T-12m"
+        "value": "33T - 12m"
       }
     ],
     "description": [
