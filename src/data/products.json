@@ -1173,6 +1173,10 @@
       {
         "label": "18m",
         "value": "18m"
+      },
+      {
+        "label": "5m électrique",
+        "value": "5m électrique"
       }
     ],
     "options": [
