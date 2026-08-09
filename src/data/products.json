@@ -1435,29 +1435,25 @@
     }
   },
   "gerbeur-transpalette": {
-    "name": "Gerbeur / Transpalette",
+    "name": "Transpalette électrique",
     "category": "manutention",
-    "spec": "1T à 2T",
+    "spec": "1T à 2,5T",
     "variants": [
       {
-        "label": "Transpalette manuel",
-        "value": "Transpalette manuel"
+        "label": "1T",
+        "value": "1T"
       },
       {
-        "label": "Transpalette électrique",
-        "value": "Transpalette électrique"
+        "label": "1,5T",
+        "value": "1,5T"
       },
       {
-        "label": "Gerbeur manuel",
-        "value": "Gerbeur manuel"
+        "label": "2T",
+        "value": "2T"
       },
       {
-        "label": "Gerbeur électrique",
-        "value": "Gerbeur électrique"
-      },
-      {
-        "label": "Gerbeur à mât rétractable",
-        "value": "Gerbeur mât rétractable"
+        "label": "2T5",
+        "value": "2T5"
       }
     ],
     "description": [
