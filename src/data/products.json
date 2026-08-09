@@ -237,7 +237,7 @@
   "bungalow": {
     "name": "Bungalow Bureau",
     "category": "base-vie",
-    "spec": "6 à 12 personnes",
+    "spec": "4 à 20 personnes",
     "variants": [
       {
         "label": "4 pers.",
@@ -277,11 +277,16 @@
       }
     ],
     "description": [
-      "EAP location propose le plus large choix de Bungalow en France. Vous retrouverez un grand nombre de choix de dispositions pour les bungalows comme réfectoire, vestiaire, bureau ou encore salle de réunion pouvant accueillir jusqu’à 200 personnes.",
+      "EAP location propose le plus large choix de bungalows en France. Vous retrouverez un grand nombre de configurations disponibles à la location : bureau, salle de réunion, réfectoire ou vestiaire, pouvant accueillir de 4 à 20 personnes.",
+      "- Bungalow de 4 personnes.",
       "- Bungalow de 6 personnes.",
       "- Bungalow de 8 personnes.",
       "- Bungalow de 10 personnes.",
-      "- Bungalow de 12 personnes."
+      "- Bungalow de 12 personnes.",
+      "- Bungalow de 14 personnes.",
+      "- Bungalow de 16 personnes.",
+      "- Bungalow de 18 personnes.",
+      "- Bungalow de 20 personnes."
     ],
     "options": [
       "Armoire de rangement",
