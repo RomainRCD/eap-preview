@@ -281,6 +281,13 @@
       "- Roulotte de chantier 8 personnes isolées avec vestiaire.",
       "- Roulotte de chantier 10 personnes isolées avec vestiaire.",
       "- Roulotte de chantier 12 personnes isolées avec vestiaire."
+    ],
+    "options": [
+      "Raccordement réseau (gaz, électricité, eau)",
+      "WC",
+      "Douche",
+      "Kitchenette (réfrigérateur, micro-ondes, évier)",
+      "Climatisation"
     ]
   },
   "sanitaire": {
