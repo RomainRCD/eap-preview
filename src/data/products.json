@@ -1541,7 +1541,12 @@
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Mini Grue Araignée",
       "imageAlt": "Mini grue araignée"
-    }
+    },
+    "options": [
+      "Fléchette (Fly JIB)",
+      "Palonnier à ventouses",
+      "Treuil"
+    ]
   },
   "gerbeur-transpalette": {
     "name": "Transpalette électrique",
