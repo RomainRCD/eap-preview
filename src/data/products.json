@@ -1438,7 +1438,7 @@
   "mini-grue-chenilles": {
     "name": "Mini grue télescopique sur chenilles",
     "category": "manutention",
-    "spec": "3T-10M à 8T-26M",
+    "spec": "3T-10m à 8T-19m",
     "variants": [
       {
         "label": "3T - 10m",
@@ -1462,19 +1462,20 @@
       }
     ],
     "description": [
-      "EAP location propose le plus large choix de mini grue télescopique sur chenilles en France. Sur notre site vous retrouverez disponible à la location des mini grue télescopique pouvant aller jusqu'à 26 mètres de hauteur de travail.",
-      "- Mini grue télescopique de 3T – 10M",
-      "- Mini grue télescopique de 5T – 20M",
-      "- Mini grue télescopique de 6T – 20M",
-      "- Mini grue télescopique de 8T – 26M"
+      "EAP location propose le plus large choix de mini grue télescopique sur chenilles en France. Disponibles à la location, nos mini grues télescopiques couvrent une plage de capacités allant de 3T à 8T, pour des hauteurs de travail de 10m à 19m.",
+      "- Mini grue télescopique de 3T – 10m",
+      "- Mini grue télescopique de 5T – 16m",
+      "- Mini grue télescopique de 6T – 17m",
+      "- Mini grue télescopique de 6T – 22m",
+      "- Mini grue télescopique de 8T – 19m"
     ],
     "page": {
       "title": "Location Mini Grue Télescopique sur Chenilles | EAP Location",
-      "description": "Location mini grue télescopique sur chenilles de 5T-20m à 8T-26m. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "description": "Location mini grue télescopique sur chenilles de 3T-10m à 8T-19m. Devis en 2h, livraison partout en France.",
       "keywords": "mini grue chenilles, grue télescopique, spider crane, levage, location matériel BTP",
       "heroTitle": "Mini Grue Télescopique",
       "heroHighlight": "Sur Chenilles",
-      "heroSubtitle": "De 5T-20m à 8T-26m. Location courte ou longue durée. Partout en France.",
+      "heroSubtitle": "De 3T-10m à 8T-19m. Location courte ou longue durée. Partout en France.",
       "selectorTitle": "Quelle configuration pour votre chantier ?",
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Mini Grue Chenilles",
@@ -1489,7 +1490,7 @@
   "mini-grue-araignee": {
     "name": "Mini grue araignée",
     "category": "manutention",
-    "spec": "3T à 4T",
+    "spec": "1,5T-5,5m à 8T-20m",
     "variants": [
       {
         "label": "1,5T - 5,5m",
@@ -1513,21 +1514,20 @@
       }
     ],
     "description": [
-      "EAP location propose le plus large choix de Mini grue araignée pour vos travaux de manutention en France . Sur notre site vous retrouverez disponible à la location :",
-      "- Mini grue araignée 3T – 5M",
-      "- Mini grue araignée 3T – 8M",
-      "- Mini grue araignée 3.5T – 10M",
-      "- Mini grue araignée 3.5T – 14M",
-      "- Mini grue araignée 4T – 18M",
-      "- Mini grue araignée 4T – 20M"
+      "EAP location propose le plus large choix de mini grues araignées pour vos travaux de manutention en France. Sur notre site vous retrouverez disponibles à la location :",
+      "- Mini grue araignée 1,5T – 5,5m",
+      "- Mini grue araignée 2,5T – 9m",
+      "- Mini grue araignée 3,5T – 17m",
+      "- Mini grue araignée 6T – 17m",
+      "- Mini grue araignée 8T – 20m"
     ],
     "page": {
-      "title": "Location Mini Grue Araignée 3T à 4T | EAP Location",
-      "description": "Location mini grue araignée de 3T à 4T. Idéale pour espaces restreints. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "title": "Location Mini Grue Araignée 1,5T-5,5m à 8T-20m | EAP Location",
+      "description": "Location mini grue araignée de 1,5T-5,5m à 8T-20m. Idéale pour espaces restreints. Disponibilité 99%, devis en 2h, livraison partout en France.",
       "keywords": "mini grue araignée, spider crane, grue compacte, levage intérieur, location matériel BTP",
       "heroTitle": "Mini Grue",
       "heroHighlight": "Araignée",
-      "heroSubtitle": "De 3T à 4T. Idéale pour espaces restreints. Partout en France.",
+      "heroSubtitle": "De 1,5T-5,5m à 8T-20m. Idéale pour espaces restreints. Partout en France.",
       "selectorTitle": "Quelle capacité pour votre chantier ?",
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Mini Grue Araignée",
@@ -2851,7 +2851,16 @@
       "- Dumper sur chenilles 15T",
       "- Dumper sur chenilles 17T",
       "- Dumper sur chenilles 20T"
-    ]
+    ],
+    "page": {
+      "title": "Location Dumper sur chenilles 2,5T Kubota KC250 | EAP Location",
+      "description": "Location de dumper sur chenilles de 1,5T à 20 T : terrain meuble, pente, accès étroit, sol à ne pas marquer. Livraison partout en France, devis gratuit en moins de 2 h.",
+      "keywords": "location dumper sur chenilles, location dumper chenille, dumper chenillé, kubota kc250, location kubota kc250, transporteur sur chenilles, motobasculeur chenille, brouette à chenilles, location dumper 2.5t, dumper chenille 1.5t, location tombereau sur chenilles",
+      "heroSubtitle": "De 1,5T à 20 T pour franchir le terrain meuble, la pente et les accès étroits sans marquer le sol. Location sans chauffeur, livraison partout en France.",
+      "selectorTitle": "Quelle capacité de dumper chenillé pour votre chantier ?",
+      "imageAlt": "Dumper sur chenilles 2,5 T en évacuation de terre sur terrain meuble",
+      "contentTitle": "Dumper sur chenilles : ce qu'il faut savoir avant de commander"
+    }
   },
   "grue-mobile-mk": {
     "name": "Grue mobile MK",
