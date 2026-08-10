@@ -1438,7 +1438,7 @@
   "mini-grue-chenilles": {
     "name": "Mini grue télescopique sur chenilles",
     "category": "manutention",
-    "spec": "3T-10M à 8T-26M",
+    "spec": "3T-10m à 8T-19m",
     "variants": [
       {
         "label": "3T - 10m",
@@ -1462,19 +1462,20 @@
       }
     ],
     "description": [
-      "EAP location propose le plus large choix de mini grue télescopique sur chenilles en France. Sur notre site vous retrouverez disponible à la location des mini grue télescopique pouvant aller jusqu'à 26 mètres de hauteur de travail.",
-      "- Mini grue télescopique de 3T – 10M",
-      "- Mini grue télescopique de 5T – 20M",
-      "- Mini grue télescopique de 6T – 20M",
-      "- Mini grue télescopique de 8T – 26M"
+      "EAP location propose le plus large choix de mini grue télescopique sur chenilles en France. Disponibles à la location, nos mini grues télescopiques couvrent une plage de capacités allant de 3T à 8T, pour des hauteurs de travail de 10m à 19m.",
+      "- Mini grue télescopique de 3T – 10m",
+      "- Mini grue télescopique de 5T – 16m",
+      "- Mini grue télescopique de 6T – 17m",
+      "- Mini grue télescopique de 6T – 22m",
+      "- Mini grue télescopique de 8T – 19m"
     ],
     "page": {
       "title": "Location Mini Grue Télescopique sur Chenilles | EAP Location",
-      "description": "Location mini grue télescopique sur chenilles de 5T-20m à 8T-26m. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "description": "Location mini grue télescopique sur chenilles de 3T-10m à 8T-19m. Devis en 2h, livraison partout en France.",
       "keywords": "mini grue chenilles, grue télescopique, spider crane, levage, location matériel BTP",
       "heroTitle": "Mini Grue Télescopique",
       "heroHighlight": "Sur Chenilles",
-      "heroSubtitle": "De 5T-20m à 8T-26m. Location courte ou longue durée. Partout en France.",
+      "heroSubtitle": "De 3T-10m à 8T-19m. Location courte ou longue durée. Partout en France.",
       "selectorTitle": "Quelle configuration pour votre chantier ?",
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Mini Grue Chenilles",
