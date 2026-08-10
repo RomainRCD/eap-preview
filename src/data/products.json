@@ -237,8 +237,12 @@
   "bungalow": {
     "name": "Bungalow Bureau",
     "category": "base-vie",
-    "spec": "6 à 12 personnes",
+    "spec": "4 à 20 personnes",
     "variants": [
+      {
+        "label": "4 pers.",
+        "value": "4 pers."
+      },
       {
         "label": "6 pers.",
         "value": "6 pers."
@@ -254,14 +258,35 @@
       {
         "label": "12 pers.",
         "value": "12 pers."
+      },
+      {
+        "label": "14 pers.",
+        "value": "14 pers."
+      },
+      {
+        "label": "16 pers.",
+        "value": "16 pers."
+      },
+      {
+        "label": "18 pers.",
+        "value": "18 pers."
+      },
+      {
+        "label": "20 pers.",
+        "value": "20 pers."
       }
     ],
     "description": [
-      "EAP location propose le plus large choix de Bungalow en France. Vous retrouverez un grand nombre de choix de dispositions pour les bungalows comme réfectoire, vestiaire, bureau ou encore salle de réunion pouvant accueillir jusqu’à 200 personnes.",
+      "EAP location propose le plus large choix de bungalows en France. Vous retrouverez un grand nombre de configurations disponibles à la location : bureau, salle de réunion, réfectoire ou vestiaire, pouvant accueillir de 4 à 20 personnes.",
+      "- Bungalow de 4 personnes.",
       "- Bungalow de 6 personnes.",
       "- Bungalow de 8 personnes.",
       "- Bungalow de 10 personnes.",
-      "- Bungalow de 12 personnes."
+      "- Bungalow de 12 personnes.",
+      "- Bungalow de 14 personnes.",
+      "- Bungalow de 16 personnes.",
+      "- Bungalow de 18 personnes.",
+      "- Bungalow de 20 personnes."
     ],
     "options": [
       "Armoire de rangement",
@@ -322,29 +347,37 @@
     ]
   },
   "sanitaire": {
-    "name": "Sanitaire mobile",
+    "name": "Bungalow sanitaire",
     "category": "base-vie",
     "spec": "1 WC à 4 douches",
     "variants": [
       {
-        "label": "1 WC",
-        "value": "1 WC"
+        "label": "1 WC — raccordable ou autonome",
+        "value": "1 WC — raccordable ou autonome"
       },
       {
-        "label": "2 WC",
-        "value": "2 WC"
+        "label": "2 WC — raccordable ou autonome",
+        "value": "2 WC — raccordable ou autonome"
       },
       {
-        "label": "1 WC + 1 douche",
-        "value": "1 WC + 1 douche"
+        "label": "1 WC + 1 douche — raccordable ou autonome",
+        "value": "1 WC + 1 douche — raccordable ou autonome"
       },
       {
-        "label": "2 WC + 2 douches",
-        "value": "2 WC + 2 douches"
+        "label": "2 WC + 2 douches — raccordable ou autonome",
+        "value": "2 WC + 2 douches — raccordable ou autonome"
       },
       {
-        "label": "4 douches + 4 lavabos",
-        "value": "4 douches + 4 lavabos"
+        "label": "2 WC + 2 douches + 2 urinoirs — raccordable ou autonome",
+        "value": "2 WC + 2 douches + 2 urinoirs — raccordable ou autonome"
+      },
+      {
+        "label": "Toilettes séparées H/F + urinoir",
+        "value": "Toilettes séparées H/F + urinoir"
+      },
+      {
+        "label": "4 douches + 4 lavabos — raccordable ou autonome",
+        "value": "4 douches + 4 lavabos — raccordable ou autonome"
       }
     ],
     "description": [
@@ -465,53 +498,6 @@
       "Option PMR (accès handicapé adapté)",
       "Extincteur",
       "Fontaine à eau"
-    ]
-  },
-  "bureau": {
-    "name": "Bungalow de réunion",
-    "category": "base-vie",
-    "spec": "4 à 20 personnes",
-    "variants": [
-      {
-        "label": "4 pers.",
-        "value": "4 pers."
-      },
-      {
-        "label": "6 pers.",
-        "value": "6 pers."
-      },
-      {
-        "label": "8 pers.",
-        "value": "8 pers."
-      },
-      {
-        "label": "10 pers.",
-        "value": "10 pers."
-      },
-      {
-        "label": "12 pers.",
-        "value": "12 pers."
-      },
-      {
-        "label": "14 pers.",
-        "value": "14 pers."
-      },
-      {
-        "label": "16 pers.",
-        "value": "16 pers."
-      },
-      {
-        "label": "18 pers.",
-        "value": "18 pers."
-      },
-      {
-        "label": "20 pers.",
-        "value": "20 pers."
-      }
-    ],
-    "description": [
-      "Bungalow bureau de chantier pour vos réunions et le pilotage des travaux : bureau, chaises, rangements, éclairage, chauffage et climatisation selon modèles.",
-      "Location toute durée, livraison, pose et raccordement sur demande."
     ]
   },
   "container": {
@@ -3166,29 +3152,45 @@
     ]
   },
   "tente-canopy": {
-    "name": "Tente canopy pliable (Barnum)",
+    "name": "Chapiteau de chantier",
     "category": "base-vie",
     "spec": "De 9 m² à 200 m²",
     "variants": [
       {
-        "label": "9 m² — 3 x 3",
-        "value": "9 m² — 3 x 3"
+        "label": "9m²",
+        "value": "9m²"
       },
       {
-        "label": "25 m² — 5 x 5",
-        "value": "25 m² — 5 x 5"
+        "label": "25m²",
+        "value": "25m²"
       },
       {
-        "label": "Chapiteau 40 m² — 5 x 8",
-        "value": "Chapiteau 40 m² — 5 x 8"
+        "label": "40m²",
+        "value": "40m²"
       },
       {
-        "label": "Chapiteau 60 m² — 5 x 12",
-        "value": "Chapiteau 60 m² — 5 x 12"
+        "label": "60m²",
+        "value": "60m²"
       },
       {
-        "label": "Chapiteau 200 m² — 20 x 10",
-        "value": "Chapiteau 200 m² — 20 x 10"
+        "label": "100m²",
+        "value": "100m²"
+      },
+      {
+        "label": "200m²",
+        "value": "200m²"
+      },
+      {
+        "label": "300m²",
+        "value": "300m²"
+      },
+      {
+        "label": "500m²",
+        "value": "500m²"
+      },
+      {
+        "label": "1000m²",
+        "value": "1000m²"
       }
     ],
     "description": [

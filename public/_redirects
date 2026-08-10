@@ -236,6 +236,10 @@
 /chariot-rotatif-impact /manutention/chariot-rotatif 301
 /chariot-rotatif-impact/ /manutention/chariot-rotatif 301
 
+# Fiche supprimee via Pilot (valentin@equipementsapartager.com)
+/base-vie/bureau /base-vie 301
+/base-vie/bureau/ /base-vie 301
+
 # Repli — DOIT rester la DERNIÈRE règle (première correspondance gagne).
 # Toutes les routes réelles sont prérendues en fichiers statiques au build
 # (scripts/prerender.mjs), donc ce qui arrive ici n'existe pas : on renvoie un
