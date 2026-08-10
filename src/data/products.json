@@ -1257,7 +1257,12 @@
         "label": "40m",
         "value": "40m"
       }
-    ]
+    ],
+    "page": {
+      "heroHighlight": "16m à 40m",
+      "heroSubtitle": "Chariot télescopique rotatif de 16m à 40m de hauteur de travail",
+      "title": "Location Chariot Télescopique Rotatif 16m à 40m | EAP Location"
+    }
   },
   "chariot-gros-tonnage": {
     "name": "Chariot télescopique gros tonnage",
