@@ -352,16 +352,16 @@
     "spec": "1 WC à 4 douches",
     "variants": [
       {
-        "label": "1 WC — raccordable ou autonome",
-        "value": "1 WC — raccordable ou autonome"
+        "label": "1 WC",
+        "value": "1 WC"
       },
       {
-        "label": "2 WC — raccordable ou autonome",
-        "value": "2 WC — raccordable ou autonome"
+        "label": "2 WC",
+        "value": "2 WC"
       },
       {
-        "label": "1 WC + 1 douche — raccordable/autonome",
-        "value": "1 WC + 1 douche — raccordable/autonome"
+        "label": "1 WC + 1 douche",
+        "value": "1 WC + 1 douche"
       },
       {
         "label": "1 WC + 1 urinoir + 1 douche",
@@ -372,8 +372,8 @@
         "value": "1 WC + 1 urinoir + 2 douches"
       },
       {
-        "label": "2 WC + 2 urinoirs + 2 douches",
-        "value": "2 WC + 2 urinoirs + 2 douches"
+        "label": "2 WC + 2 urinoirs + 2 douches + 1 rampe lavabo",
+        "value": "2 WC + 2 urinoirs + 2 douches + 1 rampe lavabo"
       },
       {
         "label": "Toilettes H/F — 5 WC + 2 urinoirs",
@@ -391,7 +391,9 @@
     "options": [
       "Raccordement en eau",
       "Raccordement électricité",
-      "Rampe PMR"
+      "Rampe PMR",
+      "Cuve de rétention 2m³",
+      "Cuve de rétention 8m³"
     ]
   },
   "vestiaire": {
