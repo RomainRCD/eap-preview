@@ -4,19 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
+      // Mesure d'audience avec mode consentement (Consent Mode v2).
+      //
+      // Avant : gtag n'était chargé QUE si l'internaute cliquait « Accepter ».
+      // Résultat, du 06/07 au 04/08/2026 : 935 clics facturés par Google Ads mais
+      // seulement 202 sessions vues dans GA4 — 78 % du trafic était invisible.
+      //
+      // Maintenant : gtag est toujours chargé, mais démarre avec TOUS les
+      // consentements refusés. Dans cet état Google ne dépose aucun cookie et
+      // n'envoie que des mesures anonymes : on voit le volume réel sans identifier
+      // personne. Le clic sur « Accepter » remonte le consentement.
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       (function(){
         var KEY = 'eap_cookie_consent';
-        var loaded = false;
-        function loadGA(){
-          if (loaded) return; loaded = true;
-          gtag('js', new Date());
-          gtag('config', 'G-JCGCRQ5GCD');
-          var s = document.createElement('script');
-          s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JCGCRQ5GCD';
-          document.head.appendChild(s);
-        }
+        var GRANTED = { ad_storage:'granted', ad_user_data:'granted', ad_personalization:'granted', analytics_storage:'granted' };
+
+        // Par défaut : rien n'est autorisé. Doit être déclaré AVANT tout autre appel gtag.
+        gtag('consent', 'default', {
+          ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+          analytics_storage: 'denied', wait_for_update: 500
+        });
+        gtag('js', new Date());
+        gtag('config', 'G-JCGCRQ5GCD');
+
+        var s = document.createElement('script');
+        s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JCGCRQ5GCD';
+        document.head.appendChild(s);
+
+        function accepter(){ gtag('consent', 'update', GRANTED); }
+
         function banner(){
           if (document.getElementById('eap-cookies')) return;
           var d = document.createElement('div');
@@ -24,30 +41,124 @@
           d.setAttribute('role','dialog');
           d.setAttribute('aria-label','Gestion des cookies');
           d.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#1a2332;color:#e2e8f0;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px 18px;box-shadow:0 12px 40px rgba(0,0,0,.4);font:14px/1.5 Roboto,system-ui,sans-serif';
-          d.innerHTML = '<p style="margin:0 0 12px">Nous utilisons des cookies de mesure d\u2019audience (Google Analytics) pour am\u00e9liorer ce site. Aucun cookie n\u2019est d\u00e9pos\u00e9 sans votre accord. <a href="/mentions-legales" style="color:#f97350;text-decoration:underline">En savoir plus</a></p>'
+          d.innerHTML = '<p style="margin:0 0 12px">Nous utilisons des cookies de mesure d’audience (Google Analytics) pour améliorer ce site. Aucun cookie n’est déposé sans votre accord. <a href="/mentions-legales" style="color:#f97350;text-decoration:underline">En savoir plus</a></p>'
             + '<div style="display:flex;gap:10px;flex-wrap:wrap"><button id="eap-ck-no" style="flex:1;min-width:120px;padding:10px 14px;border-radius:9px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#e2e8f0;font-weight:600;cursor:pointer">Refuser</button>'
             + '<button id="eap-ck-yes" style="flex:1;min-width:120px;padding:10px 14px;border-radius:9px;border:0;background:#ED5722;color:#fff;font-weight:700;cursor:pointer">Accepter</button></div>';
           document.body.appendChild(d);
-          document.getElementById('eap-ck-yes').onclick = function(){ localStorage.setItem(KEY,'granted'); d.remove(); loadGA(); };
+          document.getElementById('eap-ck-yes').onclick = function(){ localStorage.setItem(KEY,'granted'); d.remove(); accepter(); };
           document.getElementById('eap-ck-no').onclick = function(){ localStorage.setItem(KEY,'denied'); d.remove(); };
         }
         window.__eapConsentReset = function(){ localStorage.removeItem(KEY); banner(); };
         function init(){
           var v = localStorage.getItem(KEY);
-          if (v === 'granted') loadGA();
+          if (v === 'granted') accepter();
           else if (v !== 'denied') banner();
         }
         if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+        // ---------------------------------------------------------------
+        // Clic sur un numéro de téléphone → événement GA4 `phone_click`.
+        //
+        // Écouteur délégué sur document : couvre TOUS les liens tel: du site
+        // (18 au 05/08/2026) sans rien câbler dans les composants, y compris
+        // ceux montés après coup par React et ceux ajoutés plus tard.
+        //
+        // Paramètres envoyés — à déclarer en dimensions personnalisées GA4 :
+        //   zone      : header / hero / corps_de_page / footer / cta_mobile_fixe
+        //   page_type : accueil / categorie / fiche_produit / contact / devis…
+        //   produit   : "famille/slug" sur une fiche produit, sinon "(aucun)"
+        // La page et la catégorie d'appareil (mobile/desktop) sont déjà
+        // fournies nativement par GA4 : inutile de les dupliquer ici.
+        //
+        // La zone est déduite de la POSITION du lien, pas d'un attribut :
+        // les deux gabarits du site (pages avec en-tête partagé, fiches
+        // produits autonomes) n'ont aucun marqueur commun, et un attribut
+        // oublié sur un futur lien produirait un trou silencieux.
+        // ---------------------------------------------------------------
+        var FAMILLES = ['terrassement','travail-en-hauteur','manutention','compactage','base-vie','autres'];
+
+        function contextePage(){
+          var seg = (location.pathname || '/').split('/').filter(Boolean);
+          if (!seg.length) return { page_type: 'accueil', produit: '(aucun)' };
+          if (FAMILLES.indexOf(seg[0]) !== -1) {
+            return seg[1]
+              ? { page_type: 'fiche_produit', produit: seg[0] + '/' + seg[1] }
+              : { page_type: 'categorie', produit: '(aucun)' };
+          }
+          return { page_type: seg[0], produit: '(aucun)' };
+        }
+
+        function zoneDuLien(a){
+          // 1. Barre d'appel fixe en bas d'écran (mobile) : un ancêtre est en
+          //    position:fixed. À tester en premier — elle flotte au-dessus de tout.
+          for (var el = a; el && el !== document.body; el = el.parentElement) {
+            try { if (getComputedStyle(el).position === 'fixed') return 'cta_mobile_fixe'; }
+            catch (_e) { /* élément détaché */ }
+          }
+          if (a.closest('footer')) return 'footer';
+          if (a.closest('header')) return 'header';
+          // 2. Sinon on se repère à la hauteur ABSOLUE du lien dans la page.
+          var y = 0;
+          try { y = a.getBoundingClientRect().top + (window.pageYOffset || 0); } catch (_e) {}
+          if (y < 150) return 'header';                                   // bandeau de contact tout en haut
+          if (y < (window.innerHeight || 800)) return 'hero';             // 1er écran : hero accueil / hero produit
+          return 'corps_de_page';                                          // bloc devis, page contact, bas de fiche
+        }
+
         document.addEventListener('click', function(e){
           var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
-          if (a) gtag('event', 'phone_click', { phone_number: a.getAttribute('href').replace('tel:','') });
+          if (!a) return;
+          var c = contextePage();
+          var zone = zoneDuLien(a);
+          var numero = a.getAttribute('href').replace('tel:','');
+          gtag('event', 'phone_click', {
+            zone: zone,
+            page_type: c.page_type,
+            produit: c.produit,
+            phone_number: numero
+          });
+          // ---------------------------------------------------------------
+          // Second enregistrement, dans notre propre base.
+          //
+          // GA4 compte les clics mais ne conserve pas le gclid : impossible d'en
+          // faire une conversion rattachée au clic publicitaire exact, donc au
+          // mot-clé qui a amené le visiteur. On enregistre donc le clic chez
+          // nous avec l'attribution posée au premier hit de session
+          // (cf. src/lib/tracking.ts), et ads-conversions-csv le remonte à
+          // Google Ads comme conversion — « Appel depuis une fiche produit » ou
+          // « Appel depuis une autre page » selon l'endroit du clic.
+          //
+          // sendBeacon : la requête doit survivre à la bascule immédiate vers
+          // l'application téléphone, qui tue une requête fetch en vol.
+          // ---------------------------------------------------------------
+          try {
+            var attr = {};
+            try { attr = JSON.parse(sessionStorage.getItem('eap_attribution') || '{}'); } catch (_e) {}
+            var charge = JSON.stringify({
+              page: location.pathname,
+              page_type: c.page_type,
+              produit: c.produit === '(aucun)' ? null : c.produit,
+              zone: zone,
+              appareil: matchMedia('(pointer:coarse)').matches ? 'mobile' : 'ordinateur',
+              numero: numero,
+              gclid: attr.gclid, utm_source: attr.utm_source, utm_medium: attr.utm_medium,
+              utm_campaign: attr.utm_campaign, utm_term: attr.utm_term, utm_content: attr.utm_content,
+              landing_page: attr.landing_page, referrer: attr.referrer
+            });
+            var u = 'https://lnytoqspbcphamtvpvnw.supabase.co/functions/v1/site-phone-click';
+            if (navigator.sendBeacon) navigator.sendBeacon(u, new Blob([charge], { type: 'application/json' }));
+            else fetch(u, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: charge, keepalive: true });
+          } catch (_e) { /* jamais bloquer l'appel du visiteur */ }
         }, true);
       })();
     </script>
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <!--seo-defaults-start-->
+    <!-- Balises par défaut. Sur les pages prérendues (scripts/prerender.mjs),
+         ce bloc est REMPLACÉ par les balises de la page. Ne pas y ajouter de
+         balise à conserver systématiquement : la mettre au-dessus du marqueur. -->
     <title>EAP Location - Location de matériel BTP</title>
     <meta name="description" content="EAP Location - Location de matériel BTP partout en France." />
     <meta name="author" content="EAP Location" />
-    <link rel="icon" href="/favicon.png" type="image/png" />
 
     <meta property="og:title" content="EAP Location - Location de matériel BTP" />
     <meta property="og:description" content="EAP Location - Location de matériel BTP partout en France." />
@@ -57,6 +168,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@eaplocation" />
     <meta name="twitter:image" content="/images/og-preview.png" />
+    <!--seo-defaults-end-->
   </head>
 
   <body>

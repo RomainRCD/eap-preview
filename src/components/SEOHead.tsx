@@ -6,6 +6,8 @@ interface SEOHeadProps {
   keywords?: string;
   canonicalUrl?: string;
   structuredData?: object;
+  /** Page sans valeur pour la recherche (404, produit inconnu) : on demande la désindexation. */
+  noindex?: boolean;
 }
 
 const SEOHead = ({ 
@@ -13,10 +15,12 @@ const SEOHead = ({
   description, 
   keywords,
   canonicalUrl,
-  structuredData 
+  structuredData,
+  noindex = false
 }: SEOHeadProps) => {
   const baseUrl = "https://www.eap-location.fr";
-  const fullCanonicalUrl = canonicalUrl ? `${baseUrl}${canonicalUrl}` : undefined;
+  // Pas de canonical sur une page noindex : elle ne doit pas se déclarer comme version de référence.
+  const fullCanonicalUrl = !noindex && canonicalUrl ? `${baseUrl}${canonicalUrl}` : undefined;
 
   // Default LocalBusiness structured data
   const defaultStructuredData = {
@@ -62,7 +66,7 @@ const SEOHead = ({
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content="EAP Location" />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
       
       {/* Canonical URL */}
       {fullCanonicalUrl && <link rel="canonical" href={fullCanonicalUrl} />}

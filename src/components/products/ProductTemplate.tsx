@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import SEOHead from "@/components/SEOHead";
+import ProductContent from "@/components/products/ProductContent";
+import ProductFaq from "@/components/products/ProductFaq";
 import { PRODUCTS } from "@/data/products";
 
 // Logos entreprises BTP
@@ -105,6 +107,11 @@ interface ProductTemplateProps {
   categoryLabel: string;
 }
 
+/** « Benne DIB » → « benne DIB » : on minuscule le premier mot pour l'insérer
+ *  dans une phrase, sauf si c'est un sigle (WC, GNR…) qui doit rester lisible. */
+const enPhrase = (nom: string) =>
+  nom.split(" ").map((mot, i) => (i === 0 && !/^[A-Z]{2,}$/.test(mot) ? mot.toLowerCase() : mot)).join(" ");
+
 const trustLogos = [
   { name: "ASSA ABLOY", logo: logoAssaAbloy },
   { name: "EDF", logo: logoEdf },
@@ -133,7 +140,9 @@ const ProductTemplate = ({
   categoryLabel,
 }: ProductTemplateProps) => {
   const slug = canonicalUrl.split("/").filter(Boolean).pop() ?? "";
-  const longDescription = PRODUCTS[slug]?.description;
+  const fiche = PRODUCTS[slug];
+  const longDescription = fiche?.description ?? [];
+  const faq = fiche?.faq ?? [];
   const [selectedProduct, setSelectedProduct] = useState<string>("");
   // Options cochées par le client dans le formulaire (accessoires ajoutés à la machine).
   // Indépendant de `materiel` qui porte la profondeur de gamme (un seul choix).
@@ -565,6 +574,14 @@ const ProductTemplate = ({
       </section>
       )}
 
+      {/* Corps rédactionnel de la fiche (products.json, champ `description`) */}
+      <ProductContent
+        lignes={longDescription}
+        titre={PRODUCTS[slug]?.page?.contentTitle ?? `Tout savoir sur la location de ${enPhrase(fiche?.name ?? productNamePrefix)}`}
+        spec={fiche?.spec}
+        nbVariantes={products.length}
+      />
+
       {/* Why Choose Us - Impact */}
       <section className="py-10 md:py-16 lg:py-24">
         <div className="container mx-auto px-4">
@@ -597,6 +614,8 @@ const ProductTemplate = ({
       </section>
 
       {/* Form Section - Multi-Step Restructured */}
+      <ProductFaq items={faq} />
+
       <section id="devis" className="py-10 md:py-16 lg:py-24 bg-secondary">
         <div className="container mx-auto px-4 overflow-hidden">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center overflow-hidden">
@@ -632,7 +651,7 @@ const ProductTemplate = ({
               {/* Progress Bar */}
               <div className="mb-6">
                 <div className="flex justify-between text-xs text-muted-foreground mb-2">
-                  <span className={formStep >= 1 ? "text-primary font-medium" : ""}>1. Produit & Société</span>
+                  <span className={formStep >= 1 ? "text-primary font-medium" : ""}>1. Produit &amp; Société</span>
                   <span className={formStep >= 2 ? "text-primary font-medium" : ""}>2. Contact</span>
                   <span className={formStep >= 3 ? "text-primary font-medium" : ""}>3. Chantier</span>
                 </div>
@@ -657,7 +676,7 @@ const ProductTemplate = ({
                   <div className="space-y-4 animate-fade-in">
                     <p className="text-xs font-semibold text-primary mb-3 flex items-center gap-2">
                       <Building2 className="w-4 h-4" strokeWidth={1.5} />
-                      ÉTAPE 1 : PRODUIT & ENTREPRISE
+                      ÉTAPE 1 : PRODUIT &amp; ENTREPRISE
                     </p>
                     
                     {/* Choix du matériel */}

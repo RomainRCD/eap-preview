@@ -1,0 +1,228 @@
+{
+  "benne-dib": {
+    "spec": "8 à 30 m³",
+    "variants": [
+      {
+        "label": "8 m³",
+        "value": "8M3"
+      },
+      {
+        "label": "10 m³",
+        "value": "10M3"
+      },
+      {
+        "label": "15 m³",
+        "value": "15M3"
+      },
+      {
+        "label": "20 m³",
+        "value": "20M3"
+      },
+      {
+        "label": "30 m³",
+        "value": "30M3"
+      }
+    ],
+    "description": [
+      "La benne DIB — pour déchets industriels banals — est le contenant dans lequel on évacue tout ce qu'un chantier produit de non dangereux : gravats, bois, plâtre, isolants, cartons, plastiques, ferrailles, mobilier. Selon les régions et les métiers on l'appelle aussi benne de chantier, benne à déchets, benne tout venant ou conteneur de chantier : c'est le même matériel. EAP Location met à disposition la gamme complète, du 8 m³ au 30 m³, en location courte ou longue durée, partout en France.",
+      "**Quel volume pour quel chantier :**",
+      "**8 m³** — rénovation d'appartement, petits volumes, et surtout déchets denses : une benne à gravats se remplit en poids bien avant de se remplir en volume.",
+      "**10 m³** — le format le plus demandé en rénovation, bon compromis entre encombrement au sol et capacité.",
+      "**15 m³** — démolition légère et déchets encombrants : bois, placo, emballages, menuiseries déposées.",
+      "**20 m³** — tout venant de fin de chantier, gros volumes peu denses, plusieurs corps d'état sur le même site.",
+      "**30 m³** — évacuation massive et tri en sortie de chantier, sur des matériaux légers.",
+      "**Benne DIB, benne à gravats, benne tout venant : où est la différence :**",
+      "La **benne DIB** accueille un mélange de déchets non dangereux, ce qu'on appelle couramment le **tout venant** : bois, plastiques, cartons, métaux, plâtre, isolants, revêtements.",
+      "La **benne à gravats** reçoit des déchets inertes — béton, briques, tuiles, carrelage, terre. Ils pèsent trois à quatre fois plus lourd à volume égal, c'est pourquoi on part sur un petit contenant.",
+      "Ne se mettent jamais dans une benne DIB : amiante, produits chimiques, peintures et solvants, pneus, équipements électriques, déchets d'activité de soins. Ils relèvent de filières dédiées.",
+      "Au moment du devis, deux informations suffisent à choisir le bon contenant : la **nature des déchets** et le **volume estimé**. En cas de doute, décrivez le chantier, nous tranchons avec vous.",
+      "**Ce sur quoi vous pouvez compter :**",
+      "- Mise à disposition de la benne sur le chantier, en location courte ou longue durée.",
+      "- Livraison partout en France métropolitaine, grâce à un réseau de 2 400 agences partenaires.",
+      "- Enlèvement et rotations organisés avec votre interlocuteur, au rythme d'avancement du chantier.",
+      "- Un seul interlocuteur du devis à la reprise du matériel, et une réponse en moins de 2 heures."
+    ],
+    "faq": [
+      {
+        "q": "Quels déchets peut-on mettre dans une benne DIB ?",
+        "a": "Tous les déchets de chantier non dangereux, en mélange : bois, plâtre, isolants, cartons, plastiques, ferrailles, menuiseries, mobilier, revêtements de sol. Sont exclus l'amiante, les produits chimiques, peintures et solvants, les pneus et les équipements électriques, qui relèvent de filières spécifiques. Les gravats et déchets inertes se traitent à part, dans une benne dédiée."
+      },
+      {
+        "q": "Benne de chantier, benne DIB : est-ce la même chose ?",
+        "a": "Oui. « Benne de chantier » est le terme générique : c'est le contenant qu'on dépose sur un chantier pour évacuer les déchets. « Benne DIB » précise ce qu'on met dedans — des déchets industriels banals, c'est-à-dire tout ce qui n'est ni inerte ni dangereux. On parle aussi de benne à déchets, de benne tout venant ou de conteneur de chantier : dans tous les cas, c'est le matériel que nous livrons, du 8 au 30 m³."
+      },
+      {
+        "q": "Quelle différence entre une benne DIB et une benne à gravats ?",
+        "a": "La benne DIB reçoit du tout venant non dangereux, mélangé. La benne à gravats reçoit des déchets inertes : béton, briques, tuiles, carrelage, terre. La différence tient au poids — à volume égal les gravats pèsent trois à quatre fois plus lourd, on part donc sur un petit contenant même quand le chantier en produit beaucoup."
+      },
+      {
+        "q": "Quelle taille de benne choisir pour mon chantier ?",
+        "a": "8 m³ pour une rénovation d'appartement ou des déchets denses, 10 m³ pour la majorité des chantiers de rénovation, 15 m³ dès qu'il y a du volumineux (bois, placo, emballages), 20 et 30 m³ pour les fins de chantier et le tri sur des matériaux légers. Décrivez-nous le chantier dans le devis, nous confirmons le volume."
+      },
+      {
+        "q": "Combien coûte la location d'une benne à déchets ?",
+        "a": "Le prix dépend de quatre choses : le volume de la benne, la durée de mise à disposition, le lieu du chantier et la nature des déchets. Il n'y a donc pas de tarif unique. Décrivez votre besoin, vous recevez un devis chiffré gratuit en moins de 2 heures ouvrées."
+      },
+      {
+        "q": "Livrez-vous une benne partout en France ?",
+        "a": "Oui. Notre réseau de 2 400 agences partenaires couvre la France métropolitaine, y compris les chantiers isolés. Livraison et enlèvement sont organisés avec votre interlocuteur dédié."
+      },
+      {
+        "q": "Peut-on garder la benne plusieurs semaines ?",
+        "a": "Oui, la location est possible en courte comme en longue durée, et les rotations se règlent au fil de l'avancement : on remplace la benne pleine plutôt que d'immobiliser le chantier."
+      }
+    ],
+    "page": {
+      "title": "Location Benne DIB, gravats et tout venant | EAP Location",
+      "description": "Location de benne DIB de 8 à 30 m³ pour évacuer gravats, tout venant et déchets de chantier. Livraison partout en France, devis gratuit en moins de 2 h.",
+      "keywords": "location benne dib, benne de chantier, location benne de chantier, location benne à déchets, location benne gravats, location benne tout venant, location conteneur déchets, location benne 10m3, location benne 20m3",
+      "heroSubtitle": "La benne de chantier qu'il vous faut, de 8 à 30 m³, pour vos gravats, votre tout venant et vos déchets de chantier. Location courte ou longue durée, livraison partout en France.",
+      "selectorTitle": "Quel volume de benne pour votre chantier ?",
+      "imageAlt": "Benne DIB 30 m³ pour l'évacuation des déchets de chantier",
+      "contentTitle": "Benne de chantier : ce qu'il faut savoir avant de commander"
+    }
+  },
+  "dumper-chenilles": {
+    "spec": "1,5 à 20 T",
+    "description": [
+      "Le dumper sur chenilles — aussi appelé transporteur sur chenilles, motobasculeur chenillé ou, chez les compacts, brouette à chenilles — sert à déplacer de la terre, des gravats ou des matériaux là où un dumper sur pneus ne passe pas, ou passerait en abîmant tout. Les chenilles répartissent le poids de la machine au sol : elle avance sur terrain meuble, boueux, en pente ou fraîchement remblayé sans s'enliser et sans creuser d'ornières. C'est un matériel rare en location, et c'est précisément pour cela qu'EAP Location en a fait une spécialité.",
+      "**Pourquoi des chenilles plutôt que des roues :**",
+      "- **Terrain meuble, boue, sable, remblai frais** — la pression au sol d'un engin chenillé est trois à quatre fois plus faible que celle d'un dumper sur pneus à charge égale.",
+      "- **Pente et dévers** — la surface de contact au sol donne une adhérence que les pneus n'ont pas, y compris chargé.",
+      "- **Sol fini qu'il ne faut pas marquer** — pelouse, dallage, enrobé récent, sous-couche : on passe sans laisser de traces ni de contraintes de charge ponctuelle.",
+      "- **Accès étroit** — les gabarits compacts passent dans un portail, un couloir de maison ou une allée de jardin, ce qui rend le chantier possible sans démolir un accès.",
+      "**Les capacités disponibles :**",
+      "**1,5 T** — le format qui passe partout : accès de maison, jardin, terrasse, cour intérieure. Le choix des paysagistes et des chantiers de rénovation en zone contrainte.",
+      "**2,5 T — le Kubota KC250 et ses équivalents** — c'est la machine la plus demandée, et de très loin, sur l'ensemble de nos locations de dumper chenillé. Le bon équilibre entre charge utile réelle et encombrement : elle avale un chantier de terrassement de maison individuelle tout en franchissant un accès standard.",
+      "**3,5 T à 6 T** — terrassement de volume, évacuation continue derrière une pelle, chantiers de VRD sur terrain difficile.",
+      "**8 T à 20 T** — rotation de gros volumes sur terrain porteur médiocre : carrières, chantiers de génie civil, zones humides, aménagements de berges.",
+      "**Ce qu'il faut nous dire pour choisir la bonne machine :**",
+      "Trois informations suffisent : la **charge utile** dont vous avez besoin, la **largeur du passage le plus étroit** de l'accès au chantier, et la **nature du terrain**. Ces trois éléments déterminent la machine — le reste, disponibilité et logistique, est notre travail. Si vous hésitez entre chenilles et pneus, décrivez simplement le sol : nous tranchons avec vous.",
+      "**Ce sur quoi vous pouvez compter :**",
+      "- Location sans chauffeur, en courte comme en longue durée, avec un tarif dégressif à partir du cinquième jour.",
+      "- Livraison et reprise sur le chantier, partout en France métropolitaine, via un réseau de 2 400 agences partenaires.",
+      "- Un seul interlocuteur du devis à la restitution du matériel, et une réponse chiffrée en moins de 2 heures ouvrées.",
+      "- Un sourcing actif : le dumper chenillé est un matériel peu répandu en parc de location, nous allons le chercher là où il est disponible plutôt que de vous proposer un équivalent sur pneus."
+    ],
+    "faq": [
+      {
+        "q": "Quelle différence entre un dumper sur chenilles et un dumper sur pneus ?",
+        "a": "Le dumper sur pneus va plus vite et coûte moins cher : c'est le bon choix sur une piste stabilisée ou un terrain porteur. Le dumper sur chenilles répartit son poids au sol, ce qui lui permet de rouler chargé sur du meuble, de la boue, du sable ou une pente, et de passer sur un sol fini sans le marquer. Dès que le terrain est incertain ou que l'accès est étroit, ce sont les chenilles qui font le chantier."
+      },
+      {
+        "q": "Quelle capacité de dumper chenillé choisir ?",
+        "a": "Le 2,5 T couvre la grande majorité des besoins : c'est notre machine la plus louée. En dessous, le 1,5 T passe dans un accès de maison ou de jardin. Au-dessus, on part sur du 3,5 à 6 T pour du terrassement de volume, et jusqu'à 20 T pour de la rotation continue sur terrain porteur médiocre. Donnez-nous la charge utile et la largeur de votre accès le plus étroit, nous vous orientons."
+      },
+      {
+        "q": "Quels modèles de dumper sur chenilles proposez-vous ?",
+        "a": "La référence de la gamme 2,5 T est le **Kubota KC250**, et c'est la machine que l'on nous demande le plus souvent par son nom. Sur les autres capacités, les machines proposées relèvent des familles habituelles du marché : Kubota KC110 ou KC300, Yanmar, Cormidi, Messersì, Hinowa. Le modèle exact dépend de l'agence disponible près de votre chantier — nous travaillons avec un réseau de 2 400 agences partenaires. Précisez la charge utile et la largeur de votre accès, nous vous proposons la machine qui correspond."
+      },
+      {
+        "q": "Un dumper sur chenilles passe-t-il sur une pelouse ou un dallage ?",
+        "a": "Oui, et c'est l'une des principales raisons de le choisir. La pression exercée au sol est bien plus faible que celle d'un engin sur pneus, ce qui évite les ornières sur une pelouse et les contraintes ponctuelles sur un dallage ou un enrobé récent. Sur sol fini fragile, on peut en plus travailler avec des chenilles caoutchouc."
+      },
+      {
+        "q": "Combien coûte la location d'un dumper sur chenilles ?",
+        "a": "Le prix dépend de la capacité de la machine, de la durée de mise à disposition et du lieu du chantier, avec un tarif dégressif dès le cinquième jour de location. Il n'y a donc pas de tarif unique. Décrivez votre besoin, vous recevez un devis chiffré gratuit en moins de 2 heures ouvrées."
+      },
+      {
+        "q": "Livrez-vous un dumper chenillé partout en France ?",
+        "a": "Oui. Le dumper sur chenilles est un matériel peu répandu dans les parcs de location, mais notre réseau de 2 400 agences partenaires couvre la France métropolitaine. Livraison et reprise sur le chantier sont organisées avec votre interlocuteur dédié, y compris sur les sites isolés."
+      }
+    ],
+    "page": {
+      "title": "Location Dumper sur chenilles 2,5T Kubota KC250 | EAP Location",
+      "description": "Location de dumper sur chenilles de 1,5 à 20 T : terrain meuble, pente, accès étroit, sol à ne pas marquer. Livraison partout en France, devis gratuit en moins de 2 h.",
+      "keywords": "location dumper sur chenilles, location dumper chenille, dumper chenillé, kubota kc250, location kubota kc250, transporteur sur chenilles, motobasculeur chenille, brouette à chenilles, location dumper 2.5t, dumper chenille 1.5t, location tombereau sur chenilles",
+      "heroSubtitle": "De 1,5 à 20 T pour franchir le terrain meuble, la pente et les accès étroits sans marquer le sol. Location sans chauffeur, livraison partout en France.",
+      "selectorTitle": "Quelle capacité de dumper chenillé pour votre chantier ?",
+      "imageAlt": "Dumper sur chenilles 2,5 T en évacuation de terre sur terrain meuble",
+      "contentTitle": "Dumper sur chenilles : ce qu'il faut savoir avant de commander"
+    }
+  },
+  "chargeuse-chenilles": {
+    "spec": "2 à 6 T",
+    "variants": [
+      {
+        "label": "2T",
+        "value": "2T"
+      },
+      {
+        "label": "3T / 280L",
+        "value": "3T / 280L"
+      },
+      {
+        "label": "3,5T / 380L",
+        "value": "3,5T / 380L"
+      },
+      {
+        "label": "4,5T / 450L",
+        "value": "4,5T / 450L"
+      },
+      {
+        "label": "6T / 600L",
+        "value": "6T / 600L"
+      }
+    ],
+    "description": [
+      "La chargeuse compacte sur chenilles — que tout le monde appelle **mini chargeuse**, et que beaucoup nomment simplement **Bobcat**, du nom de la marque qui a popularisé l'engin — charge, déplace et nivelle sur les chantiers où une chargeuse sur pneus ne passe pas ou s'enlise. Les chenilles répartissent son poids au sol : elle travaille sur terrain meuble, boueux ou en pente, et passe sur un sol fini sans le marquer. EAP Location la propose de 2 à 6 tonnes, avec godet ou fourche à palette, partout en France.",
+      "**Ce qu'elle sait faire :**",
+      "- **Charger et évacuer** — terre, gravats, sable, remblai, déchets de chantier, avec un godet de 280 à 600 litres selon le modèle.",
+      "- **Reprendre et niveler** — préparation de plateforme, réglage de fond de forme, régalage de terre végétale.",
+      "- **Manutentionner** — avec la fourche à palette : sacs de ciment, parpaings, plaques, palettes de matériaux.",
+      "- **Travailler en espace contraint** — le gabarit compact passe là où un engin sur pneus est trop large ou trop lourd.",
+      "**Chenilles ou pneus, comment choisir :**",
+      "La **chargeuse sur chenilles** est faite pour le sol incertain : boue, terre fraîchement remuée, sable, pente, ou dallage qu'on ne veut pas marquer. Sa pression au sol est bien plus faible, elle n'ornière pas.",
+      "La **chargeuse sur pneus** va plus vite sur piste stabilisée et coûte moins cher. C'est le bon choix sur une plateforme dure et roulante.",
+      "En cas de doute, décrivez-nous simplement le sol du chantier : nous tranchons avec vous.",
+      "**Les capacités disponibles :**",
+      "**2 T** — le format qui passe partout : accès de maison, jardin, cour intérieure, chantier de rénovation en zone contrainte.",
+      "**3 T – 280 L** et **3,5 T – 380 L** — le cœur de gamme, celui qu'on nous demande le plus : assez de charge pour avancer vite, assez compact pour franchir un accès standard.",
+      "**4,5 T – 450 L** et **6 T – 600 L** — terrassement de volume, chargement continu, chantiers de VRD et d'aménagement.",
+      "**Ce sur quoi vous pouvez compter :**",
+      "- Location sans chauffeur, en courte comme en longue durée, avec un tarif dégressif dès le cinquième jour.",
+      "- Godet et fourche à palette disponibles : précisez l'usage, l'équipement suit.",
+      "- Livraison et reprise sur le chantier, partout en France métropolitaine, via un réseau de 2 400 agences partenaires.",
+      "- Un seul interlocuteur du devis à la restitution, et une réponse chiffrée en moins de 2 heures ouvrées."
+    ],
+    "faq": [
+      {
+        "q": "Mini chargeuse, chargeuse compacte, Bobcat : est-ce la même machine ?",
+        "a": "Oui. « Bobcat » est une marque devenue nom commun, comme Frigidaire pour le réfrigérateur. « Mini chargeuse » et « chargeuse compacte » désignent le même engin : une chargeuse de petit gabarit, ici sur chenilles, équipée d'un godet ou d'une fourche à palette. Quelle que soit l'appellation que vous employez, c'est le matériel que nous livrons, de 2 à 6 tonnes."
+      },
+      {
+        "q": "Quelle différence entre une chargeuse sur chenilles et une chargeuse sur pneus ?",
+        "a": "Les chenilles répartissent le poids au sol : la machine avance chargée sur du meuble, de la boue, du sable ou une pente, et passe sur un sol fini sans creuser d'ornières. Les pneus vont plus vite et coûtent moins cher, mais demandent une piste stabilisée. Dès que le terrain est incertain, ce sont les chenilles."
+      },
+      {
+        "q": "Quelle taille de mini chargeuse choisir ?",
+        "a": "Le 2 T passe dans un accès de maison ou de jardin. Le 3 T – 280 L et le 3,5 T – 380 L couvrent la majorité des chantiers : bon compromis entre charge et encombrement. Au-dessus, le 4,5 T – 450 L et le 6 T – 600 L servent au terrassement de volume. Donnez-nous la nature du sol et la largeur de votre accès le plus étroit, nous vous orientons."
+      },
+      {
+        "q": "Quels équipements sont disponibles ?",
+        "a": "Godet et fourche à palette, selon l'usage. Le godet pour charger, évacuer, niveler ; la fourche pour manutentionner des palettes, des sacs ou des plaques. Précisez ce que vous avez à faire au moment du devis, l'équipement est monté avant livraison."
+      },
+      {
+        "q": "Une mini chargeuse sur chenilles abîme-t-elle une pelouse ou un dallage ?",
+        "a": "Bien moins qu'un engin sur pneus, et c'est l'une des raisons de la choisir. La pression exercée au sol est nettement plus faible, ce qui évite les ornières sur une pelouse et les contraintes ponctuelles sur un dallage ou un enrobé récent. Sur sol fini fragile, on peut travailler avec des chenilles caoutchouc."
+      },
+      {
+        "q": "Combien coûte la location d'une mini chargeuse sur chenilles ?",
+        "a": "Le prix dépend de la capacité de la machine, de l'équipement, de la durée de mise à disposition et du lieu du chantier, avec un tarif dégressif dès le cinquième jour. Il n'y a donc pas de tarif unique. Décrivez votre besoin, vous recevez un devis chiffré gratuit en moins de 2 heures ouvrées."
+      },
+      {
+        "q": "Livrez-vous partout en France ?",
+        "a": "Oui. Notre réseau de 2 400 agences partenaires couvre la France métropolitaine, y compris les chantiers isolés. Livraison et reprise sont organisées avec votre interlocuteur dédié."
+      }
+    ],
+    "page": {
+      "title": "Location Mini Chargeuse sur chenilles (Bobcat) 2 à 6 T | EAP Location",
+      "description": "Location de mini chargeuse compacte sur chenilles de 2 à 6 T, godet ou fourche à palette. Terrain meuble, pente, accès étroit. Livraison partout en France, devis en moins de 2 h.",
+      "keywords": "location mini chargeuse, mini chargeuse, location bobcat, location bobcat sur chenilles, chargeuse compacte sur chenilles, location chargeuse compacte, chargeuse sur chenilles, location chargeuse chenilles, mini chargeuse sur chenilles, location chargeuse godet",
+      "heroSubtitle": "La mini chargeuse compacte sur chenilles, de 2 à 6 T, godet ou fourche à palette. Elle charge là où les pneus s'enlisent, sans marquer le sol. Livraison partout en France.",
+      "selectorTitle": "Quelle capacité de mini chargeuse pour votre chantier ?",
+      "imageAlt": "Mini chargeuse compacte sur chenilles avec godet sur un chantier de terrassement",
+      "contentTitle": "Mini chargeuse sur chenilles : ce qu'il faut savoir avant de commander"
+    }
+  }
+}

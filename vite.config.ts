@@ -15,4 +15,10 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Prérendu (scripts/prerender.mjs) : on embarque les dépendances dans le
+  // bundle SSR. Sans ça, Node les charge en externe et casse sur les paquets
+  // CommonJS qui n'exposent pas d'exports nommés (react-helmet-async).
+  ssr: {
+    noExternal: true,
+  },
 }));
