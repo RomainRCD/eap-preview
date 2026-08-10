@@ -391,7 +391,9 @@
     "options": [
       "Raccordement en eau",
       "Raccordement électricité",
-      "Rampe PMR"
+      "Rampe PMR",
+      "Cuve de rétention 2m³",
+      "Cuve de rétention 8m³"
     ]
   },
   "vestiaire": {
