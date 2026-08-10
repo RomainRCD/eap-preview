@@ -1490,7 +1490,7 @@
   "mini-grue-araignee": {
     "name": "Mini grue araignée",
     "category": "manutention",
-    "spec": "3T à 4T",
+    "spec": "1,5T-5,5m à 8T-20m",
     "variants": [
       {
         "label": "1,5T - 5,5m",
@@ -1514,21 +1514,20 @@
       }
     ],
     "description": [
-      "EAP location propose le plus large choix de Mini grue araignée pour vos travaux de manutention en France . Sur notre site vous retrouverez disponible à la location :",
-      "- Mini grue araignée 3T – 5M",
-      "- Mini grue araignée 3T – 8M",
-      "- Mini grue araignée 3.5T – 10M",
-      "- Mini grue araignée 3.5T – 14M",
-      "- Mini grue araignée 4T – 18M",
-      "- Mini grue araignée 4T – 20M"
+      "EAP location propose le plus large choix de mini grues araignées pour vos travaux de manutention en France. Sur notre site vous retrouverez disponibles à la location :",
+      "- Mini grue araignée 1,5T – 5,5m",
+      "- Mini grue araignée 2,5T – 9m",
+      "- Mini grue araignée 3,5T – 17m",
+      "- Mini grue araignée 6T – 17m",
+      "- Mini grue araignée 8T – 20m"
     ],
     "page": {
-      "title": "Location Mini Grue Araignée 3T à 4T | EAP Location",
-      "description": "Location mini grue araignée de 3T à 4T. Idéale pour espaces restreints. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "title": "Location Mini Grue Araignée 1,5T-5,5m à 8T-20m | EAP Location",
+      "description": "Location mini grue araignée de 1,5T-5,5m à 8T-20m. Idéale pour espaces restreints. Disponibilité 99%, devis en 2h, livraison partout en France.",
       "keywords": "mini grue araignée, spider crane, grue compacte, levage intérieur, location matériel BTP",
       "heroTitle": "Mini Grue",
       "heroHighlight": "Araignée",
-      "heroSubtitle": "De 3T à 4T. Idéale pour espaces restreints. Partout en France.",
+      "heroSubtitle": "De 1,5T-5,5m à 8T-20m. Idéale pour espaces restreints. Partout en France.",
       "selectorTitle": "Quelle capacité pour votre chantier ?",
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Mini Grue Araignée",
