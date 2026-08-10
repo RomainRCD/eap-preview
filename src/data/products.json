@@ -360,24 +360,24 @@
         "value": "2 WC — raccordable ou autonome"
       },
       {
-        "label": "1 WC + 1 douche — raccordable ou autonome",
-        "value": "1 WC + 1 douche — raccordable ou autonome"
+        "label": "1 WC + 1 douche — raccordable/autonome",
+        "value": "1 WC + 1 douche — raccordable/autonome"
       },
       {
-        "label": "2 WC + 2 douches — raccordable ou autonome",
-        "value": "2 WC + 2 douches — raccordable ou autonome"
+        "label": "1 WC + 1 urinoir + 1 douche",
+        "value": "1 WC + 1 urinoir + 1 douche"
       },
       {
-        "label": "2 WC + 2 douches + 2 urinoirs — raccordable ou autonome",
-        "value": "2 WC + 2 douches + 2 urinoirs — raccordable ou autonome"
+        "label": "1 WC + 1 urinoir + 2 douches",
+        "value": "1 WC + 1 urinoir + 2 douches"
       },
       {
-        "label": "Toilettes séparées H/F + urinoir",
-        "value": "Toilettes séparées H/F + urinoir"
+        "label": "2 WC + 2 urinoirs + 2 douches",
+        "value": "2 WC + 2 urinoirs + 2 douches"
       },
       {
-        "label": "4 douches + 4 lavabos — raccordable ou autonome",
-        "value": "4 douches + 4 lavabos — raccordable ou autonome"
+        "label": "Toilettes H/F — 5 WC + 2 urinoirs",
+        "value": "Toilettes H/F — 5 WC + 2 urinoirs"
       }
     ],
     "description": [
@@ -387,6 +387,11 @@
       "- Bungalow 1 WC et 1 douche raccordable.",
       "- Bungalow 2 WC et 2 douches raccordables.",
       "- Bungalow 4 douches et 4 lavabos raccordables."
+    ],
+    "options": [
+      "Raccordement en eau",
+      "Raccordement électricité",
+      "Rampe PMR"
     ]
   },
   "vestiaire": {
