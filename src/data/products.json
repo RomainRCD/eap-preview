@@ -3353,19 +3353,15 @@
     "variants": [
       {
         "label": "Cabine WC autonome",
-        "value": "Standard"
+        "value": "Cabine WC autonome"
       },
       {
-        "label": "Cabine WC + lave-mains",
-        "value": "Avec lave-mains intégré"
+        "label": "Cabine WC + lave-mains intégré",
+        "value": "Cabine WC + lave-mains intégré"
       },
       {
-        "label": "Cabine WC confort",
-        "value": "Lave-mains, eau chaude et radiateur"
-      },
-      {
-        "label": "Cabine WC confort + (lave-mains, eau chaude et radiateur)",
-        "value": "Cabine WC confort + (lave-mains, eau chaude et radiateur)"
+        "label": "Cabine WC confort (lave-mains, eau chaude et radiateur)",
+        "value": "Cabine WC confort (lave-mains, eau chaude et radiateur)"
       }
     ],
     "options": [
