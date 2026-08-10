@@ -3362,6 +3362,10 @@
       {
         "label": "Cabine WC confort",
         "value": "Lave-mains, eau chaude et radiateur"
+      },
+      {
+        "label": "Cabine WC confort + (lave-mains, eau chaude et radiateur)",
+        "value": "Cabine WC confort + (lave-mains, eau chaude et radiateur)"
       }
     ],
     "options": [
