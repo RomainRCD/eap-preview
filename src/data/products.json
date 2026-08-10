@@ -3345,5 +3345,53 @@
       "- Gerbeur électrique 1,5T",
       "- Gerbeur électrique 2T"
     ]
+  },
+  "wc-chimique": {
+    "name": "WC chimique",
+    "category": "base-vie",
+    "spec": "Cabine autonome / avec lave-mains / confort",
+    "variants": [
+      {
+        "label": "Cabine WC autonome",
+        "value": "Standard"
+      },
+      {
+        "label": "Cabine WC + lave-mains",
+        "value": "Avec lave-mains intégré"
+      },
+      {
+        "label": "Cabine WC confort",
+        "value": "Lave-mains, eau chaude et radiateur"
+      }
+    ],
+    "options": [
+      "Raccordement électrique",
+      "Pack papier toilette"
+    ],
+    "description": [
+      "Location de WC chimiques pour chantiers, événements et espaces de travail temporaires. EAP propose plusieurs niveaux de confort, de la cabine simple à la cabine confort avec lave-mains, eau chaude et radiateur.",
+      "Nos cabines sont livrées propres et prêtes à l'emploi. Un service de vidange et d'entretien régulier peut être organisé selon vos besoins."
+    ],
+    "faq": [
+      {
+        "q": "Quelle est la différence entre les cabines proposées ?",
+        "a": "La cabine autonome est la version standard. La version avec lave-mains intégré ajoute un point d'eau. La cabine confort va plus loin avec l'eau chaude et un radiateur pour un usage en toutes saisons."
+      },
+      {
+        "q": "La livraison et la reprise sont-elles incluses ?",
+        "a": "Oui, EAP prend en charge la livraison et la reprise de la cabine sur votre site."
+      }
+    ],
+    "page": {
+      "title": "Location WC chimique chantier | EAP Location",
+      "description": "Louez vos WC chimiques avec EAP : cabine autonome, avec lave-mains ou confort (eau chaude, radiateur). Livraison sur chantier.",
+      "keywords": "location WC chimique, cabine WC chantier, WC autonome, location sanitaire chantier",
+      "heroTitle": "Location de",
+      "heroHighlight": "WC chimique",
+      "heroSubtitle": "Cabines sanitaires autonomes pour chantiers et espaces de travail temporaires",
+      "selectorTitle": "Choisissez votre cabine",
+      "contentTitle": "WC chimiques de chantier",
+      "imageAlt": "Cabine WC chimique de chantier"
+    }
   }
 }
