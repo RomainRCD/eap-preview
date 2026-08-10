@@ -235,7 +235,7 @@
     ]
   },
   "bungalow": {
-    "name": "Bungalow Bureau",
+    "name": "Bungalow Bureau (réunion)",
     "category": "base-vie",
     "spec": "4 à 20 personnes",
     "variants": [
@@ -297,7 +297,10 @@
       "Équipement audiovisuel",
       "Raccordement internet (STARLINK)",
       "Accès PMR (accès handicapé adapté)"
-    ]
+    ],
+    "page": {
+      "title": "Location Bungalow Bureau (réunion) | EAP Location"
+    }
   },
   "roulotte": {
     "name": "Roulotte de chantier",
