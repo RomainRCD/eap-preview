@@ -387,6 +387,11 @@
       "- Bungalow 1 WC et 1 douche raccordable.",
       "- Bungalow 2 WC et 2 douches raccordables.",
       "- Bungalow 4 douches et 4 lavabos raccordables."
+    ],
+    "options": [
+      "Raccordement en eau",
+      "Raccordement électricité",
+      "Rampe PMR"
     ]
   },
   "vestiaire": {
