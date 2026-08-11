@@ -1236,10 +1236,6 @@
     ],
     "variants": [
       {
-        "label": "16m",
-        "value": "16m"
-      },
-      {
         "label": "18m",
         "value": "18m"
       },
