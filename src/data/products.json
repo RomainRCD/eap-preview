@@ -1442,7 +1442,11 @@
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Grue Mobile",
       "imageAlt": "Grue mobile"
-    }
+    },
+    "options": [
+      "Radiocommande",
+      "Fléchette (JIB)"
+    ]
   },
   "mini-grue-chenilles": {
     "name": "Mini grue télescopique sur chenilles",
