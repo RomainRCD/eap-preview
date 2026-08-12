@@ -78,8 +78,20 @@ const getTodayDate = (): string => {
 };
 
 const ChariotRotatif = () => {
-  // Options/accessoires : pilotées par products.json (donc éditables depuis l'outil Site de Pilot).
-  const OPTIONS = PRODUCTS["chariot-rotatif"]?.options ?? [];
+  // CONTENU PILOTÉ PAR products.json — l'outil Site de Pilot est la source unique.
+  // Cette page garde sa mise en page dédiée (formulaire multi-étapes, logos, arguments),
+  // mais AUCUN texte de fiche n'est plus écrit en dur ici : titre affiché, balises SEO,
+  // profondeur de gamme et options viennent tous de la fiche. Sans ça l'outil répondait
+  // « c'est fait » et la page ne bougeait pas (panne de confiance du 10-12/08/2026).
+  const FICHE = PRODUCTS["chariot-rotatif"];
+  const PAGE = FICHE?.page ?? {};
+  const OPTIONS = FICHE?.options ?? [];
+  // PROFONDEUR DE GAMME = variants. Le libellé s'affiche TEL QUEL (ici des hauteurs) :
+  // aucune donnée technique n'est recomposée en dur, sinon elle redevient non modifiable.
+  const products = (FICHE?.variants ?? []).map((v) => ({ label: v.label, value: v.value || v.label }));
+  // Libellé porté par la demande de devis : préfixe éditable + libellé de la déclinaison.
+  const NOM_DEVIS = PAGE.namePrefix ?? PAGE.heroTitle ?? FICHE?.name ?? "Chariot télescopique Rotatif";
+  const libelleDevis = (p: { label: string }) => `${NOM_DEVIS} ${p.label}`;
   const [selectedProduct, setSelectedProduct] = useState<string>("");
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const toggleOption = (opt: string) =>
@@ -152,17 +164,6 @@ const ChariotRotatif = () => {
   // Debounce timer ref
   const siretSearchTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const products = [
-    { height: "16m", capacity: "4T" },
-    { height: "18m", capacity: "4T" },
-    { height: "21m", capacity: "5T" },
-    { height: "25m", capacity: "5T" },
-    { height: "30m", capacity: "6T" },
-    { height: "32m", capacity: "6T" },
-    { height: "35m", capacity: "6T" },
-    { height: "40m", capacity: "6T" },
-  ];
-
   const trustLogos = [
     { name: "ASSA ABLOY", logo: logoAssaAbloy },
     { name: "EDF", logo: logoEdf },
@@ -174,7 +175,7 @@ const ChariotRotatif = () => {
 
   // Handle product selection and scroll to form
   const handleProductSelect = (product: typeof products[0]) => {
-    const value = `Chariot Rotatif ${product.height} - Cap. ${product.capacity}`;
+    const value = libelleDevis(product);
     setSelectedProduct(value);
     setFormData(prev => ({ ...prev, materiel: value }));
     setValidFields(prev => ({ ...prev, materiel: true }));
@@ -329,9 +330,9 @@ const ChariotRotatif = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Location Chariot Télescopique Rotatif jusqu'à 35m | Dispo Immédiate | EAP Location"
-        description="Location chariot télescopique rotatif 16m-40m. Disponibilité 99%, devis en 2h, livraison 48h partout en France."
-        keywords="chariot télescopique 35m, location chariot rotatif, manitou location, nacelle grande hauteur, location matériel BTP"
+        title={PAGE.title ?? `Location ${FICHE?.name ?? "Chariot Télescopique Rotatif"} | EAP Location`}
+        description={PAGE.description ?? "Location chariot télescopique rotatif. Disponibilité 99%, devis en 2h, livraison 48h partout en France."}
+        keywords={PAGE.keywords ?? "location chariot rotatif, chariot télescopique rotatif, manitou location, nacelle grande hauteur, location matériel BTP"}
         canonicalUrl="/manutention/chariot-rotatif"
       />
       
@@ -390,12 +391,12 @@ const ChariotRotatif = () => {
           <div className="grid md:grid-cols-2 gap-8 lg:gap-14 items-center">
             <div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-secondary-foreground leading-tight mb-3 md:mb-4">
-                Chariot Rotatif
-                <span className="block text-primary">Jusqu'à 40m</span>
+                {PAGE.heroTitle ?? FICHE?.name ?? "Chariot Rotatif"}
+                {PAGE.heroHighlight && <span className="block text-primary">{PAGE.heroHighlight}</span>}
               </h1>
 
               <p className="text-base md:text-lg text-secondary-foreground/80 mb-5 md:mb-6">
-                Location courte ou longue durée. Partout en France.
+                {PAGE.heroSubtitle ?? "Location courte ou longue durée. Partout en France."}
               </p>
 
               <div className="flex gap-8 md:gap-12 mb-5 md:mb-7">
@@ -437,7 +438,7 @@ const ChariotRotatif = () => {
             <div className="relative bg-white rounded-2xl shadow-2xl h-64 md:h-[380px] lg:h-[440px] flex items-center justify-center overflow-hidden">
               <img
                 src={heroImage}
-                alt="Chariot télescopique rotatif"
+                alt={PAGE.imageAlt ?? FICHE?.name ?? "Chariot télescopique rotatif"}
                 className="w-full h-full object-contain p-5 md:p-8"
                 loading="eager"
               />
@@ -479,8 +480,8 @@ const ChariotRotatif = () => {
       {/* Height Selection - Quick Visual */}
       <section className="py-10 md:py-16 bg-muted">
         <div className="container mx-auto px-4">
-          <h2 className="section-title text-center mb-3 md:mb-4">Quelle hauteur pour votre chantier ?</h2>
-          <p className="text-center text-muted-foreground mb-8 md:mb-12 text-sm md:text-base">Sélectionnez et obtenez un devis immédiat</p>
+          <h2 className="section-title text-center mb-3 md:mb-4">{PAGE.selectorTitle ?? "Quelle hauteur pour votre chantier ?"}</h2>
+          <p className="text-center text-muted-foreground mb-8 md:mb-12 text-sm md:text-base">{PAGE.selectorSubtitle ?? "Sélectionnez et obtenez un devis immédiat"}</p>
           
           <div className="grid grid-cols-3 sm:grid-cols-4 md:flex md:flex-wrap md:justify-center gap-2 md:gap-4">
             {products.map((product, index) => (
@@ -488,17 +489,16 @@ const ChariotRotatif = () => {
                 key={index}
                 onClick={() => handleProductSelect(product)}
                 className={`group relative bg-card border-2 rounded-lg md:rounded-xl px-3 py-3 md:px-8 md:py-6 text-center transition-all duration-300 hover:border-primary hover:shadow-lg hover:-translate-y-1 ${
-                  selectedProduct.includes(product.height) 
+                  selectedProduct === libelleDevis(product)
                     ? "border-primary shadow-lg" 
                     : "border-border"
                 }`}
               >
                 <p className={`text-xl md:text-3xl font-display font-bold transition-colors ${
-                  selectedProduct.includes(product.height) ? "text-primary" : "text-foreground group-hover:text-primary"
-                }`}>{product.height}</p>
-                <p className="text-xs md:text-sm text-muted-foreground">Cap. {product.capacity}</p>
+                  selectedProduct === libelleDevis(product) ? "text-primary" : "text-foreground group-hover:text-primary"
+                }`}>{product.label}</p>
                 <div className={`absolute -top-1 -right-1 md:-top-2 md:-right-2 w-4 h-4 md:w-6 md:h-6 bg-success rounded-full flex items-center justify-center transition-opacity ${
-                  selectedProduct.includes(product.height) ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                  selectedProduct === libelleDevis(product) ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                 }`}>
                   <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-success-foreground" strokeWidth={1.5} />
                 </div>
@@ -630,8 +630,8 @@ const ChariotRotatif = () => {
                       >
                         <option value="">Choisir une hauteur</option>
                         {products.map((p, i) => (
-                          <option key={i} value={`Chariot Rotatif ${p.height} - Cap. ${p.capacity}`}>
-                            Chariot Rotatif {p.height} - Cap. {p.capacity}
+                          <option key={i} value={libelleDevis(p)}>
+                            {libelleDevis(p)}
                           </option>
                         ))}
                       </select>

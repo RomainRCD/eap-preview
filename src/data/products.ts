@@ -30,8 +30,9 @@ export interface ProductInfo {
   description?: string[];
   /** Questions fréquentes affichées en bas de fiche et balisées en FAQPage. */
   faq?: { q: string; a: string }[];
-  /** Surcharges rédactionnelles d'une fiche historique (SEO + hero + titre du sélecteur).
-   *  Champ ADMIN : l'outil Site de Pilot ne peut pas l'écrire (absent de sa liste blanche).
+  /** Textes AFFICHÉS et SEO de la fiche (hero, balises, titre du sélecteur).
+   *  Écrit par l'outil Site de Pilot depuis site-agent v11 (fusion sous-champ par sous-champ).
+   *  C'est ici que vit « le titre » au sens de l'utilisateur : heroTitle + heroHighlight.
    *  Absent = ProductPage génère ces textes depuis name/spec/description. */
   page?: {
     title?: string; description?: string; keywords?: string;
