@@ -3187,40 +3187,12 @@
     "spec": "De 9 m² à 200 m²",
     "variants": [
       {
-        "label": "9m²",
-        "value": "9m²"
+        "label": "3x3 m",
+        "value": "3x3 m"
       },
       {
-        "label": "25m²",
-        "value": "25m²"
-      },
-      {
-        "label": "40m²",
-        "value": "40m²"
-      },
-      {
-        "label": "60m²",
-        "value": "60m²"
-      },
-      {
-        "label": "100m²",
-        "value": "100m²"
-      },
-      {
-        "label": "200m²",
-        "value": "200m²"
-      },
-      {
-        "label": "300m²",
-        "value": "300m²"
-      },
-      {
-        "label": "500m²",
-        "value": "500m²"
-      },
-      {
-        "label": "1000m²",
-        "value": "1000m²"
+        "label": "3x6 m",
+        "value": "3x6 m"
       }
     ],
     "description": [
