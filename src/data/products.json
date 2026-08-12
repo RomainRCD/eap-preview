@@ -1211,7 +1211,7 @@
     }
   },
   "chariot-rotatif": {
-    "name": "Chariot télescopique rotatif",
+    "name": "Chariot télescopique Rotatif 18 à 40M",
     "category": "manutention",
     "spec": "18m à 40m",
     "options": [
@@ -1265,10 +1265,12 @@
       }
     ],
     "page": {
-      "heroHighlight": "de 18 à 40m",
+      "heroHighlight": "18 à 40M",
       "heroSubtitle": "Chariot télescopique rotatif de 18m à 40m de hauteur de travail",
-      "title": "Location Chariot Télescopique Rotatif 18m à 40m | EAP Location",
-      "heroTitle": "Chariot télescopique rotatif"
+      "title": "Location Chariot Télescopique Rotatif 18 à 40M | EAP Location",
+      "heroTitle": "Chariot télescopique Rotatif",
+      "description": "Location chariot télescopique rotatif 18m à 40m. Disponibilité 99%, devis en 2h, livraison 48h partout en France.",
+      "keywords": "location chariot rotatif, chariot télescopique 35m, manitou location, nacelle grande hauteur, location matériel BTP"
     }
   },
   "chariot-gros-tonnage": {

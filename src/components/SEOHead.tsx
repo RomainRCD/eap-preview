@@ -50,7 +50,7 @@ const SEOHead = ({
       "itemOffered": {
         "@type": "Service",
         "name": "Location chariot télescopique rotatif",
-        "description": "Location courte et longue durée de chariots télescopiques rotatifs de 16m à 35m"
+        "description": "Location courte et longue durée de chariots télescopiques rotatifs de 18m à 40m"
       }
     }
   };
