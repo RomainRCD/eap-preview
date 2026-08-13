@@ -2755,6 +2755,7 @@
       "- Brokk 200",
       "- Brokk 300",
       "- Brokk 500",
+      "- Brokk 900",
       "Équipements disponibles selon besoin : brise-roche hydraulique, pince de tri, marteau BHB, cisaille à béton, fraise hydraulique. Contactez-nous pour un devis."
     ]
   },
@@ -3547,7 +3548,7 @@
     }
   },
   "dumper-electrique-pneus": {
-    "name": "Location Dumper électrique sur pneus",
+    "name": "Dumper électrique sur pneus",
     "category": "terrassement",
     "spec": "1T à 1,5T",
     "variants": [
@@ -3577,13 +3578,13 @@
       }
     ],
     "page": {
-      "title": "Location Dumper électrique sur pneus | EAP Location",
+      "title": "Dumper électrique sur pneus | EAP Location",
       "description": "Louez un dumper électrique sur pneus 1T ou 1,5T pour vos chantiers. Solution zéro émission, idéale pour les espaces confinés et les zones urbaines.",
       "keywords": "location dumper électrique, dumper pneus électrique, location matériel BTP, terrassement électrique",
-      "heroTitle": "Location",
-      "heroHighlight": "Dumper électrique sur pneus",
+      "heroTitle": "Dumper électrique",
+      "heroHighlight": "sur pneus",
       "heroSubtitle": "Transport de matériaux zéro émission — 1T à 1,5T",
-      "namePrefix": "Location",
+      "namePrefix": " ",
       "imageAlt": "Dumper électrique sur pneus en location"
     }
   },
@@ -3621,6 +3622,21 @@
       "heroHighlight": "Télescopique Électrique",
       "heroSubtitle": "Disponible de 4M à 6M — option godet ou fourches",
       "namePrefix": "Location"
+    }
+  },
+  "chariot-mat-retractable": {
+    "name": "Chariot mât rétractable",
+    "category": "manutention",
+    "spec": " ",
+    "variants": [],
+    "options": [],
+    "description": [],
+    "faq": [],
+    "page": {
+      "title": "Chariot mât rétractable | EAP Location",
+      "heroTitle": "Chariot mât",
+      "heroHighlight": "rétractable",
+      "heroSubtitle": "Location de chariot mât rétractable pour vos chantiers"
     }
   }
 }
