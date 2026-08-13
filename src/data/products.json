@@ -2212,7 +2212,7 @@
     ]
   },
   "nacelle-telescopique": {
-    "name": "Nacelle télescopique",
+    "name": "Nacelle flèche télescopique diesel",
     "category": "travail-en-hauteur",
     "spec": "14m à 57m",
     "variants": [
@@ -2264,7 +2264,12 @@
       "- Nacelle Télescopique de 43 mètres de hauteur de travail",
       "- Nacelle Télescopique de 48 mètres de hauteur de travail",
       "- Nacelle Télescopique de 57 mètres de hauteur de travail"
-    ]
+    ],
+    "page": {
+      "title": "Nacelle flèche télescopique diesel | EAP Location",
+      "heroTitle": "Nacelle flèche",
+      "heroHighlight": "télescopique diesel"
+    }
   },
   "nacelle-araignee": {
     "name": "Nacelle araignée",
