@@ -3545,5 +3545,46 @@
       "contentTitle": "Tour d'escalier : accès sécurisé en hauteur",
       "imageAlt": "Tour d'escalier de chantier en location"
     }
+  },
+  "dumper-electrique-pneus": {
+    "name": "Location Dumper électrique sur pneus",
+    "category": "terrassement",
+    "spec": "1T à 1,5T",
+    "variants": [
+      {
+        "label": "1T",
+        "value": "1T"
+      },
+      {
+        "label": "1,5T",
+        "value": "1,5T"
+      }
+    ],
+    "options": [],
+    "description": [
+      "Le dumper électrique sur pneus est idéal pour le transport de matériaux sur chantier, alliant mobilité et zéro émission.",
+      "Disponible en 1T et 1,5T, il convient aussi bien aux espaces confinés qu'aux chantiers soucieux de leur impact environnemental.",
+      "Son motorisation électrique le rend particulièrement adapté aux chantiers en intérieur ou en zone urbaine où les nuisances sonores et les émissions doivent être limitées."
+    ],
+    "faq": [
+      {
+        "q": "Le dumper électrique sur pneus convient-il aux chantiers en intérieur ?",
+        "a": "Oui, grâce à sa motorisation électrique, il ne produit aucune émission de gaz, ce qui le rend parfaitement adapté aux chantiers en intérieur ou en milieu confiné."
+      },
+      {
+        "q": "Quelle est l'autonomie du dumper électrique ?",
+        "a": "L'autonomie dépend des conditions d'utilisation. Nos équipes peuvent vous conseiller sur la configuration la plus adaptée à votre chantier."
+      }
+    ],
+    "page": {
+      "title": "Location Dumper électrique sur pneus | EAP Location",
+      "description": "Louez un dumper électrique sur pneus 1T ou 1,5T pour vos chantiers. Solution zéro émission, idéale pour les espaces confinés et les zones urbaines.",
+      "keywords": "location dumper électrique, dumper pneus électrique, location matériel BTP, terrassement électrique",
+      "heroTitle": "Location",
+      "heroHighlight": "Dumper électrique sur pneus",
+      "heroSubtitle": "Transport de matériaux zéro émission — 1T à 1,5T",
+      "namePrefix": "Location",
+      "imageAlt": "Dumper électrique sur pneus en location"
+    }
   }
 }
