@@ -800,6 +800,26 @@
       {
         "label": "16T",
         "value": "16T"
+      },
+      {
+        "label": "6T",
+        "value": "6T"
+      },
+      {
+        "label": "20T",
+        "value": "20T"
+      },
+      {
+        "label": "25T",
+        "value": "25T"
+      },
+      {
+        "label": "30T",
+        "value": "30T"
+      },
+      {
+        "label": "35T",
+        "value": "35T"
       }
     ],
     "options": [
