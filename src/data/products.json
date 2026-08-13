@@ -2712,24 +2712,28 @@
     "spec": "0,5T à 5T",
     "variants": [
       {
-        "label": "0,5T",
-        "value": "0,5T"
+        "label": "Brokk 70",
+        "value": "Brokk 70"
       },
       {
-        "label": "1T",
-        "value": "1T"
+        "label": "Brokk 110",
+        "value": "Brokk 110"
       },
       {
-        "label": "2T",
-        "value": "2T"
+        "label": "Brokk 170",
+        "value": "Brokk 170"
       },
       {
-        "label": "3T",
-        "value": "3T"
+        "label": "Brokk 200",
+        "value": "Brokk 200"
       },
       {
-        "label": "5T",
-        "value": "5T"
+        "label": "Brokk 300",
+        "value": "Brokk 300"
+      },
+      {
+        "label": "Brokk 500",
+        "value": "Brokk 500"
       }
     ],
     "options": [
