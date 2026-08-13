@@ -1596,7 +1596,7 @@
     }
   },
   "mini-pelle": {
-    "name": "Mini-pelle",
+    "name": "Location Mini-pelle",
     "category": "terrassement",
     "spec": "De 1,5T à 8T",
     "variants": [
@@ -2734,6 +2734,10 @@
       {
         "label": "Brokk 500",
         "value": "Brokk 500"
+      },
+      {
+        "label": "Brokk 900",
+        "value": "Brokk 900"
       }
     ],
     "options": [
