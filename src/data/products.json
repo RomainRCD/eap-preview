@@ -1596,7 +1596,7 @@
     }
   },
   "mini-pelle": {
-    "name": "Location Mini-pelle",
+    "name": "Mini-pelle",
     "category": "terrassement",
     "spec": "De 1,5T à 8T",
     "variants": [
@@ -2709,7 +2709,7 @@
   "robot-demolition": {
     "name": "Robot de démolition",
     "category": "terrassement",
-    "spec": "Brokk 70 à Brokk 500",
+    "spec": "Brokk 70 à Brokk 900",
     "variants": [
       {
         "label": "Brokk 70",
@@ -3463,7 +3463,7 @@
     }
   },
   "mini-pelle-electrique": {
-    "name": "Mini pelle électrique",
+    "name": "Location Mini pelle électrique",
     "category": "terrassement",
     "spec": "1,5T à 2,5T",
     "variants": [
@@ -3490,16 +3490,16 @@
       "Accessoires disponibles : BRH, Pince de tri, Godet, Tarière"
     ],
     "page": {
-      "title": "Mini pelle électrique | EAP Location",
+      "title": "Location Mini pelle électrique | EAP Location",
       "description": "Location de mini-pelle électrique 1,5T et 2,5T. Idéale pour les chantiers en zones urbaines ou sensibles. Devis rapide avec EAP Location.",
       "keywords": "location mini pelle électrique, mini pelle électrique 1,5T, mini pelle électrique 2,5T, location engin électrique BTP",
-      "heroTitle": "Mini pelle",
+      "heroTitle": "Location Mini pelle",
       "heroHighlight": "électrique",
       "heroSubtitle": "1,5T à 2,5T — Solution silencieuse et zéro émission pour vos chantiers",
       "selectorTitle": "Choisissez votre mini pelle électrique",
       "selectorSubtitle": "Sélectionnez le tonnage adapté à votre chantier",
       "contentTitle": "Location de mini pelle électrique",
-      "imageAlt": "Mini pelle électrique disponible à la location"
+      "imageAlt": "Location mini pelle électrique disponible à la location"
     }
   },
   "tour-escalier": {
@@ -3544,6 +3544,83 @@
       "selectorSubtitle": "Sélectionnez le type adapté à votre chantier",
       "contentTitle": "Tour d'escalier : accès sécurisé en hauteur",
       "imageAlt": "Tour d'escalier de chantier en location"
+    }
+  },
+  "dumper-electrique-pneus": {
+    "name": "Location Dumper électrique sur pneus",
+    "category": "terrassement",
+    "spec": "1T à 1,5T",
+    "variants": [
+      {
+        "label": "1T",
+        "value": "1T"
+      },
+      {
+        "label": "1,5T",
+        "value": "1,5T"
+      }
+    ],
+    "options": [],
+    "description": [
+      "Le dumper électrique sur pneus est idéal pour le transport de matériaux sur chantier, alliant mobilité et zéro émission.",
+      "Disponible en 1T et 1,5T, il convient aussi bien aux espaces confinés qu'aux chantiers soucieux de leur impact environnemental.",
+      "Son motorisation électrique le rend particulièrement adapté aux chantiers en intérieur ou en zone urbaine où les nuisances sonores et les émissions doivent être limitées."
+    ],
+    "faq": [
+      {
+        "q": "Le dumper électrique sur pneus convient-il aux chantiers en intérieur ?",
+        "a": "Oui, grâce à sa motorisation électrique, il ne produit aucune émission de gaz, ce qui le rend parfaitement adapté aux chantiers en intérieur ou en milieu confiné."
+      },
+      {
+        "q": "Quelle est l'autonomie du dumper électrique ?",
+        "a": "L'autonomie dépend des conditions d'utilisation. Nos équipes peuvent vous conseiller sur la configuration la plus adaptée à votre chantier."
+      }
+    ],
+    "page": {
+      "title": "Location Dumper électrique sur pneus | EAP Location",
+      "description": "Louez un dumper électrique sur pneus 1T ou 1,5T pour vos chantiers. Solution zéro émission, idéale pour les espaces confinés et les zones urbaines.",
+      "keywords": "location dumper électrique, dumper pneus électrique, location matériel BTP, terrassement électrique",
+      "heroTitle": "Location",
+      "heroHighlight": "Dumper électrique sur pneus",
+      "heroSubtitle": "Transport de matériaux zéro émission — 1T à 1,5T",
+      "namePrefix": "Location",
+      "imageAlt": "Dumper électrique sur pneus en location"
+    }
+  },
+  "chariot-telescopique-electrique": {
+    "name": "Location Chariot télescopique électrique",
+    "category": "manutention",
+    "spec": "4M à 6M",
+    "variants": [
+      {
+        "label": "Hauteur",
+        "value": "4M"
+      },
+      {
+        "label": "Hauteur",
+        "value": "5M"
+      },
+      {
+        "label": "Hauteur",
+        "value": "6M"
+      }
+    ],
+    "options": [
+      "Godet",
+      "Fourches"
+    ],
+    "description": [
+      "Le chariot télescopique électrique est idéal pour les chantiers nécessitant une solution de manutention silencieuse et sans émission. Disponible en plusieurs hauteurs de travail, il s'adapte à vos besoins.",
+      "Disponible en location avec les options godet ou fourches selon vos besoins de chantier."
+    ],
+    "page": {
+      "title": "Location Chariot Télescopique Électrique | EAP Location",
+      "description": "Louez un chariot télescopique électrique de 4M à 6M avec EAP Location. Options godet et fourches disponibles pour vos chantiers BTP.",
+      "keywords": "location chariot télescopique électrique, chariot élévateur électrique, manutention chantier",
+      "heroTitle": "Location Chariot",
+      "heroHighlight": "Télescopique Électrique",
+      "heroSubtitle": "Disponible de 4M à 6M — option godet ou fourches",
+      "namePrefix": "Location"
     }
   }
 }
