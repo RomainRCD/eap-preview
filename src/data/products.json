@@ -2212,7 +2212,7 @@
     ]
   },
   "nacelle-telescopique": {
-    "name": "Nacelle télescopique",
+    "name": "Nacelle flèche télescopique diesel",
     "category": "travail-en-hauteur",
     "spec": "14m à 57m",
     "variants": [
@@ -2264,7 +2264,12 @@
       "- Nacelle Télescopique de 43 mètres de hauteur de travail",
       "- Nacelle Télescopique de 48 mètres de hauteur de travail",
       "- Nacelle Télescopique de 57 mètres de hauteur de travail"
-    ]
+    ],
+    "page": {
+      "title": "Nacelle flèche télescopique diesel | EAP Location",
+      "heroTitle": "Nacelle flèche",
+      "heroHighlight": "télescopique diesel"
+    }
   },
   "nacelle-araignee": {
     "name": "Nacelle araignée",
@@ -3225,7 +3230,7 @@
     ]
   },
   "nacelle-fleche-articulee-chenilles": {
-    "name": "Nacelle flèche articulée sur chenilles",
+    "name": "Nacelle flèche diesel sur chenilles",
     "category": "travail-en-hauteur",
     "spec": "14m à 22m",
     "variants": [
@@ -3248,10 +3253,16 @@
     ],
     "options": [],
     "description": [
-      "La nacelle flèche articulée sur chenilles est conçue pour intervenir sur des chantiers à accès difficile : sols meubles, terrains accidentés, zones boueuses ou en pente. Ses chenilles lui confèrent une excellente stabilité et une mobilité tout-terrain sans dégrader le sol.",
-      "Grâce à sa flèche articulée, elle permet de contourner les obstacles et d'atteindre des points de travail en hauteur inaccessibles aux nacelles classiques sur pneus.",
-      "- Déplacement sur chenilles pour sols meubles et terrains difficiles\n- Flèche articulée multi-bras pour franchir les obstacles\n- Haute stabilité sur terrain en pente\n- Idéale pour chantiers forestiers, espaces verts, façades, réseaux"
-    ]
+      "La nacelle flèche diesel sur chenilles est conçue pour intervenir sur des chantiers à accès difficile : sols meubles, terrains accidentés, zones boueuses ou en pente. Ses chenilles lui confèrent une excellente stabilité et une mobilité tout-terrain sans dégrader le sol.",
+      "Grâce à sa flèche, elle permet de contourner les obstacles et d'atteindre des points de travail en hauteur inaccessibles aux nacelles classiques sur pneus.",
+      "- Déplacement sur chenilles pour sols meubles et terrains difficiles\n- Flèche multi-bras pour franchir les obstacles\n- Haute stabilité sur terrain en pente\n- Idéale pour chantiers forestiers, espaces verts, façades, réseaux"
+    ],
+    "page": {
+      "title": "Nacelle flèche diesel sur chenilles | EAP Location",
+      "heroTitle": "Nacelle flèche",
+      "heroHighlight": "diesel sur chenilles",
+      "imageAlt": "Nacelle flèche diesel sur chenilles"
+    }
   },
   "nacelle-porteur-pl": {
     "name": "Nacelle sur porteur PL",
@@ -3379,6 +3390,58 @@
       "selectorTitle": "Choisissez votre cabine",
       "contentTitle": "WC chimiques de chantier",
       "imageAlt": "Cabine WC chimique de chantier"
+    }
+  },
+  "nacelle-telescopique-electrique": {
+    "name": "Nacelle flèche télescopique électrique",
+    "category": "travail-en-hauteur",
+    "spec": "14m à 42m",
+    "variants": [
+      {
+        "label": "14m",
+        "value": "14m"
+      },
+      {
+        "label": "18m",
+        "value": "18m"
+      },
+      {
+        "label": "20m",
+        "value": "20m"
+      },
+      {
+        "label": "24m",
+        "value": "24m"
+      },
+      {
+        "label": "32m",
+        "value": "32m"
+      },
+      {
+        "label": "38m",
+        "value": "38m"
+      },
+      {
+        "label": "42m",
+        "value": "42m"
+      }
+    ],
+    "description": [
+      "EAP Location propose un large choix de nacelles flèche télescopiques électriques pour vos travaux en hauteur en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Nacelle télescopique électrique de 14 mètres de hauteur de travail",
+      "- Nacelle télescopique électrique de 18 mètres de hauteur de travail",
+      "- Nacelle télescopique électrique de 20 mètres de hauteur de travail",
+      "- Nacelle télescopique électrique de 24 mètres de hauteur de travail",
+      "- Nacelle télescopique électrique de 32 mètres de hauteur de travail",
+      "- Nacelle télescopique électrique de 38 mètres de hauteur de travail",
+      "- Nacelle télescopique électrique de 42 mètres de hauteur de travail"
+    ],
+    "page": {
+      "title": "Nacelle flèche télescopique électrique | EAP Location",
+      "heroTitle": "Nacelle flèche",
+      "heroHighlight": "télescopique électrique",
+      "heroSubtitle": "14m à 42m — motorisation électrique, idéale pour les chantiers en intérieur et zones sensibles",
+      "imageAlt": "Nacelle flèche télescopique électrique"
     }
   }
 }
