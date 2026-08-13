@@ -971,7 +971,7 @@
   "chariot-industriel-electrique": {
     "name": "Chariot industriel électrique",
     "category": "manutention",
-    "spec": "1,5T à 8T",
+    "spec": "1,5T à 12T",
     "variants": [
       {
         "label": "1,5T",
@@ -1017,7 +1017,7 @@
       "Potence de levage"
     ],
     "description": [
-      "EAP location propose le plus large choix de chariot industriel électrique en France. Sur notre site vous retrouverez disponible à la location des chariots industriels électrique avec une capacité de levage pouvant aller jusqu'à 6 tonnes.",
+      "EAP location propose le plus large choix de chariot industriel électrique en France. Sur notre site vous retrouverez disponible à la location des chariots industriels électrique avec une capacité de levage pouvant aller jusqu'à 12 tonnes.",
       "Les disponibilités et caractéristiques de nos chariots :",
       "- Chariot Industriel électrique de 1,5 tonnes",
       "- Chariot Industriel électrique de 2,5 tonnes",
@@ -1025,6 +1025,8 @@
       "- Chariot Industriel électrique de 5 tonnes",
       "- Chariot Industriel électrique de 6 tonnes",
       "- Chariot Industriel électrique de 8 tonnes",
+      "- Chariot Industriel électrique de 10 tonnes",
+      "- Chariot Industriel électrique de 12 tonnes",
       "Des accessoires sont disponibles en option pour compléter votre location :",
       "- Rallonge de fourches 1,80 m",
       "- Rallonge de fourches 2,00 m",
@@ -1033,12 +1035,12 @@
       "- Tête rotative"
     ],
     "page": {
-      "title": "Location Chariot Industriel Électrique jusqu'à 8T | EAP Location",
+      "title": "Location Chariot Industriel Électrique jusqu'à 12T | EAP Location",
       "description": "Location chariot industriel électrique de 1,5T à 8T. Disponibilité 99%, devis en 2h, livraison partout en France.",
       "keywords": "chariot industriel électrique, fenwick électrique, chariot zéro émission, location chariot élévateur",
       "heroTitle": "Chariot Industriel",
       "heroHighlight": "Électrique",
-      "heroSubtitle": "De 1,5T à 8T. Location courte ou longue durée, partout en France.",
+      "heroSubtitle": "De 1,5T à 12T. Location courte ou longue durée, partout en France.",
       "selectorTitle": "Quelle capacité pour votre chantier ?",
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Chariot Industriel Électrique",
