@@ -1194,6 +1194,10 @@
         "value": "4m"
       },
       {
+        "label": "5m",
+        "value": "5m"
+      },
+      {
         "label": "6m",
         "value": "6m"
       },
@@ -1224,10 +1228,6 @@
       {
         "label": "18m",
         "value": "18m"
-      },
-      {
-        "label": "5m",
-        "value": "5m"
       }
     ],
     "options": [
@@ -3687,6 +3687,48 @@
       "heroTitle": "Chariot mât",
       "heroHighlight": "rétractable",
       "heroSubtitle": "Location de chariot mât rétractable pour vos chantiers"
+    }
+  },
+  "chariot-rotatif-electrique": {
+    "name": "Chariot télescopique rotatif électrique",
+    "category": "manutention",
+    "spec": "22m à 26m",
+    "variants": [
+      {
+        "label": "22m",
+        "value": "22m"
+      },
+      {
+        "label": "26m",
+        "value": "26m"
+      }
+    ],
+    "options": [
+      "Potence courte",
+      "Potence longue",
+      "Treuil",
+      "Panier nacelle",
+      "Radio télécommande",
+      "Palonnier à ventouses"
+    ],
+    "description": [
+      "EAP location propose à la location des chariots télescopiques rotatifs électriques, idéaux pour les chantiers souhaitant limiter les émissions de CO₂ tout en bénéficiant d'une grande hauteur de travail.",
+      "Les disponibilités et caractéristiques de nos chariots :",
+      "- Chariot Télescopique Rotatif Électrique – 22 mètres de hauteur de travail",
+      "- Chariot Télescopique Rotatif Électrique – 26 mètres de hauteur de travail",
+      "Accessoires disponibles : Potence courte, Potence longue, Treuil, Panier Nacelle, Radio Télécommande, Palonnier à ventouses"
+    ],
+    "faq": [],
+    "page": {
+      "title": "Location Chariot Télescopique Rotatif Électrique | EAP Location",
+      "heroTitle": "Chariot télescopique Rotatif Électrique",
+      "heroHighlight": " ",
+      "heroSubtitle": "Chariot télescopique rotatif électrique de 22m à 26m de hauteur de travail",
+      "description": "Location chariot télescopique rotatif électrique 22m à 26m. Devis en 2h, livraison 48h partout en France.",
+      "keywords": "location chariot rotatif électrique, chariot télescopique électrique, location matériel BTP électrique",
+      "selectorTitle": "Choisissez votre hauteur de travail",
+      "contentTitle": "Chariot télescopique rotatif électrique à louer",
+      "imageAlt": "Chariot télescopique rotatif électrique en location"
     }
   }
 }
