@@ -996,6 +996,14 @@
       {
         "label": "8T",
         "value": "8T"
+      },
+      {
+        "label": "10T",
+        "value": "10T"
+      },
+      {
+        "label": "12T",
+        "value": "12T"
       }
     ],
     "options": [
