@@ -971,7 +971,7 @@
   "chariot-industriel-electrique": {
     "name": "Chariot industriel électrique",
     "category": "manutention",
-    "spec": "1,5T à 8T",
+    "spec": "1,5T à 12T",
     "variants": [
       {
         "label": "1,5T",
@@ -996,6 +996,14 @@
       {
         "label": "8T",
         "value": "8T"
+      },
+      {
+        "label": "10T",
+        "value": "10T"
+      },
+      {
+        "label": "12T",
+        "value": "12T"
       }
     ],
     "options": [
@@ -1009,7 +1017,7 @@
       "Potence de levage"
     ],
     "description": [
-      "EAP location propose le plus large choix de chariot industriel électrique en France. Sur notre site vous retrouverez disponible à la location des chariots industriels électrique avec une capacité de levage pouvant aller jusqu'à 6 tonnes.",
+      "EAP location propose le plus large choix de chariot industriel électrique en France. Sur notre site vous retrouverez disponible à la location des chariots industriels électrique avec une capacité de levage pouvant aller jusqu'à 12 tonnes.",
       "Les disponibilités et caractéristiques de nos chariots :",
       "- Chariot Industriel électrique de 1,5 tonnes",
       "- Chariot Industriel électrique de 2,5 tonnes",
@@ -1017,6 +1025,8 @@
       "- Chariot Industriel électrique de 5 tonnes",
       "- Chariot Industriel électrique de 6 tonnes",
       "- Chariot Industriel électrique de 8 tonnes",
+      "- Chariot Industriel électrique de 10 tonnes",
+      "- Chariot Industriel électrique de 12 tonnes",
       "Des accessoires sont disponibles en option pour compléter votre location :",
       "- Rallonge de fourches 1,80 m",
       "- Rallonge de fourches 2,00 m",
@@ -1025,12 +1035,12 @@
       "- Tête rotative"
     ],
     "page": {
-      "title": "Location Chariot Industriel Électrique jusqu'à 8T | EAP Location",
+      "title": "Location Chariot Industriel Électrique jusqu'à 12T | EAP Location",
       "description": "Location chariot industriel électrique de 1,5T à 8T. Disponibilité 99%, devis en 2h, livraison partout en France.",
       "keywords": "chariot industriel électrique, fenwick électrique, chariot zéro émission, location chariot élévateur",
       "heroTitle": "Chariot Industriel",
       "heroHighlight": "Électrique",
-      "heroSubtitle": "De 1,5T à 8T. Location courte ou longue durée, partout en France.",
+      "heroSubtitle": "De 1,5T à 12T. Location courte ou longue durée, partout en France.",
       "selectorTitle": "Quelle capacité pour votre chantier ?",
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Chariot Industriel Électrique",
@@ -1184,10 +1194,6 @@
         "value": "4m"
       },
       {
-        "label": "5m électrique",
-        "value": "5m électrique"
-      },
-      {
         "label": "6m",
         "value": "6m"
       },
@@ -1218,6 +1224,10 @@
       {
         "label": "18m",
         "value": "18m"
+      },
+      {
+        "label": "5m",
+        "value": "5m"
       }
     ],
     "options": [
@@ -1225,22 +1235,22 @@
       "Potence longue",
       "Rallonge de fourches",
       "Godet",
-      "Tête rotative"
+      "Tête rotative",
+      "Panier nacelle"
     ],
     "description": [
       "EAP location propose le plus large choix de chariot télescopique en France. Sur notre site vous retrouverez disponible à la location des chariot télescopique pouvant aller jusqu'a 18 mètres de hauteur de travail.",
       "Les disponibilités et caractéristiques de nos chariots :",
       "- Chariot Télescopique fixe avec fourche – 4 mètres de hauteur de travail",
-      "- Chariot Télescopique fixe avec fourche – 5 mètres de hauteur de travail (électrique)",
       "- Chariot Télescopique fixe avec fourche – 6 mètres de hauteur de travail",
       "- Chariot Télescopique fixe avec fourche – 7 mètres de hauteur de travail",
       "- Chariot Télescopique fixe avec fourche – 9 mètres de hauteur de travail",
-      "- Chariot Télescopique fixe avec fourche – 11 mètres de hauteur de travail",
-      "- Chariot Télescopique fixe avec fourche – 13 mètres de hauteur de travail",
+      "- Chariot Télescopique fixe avec fourche – 10 mètres de hauteur de travail",
+      "- Chariot Télescopique fixe avec fourche – 12 mètres de hauteur de travail",
       "- Chariot Télescopique fixe avec fourche – 14 mètres de hauteur de travail",
       "- Chariot Télescopique fixe avec fourche – 17 mètres de hauteur de travail",
       "- Chariot Télescopique fixe avec fourche – 18 mètres de hauteur de travail",
-      "Accessoires disponibles : Potence courte, Potence longue, Rallonge de fourches, Godet"
+      "Accessoires disponibles : Potence courte, Potence longue, Rallonge de fourches, Godet, Tête rotative"
     ],
     "page": {
       "title": "Location Chariot Télescopique Fixe 4m à 18m | EAP Location",
@@ -3531,10 +3541,10 @@
       "Accessoires disponibles : BRH, Pince de tri, Godet, Tarière"
     ],
     "page": {
-      "title": "Mini pelle électrique | EAP Location",
+      "title": "Location Mini pelle électrique | EAP Location",
       "description": "Location de mini-pelle électrique 1,5T et 2,5T. Idéale pour les chantiers en zones urbaines ou sensibles. Devis rapide avec EAP Location.",
       "keywords": "location mini pelle électrique, mini pelle électrique 1,5T, mini pelle électrique 2,5T, location engin électrique BTP",
-      "heroTitle": "Mini pelle",
+      "heroTitle": "Location Mini pelle",
       "heroHighlight": "électrique",
       "heroSubtitle": "1,5T à 2,5T — Solution silencieuse et zéro émission pour vos chantiers",
       "selectorTitle": "Choisissez votre mini pelle électrique",
@@ -3618,10 +3628,10 @@
       }
     ],
     "page": {
-      "title": "Dumper électrique sur pneus | EAP Location",
+      "title": "Location Dumper électrique sur pneus | EAP Location",
       "description": "Louez un dumper électrique sur pneus 1T ou 1,5T pour vos chantiers. Solution zéro émission, idéale pour les espaces confinés et les zones urbaines.",
       "keywords": "location dumper électrique, dumper pneus électrique, location matériel BTP, terrassement électrique",
-      "heroTitle": "Dumper électrique",
+      "heroTitle": "Location Dumper électrique",
       "heroHighlight": "sur pneus",
       "heroSubtitle": "Transport de matériaux zéro émission — 1T à 1,5T",
       "namePrefix": " ",
