@@ -820,6 +820,18 @@
       {
         "label": "35T",
         "value": "35T"
+      },
+      {
+        "label": "40T",
+        "value": "40T"
+      },
+      {
+        "label": "45T",
+        "value": "45T"
+      },
+      {
+        "label": "50T",
+        "value": "50T"
       }
     ],
     "options": [
