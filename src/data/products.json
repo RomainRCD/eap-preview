@@ -3273,6 +3273,10 @@
     ],
     "variants": [
       {
+        "label": "36m",
+        "value": "36m"
+      },
+      {
         "label": "40m",
         "value": "40m"
       },
@@ -3297,20 +3301,16 @@
         "value": "70m"
       },
       {
+        "label": "75m",
+        "value": "75m"
+      },
+      {
         "label": "90m",
         "value": "90m"
       },
       {
         "label": "100m",
         "value": "100m"
-      },
-      {
-        "label": "75m",
-        "value": "75m"
-      },
-      {
-        "label": "36m",
-        "value": "36m"
       }
     ],
     "options": []
