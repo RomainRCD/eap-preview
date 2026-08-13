@@ -2125,6 +2125,14 @@
       {
         "label": "20m",
         "value": "20m"
+      },
+      {
+        "label": "22m",
+        "value": "22m"
+      },
+      {
+        "label": "26m",
+        "value": "26m"
       }
     ],
     "description": [
