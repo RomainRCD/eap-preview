@@ -3255,32 +3255,32 @@
         "value": "30m"
       },
       {
-        "label": "36-40m",
-        "value": "36-40m"
+        "label": "40m",
+        "value": "40m"
       },
       {
-        "label": "41-45m",
-        "value": "41-45m"
+        "label": "45m",
+        "value": "45m"
       },
       {
-        "label": "46-50m",
-        "value": "46-50m"
+        "label": "50m",
+        "value": "50m"
       },
       {
-        "label": "51-60m",
-        "value": "51-60m"
+        "label": "60m",
+        "value": "60m"
       },
       {
-        "label": "61-70m",
-        "value": "61-70m"
+        "label": "65m",
+        "value": "65m"
       },
       {
-        "label": "71-80m",
-        "value": "71-80m"
+        "label": "70m",
+        "value": "70m"
       },
       {
-        "label": "81-90m",
-        "value": "81-90m"
+        "label": "90m",
+        "value": "90m"
       }
     ],
     "options": []
