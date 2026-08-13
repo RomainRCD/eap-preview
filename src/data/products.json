@@ -3639,7 +3639,7 @@
     }
   },
   "chariot-telescopique-electrique": {
-    "name": "Location Chariot télescopique électrique",
+    "name": "Chariot télescopique électrique",
     "category": "manutention",
     "spec": "4M à 6M",
     "variants": [
@@ -3665,13 +3665,13 @@
       "Disponible en location avec les options godet ou fourches selon vos besoins de chantier."
     ],
     "page": {
-      "title": "Location Chariot Télescopique Électrique | EAP Location",
+      "title": "Chariot Télescopique Électrique | EAP Location",
       "description": "Louez un chariot télescopique électrique de 4M à 6M avec EAP Location. Options godet et fourches disponibles pour vos chantiers BTP.",
       "keywords": "location chariot télescopique électrique, chariot élévateur électrique, manutention chantier",
-      "heroTitle": "Location Chariot",
+      "heroTitle": "Chariot",
       "heroHighlight": "Télescopique Électrique",
       "heroSubtitle": "Disponible de 4M à 6M — option godet ou fourches",
-      "namePrefix": "Location"
+      "namePrefix": " "
     }
   },
   "chariot-mat-retractable": {
