@@ -177,7 +177,7 @@
   "dumper": {
     "name": "Dumper sur pneus",
     "category": "terrassement",
-    "spec": "1T à 10T",
+    "spec": "1T à 12T",
     "variants": [
       {
         "label": "1T",
@@ -218,12 +218,16 @@
       {
         "label": "10T",
         "value": "10T"
+      },
+      {
+        "label": "12T",
+        "value": "12T"
       }
     ],
     "description": [
       "EAP location propose le plus large choix de Dumper sur pneus pour vos travaux de terrassement en France. Sur notre site vous retrouverez disponible à la location :",
       "- Dumper sur pneus 1T",
-      "- Dumper sur pneus 1.5T",
+      "- Dumper sur pneus 1,5T",
       "- Dumper sur pneus 2T",
       "- Dumper sur pneus 3T",
       "- Dumper sur pneus 4T",
@@ -231,7 +235,8 @@
       "- Dumper sur pneus 6T",
       "- Dumper sur pneus 7T",
       "- Dumper sur pneus 9T",
-      "- Dumper sur pneus 10T"
+      "- Dumper sur pneus 10T",
+      "- Dumper sur pneus 12T"
     ]
   },
   "bungalow": {
@@ -3273,6 +3278,10 @@
     ],
     "variants": [
       {
+        "label": "36m",
+        "value": "36m"
+      },
+      {
         "label": "40m",
         "value": "40m"
       },
@@ -3297,20 +3306,16 @@
         "value": "70m"
       },
       {
+        "label": "75m",
+        "value": "75m"
+      },
+      {
         "label": "90m",
         "value": "90m"
       },
       {
         "label": "100m",
         "value": "100m"
-      },
-      {
-        "label": "75m",
-        "value": "75m"
-      },
-      {
-        "label": "36m",
-        "value": "36m"
       }
     ],
     "options": []
@@ -3446,6 +3451,46 @@
       "heroHighlight": "télescopique électrique",
       "heroSubtitle": "14m à 42m — motorisation électrique, idéale pour les chantiers en intérieur et zones sensibles",
       "imageAlt": "Nacelle flèche télescopique électrique"
+    }
+  },
+  "mini-pelle-electrique": {
+    "name": "Mini pelle électrique",
+    "category": "terrassement",
+    "spec": "1,5T à 2,5T",
+    "variants": [
+      {
+        "label": "1,5T",
+        "value": "1,5T"
+      },
+      {
+        "label": "2,5T",
+        "value": "2,5T"
+      }
+    ],
+    "options": [
+      "BRH",
+      "Pince de tri",
+      "Godet",
+      "Tarière"
+    ],
+    "description": [
+      "EAP location propose à la location des mini-pelles électriques, idéales pour les chantiers en zones sensibles aux nuisances sonores ou aux émissions de CO₂.",
+      "Les disponibilités et caractéristiques de nos mini-pelles électriques :",
+      "- Mini pelle électrique – 1,5 tonnes",
+      "- Mini pelle électrique – 2,5 tonnes",
+      "Accessoires disponibles : BRH, Pince de tri, Godet, Tarière"
+    ],
+    "page": {
+      "title": "Mini pelle électrique | EAP Location",
+      "description": "Location de mini-pelle électrique 1,5T et 2,5T. Idéale pour les chantiers en zones urbaines ou sensibles. Devis rapide avec EAP Location.",
+      "keywords": "location mini pelle électrique, mini pelle électrique 1,5T, mini pelle électrique 2,5T, location engin électrique BTP",
+      "heroTitle": "Mini pelle",
+      "heroHighlight": "électrique",
+      "heroSubtitle": "1,5T à 2,5T — Solution silencieuse et zéro émission pour vos chantiers",
+      "selectorTitle": "Choisissez votre mini pelle électrique",
+      "selectorSubtitle": "Sélectionnez le tonnage adapté à votre chantier",
+      "contentTitle": "Location de mini pelle électrique",
+      "imageAlt": "Mini pelle électrique disponible à la location"
     }
   }
 }
