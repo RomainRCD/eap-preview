@@ -2709,7 +2709,7 @@
   "robot-demolition": {
     "name": "Robot de démolition",
     "category": "terrassement",
-    "spec": "Brokk 70 à Brokk 500",
+    "spec": "Brokk 70 à Brokk 900",
     "variants": [
       {
         "label": "Brokk 70",
