@@ -1194,6 +1194,10 @@
         "value": "4m"
       },
       {
+        "label": "5m",
+        "value": "5m"
+      },
+      {
         "label": "6m",
         "value": "6m"
       },
@@ -1224,10 +1228,6 @@
       {
         "label": "18m",
         "value": "18m"
-      },
-      {
-        "label": "5m",
-        "value": "5m"
       }
     ],
     "options": [
