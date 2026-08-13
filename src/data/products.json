@@ -763,7 +763,7 @@
   "chariot-industriel-diesel": {
     "name": "Chariot industriel diesel",
     "category": "manutention",
-    "spec": "1,5T à 16T",
+    "spec": "1,5T à 35T",
     "variants": [
       {
         "label": "1,5T",
@@ -800,6 +800,26 @@
       {
         "label": "16T",
         "value": "16T"
+      },
+      {
+        "label": "6T",
+        "value": "6T"
+      },
+      {
+        "label": "20T",
+        "value": "20T"
+      },
+      {
+        "label": "25T",
+        "value": "25T"
+      },
+      {
+        "label": "30T",
+        "value": "30T"
+      },
+      {
+        "label": "35T",
+        "value": "35T"
       }
     ],
     "options": [
@@ -813,17 +833,22 @@
       "Potence de levage"
     ],
     "description": [
-      "EAP location propose le plus large choix de chariot industriel diesel en France. Sur notre site vous retrouverez disponible à la location des chariots industriels diesel avec une capacité de levage pouvant aller jusqu'à 16 tonnes.",
+      "EAP location propose le plus large choix de chariot industriel diesel en France. Sur notre site vous retrouverez disponible à la location des chariots industriels diesel avec une capacité de levage pouvant aller jusqu'à 35 tonnes.",
       "Les disponibilités et caractéristiques de nos chariots :",
       "- Chariot Industriel diesel de 1,5 tonnes",
       "- Chariot Industriel diesel de 2,5 tonnes",
       "- Chariot Industriel diesel de 3,5 tonnes",
       "- Chariot Industriel diesel de 5 tonnes",
+      "- Chariot Industriel diesel de 6 tonnes",
       "- Chariot Industriel diesel de 8 tonnes",
       "- Chariot Industriel diesel de 10 tonnes",
       "- Chariot Industriel diesel de 12 tonnes",
       "- Chariot Industriel diesel de 14 tonnes",
       "- Chariot Industriel diesel de 16 tonnes",
+      "- Chariot Industriel diesel de 20 tonnes",
+      "- Chariot Industriel diesel de 25 tonnes",
+      "- Chariot Industriel diesel de 30 tonnes",
+      "- Chariot Industriel diesel de 35 tonnes",
       "Des accessoires sont disponibles en option pour compléter votre location :",
       "- Rallonge de fourches 1,80 m",
       "- Rallonge de fourches 2,00 m",
@@ -832,12 +857,12 @@
       "- Tête rotative"
     ],
     "page": {
-      "title": "Location Chariot Industriel Diesel (Fenwick) jusqu'à 16T | EAP Location",
-      "description": "Location chariot industriel diesel de 1,5T à 16T. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "title": "Location Chariot Industriel Diesel (Fenwick) jusqu'à 35T | EAP Location",
+      "description": "Location chariot industriel diesel de 1,5T à 35T. Disponibilité 99%, devis en 2h, livraison partout en France.",
       "keywords": "chariot industriel diesel, fenwick diesel, location chariot élévateur, location matériel BTP",
       "heroTitle": "Chariot Industriel",
       "heroHighlight": "Diesel",
-      "heroSubtitle": "De 1,5T à 16T. Location courte ou longue durée, partout en France.",
+      "heroSubtitle": "De 1,5T à 35T. Location courte ou longue durée, partout en France.",
       "selectorTitle": "Quelle capacité pour votre chantier ?",
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Chariot Industriel Diesel",
@@ -3464,7 +3489,7 @@
     }
   },
   "mini-pelle-electrique": {
-    "name": "Mini pelle électrique",
+    "name": "Location Mini pelle électrique",
     "category": "terrassement",
     "spec": "1,5T à 2,5T",
     "variants": [
@@ -3491,10 +3516,10 @@
       "Accessoires disponibles : BRH, Pince de tri, Godet, Tarière"
     ],
     "page": {
-      "title": "Mini pelle électrique | EAP Location",
+      "title": "Location Mini pelle électrique | EAP Location",
       "description": "Location de mini-pelle électrique 1,5T et 2,5T. Idéale pour les chantiers en zones urbaines ou sensibles. Devis rapide avec EAP Location.",
       "keywords": "location mini pelle électrique, mini pelle électrique 1,5T, mini pelle électrique 2,5T, location engin électrique BTP",
-      "heroTitle": "Mini pelle",
+      "heroTitle": "Location Mini pelle",
       "heroHighlight": "électrique",
       "heroSubtitle": "1,5T à 2,5T — Solution silencieuse et zéro émission pour vos chantiers",
       "selectorTitle": "Choisissez votre mini pelle électrique",
@@ -3548,7 +3573,7 @@
     }
   },
   "dumper-electrique-pneus": {
-    "name": "Dumper électrique sur pneus",
+    "name": "Location Dumper électrique sur pneus",
     "category": "terrassement",
     "spec": "1T à 1,5T",
     "variants": [
@@ -3578,10 +3603,10 @@
       }
     ],
     "page": {
-      "title": "Dumper électrique sur pneus | EAP Location",
+      "title": "Location Dumper électrique sur pneus | EAP Location",
       "description": "Louez un dumper électrique sur pneus 1T ou 1,5T pour vos chantiers. Solution zéro émission, idéale pour les espaces confinés et les zones urbaines.",
       "keywords": "location dumper électrique, dumper pneus électrique, location matériel BTP, terrassement électrique",
-      "heroTitle": "Dumper électrique",
+      "heroTitle": "Location Dumper électrique",
       "heroHighlight": "sur pneus",
       "heroSubtitle": "Transport de matériaux zéro émission — 1T à 1,5T",
       "namePrefix": " ",
