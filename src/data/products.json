@@ -3586,5 +3586,41 @@
       "namePrefix": "Location",
       "imageAlt": "Dumper électrique sur pneus en location"
     }
+  },
+  "chariot-telescopique-electrique": {
+    "name": "Location Chariot télescopique électrique",
+    "category": "manutention",
+    "spec": "4M à 6M",
+    "variants": [
+      {
+        "label": "Hauteur",
+        "value": "4M"
+      },
+      {
+        "label": "Hauteur",
+        "value": "5M"
+      },
+      {
+        "label": "Hauteur",
+        "value": "6M"
+      }
+    ],
+    "options": [
+      "Godet",
+      "Fourches"
+    ],
+    "description": [
+      "Le chariot télescopique électrique est idéal pour les chantiers nécessitant une solution de manutention silencieuse et sans émission. Disponible en plusieurs hauteurs de travail, il s'adapte à vos besoins.",
+      "Disponible en location avec les options godet ou fourches selon vos besoins de chantier."
+    ],
+    "page": {
+      "title": "Location Chariot Télescopique Électrique | EAP Location",
+      "description": "Louez un chariot télescopique électrique de 4M à 6M avec EAP Location. Options godet et fourches disponibles pour vos chantiers BTP.",
+      "keywords": "location chariot télescopique électrique, chariot élévateur électrique, manutention chantier",
+      "heroTitle": "Location Chariot",
+      "heroHighlight": "Télescopique Électrique",
+      "heroSubtitle": "Disponible de 4M à 6M — option godet ou fourches",
+      "namePrefix": "Location"
+    }
   }
 }
