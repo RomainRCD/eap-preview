@@ -3623,5 +3623,20 @@
       "heroSubtitle": "Disponible de 4M à 6M — option godet ou fourches",
       "namePrefix": "Location"
     }
+  },
+  "chariot-mat-retractable": {
+    "name": "Chariot mât rétractable",
+    "category": "manutention",
+    "spec": " ",
+    "variants": [],
+    "options": [],
+    "description": [],
+    "faq": [],
+    "page": {
+      "title": "Chariot mât rétractable | EAP Location",
+      "heroTitle": "Chariot mât",
+      "heroHighlight": "rétractable",
+      "heroSubtitle": "Location de chariot mât rétractable pour vos chantiers"
+    }
   }
 }
