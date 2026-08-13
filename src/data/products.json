@@ -3463,7 +3463,7 @@
     }
   },
   "mini-pelle-electrique": {
-    "name": "Mini pelle électrique",
+    "name": "Location Mini pelle électrique",
     "category": "terrassement",
     "spec": "1,5T à 2,5T",
     "variants": [
@@ -3490,16 +3490,16 @@
       "Accessoires disponibles : BRH, Pince de tri, Godet, Tarière"
     ],
     "page": {
-      "title": "Mini pelle électrique | EAP Location",
+      "title": "Location Mini pelle électrique | EAP Location",
       "description": "Location de mini-pelle électrique 1,5T et 2,5T. Idéale pour les chantiers en zones urbaines ou sensibles. Devis rapide avec EAP Location.",
       "keywords": "location mini pelle électrique, mini pelle électrique 1,5T, mini pelle électrique 2,5T, location engin électrique BTP",
-      "heroTitle": "Mini pelle",
+      "heroTitle": "Location Mini pelle",
       "heroHighlight": "électrique",
       "heroSubtitle": "1,5T à 2,5T — Solution silencieuse et zéro émission pour vos chantiers",
       "selectorTitle": "Choisissez votre mini pelle électrique",
       "selectorSubtitle": "Sélectionnez le tonnage adapté à votre chantier",
       "contentTitle": "Location de mini pelle électrique",
-      "imageAlt": "Mini pelle électrique disponible à la location"
+      "imageAlt": "Location mini pelle électrique disponible à la location"
     }
   },
   "tour-escalier": {
