@@ -1596,7 +1596,7 @@
     }
   },
   "mini-pelle": {
-    "name": "Location Mini-pelle",
+    "name": "Mini-pelle",
     "category": "terrassement",
     "spec": "De 1,5T à 8T",
     "variants": [
