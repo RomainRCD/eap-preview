@@ -3273,14 +3273,6 @@
     ],
     "variants": [
       {
-        "label": "28m",
-        "value": "28m"
-      },
-      {
-        "label": "30m",
-        "value": "30m"
-      },
-      {
         "label": "40m",
         "value": "40m"
       },
