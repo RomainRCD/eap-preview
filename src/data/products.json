@@ -3385,5 +3385,57 @@
       "contentTitle": "WC chimiques de chantier",
       "imageAlt": "Cabine WC chimique de chantier"
     }
+  },
+  "nacelle-telescopique-electrique": {
+    "name": "Nacelle flèche télescopique électrique",
+    "category": "travail-en-hauteur",
+    "spec": "14m à 42m",
+    "variants": [
+      {
+        "label": "14m",
+        "value": "14m"
+      },
+      {
+        "label": "18m",
+        "value": "18m"
+      },
+      {
+        "label": "20m",
+        "value": "20m"
+      },
+      {
+        "label": "24m",
+        "value": "24m"
+      },
+      {
+        "label": "32m",
+        "value": "32m"
+      },
+      {
+        "label": "38m",
+        "value": "38m"
+      },
+      {
+        "label": "42m",
+        "value": "42m"
+      }
+    ],
+    "description": [
+      "EAP Location propose un large choix de nacelles flèche télescopiques électriques pour vos travaux en hauteur en France. Sur notre site vous retrouverez disponible à la location :",
+      "- Nacelle télescopique électrique de 14 mètres de hauteur de travail",
+      "- Nacelle télescopique électrique de 18 mètres de hauteur de travail",
+      "- Nacelle télescopique électrique de 20 mètres de hauteur de travail",
+      "- Nacelle télescopique électrique de 24 mètres de hauteur de travail",
+      "- Nacelle télescopique électrique de 32 mètres de hauteur de travail",
+      "- Nacelle télescopique électrique de 38 mètres de hauteur de travail",
+      "- Nacelle télescopique électrique de 42 mètres de hauteur de travail"
+    ],
+    "page": {
+      "title": "Nacelle flèche télescopique électrique | EAP Location",
+      "heroTitle": "Nacelle flèche",
+      "heroHighlight": "télescopique électrique",
+      "heroSubtitle": "14m à 42m — motorisation électrique, idéale pour les chantiers en intérieur et zones sensibles",
+      "imageAlt": "Nacelle flèche télescopique électrique"
+    }
   }
 }
