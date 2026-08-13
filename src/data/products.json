@@ -763,7 +763,7 @@
   "chariot-industriel-diesel": {
     "name": "Chariot industriel diesel",
     "category": "manutention",
-    "spec": "1,5T à 16T",
+    "spec": "1,5T à 35T",
     "variants": [
       {
         "label": "1,5T",
@@ -833,17 +833,22 @@
       "Potence de levage"
     ],
     "description": [
-      "EAP location propose le plus large choix de chariot industriel diesel en France. Sur notre site vous retrouverez disponible à la location des chariots industriels diesel avec une capacité de levage pouvant aller jusqu'à 16 tonnes.",
+      "EAP location propose le plus large choix de chariot industriel diesel en France. Sur notre site vous retrouverez disponible à la location des chariots industriels diesel avec une capacité de levage pouvant aller jusqu'à 35 tonnes.",
       "Les disponibilités et caractéristiques de nos chariots :",
       "- Chariot Industriel diesel de 1,5 tonnes",
       "- Chariot Industriel diesel de 2,5 tonnes",
       "- Chariot Industriel diesel de 3,5 tonnes",
       "- Chariot Industriel diesel de 5 tonnes",
+      "- Chariot Industriel diesel de 6 tonnes",
       "- Chariot Industriel diesel de 8 tonnes",
       "- Chariot Industriel diesel de 10 tonnes",
       "- Chariot Industriel diesel de 12 tonnes",
       "- Chariot Industriel diesel de 14 tonnes",
       "- Chariot Industriel diesel de 16 tonnes",
+      "- Chariot Industriel diesel de 20 tonnes",
+      "- Chariot Industriel diesel de 25 tonnes",
+      "- Chariot Industriel diesel de 30 tonnes",
+      "- Chariot Industriel diesel de 35 tonnes",
       "Des accessoires sont disponibles en option pour compléter votre location :",
       "- Rallonge de fourches 1,80 m",
       "- Rallonge de fourches 2,00 m",
@@ -852,12 +857,12 @@
       "- Tête rotative"
     ],
     "page": {
-      "title": "Location Chariot Industriel Diesel (Fenwick) jusqu'à 16T | EAP Location",
-      "description": "Location chariot industriel diesel de 1,5T à 16T. Disponibilité 99%, devis en 2h, livraison partout en France.",
+      "title": "Location Chariot Industriel Diesel (Fenwick) jusqu'à 35T | EAP Location",
+      "description": "Location chariot industriel diesel de 1,5T à 35T. Disponibilité 99%, devis en 2h, livraison partout en France.",
       "keywords": "chariot industriel diesel, fenwick diesel, location chariot élévateur, location matériel BTP",
       "heroTitle": "Chariot Industriel",
       "heroHighlight": "Diesel",
-      "heroSubtitle": "De 1,5T à 16T. Location courte ou longue durée, partout en France.",
+      "heroSubtitle": "De 1,5T à 35T. Location courte ou longue durée, partout en France.",
       "selectorTitle": "Quelle capacité pour votre chantier ?",
       "selectorSubtitle": "Sélectionnez et obtenez un devis immédiat",
       "namePrefix": "Chariot Industriel Diesel",
