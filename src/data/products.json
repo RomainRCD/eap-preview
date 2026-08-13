@@ -3230,7 +3230,7 @@
     ]
   },
   "nacelle-fleche-articulee-chenilles": {
-    "name": "Nacelle flèche articulée sur chenilles",
+    "name": "Nacelle flèche diesel sur chenilles",
     "category": "travail-en-hauteur",
     "spec": "14m à 22m",
     "variants": [
@@ -3253,10 +3253,16 @@
     ],
     "options": [],
     "description": [
-      "La nacelle flèche articulée sur chenilles est conçue pour intervenir sur des chantiers à accès difficile : sols meubles, terrains accidentés, zones boueuses ou en pente. Ses chenilles lui confèrent une excellente stabilité et une mobilité tout-terrain sans dégrader le sol.",
-      "Grâce à sa flèche articulée, elle permet de contourner les obstacles et d'atteindre des points de travail en hauteur inaccessibles aux nacelles classiques sur pneus.",
-      "- Déplacement sur chenilles pour sols meubles et terrains difficiles\n- Flèche articulée multi-bras pour franchir les obstacles\n- Haute stabilité sur terrain en pente\n- Idéale pour chantiers forestiers, espaces verts, façades, réseaux"
-    ]
+      "La nacelle flèche diesel sur chenilles est conçue pour intervenir sur des chantiers à accès difficile : sols meubles, terrains accidentés, zones boueuses ou en pente. Ses chenilles lui confèrent une excellente stabilité et une mobilité tout-terrain sans dégrader le sol.",
+      "Grâce à sa flèche, elle permet de contourner les obstacles et d'atteindre des points de travail en hauteur inaccessibles aux nacelles classiques sur pneus.",
+      "- Déplacement sur chenilles pour sols meubles et terrains difficiles\n- Flèche multi-bras pour franchir les obstacles\n- Haute stabilité sur terrain en pente\n- Idéale pour chantiers forestiers, espaces verts, façades, réseaux"
+    ],
+    "page": {
+      "title": "Nacelle flèche diesel sur chenilles | EAP Location",
+      "heroTitle": "Nacelle flèche",
+      "heroHighlight": "diesel sur chenilles",
+      "imageAlt": "Nacelle flèche diesel sur chenilles"
+    }
   },
   "nacelle-porteur-pl": {
     "name": "Nacelle sur porteur PL",
