@@ -177,7 +177,7 @@
   "dumper": {
     "name": "Dumper sur pneus",
     "category": "terrassement",
-    "spec": "1T à 10T",
+    "spec": "1T à 12T",
     "variants": [
       {
         "label": "1T",
@@ -227,7 +227,7 @@
     "description": [
       "EAP location propose le plus large choix de Dumper sur pneus pour vos travaux de terrassement en France. Sur notre site vous retrouverez disponible à la location :",
       "- Dumper sur pneus 1T",
-      "- Dumper sur pneus 1.5T",
+      "- Dumper sur pneus 1,5T",
       "- Dumper sur pneus 2T",
       "- Dumper sur pneus 3T",
       "- Dumper sur pneus 4T",
@@ -235,7 +235,8 @@
       "- Dumper sur pneus 6T",
       "- Dumper sur pneus 7T",
       "- Dumper sur pneus 9T",
-      "- Dumper sur pneus 10T"
+      "- Dumper sur pneus 10T",
+      "- Dumper sur pneus 12T"
     ]
   },
   "bungalow": {
