@@ -3267,19 +3267,11 @@
   "nacelle-porteur-pl": {
     "name": "Nacelle sur porteur PL",
     "category": "travail-en-hauteur",
-    "spec": "28m à 90m",
+    "spec": "36m à 100m",
     "description": [
-      "Location de nacelles sur porteur poids lourds pour travaux en grande hauteur. Disponibles en 28, 30, 40, 45, 50, 60, 65, 70 et 90 mètres de hauteur de travail, ces nacelles offrent une grande portée et une capacité d'intervention sur des chantiers exigeants."
+      "Location de nacelles sur porteur poids lourds pour travaux en grande hauteur. Disponibles en 36, 40, 45, 50, 60, 65, 70, 75, 90 et 100 mètres de hauteur de travail, ces nacelles offrent une grande portée et une capacité d'intervention sur des chantiers exigeants."
     ],
     "variants": [
-      {
-        "label": "28m",
-        "value": "28m"
-      },
-      {
-        "label": "30m",
-        "value": "30m"
-      },
       {
         "label": "40m",
         "value": "40m"
@@ -3307,6 +3299,18 @@
       {
         "label": "90m",
         "value": "90m"
+      },
+      {
+        "label": "100m",
+        "value": "100m"
+      },
+      {
+        "label": "75m",
+        "value": "75m"
+      },
+      {
+        "label": "36m",
+        "value": "36m"
       }
     ],
     "options": []
