@@ -3492,5 +3492,49 @@
       "contentTitle": "Location de mini pelle électrique",
       "imageAlt": "Mini pelle électrique disponible à la location"
     }
+  },
+  "tour-escalier": {
+    "name": "Tour d'escalier",
+    "category": "travail-en-hauteur",
+    "spec": "Roulante 3x3 jusqu'à 15m / Fixe jusqu'à 24m",
+    "variants": [
+      {
+        "label": "Type",
+        "value": "Tour escalier roulante 3x3 – jusqu'à 15m"
+      },
+      {
+        "label": "Type",
+        "value": "Tour escalier fixe – jusqu'à 24m"
+      }
+    ],
+    "options": [],
+    "description": [
+      "La tour d'escalier est une solution d'accès sécurisée pour les travaux en hauteur sur chantier, idéale pour permettre la circulation des intervenants entre les niveaux.",
+      "- **Tour escalier roulante 3x3** : structure mobile sur roulettes, embase 3x3m, hauteur maximale de **15m**. Facilement déplaçable sur chantier pour s'adapter aux besoins.",
+      "- **Tour escalier fixe** : structure stabilisée, hauteur maximale de **24m**, adaptée aux chantiers de longue durée nécessitant un accès permanent et sécurisé en hauteur.",
+      "Ces tours sont conformes aux normes de sécurité en vigueur et s'adaptent aux exigences des chantiers BTP, de rénovation et de génie civil."
+    ],
+    "faq": [
+      {
+        "q": "Quelle est la différence entre la tour roulante et la tour fixe ?",
+        "a": "La tour roulante 3x3 est mobile et peut être déplacée facilement sur chantier, avec une hauteur max de 15m. La tour fixe est ancrée au sol et permet d'atteindre jusqu'à 24m de hauteur."
+      },
+      {
+        "q": "Ces tours sont-elles conformes aux normes de sécurité ?",
+        "a": "Oui, les tours d'escalier proposées sont conformes aux réglementations en vigueur pour les accès temporaires en hauteur sur chantier."
+      }
+    ],
+    "page": {
+      "title": "Location Tour d'Escalier | EAP Location",
+      "description": "Louez une tour d'escalier pour vos chantiers : tour roulante 3x3 jusqu'à 15m ou tour fixe jusqu'à 24m. Devis rapide avec EAP Location.",
+      "keywords": "location tour escalier, tour escalier roulante, tour escalier fixe, accès hauteur chantier, EAP location",
+      "heroTitle": "Location tour",
+      "heroHighlight": "d'escalier",
+      "heroSubtitle": "Tour roulante 3x3 jusqu'à 15m ou tour fixe jusqu'à 24m — accès sécurisé pour vos chantiers",
+      "selectorTitle": "Choisissez votre tour d'escalier",
+      "selectorSubtitle": "Sélectionnez le type adapté à votre chantier",
+      "contentTitle": "Tour d'escalier : accès sécurisé en hauteur",
+      "imageAlt": "Tour d'escalier de chantier en location"
+    }
   }
 }
