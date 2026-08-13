@@ -2108,7 +2108,7 @@
   "nacelle-articulee-electrique": {
     "name": "Nacelle articulée électrique",
     "category": "travail-en-hauteur",
-    "spec": "12m à 20m",
+    "spec": "12m à 41m",
     "variants": [
       {
         "label": "12m",
@@ -2125,6 +2125,18 @@
       {
         "label": "20m",
         "value": "20m"
+      },
+      {
+        "label": "22m",
+        "value": "22m"
+      },
+      {
+        "label": "26m",
+        "value": "26m"
+      },
+      {
+        "label": "41m",
+        "value": "41m"
       }
     ],
     "description": [
@@ -2132,7 +2144,10 @@
       "- Nacelle Articulée électrique 12 mètres",
       "- Nacelle Articulée électrique 15 mètres",
       "- Nacelle Articulée électrique 17 mètres",
-      "- Nacelle Articulée électrique 20 mètres"
+      "- Nacelle Articulée électrique 20 mètres",
+      "- Nacelle Articulée électrique 22 mètres",
+      "- Nacelle Articulée électrique 26 mètres",
+      "- Nacelle Articulée électrique 41 mètres"
     ]
   },
   "nacelle-articulee-diesel": {
