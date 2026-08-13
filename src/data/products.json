@@ -2709,7 +2709,7 @@
   "robot-demolition": {
     "name": "Robot de démolition",
     "category": "terrassement",
-    "spec": "0,5T à 5T",
+    "spec": "Brokk 70 à Brokk 500",
     "variants": [
       {
         "label": "Brokk 70",
@@ -2743,14 +2743,15 @@
       "Pince de tri"
     ],
     "description": [
-      "EAP Location propose des robots de démolition télécommandés (type BROKK) pour vos travaux de démolition intérieure, de curage et de déconstruction en milieu contraint, partout en France. Machines compactes et radiocommandées, qui interviennent là où un engin classique ne passe pas et éloignent l'opérateur de la zone à risque.",
-      "Tonnages disponibles à la location :",
-      "- Robot de démolition 0,5 T",
-      "- Robot de démolition 1 T",
-      "- Robot de démolition 2 T",
-      "- Robot de démolition 3 T",
-      "- Robot de démolition 5 T",
-      "Équipements disponibles selon besoin : brise-roche hydraulique, pince de tri, godet, marteau BHB, cisaille à béton, fraise hydraulique. Contactez-nous pour un devis."
+      "EAP Location propose des robots de démolition BROKK télécommandés pour vos travaux de démolition intérieure, de curage et de déconstruction en milieu contraint, partout en France. Machines compactes et radiocommandées, qui interviennent là où un engin classique ne passe pas et éloignent l'opérateur de la zone à risque.",
+      "Modèles disponibles à la location :",
+      "- Brokk 70",
+      "- Brokk 110",
+      "- Brokk 170",
+      "- Brokk 200",
+      "- Brokk 300",
+      "- Brokk 500",
+      "Équipements disponibles selon besoin : brise-roche hydraulique, pince de tri, marteau BHB, cisaille à béton, fraise hydraulique. Contactez-nous pour un devis."
     ]
   },
   "nacelle-mat-chenilles": {
