@@ -2467,6 +2467,10 @@
       {
         "label": "12,8m",
         "value": "12,8m"
+      },
+      {
+        "label": "Tour d'échafaudage roulant",
+        "value": "Tour d'échafaudage roulant"
       }
     ],
     "description": [
@@ -2480,6 +2484,10 @@
       "- Échafaudage roulant 10,8 mètres",
       "- Échafaudage roulant 11,8 mètres",
       "- Échafaudage roulant 12,8 mètres"
+    ],
+    "options": [
+      "Simple largeur",
+      "Double largeur"
     ]
   },
   "nacelle-mat": {
