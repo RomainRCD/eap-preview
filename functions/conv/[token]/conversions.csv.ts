@@ -21,9 +21,18 @@ const SUPABASE_CSV =
 
 interface Contexte {
   params: { token: string };
+  request: Request;
 }
 
-export const onRequestGet = async ({ params }: Contexte): Promise<Response> => {
+/**
+ * GET **et HEAD**. Le robot d'import de Google sonde l'URL en HEAD avant de
+ * télécharger ; une Pages Function qui n'exporte que onRequestGet laisse le
+ * HEAD tomber sur le statique → 404 → « Fichier introuvable ». C'est ce qui a
+ * fait échouer les dix premières importations planifiées (08-17/08/2026),
+ * alors que le GET répondait parfaitement. Pour un HEAD on fait le même
+ * travail et on renvoie les en-têtes sans le corps.
+ */
+const handler = async ({ params, request }: Contexte): Promise<Response> => {
   const token = params.token;
   // Garde-fou de forme : le vrai contrôle est fait par Supabase, mais inutile
   // de lui relayer n'importe quoi.
@@ -41,14 +50,18 @@ export const onRequestGet = async ({ params }: Contexte): Promise<Response> => {
     return new Response("indisponible\n", { status: amont.status === 403 ? 403 : 502 });
   }
 
-  return new Response(await amont.text(), {
-    headers: {
-      "Content-Type": "text/csv; charset=utf-8",
-      "Content-Disposition": 'attachment; filename="conversions.csv"',
-      // Le fichier change à chaque nouvelle demande : jamais de cache.
-      "Cache-Control": "no-store",
-      // Ce fichier n'a rien à faire dans un index de moteur de recherche.
-      "X-Robots-Tag": "noindex, nofollow",
-    },
-  });
+  const corps = await amont.text();
+  const entetes = {
+    "Content-Type": "text/csv; charset=utf-8",
+    "Content-Disposition": 'attachment; filename="conversions.csv"',
+    "Content-Length": String(new TextEncoder().encode(corps).byteLength),
+    // Le fichier change à chaque nouvelle demande : jamais de cache.
+    "Cache-Control": "no-store",
+    // Ce fichier n'a rien à faire dans un index de moteur de recherche.
+    "X-Robots-Tag": "noindex, nofollow",
+  };
+  return new Response(request.method === "HEAD" ? null : corps, { headers: entetes });
 };
+
+export const onRequestGet = handler;
+export const onRequestHead = handler;

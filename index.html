@@ -129,6 +129,16 @@
           //
           // sendBeacon : la requête doit survivre à la bascule immédiate vers
           // l'application téléphone, qui tue une requête fetch en vol.
+          //
+          // ⚠️ Le corps part en text/plain, PAS en application/json, et ce
+          // n'est pas un détail : sendBeacon envoie toujours la requête avec
+          // les identifiants, et un type non « safelisted » impose un prévol
+          // CORS que la passerelle refuse pour ces requêtes-là. Résultat vécu
+          // (07-17/08/2026) : dix jours où AUCUN clic n'est parti — le
+          // navigateur n'envoyait jamais la requête, silencieusement. En
+          // text/plain c'est une « requête simple » : livrée d'abord, CORS
+          // vérifié après, ce qui pour un signal à sens unique nous suffit.
+          // La fonction site-phone-click parse le texte en JSON elle-même.
           // ---------------------------------------------------------------
           try {
             var attr = {};
@@ -145,8 +155,8 @@
               landing_page: attr.landing_page, referrer: attr.referrer
             });
             var u = 'https://lnytoqspbcphamtvpvnw.supabase.co/functions/v1/site-phone-click';
-            if (navigator.sendBeacon) navigator.sendBeacon(u, new Blob([charge], { type: 'application/json' }));
-            else fetch(u, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: charge, keepalive: true });
+            if (navigator.sendBeacon) navigator.sendBeacon(u, new Blob([charge], { type: 'text/plain;charset=UTF-8' }));
+            else fetch(u, { method: 'POST', body: charge, keepalive: true });
           } catch (_e) { /* jamais bloquer l'appel du visiteur */ }
         }, true);
       })();
