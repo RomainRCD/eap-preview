@@ -56,11 +56,17 @@
         }
         if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
         // ---------------------------------------------------------------
-        // Clic sur un numéro de téléphone → événement GA4 `phone_click`.
+        // Clic de contact → événement GA4 `phone_click` ou `mail_click`.
         //
-        // Écouteur délégué sur document : couvre TOUS les liens tel: du site
-        // (18 au 05/08/2026) sans rien câbler dans les composants, y compris
+        // Écouteur délégué sur document : couvre TOUS les liens tel: ET
+        // mailto: du site sans rien câbler dans les composants, y compris
         // ceux montés après coup par React et ceux ajoutés plus tard.
+        //
+        // Le canal mail a été ajouté le 08/09/2026. Jusque-là, un prospect qui
+        // trouvait le site, ne remplissait pas le formulaire et nous écrivait
+        // directement n'apparaissait NULLE PART : ni dans les demandes, ni
+        // dans le taux de cible. Limite qui reste : si le visiteur recopie
+        // l'adresse à la main, on ne verra rien — c'est assumé.
         //
         // Paramètres envoyés — à déclarer en dimensions personnalisées GA4 :
         //   zone      : header / hero / corps_de_page / footer / cta_mobile_fixe
@@ -105,16 +111,21 @@
         }
 
         document.addEventListener('click', function(e){
-          var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+          var a = e.target && e.target.closest
+            ? e.target.closest('a[href^="tel:"], a[href^="mailto:"]') : null;
           if (!a) return;
+          var href = a.getAttribute('href') || '';
+          var canal = href.indexOf('mailto:') === 0 ? 'mail' : 'tel';
           var c = contextePage();
           var zone = zoneDuLien(a);
-          var numero = a.getAttribute('href').replace('tel:','');
-          gtag('event', 'phone_click', {
+          // Cible du clic : le numéro pour un tel:, l'adresse pour un mailto:.
+          // Le paramètre de requête éventuel (?subject=…) n'apporte rien.
+          var cible = href.replace(/^(tel:|mailto:)/, '').split('?')[0];
+          gtag('event', canal === 'mail' ? 'mail_click' : 'phone_click', {
             zone: zone,
             page_type: c.page_type,
             produit: c.produit,
-            phone_number: numero
+            contact_cible: cible
           });
           // ---------------------------------------------------------------
           // Second enregistrement, dans notre propre base.
@@ -126,6 +137,7 @@
           // (cf. src/lib/tracking.ts), et ads-conversions-csv le remonte à
           // Google Ads comme conversion — « Appel depuis une fiche produit » ou
           // « Appel depuis une autre page » selon l'endroit du clic.
+          // Le champ `canal` distingue le téléphone du mail dans la même table.
           //
           // sendBeacon : la requête doit survivre à la bascule immédiate vers
           // l'application téléphone, qui tue une requête fetch en vol.
@@ -149,7 +161,8 @@
               produit: c.produit === '(aucun)' ? null : c.produit,
               zone: zone,
               appareil: matchMedia('(pointer:coarse)').matches ? 'mobile' : 'ordinateur',
-              numero: numero,
+              canal: canal,
+              numero: cible,
               gclid: attr.gclid, utm_source: attr.utm_source, utm_medium: attr.utm_medium,
               utm_campaign: attr.utm_campaign, utm_term: attr.utm_term, utm_content: attr.utm_content,
               landing_page: attr.landing_page, referrer: attr.referrer
@@ -157,7 +170,7 @@
             var u = 'https://lnytoqspbcphamtvpvnw.supabase.co/functions/v1/site-phone-click';
             if (navigator.sendBeacon) navigator.sendBeacon(u, new Blob([charge], { type: 'text/plain;charset=UTF-8' }));
             else fetch(u, { method: 'POST', body: charge, keepalive: true });
-          } catch (_e) { /* jamais bloquer l'appel du visiteur */ }
+          } catch (_e) { /* jamais bloquer le contact du visiteur */ }
         }, true);
       })();
     </script>
