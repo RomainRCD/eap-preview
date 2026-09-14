@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { CheckCircle } from "lucide-react";
+import { signalerDemande } from "@/lib/conversions";
 
 const Contact = () => {
   const [form, setForm] = useState({ nom: "", email: "", telephone: "", message: "" });
@@ -31,7 +32,7 @@ const Contact = () => {
       const j = await r.json();
       if (!j.ok) throw new Error(String(j.error || "erreur"));
       setState("sent");
-      (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.("event", "generate_lead", { method: "contact_form" });
+      signalerDemande("contact_form");
     } catch (_e) {
       setState("error");
     }

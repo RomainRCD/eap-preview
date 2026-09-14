@@ -28,6 +28,38 @@
         gtag('js', new Date());
         gtag('config', 'G-JCGCRQ5GCD');
 
+        // ---------------------------------------------------------------
+        // Conversions Google Ads — LA table des étiquettes, un seul endroit.
+        //
+        // index.html est le seul fichier chargé par TOUTES les pages (celles
+        // rendues par React comme les fiches produits autonomes). L'identifiant
+        // et les étiquettes vivent donc ici, et nulle part ailleurs : le bundle
+        // React les lit via window.__EAP_ADS (cf. src/lib/conversions.ts).
+        //
+        // Pourquoi ce tag existe (14/09/2026) : jusqu'ici AUCUNE conversion du
+        // site n'arrivait dans Google Ads. L'action « GA4 formulaire », primaire
+        // dans le compte, était branchée sur l'ancienne propriété Analytics
+        // (celle d'equipementsapartager.com) que le nouveau site n'alimente
+        // plus depuis sa mise en ligne ; et la remontée par fichier était
+        // arrêtée. Les enchères automatiques ne voyaient que les appels passés
+        // depuis l'annonce elle-même. Le tag ci-dessous rend le signal direct
+        // et immédiat : plus d'intermédiaire, plus rien à importer à la main.
+        // ---------------------------------------------------------------
+        window.__EAP_ADS = {
+          id:          'AW-623462795',
+          devis:       'AW-623462795/dq54COi7m_ccEIuTpakC',
+          appel_fiche: 'AW-623462795/JM3ECOu7m_ccEIuTpakC',
+          appel_autre: 'AW-623462795/ilTgCOiMpvccEIuTpakC'
+        };
+        gtag('config', window.__EAP_ADS.id);
+
+        // Déclenche une conversion Ads. Sans consentement publicitaire, le
+        // Consent Mode retient l'envoi tout seul : rien à tester ici.
+        window.__eapConversionAds = function (cle) {
+          var envoi = window.__EAP_ADS[cle];
+          if (envoi) gtag('event', 'conversion', { send_to: envoi });
+        };
+
         var s = document.createElement('script');
         s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JCGCRQ5GCD';
         document.head.appendChild(s);
@@ -127,6 +159,14 @@
             produit: c.produit,
             contact_cible: cible
           });
+
+          // Conversion Google Ads, en temps réel et rattachée au clic
+          // publicitaire par le cookie Ads — pas besoin du gclid ici.
+          // Le mail n'a pas d'action dédiée : volume trop faible pour
+          // piloter des enchères, on le laisse à GA4.
+          if (canal === 'tel') {
+            window.__eapConversionAds(c.page_type === 'fiche_produit' ? 'appel_fiche' : 'appel_autre');
+          }
           // ---------------------------------------------------------------
           // Second enregistrement, dans notre propre base.
           //
