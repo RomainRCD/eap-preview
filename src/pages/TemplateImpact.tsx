@@ -15,6 +15,7 @@ import logoNordex from "@/assets/logos/nordex.jpg";
 import logoTriangleHorizon from "@/assets/logos/triangle-horizon.jpg";
 import logoEiffage from "@/assets/logos/eiffage.jpg";
 import logoVinci from "@/assets/logos/vinci.jpg";
+import { signalerDemande } from "@/lib/conversions";
 
 // Helper function to check if value looks like a SIRET (9 or 14 digits)
 const isSiretFormat = (value: string): boolean => {
@@ -135,7 +136,7 @@ const TemplateImpact = () => {
       const j = await r.json();
       if (!j.ok) throw new Error(String(j.error || "erreur"));
       setSubmitState("sent");
-      (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.("event", "generate_lead", { method: "devis_express" });
+      signalerDemande("devis_express");
     } catch (_e) {
       setSubmitState("error");
     }
