@@ -68,8 +68,8 @@
 /nacelle-ciseaux-electrique/ /travail-en-hauteur/nacelle-ciseaux-electrique 301
 /echafaudage-roulant-v2 /travail-en-hauteur/echafaudage-roulant 301
 /echafaudage-roulant-v2/ /travail-en-hauteur/echafaudage-roulant 301
-/nacelle-sur-poids-lourds-v2 /travail-en-hauteur/nacelle-camion 301
-/nacelle-sur-poids-lourds-v2/ /travail-en-hauteur/nacelle-camion 301
+/nacelle-sur-poids-lourds-v2 /travail-en-hauteur/nacelle-porteur-pl 301
+/nacelle-sur-poids-lourds-v2/ /travail-en-hauteur/nacelle-porteur-pl 301
 /nacelle-articulee-sur-vehicule-leger-v2 /travail-en-hauteur/nacelle-camion 301
 /nacelle-articulee-sur-vehicule-leger-v2/ /travail-en-hauteur/nacelle-camion 301
 /elevateur-mecanique-de-charge /travail-en-hauteur/monte-materiaux 301
@@ -102,16 +102,16 @@
 /compacteur-monocylindre-v2/ /compactage/rouleau-monocylindre 301
 /compacteur-tandem-v2 /compactage/rouleau-tandem 301
 /compacteur-tandem-v2/ /compactage/rouleau-tandem 301
-/compacteur-de-tranchee-a-pieds-dameurs /compactage/rouleau-monocylindre 301
-/compacteur-de-tranchee-a-pieds-dameurs/ /compactage/rouleau-monocylindre 301
+/compacteur-de-tranchee-a-pieds-dameurs /compactage 301
+/compacteur-de-tranchee-a-pieds-dameurs/ /compactage 301
 /bungalow-v2 /base-vie/bungalow 301
 /bungalow-v2/ /base-vie/bungalow 301
 /landing-page-2 /base-vie/sanitaire 301
 /landing-page-2/ /base-vie/sanitaire 301
 /bungalow-sanitaire /base-vie/sanitaire 301
 /bungalow-sanitaire/ /base-vie/sanitaire 301
-/wc-chimique-v2 /base-vie/sanitaire 301
-/wc-chimique-v2/ /base-vie/sanitaire 301
+/wc-chimique-v2 /base-vie/wc-chimique 301
+/wc-chimique-v2/ /base-vie/wc-chimique 301
 /roulotte-de-chantier-v2 /base-vie/roulotte 301
 /roulotte-de-chantier-v2/ /base-vie/roulotte 301
 /roulotte-de-chantier-avec-wc-et-douche-v2 /base-vie/roulotte 301
@@ -185,8 +185,8 @@
 /home/chariot-telescopique-rotatif/ /manutention/chariot-rotatif 301
 /home/chariot-tout-terrain /manutention/chariot-tout-terrain 301
 /home/chariot-tout-terrain/ /manutention/chariot-tout-terrain 301
-/home/compacteur-de-tranchee-a-pieds-dameurs /compactage/rouleau-monocylindre 301
-/home/compacteur-de-tranchee-a-pieds-dameurs/ /compactage/rouleau-monocylindre 301
+/home/compacteur-de-tranchee-a-pieds-dameurs /compactage 301
+/home/compacteur-de-tranchee-a-pieds-dameurs/ /compactage 301
 /home/compacteur-monocylindre /compactage/rouleau-monocylindre 301
 /home/compacteur-monocylindre/ /compactage/rouleau-monocylindre 301
 /home/dumper-sur-chenilles /terrassement/dumper-chenilles 301
@@ -205,8 +205,8 @@
 /home/nacelle-ciseaux/ /travail-en-hauteur/nacelle-ciseaux-electrique 301
 /home/nacelle-mat-vertical-manuel /travail-en-hauteur/nacelle-mat 301
 /home/nacelle-mat-vertical-manuel/ /travail-en-hauteur/nacelle-mat 301
-/home/nacelle-sur-poids-lourd /travail-en-hauteur/nacelle-camion 301
-/home/nacelle-sur-poids-lourd/ /travail-en-hauteur/nacelle-camion 301
+/home/nacelle-sur-poids-lourd /travail-en-hauteur/nacelle-porteur-pl 301
+/home/nacelle-sur-poids-lourd/ /travail-en-hauteur/nacelle-porteur-pl 301
 /home/nacelle-sur-vehicule-leger /travail-en-hauteur/nacelle-camion 301
 /home/nacelle-sur-vehicule-leger/ /travail-en-hauteur/nacelle-camion 301
 /home/nacelle-telescopique /travail-en-hauteur/nacelle-telescopique 301
@@ -217,8 +217,8 @@
 /home/roulotte-de-chantier/ /base-vie/roulotte 301
 /home/roulotte-de-chantier-avec-wc-et-douche /base-vie/roulotte 301
 /home/roulotte-de-chantier-avec-wc-et-douche/ /base-vie/roulotte 301
-/home/wc-chimique /base-vie/sanitaire 301
-/home/wc-chimique/ /base-vie/sanitaire 301
+/home/wc-chimique /base-vie/wc-chimique 301
+/home/wc-chimique/ /base-vie/wc-chimique 301
 
 
 # --- Canonicalisation : fiches accessibles sous deux catégories (03/08/2026) ---
